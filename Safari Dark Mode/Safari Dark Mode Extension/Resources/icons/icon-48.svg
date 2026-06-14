@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="Safari Dark Mode">
+  <rect width="48" height="48" rx="10" fill="#111318"/>
+  <path d="M31.7 32.9c-8.8 0-15.9-7.1-15.9-15.9 0-2.1.4-4.1 1.2-6A15.6 15.6 0 0 0 8 25.1C8 33.3 14.7 40 22.9 40c6.4 0 11.9-4 14-9.7-1.7 1.6-3.4 2.6-5.2 2.6Z" fill="#8ab4f8"/>
+  <path d="M31.7 32.9c1.8 0 3.5-1 5.2-2.6A15 15 0 0 1 22.9 40C14.7 40 8 33.3 8 25.1A15.6 15.6 0 0 1 17 11a16 16 0 0 0 14.7 21.9Z" fill="none" stroke="#e8eaed" stroke-width="2" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,56 @@
+:root:not([data-sdm-disabled]) {
+  color-scheme: dark !important;
+  --sdm-bg: #0f1115;
+  --sdm-bg-elevated: #13161c;
+  --sdm-surface: #171b22;
+  --sdm-surface-2: #202630;
+  --sdm-surface-3: #2a3240;
+  --sdm-border: #343c49;
+  --sdm-border-strong: #596273;
+  --sdm-text: #eef2f7;
+  --sdm-muted: #aeb7c5;
+  --sdm-dim: #7d8796;
+  --sdm-accent: #8ab4f8;
+  --sdm-accent-bg: #1d3152;
+  --sdm-selected: #1e3558;
+  --sdm-selected-hover: #263f66;
+}
+
+:root:not([data-sdm-disabled]),
+:root:not([data-sdm-disabled]) body {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) input,
+:root:not([data-sdm-disabled]) textarea,
+:root:not([data-sdm-disabled]) select {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) input::placeholder,
+:root:not([data-sdm-disabled]) textarea::placeholder {
+  color: var(--sdm-dim) !important;
+}
+
+:root:not([data-sdm-disabled]) ::selection {
+  background: #31588f !important;
+  color: #ffffff !important;
+}
+
+:root:not([data-sdm-disabled]) ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+:root:not([data-sdm-disabled]) ::-webkit-scrollbar-track {
+  background: var(--sdm-bg) !important;
+}
+
+:root:not([data-sdm-disabled]) ::-webkit-scrollbar-thumb {
+  background: var(--sdm-surface-3) !important;
+  border: 3px solid var(--sdm-bg) !important;
+  border-radius: 999px !important;
+}

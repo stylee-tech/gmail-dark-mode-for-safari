@@ -1,0 +1,561 @@
+:root:not([data-sdm-disabled]) body,
+:root:not([data-sdm-disabled]) div[role="application"],
+:root:not([data-sdm-disabled]) .bkK,
+:root:not([data-sdm-disabled]) .aeJ,
+:root:not([data-sdm-disabled]) .aeH,
+:root:not([data-sdm-disabled]) .aeI,
+:root:not([data-sdm-disabled]) .ae3,
+:root:not([data-sdm-disabled]) .ae4,
+:root:not([data-sdm-disabled]) .aim,
+:root:not([data-sdm-disabled]) .ain,
+:root:not([data-sdm-disabled]) .aia,
+:root:not([data-sdm-disabled]) .nH .nH,
+:root:not([data-sdm-disabled]) .nH,
+:root:not([data-sdm-disabled]) .aeN,
+:root:not([data-sdm-disabled]) .aeF,
+:root:not([data-sdm-disabled]) .AO,
+:root:not([data-sdm-disabled]) .Tm,
+:root:not([data-sdm-disabled]) .aic,
+:root:not([data-sdm-disabled]) [role="main"],
+:root:not([data-sdm-disabled]) [role="navigation"],
+:root:not([data-sdm-disabled]) [role="complementary"] {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) header,
+:root:not([data-sdm-disabled]) .gb_Td,
+:root:not([data-sdm-disabled]) .gb_Dd,
+:root:not([data-sdm-disabled]) .gb_Fd,
+:root:not([data-sdm-disabled]) .gb_Ue,
+:root:not([data-sdm-disabled]) .gb_2d,
+:root:not([data-sdm-disabled]) .G-atb,
+:root:not([data-sdm-disabled]) .G-tF,
+:root:not([data-sdm-disabled]) .bAw,
+:root:not([data-sdm-disabled]) .bq9,
+:root:not([data-sdm-disabled]) .brC-aT5-aOt-Jw {
+  background: var(--sdm-bg-elevated) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .aAU,
+:root:not([data-sdm-disabled]) .gb_qe,
+:root:not([data-sdm-disabled]) .gb_2e,
+:root:not([data-sdm-disabled]) .gb_Ze,
+:root:not([data-sdm-disabled]) form[role="search"],
+:root:not([data-sdm-disabled]) [role="search"],
+:root:not([data-sdm-disabled]) [aria-label="Search mail"],
+:root:not([data-sdm-disabled]) [aria-label="Search in mail"],
+:root:not([data-sdm-disabled]) input[aria-label="Search mail"],
+:root:not([data-sdm-disabled]) input[aria-label="Search in mail"] {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .T-I,
+:root:not([data-sdm-disabled]) .J-J5-Ji,
+:root:not([data-sdm-disabled]) .J-Ke,
+:root:not([data-sdm-disabled]) a.J-Ke,
+:root:not([data-sdm-disabled]) a.J-Ke.n0.uA {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) a.J-Ke.n0.uA,
+:root:not([data-sdm-disabled]) .TO.NQ a.J-Ke,
+:root:not([data-sdm-disabled]) [aria-current="page"] a.J-Ke {
+  background: transparent !important;
+  color: var(--sdm-accent) !important;
+}
+
+:root:not([data-sdm-disabled]) .zA,
+:root:not([data-sdm-disabled]) .yO,
+:root:not([data-sdm-disabled]) .x7,
+:root:not([data-sdm-disabled]) .Cp,
+:root:not([data-sdm-disabled]) .UI,
+:root:not([data-sdm-disabled]) .F,
+:root:not([data-sdm-disabled]) .BltHke,
+:root:not([data-sdm-disabled]) .aDP,
+:root:not([data-sdm-disabled]) .adC,
+:root:not([data-sdm-disabled]) .adF,
+:root:not([data-sdm-disabled]) .if,
+:root:not([data-sdm-disabled]) td.xY,
+:root:not([data-sdm-disabled]) .xS,
+:root:not([data-sdm-disabled]) .xT,
+:root:not([data-sdm-disabled]) .yi,
+:root:not([data-sdm-disabled]) .y6 {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .zA:hover,
+:root:not([data-sdm-disabled]) .yO:hover,
+:root:not([data-sdm-disabled]) .x7:hover,
+:root:not([data-sdm-disabled]) [aria-selected="true"] {
+  background: var(--sdm-surface-2) !important;
+}
+
+:root:not([data-sdm-disabled]) .TO.NQ,
+:root:not([data-sdm-disabled]) .TO:hover,
+:root:not([data-sdm-disabled]) .aim:hover,
+:root:not([data-sdm-disabled]) [aria-current="page"] {
+  background: var(--sdm-selected) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .bog,
+:root:not([data-sdm-disabled]) .bqe,
+:root:not([data-sdm-disabled]) .yP,
+:root:not([data-sdm-disabled]) .zF,
+:root:not([data-sdm-disabled]) .av,
+:root:not([data-sdm-disabled]) .aio,
+:root:not([data-sdm-disabled]) .aio span,
+:root:not([data-sdm-disabled]) .G2,
+:root:not([data-sdm-disabled]) .ha,
+:root:not([data-sdm-disabled]) .hP {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .y2,
+:root:not([data-sdm-disabled]) .bsU,
+:root:not([data-sdm-disabled]) .gD,
+:root:not([data-sdm-disabled]) .g3,
+:root:not([data-sdm-disabled]) .hx,
+:root:not([data-sdm-disabled]) .aKz {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .xT .ar,
+:root:not([data-sdm-disabled]) .xT .as {
+  background: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) .xT .at {
+  background-color: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .xT .au {
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .xT .av {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .brd,
+:root:not([data-sdm-disabled]) .brc {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .brc:hover {
+  background: var(--sdm-surface-3) !important;
+}
+
+:root:not([data-sdm-disabled]) .bzB,
+:root:not([data-sdm-disabled]) .brg {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .iY,
+:root:not([data-sdm-disabled]) .aju,
+:root:not([data-sdm-disabled]) .gE,
+:root:not([data-sdm-disabled]) .gH,
+:root:not([data-sdm-disabled]) .h7,
+:root:not([data-sdm-disabled]) .Bk,
+:root:not([data-sdm-disabled]) .G3,
+:root:not([data-sdm-disabled]) .adn {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .Am,
+:root:not([data-sdm-disabled]) .editable,
+:root:not([data-sdm-disabled]) .gs {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .ii,
+:root:not([data-sdm-disabled]) .a3s {
+  background: #ffffff !important;
+  color: #202124 !important;
+  color-scheme: light !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #fff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#fff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: white"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:white"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #fff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#fff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: white"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:white"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(255, 255, 255)"] {
+  color-scheme: light !important;
+}
+
+:root:not([data-sdm-disabled]) .J-M,
+:root:not([data-sdm-disabled]) .b8,
+:root:not([data-sdm-disabled]) .vh,
+:root:not([data-sdm-disabled]) .Kj-JD {
+  background: var(--sdm-surface) !important;
+  border-color: var(--sdm-border-strong) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .AD,
+:root:not([data-sdm-disabled]) .M9,
+:root:not([data-sdm-disabled]) .aoI,
+:root:not([data-sdm-disabled]) .aoP,
+:root:not([data-sdm-disabled]) .aoT,
+:root:not([data-sdm-disabled]) .aoD,
+:root:not([data-sdm-disabled]) .aoY,
+:root:not([data-sdm-disabled]) .Ar,
+:root:not([data-sdm-disabled]) .At,
+:root:not([data-sdm-disabled]) .aDh,
+:root:not([data-sdm-disabled]) .btC,
+:root:not([data-sdm-disabled]) .gU,
+:root:not([data-sdm-disabled]) .J-Z,
+:root:not([data-sdm-disabled]) .J-JN-M-I,
+:root:not([data-sdm-disabled]) .wO,
+:root:not([data-sdm-disabled]) .vO,
+:root:not([data-sdm-disabled]) .ao5,
+:root:not([data-sdm-disabled]) .aoO {
+  background: var(--sdm-surface) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .M9 {
+  box-shadow: 0 18px 50px rgb(0 0 0 / 45%) !important;
+}
+
+:root:not([data-sdm-disabled]) .aoT,
+:root:not([data-sdm-disabled]) .aoD {
+  box-shadow: inset 0 -1px 0 var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .vO,
+:root:not([data-sdm-disabled]) .aoT input,
+:root:not([data-sdm-disabled]) .aoD input,
+:root:not([data-sdm-disabled]) .aoP input {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .aoT .aB,
+:root:not([data-sdm-disabled]) .aoD .aB,
+:root:not([data-sdm-disabled]) .aYF,
+:root:not([data-sdm-disabled]) .aHS-bnt {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s img,
+:root:not([data-sdm-disabled]) .ii img,
+:root:not([data-sdm-disabled]) .adn img,
+:root:not([data-sdm-disabled]) .M9 img,
+:root:not([data-sdm-disabled]) .brc img {
+  filter: none !important;
+}
+
+:root:not([data-sdm-disabled]) .TO:hover,
+:root:not([data-sdm-disabled]) .TO:hover a.J-Ke,
+:root:not([data-sdm-disabled]) .TO:hover .aio,
+:root:not([data-sdm-disabled]) .aim:hover,
+:root:not([data-sdm-disabled]) .aim:hover a,
+:root:not([data-sdm-disabled]) .nZ:hover,
+:root:not([data-sdm-disabled]) .J-Ke:hover,
+:root:not([data-sdm-disabled]) .J-N:hover,
+:root:not([data-sdm-disabled]) .J-LC:hover {
+  background: var(--sdm-selected-hover) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .TO.NQ,
+:root:not([data-sdm-disabled]) .TO.NQ:hover,
+:root:not([data-sdm-disabled]) .TO.NQ a.J-Ke,
+:root:not([data-sdm-disabled]) .TO.NQ .aio,
+:root:not([data-sdm-disabled]) .nZ.aHS,
+:root:not([data-sdm-disabled]) .nZ.aHS:hover,
+:root:not([data-sdm-disabled]) [aria-current="page"],
+:root:not([data-sdm-disabled]) [aria-current="page"] a {
+  background: var(--sdm-selected) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .zA:hover td,
+:root:not([data-sdm-disabled]) .zA:hover .xY,
+:root:not([data-sdm-disabled]) .zA:hover .xS,
+:root:not([data-sdm-disabled]) .zA:hover .xT,
+:root:not([data-sdm-disabled]) .zA:hover .y6,
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] td,
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xY,
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xS,
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xT,
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .y6 {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .T-I:hover,
+:root:not([data-sdm-disabled]) .asa:hover,
+:root:not([data-sdm-disabled]) .G-Ni:hover,
+:root:not([data-sdm-disabled]) [role="button"]:hover {
+  background-color: var(--sdm-surface-3) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .gb_Qe,
+:root:not([data-sdm-disabled]) .gb_Se,
+:root:not([data-sdm-disabled]) .gb_Te,
+:root:not([data-sdm-disabled]) .gb_Ue,
+:root:not([data-sdm-disabled]) .gb_Ve,
+:root:not([data-sdm-disabled]) .gb_Wa,
+:root:not([data-sdm-disabled]) .gb_Xa,
+:root:not([data-sdm-disabled]) .gb_Za,
+:root:not([data-sdm-disabled]) .gb_0a,
+:root:not([data-sdm-disabled]) .gb_1a,
+:root:not([data-sdm-disabled]) .gb_2a,
+:root:not([data-sdm-disabled]) .gb_3a,
+:root:not([data-sdm-disabled]) .gb_4a,
+:root:not([data-sdm-disabled]) .gb_Ea,
+:root:not([data-sdm-disabled]) .gb_Fa,
+:root:not([data-sdm-disabled]) .gb_Ga,
+:root:not([data-sdm-disabled]) .gb_Ha,
+:root:not([data-sdm-disabled]) .gb_Ia,
+:root:not([data-sdm-disabled]) .gb_Ja,
+:root:not([data-sdm-disabled]) .gb_Ka,
+:root:not([data-sdm-disabled]) .gb_La,
+:root:not([data-sdm-disabled]) .gb_Ma,
+:root:not([data-sdm-disabled]) .gb_Na,
+:root:not([data-sdm-disabled]) .gb_Oa,
+:root:not([data-sdm-disabled]) [role="dialog"],
+:root:not([data-sdm-disabled]) [role="menu"],
+:root:not([data-sdm-disabled]) [role="listbox"] {
+  background: var(--sdm-surface) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .gb_Qe *,
+:root:not([data-sdm-disabled]) .gb_Se *,
+:root:not([data-sdm-disabled]) .gb_Te *,
+:root:not([data-sdm-disabled]) .gb_Ue *,
+:root:not([data-sdm-disabled]) .gb_Ve *,
+:root:not([data-sdm-disabled]) .gb_Wa *,
+:root:not([data-sdm-disabled]) .gb_Xa *,
+:root:not([data-sdm-disabled]) .gb_Za *,
+:root:not([data-sdm-disabled]) .gb_0a *,
+:root:not([data-sdm-disabled]) .gb_1a *,
+:root:not([data-sdm-disabled]) .gb_2a *,
+:root:not([data-sdm-disabled]) .gb_3a *,
+:root:not([data-sdm-disabled]) .gb_4a *,
+:root:not([data-sdm-disabled]) .gb_Ea *,
+:root:not([data-sdm-disabled]) .gb_Fa *,
+:root:not([data-sdm-disabled]) .gb_Ga *,
+:root:not([data-sdm-disabled]) .gb_Ha *,
+:root:not([data-sdm-disabled]) .gb_Ia *,
+:root:not([data-sdm-disabled]) .gb_Ja *,
+:root:not([data-sdm-disabled]) .gb_Ka *,
+:root:not([data-sdm-disabled]) .gb_La *,
+:root:not([data-sdm-disabled]) .gb_Ma *,
+:root:not([data-sdm-disabled]) .gb_Na *,
+:root:not([data-sdm-disabled]) .gb_Oa * {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .gb_Qe a,
+:root:not([data-sdm-disabled]) .gb_Se a,
+:root:not([data-sdm-disabled]) .gb_Te a,
+:root:not([data-sdm-disabled]) .gb_Ue a,
+:root:not([data-sdm-disabled]) .gb_Ve a,
+:root:not([data-sdm-disabled]) .gb_Wa a,
+:root:not([data-sdm-disabled]) .gb_Xa a,
+:root:not([data-sdm-disabled]) .gb_Za a,
+:root:not([data-sdm-disabled]) .gb_0a a,
+:root:not([data-sdm-disabled]) .gb_1a a,
+:root:not([data-sdm-disabled]) .gb_2a a,
+:root:not([data-sdm-disabled]) .gb_3a a,
+:root:not([data-sdm-disabled]) .gb_4a a,
+:root:not([data-sdm-disabled]) .gb_Ea a,
+:root:not([data-sdm-disabled]) .gb_Fa a,
+:root:not([data-sdm-disabled]) .gb_Ga a,
+:root:not([data-sdm-disabled]) .gb_Ha a,
+:root:not([data-sdm-disabled]) .gb_Ia a,
+:root:not([data-sdm-disabled]) .gb_Ja a,
+:root:not([data-sdm-disabled]) .gb_Ka a,
+:root:not([data-sdm-disabled]) .gb_La a,
+:root:not([data-sdm-disabled]) .gb_Ma a,
+:root:not([data-sdm-disabled]) .gb_Na a,
+:root:not([data-sdm-disabled]) .gb_Oa a {
+  color: var(--sdm-accent) !important;
+}
+
+:root:not([data-sdm-disabled]) .gb_Qe [role="button"],
+:root:not([data-sdm-disabled]) .gb_Se [role="button"],
+:root:not([data-sdm-disabled]) .gb_Te [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ue [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ve [role="button"],
+:root:not([data-sdm-disabled]) .gb_Wa [role="button"],
+:root:not([data-sdm-disabled]) .gb_Xa [role="button"],
+:root:not([data-sdm-disabled]) .gb_Za [role="button"],
+:root:not([data-sdm-disabled]) .gb_0a [role="button"],
+:root:not([data-sdm-disabled]) .gb_1a [role="button"],
+:root:not([data-sdm-disabled]) .gb_2a [role="button"],
+:root:not([data-sdm-disabled]) .gb_3a [role="button"],
+:root:not([data-sdm-disabled]) .gb_4a [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ea [role="button"],
+:root:not([data-sdm-disabled]) .gb_Fa [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ga [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ha [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ia [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ja [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ka [role="button"],
+:root:not([data-sdm-disabled]) .gb_La [role="button"],
+:root:not([data-sdm-disabled]) .gb_Ma [role="button"],
+:root:not([data-sdm-disabled]) .gb_Na [role="button"],
+:root:not([data-sdm-disabled]) .gb_Oa [role="button"] {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .gb_Qe [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Se [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Te [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ue [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ve [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Wa [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Xa [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Za [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_0a [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_1a [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_2a [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_3a [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_4a [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ea [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Fa [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ga [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ha [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ia [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ja [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ka [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_La [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Ma [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Na [role="button"]:hover,
+:root:not([data-sdm-disabled]) .gb_Oa [role="button"]:hover {
+  background: var(--sdm-surface-3) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color:white"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color: white"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background:white"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background: white"] {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .TC,
+:root:not([data-sdm-disabled]) .TD,
+:root:not([data-sdm-disabled]) .aRv,
+:root:not([data-sdm-disabled]) .aRu,
+:root:not([data-sdm-disabled]) .aRz,
+:root:not([data-sdm-disabled]) .BltHke,
+:root:not([data-sdm-disabled]) .Cp .UI,
+:root:not([data-sdm-disabled]) .Cp .F,
+:root:not([data-sdm-disabled]) .ae4 .Cp {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .T-I.T-I-KE,
+:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3,
+:root:not([data-sdm-disabled]) .z0 > .L3,
+:root:not([data-sdm-disabled]) [gh="cm"] {
+  background: #b9ddff !important;
+  border-color: #b9ddff !important;
+  color: #0b1524 !important;
+  box-shadow: none !important;
+}
+
+:root:not([data-sdm-disabled]) .T-I.T-I-KE *,
+:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3 *,
+:root:not([data-sdm-disabled]) .z0 > .L3 *,
+:root:not([data-sdm-disabled]) [gh="cm"] * {
+  color: #0b1524 !important;
+}
+
+:root:not([data-sdm-disabled]) .T-I.T-I-KE:hover,
+:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3:hover,
+:root:not([data-sdm-disabled]) .z0 > .L3:hover,
+:root:not([data-sdm-disabled]) [gh="cm"]:hover {
+  background: #d2ebff !important;
+  border-color: #d2ebff !important;
+  color: #0b1524 !important;
+}
+
+:root:not([data-sdm-disabled]) .TN.bzz,
+:root:not([data-sdm-disabled]) .TN.bzz .aio,
+:root:not([data-sdm-disabled]) .TN.bzz .aio span,
+:root:not([data-sdm-disabled]) .TN.bzz .n0,
+:root:not([data-sdm-disabled]) .TN.bzz a,
+:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt,
+:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt .aio,
+:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt .aio span,
+:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt .n0,
+:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt a,
+:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt div,
+:root:not([data-sdm-disabled]) .TO.NQ,
+:root:not([data-sdm-disabled]) .TO.NQ .aio,
+:root:not([data-sdm-disabled]) .TO.NQ .aio span,
+:root:not([data-sdm-disabled]) .TO.NQ .n0,
+:root:not([data-sdm-disabled]) .TO.NQ a {
+  background: var(--sdm-selected) !important;
+  color: var(--sdm-text) !important;
+  opacity: 1 !important;
+}
+
+:root:not([data-sdm-disabled]) .TN.bzz:hover,
+:root:not([data-sdm-disabled]) .TN.bzz:hover .aio,
+:root:not([data-sdm-disabled]) .TN.bzz:hover .aio span,
+:root:not([data-sdm-disabled]) .TN.bzz:hover .n0,
+:root:not([data-sdm-disabled]) .TN.bzz:hover a,
+:root:not([data-sdm-disabled]) .aHS-bnt:hover,
+:root:not([data-sdm-disabled]) .aHS-bnt:hover .aio,
+:root:not([data-sdm-disabled]) .aHS-bnt:hover .aio span,
+:root:not([data-sdm-disabled]) .aHS-bnt:hover .n0,
+:root:not([data-sdm-disabled]) .aHS-bnt:hover a {
+  background: var(--sdm-selected-hover) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="navigation"] .aKz,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKw,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKo,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKn,
+:root:not([data-sdm-disabled]) [role="navigation"] .CJ,
+:root:not([data-sdm-disabled]) [role="navigation"] .n4,
+:root:not([data-sdm-disabled]) [role="navigation"] .TK,
+:root:not([data-sdm-disabled]) [role="navigation"] [style*="color: rgb(95, 99, 104)"],
+:root:not([data-sdm-disabled]) [role="navigation"] [style*="color:#5f6368"],
+:root:not([data-sdm-disabled]) [role="navigation"] [style*="color: #5f6368"] {
+  color: var(--sdm-muted) !important;
+  opacity: 1 !important;
+}
+
+:root:not([data-sdm-disabled]) [role="main"] .BltHke,
+:root:not([data-sdm-disabled]) [role="main"] .aRv,
+:root:not([data-sdm-disabled]) [role="main"] .aRu,
+:root:not([data-sdm-disabled]) [role="main"] .aRz,
+:root:not([data-sdm-disabled]) [role="main"] [style*="color: rgb(95, 99, 104)"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="color:#5f6368"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="color: #5f6368"] {
+  color: var(--sdm-muted) !important;
+  opacity: 1 !important;
+}

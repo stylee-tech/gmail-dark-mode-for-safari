@@ -1,0 +1,391 @@
+:root:not([data-sdm-disabled]) {
+  color-scheme: dark !important;
+  --sdm-bg: #0f1115;
+  --sdm-bg-elevated: #13161c;
+  --sdm-surface: #171b22;
+  --sdm-surface-2: #202630;
+  --sdm-surface-3: #2a3240;
+  --sdm-border: #343c49;
+  --sdm-border-strong: #596273;
+  --sdm-text: #eef2f7;
+  --sdm-muted: #aeb7c5;
+  --sdm-dim: #7d8796;
+  --sdm-accent: #8ab4f8;
+  --sdm-accent-bg: #1d3152;
+  --sdm-selected: #d8e3ff;
+  --sdm-warning: #fdd663;
+  --sdm-danger: #f28b82;
+}
+
+:root:not([data-sdm-disabled]),
+:root:not([data-sdm-disabled]) body {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) a {
+  color: var(--sdm-accent) !important;
+}
+
+:root:not([data-sdm-disabled]) input,
+:root:not([data-sdm-disabled]) textarea,
+:root:not([data-sdm-disabled]) select {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) input::placeholder,
+:root:not([data-sdm-disabled]) textarea::placeholder {
+  color: var(--sdm-dim) !important;
+}
+
+:root:not([data-sdm-disabled]) ::selection {
+  background: #31588f !important;
+  color: #ffffff !important;
+}
+
+:root:not([data-sdm-disabled]) ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+:root:not([data-sdm-disabled]) ::-webkit-scrollbar-track {
+  background: var(--sdm-bg) !important;
+}
+
+:root:not([data-sdm-disabled]) ::-webkit-scrollbar-thumb {
+  background: var(--sdm-surface-3) !important;
+  border: 3px solid var(--sdm-bg) !important;
+  border-radius: 999px !important;
+}
+
+/* Gmail */
+:root:not([data-sdm-disabled]) .nH,
+:root:not([data-sdm-disabled]) .aeN,
+:root:not([data-sdm-disabled]) .aeF,
+:root:not([data-sdm-disabled]) .AO,
+:root:not([data-sdm-disabled]) .Tm,
+:root:not([data-sdm-disabled]) .aic,
+:root:not([data-sdm-disabled]) [role="main"],
+:root:not([data-sdm-disabled]) [role="navigation"],
+:root:not([data-sdm-disabled]) [role="complementary"] {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) header,
+:root:not([data-sdm-disabled]) .gb_Td,
+:root:not([data-sdm-disabled]) .gb_Dd,
+:root:not([data-sdm-disabled]) .gb_Fd,
+:root:not([data-sdm-disabled]) .gb_Ue,
+:root:not([data-sdm-disabled]) .gb_2d {
+  background: var(--sdm-bg-elevated) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .aAU,
+:root:not([data-sdm-disabled]) .gb_qe,
+:root:not([data-sdm-disabled]) form[role="search"],
+:root:not([data-sdm-disabled]) input[aria-label="Search mail"],
+:root:not([data-sdm-disabled]) input[aria-label="Search in mail"] {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .T-I,
+:root:not([data-sdm-disabled]) .J-J5-Ji,
+:root:not([data-sdm-disabled]) [role="button"] {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .zA,
+:root:not([data-sdm-disabled]) .yO,
+:root:not([data-sdm-disabled]) .x7,
+:root:not([data-sdm-disabled]) .Cp,
+:root:not([data-sdm-disabled]) .UI,
+:root:not([data-sdm-disabled]) tr,
+:root:not([data-sdm-disabled]) td {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .zA:hover,
+:root:not([data-sdm-disabled]) tr:hover,
+:root:not([data-sdm-disabled]) [aria-selected="true"] {
+  background: var(--sdm-surface-2) !important;
+}
+
+:root:not([data-sdm-disabled]) .TO.NQ,
+:root:not([data-sdm-disabled]) .TO:hover,
+:root:not([data-sdm-disabled]) .aim:hover,
+:root:not([data-sdm-disabled]) [aria-current="page"] {
+  background: var(--sdm-selected) !important;
+  color: #183153 !important;
+}
+
+:root:not([data-sdm-disabled]) .bog,
+:root:not([data-sdm-disabled]) .bqe,
+:root:not([data-sdm-disabled]) .yP,
+:root:not([data-sdm-disabled]) .zF,
+:root:not([data-sdm-disabled]) .av,
+:root:not([data-sdm-disabled]) .aio,
+:root:not([data-sdm-disabled]) .aio span,
+:root:not([data-sdm-disabled]) .G2,
+:root:not([data-sdm-disabled]) .ha,
+:root:not([data-sdm-disabled]) .hP {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .y2,
+:root:not([data-sdm-disabled]) .bsU,
+:root:not([data-sdm-disabled]) .gD,
+:root:not([data-sdm-disabled]) .g3,
+:root:not([data-sdm-disabled]) .hx,
+:root:not([data-sdm-disabled]) .aKz {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s,
+:root:not([data-sdm-disabled]) .ii,
+:root:not([data-sdm-disabled]) .Am,
+:root:not([data-sdm-disabled]) .editable,
+:root:not([data-sdm-disabled]) .adn,
+:root:not([data-sdm-disabled]) .gs {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .J-M,
+:root:not([data-sdm-disabled]) .b8,
+:root:not([data-sdm-disabled]) .vh,
+:root:not([data-sdm-disabled]) .Kj-JD,
+:root:not([data-sdm-disabled]) div[role="dialog"],
+:root:not([data-sdm-disabled]) div[aria-modal="true"],
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] {
+  background: var(--sdm-surface) !important;
+  border-color: var(--sdm-border-strong) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) div[role="dialog"] div,
+:root:not([data-sdm-disabled]) div[role="dialog"] section,
+:root:not([data-sdm-disabled]) div[role="dialog"] [role="presentation"],
+:root:not([data-sdm-disabled]) div[aria-modal="true"] div,
+:root:not([data-sdm-disabled]) div[aria-modal="true"] section,
+:root:not([data-sdm-disabled]) div[aria-modal="true"] [role="presentation"],
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] div,
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] section,
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] [role="presentation"] {
+  background-color: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) div[role="dialog"] h1,
+:root:not([data-sdm-disabled]) div[role="dialog"] h2,
+:root:not([data-sdm-disabled]) div[role="dialog"] h3,
+:root:not([data-sdm-disabled]) div[role="dialog"] span,
+:root:not([data-sdm-disabled]) div[role="dialog"] label,
+:root:not([data-sdm-disabled]) div[role="dialog"] [role="heading"],
+:root:not([data-sdm-disabled]) div[aria-modal="true"] h1,
+:root:not([data-sdm-disabled]) div[aria-modal="true"] h2,
+:root:not([data-sdm-disabled]) div[aria-modal="true"] h3,
+:root:not([data-sdm-disabled]) div[aria-modal="true"] span,
+:root:not([data-sdm-disabled]) div[aria-modal="true"] label,
+:root:not([data-sdm-disabled]) div[aria-modal="true"] [role="heading"],
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] h1,
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] h2,
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] h3,
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] span,
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] label,
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] [role="heading"] {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) div[role="dialog"] button,
+:root:not([data-sdm-disabled]) div[role="dialog"] [role="button"],
+:root:not([data-sdm-disabled]) div[aria-modal="true"] button,
+:root:not([data-sdm-disabled]) div[aria-modal="true"] [role="button"],
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] button,
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] [role="button"] {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) div[role="dialog"] [aria-disabled="true"],
+:root:not([data-sdm-disabled]) div[aria-modal="true"] [aria-disabled="true"],
+:root:not([data-sdm-disabled]) [aria-label="Quick settings"] [aria-disabled="true"] {
+  color: var(--sdm-dim) !important;
+  opacity: 0.55 !important;
+}
+
+:root:not([data-sdm-disabled]) .AD,
+:root:not([data-sdm-disabled]) .M9,
+:root:not([data-sdm-disabled]) .aoI,
+:root:not([data-sdm-disabled]) .aoP,
+:root:not([data-sdm-disabled]) .aoT,
+:root:not([data-sdm-disabled]) .aoD,
+:root:not([data-sdm-disabled]) .aoY,
+:root:not([data-sdm-disabled]) .Ar,
+:root:not([data-sdm-disabled]) .At,
+:root:not([data-sdm-disabled]) .aDh,
+:root:not([data-sdm-disabled]) .btC,
+:root:not([data-sdm-disabled]) .gU,
+:root:not([data-sdm-disabled]) .J-Z,
+:root:not([data-sdm-disabled]) .J-JN-M-I,
+:root:not([data-sdm-disabled]) .wO,
+:root:not([data-sdm-disabled]) .vO,
+:root:not([data-sdm-disabled]) .ao5,
+:root:not([data-sdm-disabled]) .aoO {
+  background: var(--sdm-surface) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .M9 {
+  box-shadow: 0 18px 50px rgb(0 0 0 / 45%) !important;
+}
+
+:root:not([data-sdm-disabled]) .aoT,
+:root:not([data-sdm-disabled]) .aoD {
+  box-shadow: inset 0 -1px 0 var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .vO,
+:root:not([data-sdm-disabled]) .aoT input,
+:root:not([data-sdm-disabled]) .aoD input,
+:root:not([data-sdm-disabled]) .aoP input {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .aoT .aB,
+:root:not([data-sdm-disabled]) .aoD .aB,
+:root:not([data-sdm-disabled]) .aYF,
+:root:not([data-sdm-disabled]) .aHS-bnt {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s img,
+:root:not([data-sdm-disabled]) .ii img,
+:root:not([data-sdm-disabled]) .adn img,
+:root:not([data-sdm-disabled]) div[role="dialog"] img {
+  filter: none !important;
+}
+
+/* Google Sheets */
+:root:not([data-sdm-disabled]) #docs-chrome,
+:root:not([data-sdm-disabled]) #docs-header,
+:root:not([data-sdm-disabled]) #docs-header-container,
+:root:not([data-sdm-disabled]) #docs-branding-container,
+:root:not([data-sdm-disabled]) #docs-titlebar-container,
+:root:not([data-sdm-disabled]) #docs-toolbar-wrapper,
+:root:not([data-sdm-disabled]) #docs-menubar,
+:root:not([data-sdm-disabled]) #formula-bar,
+:root:not([data-sdm-disabled]) .docs-titlebar,
+:root:not([data-sdm-disabled]) .docs-title-outer,
+:root:not([data-sdm-disabled]) .docs-gm,
+:root:not([data-sdm-disabled]) .waffle-sheet-container,
+:root:not([data-sdm-disabled]) .grid-container,
+:root:not([data-sdm-disabled]) .waffle-cell-input,
+:root:not([data-sdm-disabled]) .waffle-formula-bar {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-title-input,
+:root:not([data-sdm-disabled]) .cell-input,
+:root:not([data-sdm-disabled]) .formula-content,
+:root:not([data-sdm-disabled]) .waffle-name-box,
+:root:not([data-sdm-disabled]) .docs-gm .goog-inline-block {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-menubar,
+:root:not([data-sdm-disabled]) .goog-menubar,
+:root:not([data-sdm-disabled]) .goog-menubar .goog-menu-button,
+:root:not([data-sdm-disabled]) .docs-title-input-label,
+:root:not([data-sdm-disabled]) .docs-title-widget,
+:root:not([data-sdm-disabled]) .docs-titlebar-buttons,
+:root:not([data-sdm-disabled]) .docs-gm .goog-menu-button,
+:root:not([data-sdm-disabled]) .docs-gm .goog-toolbar-menu-button {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-toolbar,
+:root:not([data-sdm-disabled]) .docs-toolbar,
+:root:not([data-sdm-disabled]) .docs-gm .docs-toolbar,
+:root:not([data-sdm-disabled]) .goog-toolbar-button,
+:root:not([data-sdm-disabled]) .goog-toolbar-toggle-button,
+:root:not([data-sdm-disabled]) .goog-toolbar-menu-button,
+:root:not([data-sdm-disabled]) .docs-material-button,
+:root:not([data-sdm-disabled]) .jfk-button,
+:root:not([data-sdm-disabled]) .jfk-button-standard {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-toolbar-button-hover,
+:root:not([data-sdm-disabled]) .goog-toolbar-menu-button-hover,
+:root:not([data-sdm-disabled]) .jfk-button-hover,
+:root:not([data-sdm-disabled]) .docs-material-button-hover {
+  background: var(--sdm-surface-3) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-toolbar-button-checked,
+:root:not([data-sdm-disabled]) .goog-toolbar-toggle-button-checked,
+:root:not([data-sdm-disabled]) .docs-material-button-selected {
+  background: var(--sdm-accent-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-menu,
+:root:not([data-sdm-disabled]) .goog-menuitem,
+:root:not([data-sdm-disabled]) .docs-material,
+:root:not([data-sdm-disabled]) .modal-dialog,
+:root:not([data-sdm-disabled]) .docs-gm .goog-menu {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-menuitem-highlight,
+:root:not([data-sdm-disabled]) .goog-menuitem-hover,
+:root:not([data-sdm-disabled]) .goog-menuitem:hover {
+  background: var(--sdm-surface-2) !important;
+}
+
+:root:not([data-sdm-disabled]) .waffle-sheet-tab,
+:root:not([data-sdm-disabled]) .docs-sheet-tab,
+:root:not([data-sdm-disabled]) .grid-bottom-bar,
+:root:not([data-sdm-disabled]) .waffle-bottom-bar {
+  background: var(--sdm-bg-elevated) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .waffle-sheet-tab-active,
+:root:not([data-sdm-disabled]) .docs-sheet-tab-selected {
+  background: var(--sdm-accent-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-gm .docs-titlebar-buttons,
+:root:not([data-sdm-disabled]) .docs-gm .docs-chat,
+:root:not([data-sdm-disabled]) .docs-gm .docs-icon {
+  background-color: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) canvas {
+  filter: invert(0.9) hue-rotate(180deg) saturate(0.85) contrast(0.9) brightness(0.92) !important;
+}
+
+:root:not([data-sdm-disabled]) img,
+:root:not([data-sdm-disabled]) video,
+:root:not([data-sdm-disabled]) svg {
+  filter: none !important;
+}

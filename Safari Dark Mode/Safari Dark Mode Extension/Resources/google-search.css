@@ -1,0 +1,295 @@
+:root:not([data-sdm-disabled]) {
+  color-scheme: dark !important;
+  --sdm-bg: #111317;
+  --sdm-bg-elevated: #151820;
+  --sdm-surface: #1b2028;
+  --sdm-surface-2: #232936;
+  --sdm-surface-3: #303848;
+  --sdm-border: #394252;
+  --sdm-text: #e8eaed;
+  --sdm-muted: #bdc4cf;
+  --sdm-dim: #8f98a7;
+  --sdm-accent: #8ab4f8;
+  --sdm-accent-bg: #1e334f;
+}
+
+:root:not([data-sdm-disabled]),
+:root:not([data-sdm-disabled]) html {
+  background: var(--sdm-bg) !important;
+}
+
+:root:not([data-sdm-disabled]) body,
+:root:not([data-sdm-disabled]) #cnt,
+:root:not([data-sdm-disabled]) #main,
+:root:not([data-sdm-disabled]) #search,
+:root:not([data-sdm-disabled]) #center_col,
+:root:not([data-sdm-disabled]) #rhs,
+:root:not([data-sdm-disabled]) #rcnt,
+:root:not([data-sdm-disabled]) #rso,
+:root:not([data-sdm-disabled]) #bres,
+:root:not([data-sdm-disabled]) #botstuff,
+:root:not([data-sdm-disabled]) #foot,
+:root:not([data-sdm-disabled]) #fbar,
+:root:not([data-sdm-disabled]) #top_nav,
+:root:not([data-sdm-disabled]) .GyAeWb,
+:root:not([data-sdm-disabled]) .appbar,
+:root:not([data-sdm-disabled]) .sfbg,
+:root:not([data-sdm-disabled]) .sfbgg,
+:root:not([data-sdm-disabled]) .minidiv .sfbg,
+:root:not([data-sdm-disabled]) .kp-wholepage,
+:root:not([data-sdm-disabled]) .ULSxyf,
+:root:not([data-sdm-disabled]) .AaVjTc,
+:root:not([data-sdm-disabled]) .WE0UJf,
+:root:not([data-sdm-disabled]) .main,
+:root:not([data-sdm-disabled]) .By0U9,
+:root:not([data-sdm-disabled]) .eqAnXb,
+:root:not([data-sdm-disabled]) .TQc1id,
+:root:not([data-sdm-disabled]) .dURPMd {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) header,
+:root:not([data-sdm-disabled]) #searchform,
+:root:not([data-sdm-disabled]) #searchform > div,
+:root:not([data-sdm-disabled]) .logo,
+:root:not([data-sdm-disabled]) .dodTBe,
+:root:not([data-sdm-disabled]) .yg51vc,
+:root:not([data-sdm-disabled]) .MUFPAc,
+:root:not([data-sdm-disabled]) .hdtb-mitem,
+:root:not([data-sdm-disabled]) .hdtb-msel,
+:root:not([data-sdm-disabled]) .GOE98c,
+:root:not([data-sdm-disabled]) .Lj9fsd,
+:root:not([data-sdm-disabled]) .Q3DXx {
+  background: var(--sdm-bg-elevated) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) textarea[name="q"],
+:root:not([data-sdm-disabled]) input[name="q"],
+:root:not([data-sdm-disabled]) .RNNXgb,
+:root:not([data-sdm-disabled]) .a4bIc,
+:root:not([data-sdm-disabled]) .W6pGoe,
+:root:not([data-sdm-disabled]) .erkvQe,
+:root:not([data-sdm-disabled]) .sbct,
+:root:not([data-sdm-disabled]) .G43f7e,
+:root:not([data-sdm-disabled]) .SDkEP,
+:root:not([data-sdm-disabled]) .iblpc,
+:root:not([data-sdm-disabled]) .A8SBwf,
+:root:not([data-sdm-disabled]) .UUbT9 {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .RNNXgb:hover,
+:root:not([data-sdm-disabled]) .RNNXgb:focus-within,
+:root:not([data-sdm-disabled]) .sbct:hover {
+  background: var(--sdm-surface-3) !important;
+  border-color: var(--sdm-border-strong) !important;
+}
+
+:root:not([data-sdm-disabled]) .g,
+:root:not([data-sdm-disabled]) .MjjYud,
+:root:not([data-sdm-disabled]) .Ww4FFb,
+:root:not([data-sdm-disabled]) .cUnQKe,
+:root:not([data-sdm-disabled]) .ULSxyf,
+:root:not([data-sdm-disabled]) .commercial-unit-desktop-top,
+:root:not([data-sdm-disabled]) .I6TXqe,
+:root:not([data-sdm-disabled]) .kp-blk,
+:root:not([data-sdm-disabled]) .osrp-blk,
+:root:not([data-sdm-disabled]) .ifM9O,
+:root:not([data-sdm-disabled]) .YbJVL,
+:root:not([data-sdm-disabled]) .M8OgIe,
+:root:not([data-sdm-disabled]) .Lu57id,
+:root:not([data-sdm-disabled]) .commercial-unit-desktop-rhs,
+:root:not([data-sdm-disabled]) .ULSxyf,
+:root:not([data-sdm-disabled]) .VjDLd,
+:root:not([data-sdm-disabled]) .wHYlTd,
+:root:not([data-sdm-disabled]) .gIYJUc,
+:root:not([data-sdm-disabled]) .usJj9c,
+:root:not([data-sdm-disabled]) .LGOjhe,
+:root:not([data-sdm-disabled]) .xpd,
+:root:not([data-sdm-disabled]) .xpdopen,
+:root:not([data-sdm-disabled]) .xpdclose,
+:root:not([data-sdm-disabled]) .related-question-pair {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .Ww4FFb,
+:root:not([data-sdm-disabled]) .kp-blk,
+:root:not([data-sdm-disabled]) .osrp-blk,
+:root:not([data-sdm-disabled]) .ifM9O,
+:root:not([data-sdm-disabled]) .YbJVL,
+:root:not([data-sdm-disabled]) .Lu57id,
+:root:not([data-sdm-disabled]) .M8OgIe,
+:root:not([data-sdm-disabled]) .VjDLd,
+:root:not([data-sdm-disabled]) .wHYlTd,
+:root:not([data-sdm-disabled]) .gIYJUc,
+:root:not([data-sdm-disabled]) .usJj9c,
+:root:not([data-sdm-disabled]) .LGOjhe,
+:root:not([data-sdm-disabled]) .So9e7d,
+:root:not([data-sdm-disabled]) .cLjAic,
+:root:not([data-sdm-disabled]) .pkphOe,
+:root:not([data-sdm-disabled]) .obcontainer,
+:root:not([data-sdm-disabled]) .fG8Fp {
+  background: var(--sdm-surface) !important;
+}
+
+:root:not([data-sdm-disabled]) h1,
+:root:not([data-sdm-disabled]) h2,
+:root:not([data-sdm-disabled]) h3,
+:root:not([data-sdm-disabled]) .LC20lb,
+:root:not([data-sdm-disabled]) .DKV0Md,
+:root:not([data-sdm-disabled]) .qrShPb,
+:root:not([data-sdm-disabled]) .SPZz6b,
+:root:not([data-sdm-disabled]) .A6K0A,
+:root:not([data-sdm-disabled]) .yuRUbf,
+:root:not([data-sdm-disabled]) .yuRUbf a,
+:root:not([data-sdm-disabled]) .yuRUbf span,
+:root:not([data-sdm-disabled]) .mCBkyc,
+:root:not([data-sdm-disabled]) .pymv4e,
+:root:not([data-sdm-disabled]) .LGOjhe,
+:root:not([data-sdm-disabled]) .CVA68e,
+:root:not([data-sdm-disabled]) .GmE3X,
+:root:not([data-sdm-disabled]) .dbg0pd,
+:root:not([data-sdm-disabled]) .OSrXXb {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) a,
+:root:not([data-sdm-disabled]) a:visited,
+:root:not([data-sdm-disabled]) .qLRx3b,
+:root:not([data-sdm-disabled]) .fl,
+:root:not([data-sdm-disabled]) .R1QWuf,
+:root:not([data-sdm-disabled]) .MUFPAc a,
+:root:not([data-sdm-disabled]) .hide-focus-ring,
+:root:not([data-sdm-disabled]) .VuuXrf a,
+:root:not([data-sdm-disabled]) .fl a {
+  color: var(--sdm-accent) !important;
+}
+
+:root:not([data-sdm-disabled]) cite,
+:root:not([data-sdm-disabled]) .NJjxre,
+:root:not([data-sdm-disabled]) .tjvcx,
+:root:not([data-sdm-disabled]) .iUh30,
+:root:not([data-sdm-disabled]) .VuuXrf,
+:root:not([data-sdm-disabled]) .qzEoUe,
+:root:not([data-sdm-disabled]) .apx8Vc,
+:root:not([data-sdm-disabled]) .IsZvec,
+:root:not([data-sdm-disabled]) .VwiC3b,
+:root:not([data-sdm-disabled]) .MUxGbd,
+:root:not([data-sdm-disabled]) .yDYNvb,
+:root:not([data-sdm-disabled]) .wwUB2c,
+:root:not([data-sdm-disabled]) .kno-rdesc,
+:root:not([data-sdm-disabled]) .hgKElc,
+:root:not([data-sdm-disabled]) .wDYxhc,
+:root:not([data-sdm-disabled]) .hgKElc span,
+:root:not([data-sdm-disabled]) .YrbPuc,
+:root:not([data-sdm-disabled]) .yXK7lf,
+:root:not([data-sdm-disabled]) .lEBKkf,
+:root:not([data-sdm-disabled]) .LEwnzc,
+:root:not([data-sdm-disabled]) .iAIpCb,
+:root:not([data-sdm-disabled]) .xpdopen .hgKElc {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .TbwUpd,
+:root:not([data-sdm-disabled]) .BYM4Nd,
+:root:not([data-sdm-disabled]) .H9lube,
+:root:not([data-sdm-disabled]) .PZPZlf,
+:root:not([data-sdm-disabled]) .BNeawe,
+:root:not([data-sdm-disabled]) .QyR1Ze,
+:root:not([data-sdm-disabled]) .X5LH0c {
+  color: var(--sdm-dim) !important;
+}
+
+:root:not([data-sdm-disabled]) .gb_C,
+:root:not([data-sdm-disabled]) .gb_D,
+:root:not([data-sdm-disabled]) .gb_E,
+:root:not([data-sdm-disabled]) .gb_F,
+:root:not([data-sdm-disabled]) .gb_Xa,
+:root:not([data-sdm-disabled]) .gb_Za,
+:root:not([data-sdm-disabled]) .gb_2d,
+:root:not([data-sdm-disabled]) .gb_Se,
+:root:not([data-sdm-disabled]) .gb_Ue,
+:root:not([data-sdm-disabled]) .gb_1e {
+  background: var(--sdm-bg-elevated) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .VfPpkd-LgbsSe,
+:root:not([data-sdm-disabled]) .ksb,
+:root:not([data-sdm-disabled]) .gbqfba,
+:root:not([data-sdm-disabled]) button,
+:root:not([data-sdm-disabled]) [role="button"],
+:root:not([data-sdm-disabled]) .qIbj0e,
+:root:not([data-sdm-disabled]) .GKS7s,
+:root:not([data-sdm-disabled]) .MJ8UF,
+:root:not([data-sdm-disabled]) .YmvwI {
+  background-color: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) button:hover,
+:root:not([data-sdm-disabled]) [role="button"]:hover,
+:root:not([data-sdm-disabled]) .qIbj0e:hover,
+:root:not([data-sdm-disabled]) .GKS7s:hover,
+:root:not([data-sdm-disabled]) .MJ8UF:hover,
+:root:not([data-sdm-disabled]) .YmvwI:hover,
+:root:not([data-sdm-disabled]) .sbct:hover {
+  background-color: var(--sdm-surface-3) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) hr,
+:root:not([data-sdm-disabled]) .eFM0qc,
+:root:not([data-sdm-disabled]) .KFFQ0c,
+:root:not([data-sdm-disabled]) .mnr-c,
+:root:not([data-sdm-disabled]) .YmvwI {
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color:white"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color: white"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background:white"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="background: white"],
+:root:not([data-sdm-disabled]) #rhs [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) #rhs [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) #rhs [style*="background-color:white"],
+:root:not([data-sdm-disabled]) #rhs [style*="background-color: white"] {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="main"] [style*="color: rgb(32, 33, 36)"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="color:#202124"],
+:root:not([data-sdm-disabled]) [role="main"] [style*="color: #202124"],
+:root:not([data-sdm-disabled]) #rhs [style*="color: rgb(32, 33, 36)"],
+:root:not([data-sdm-disabled]) #rhs [style*="color:#202124"],
+:root:not([data-sdm-disabled]) #rhs [style*="color: #202124"] {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .GKS7s,
+:root:not([data-sdm-disabled]) .gGQDvd,
+:root:not([data-sdm-disabled]) .S8ee5,
+:root:not([data-sdm-disabled]) .M6CB1c,
+:root:not([data-sdm-disabled]) .Ww4FFb,
+:root:not([data-sdm-disabled]) .VjDLd,
+:root:not([data-sdm-disabled]) .akqY6 {
+  box-shadow: none !important;
+}
+
+:root:not([data-sdm-disabled]) img,
+:root:not([data-sdm-disabled]) video,
+:root:not([data-sdm-disabled]) svg {
+  filter: none !important;
+}

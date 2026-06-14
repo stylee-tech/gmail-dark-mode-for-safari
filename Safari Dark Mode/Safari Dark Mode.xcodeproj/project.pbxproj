@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAF902B42FDBA4AE00824537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF902B32FDBA4AE00824537 /* AppDelegate.swift */; };
+		CAF902B82FDBA4AE00824537 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = CAF902B62FDBA4AE00824537 /* Main.html */; };
+		CAF902BA2FDBA4AE00824537 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF902B92FDBA4AE00824537 /* Icon.png */; };
+		CAF902BC2FDBA4AE00824537 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF902BB2FDBA4AE00824537 /* Style.css */; };
+		CAF902BE2FDBA4AE00824537 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF902BD2FDBA4AE00824537 /* Script.js */; };
+		CAF902C02FDBA4AE00824537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF902BF2FDBA4AE00824537 /* ViewController.swift */; };
+		CAF902C32FDBA4AE00824537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF902C12FDBA4AE00824537 /* Main.storyboard */; };
+		CAF902C52FDBA4AE00824537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF902C42FDBA4AE00824537 /* Assets.xcassets */; };
+		CAF902CC2FDBA4AF00824537 /* Safari Dark Mode Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CAF902CB2FDBA4AF00824537 /* Safari Dark Mode Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CAF902D12FDBA4AF00824537 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF902D02FDBA4AF00824537 /* SafariWebExtensionHandler.swift */; };
+		CAF902E22FDBA4AF00824537 /* popup in Resources */ = {isa = PBXBuildFile; fileRef = CAF902DD2FDBA4AF00824537 /* popup */; };
+		CAF902E32FDBA4AF00824537 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = CAF902DE2FDBA4AF00824537 /* icons */; };
+		CAF902E42FDBA4AF00824537 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = CAF902DF2FDBA4AF00824537 /* manifest.json */; };
+		CAF902E62FDBA4AF00824537 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF902E12FDBA4AF00824537 /* content.js */; };
+		CAF903002FDBA4AF00824537 /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF903032FDBA4AF00824537 /* base.css */; };
+		CAF903012FDBA4AF00824537 /* gmail.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF903042FDBA4AF00824537 /* gmail.css */; };
+		CAF903022FDBA4AF00824537 /* sheets.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF903052FDBA4AF00824537 /* sheets.css */; };
+		CAF903062FDBA4AF00824537 /* preload.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF903072FDBA4AF00824537 /* preload.js */; };
+		CAF903082FDBA4AF00824537 /* google-search.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF903092FDBA4AF00824537 /* google-search.css */; };
+		CAF9030A2FDBA4AF00824537 /* filter.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF9030B2FDBA4AF00824537 /* filter.css */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAF902CD2FDBA4AF00824537 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAF902A82FDBA4AE00824537 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAF902CA2FDBA4AF00824537;
+			remoteInfo = "Safari Dark Mode Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CAF902D82FDBA4AF00824537 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CAF902CC2FDBA4AF00824537 /* Safari Dark Mode Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CAF902B02FDBA4AE00824537 /* Safari Dark Mode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safari Dark Mode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF902B32FDBA4AE00824537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAF902B72FDBA4AE00824537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		CAF902B92FDBA4AE00824537 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CAF902BB2FDBA4AE00824537 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		CAF902BD2FDBA4AE00824537 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		CAF902BF2FDBA4AE00824537 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAF902C22FDBA4AE00824537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAF902C42FDBA4AE00824537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAF902C62FDBA4AE00824537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAF902CB2FDBA4AF00824537 /* Safari Dark Mode Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Safari Dark Mode Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF902D02FDBA4AF00824537 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		CAF902D22FDBA4AF00824537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAF902DD2FDBA4AF00824537 /* popup */ = {isa = PBXFileReference; lastKnownFileType = folder; name = popup; path = Resources/popup; sourceTree = "<group>"; };
+		CAF902DE2FDBA4AF00824537 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		CAF902DF2FDBA4AF00824537 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		CAF902E12FDBA4AF00824537 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = Resources/content.js; sourceTree = "<group>"; };
+		CAF903032FDBA4AF00824537 /* base.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = base.css; path = Resources/base.css; sourceTree = "<group>"; };
+		CAF903042FDBA4AF00824537 /* gmail.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = gmail.css; path = Resources/gmail.css; sourceTree = "<group>"; };
+		CAF903052FDBA4AF00824537 /* sheets.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = sheets.css; path = Resources/sheets.css; sourceTree = "<group>"; };
+		CAF903072FDBA4AF00824537 /* preload.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = preload.js; path = Resources/preload.js; sourceTree = "<group>"; };
+		CAF903092FDBA4AF00824537 /* google-search.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = "google-search.css"; path = "Resources/google-search.css"; sourceTree = "<group>"; };
+		CAF9030B2FDBA4AF00824537 /* filter.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = filter.css; path = Resources/filter.css; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAF902AD2FDBA4AE00824537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF902C82FDBA4AF00824537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAF902A72FDBA4AE00824537 = {
+			isa = PBXGroup;
+			children = (
+				CAF902B22FDBA4AE00824537 /* Safari Dark Mode */,
+				CAF902CF2FDBA4AF00824537 /* Safari Dark Mode Extension */,
+				CAF902B12FDBA4AE00824537 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAF902B12FDBA4AE00824537 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAF902B02FDBA4AE00824537 /* Safari Dark Mode.app */,
+				CAF902CB2FDBA4AF00824537 /* Safari Dark Mode Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAF902B22FDBA4AE00824537 /* Safari Dark Mode */ = {
+			isa = PBXGroup;
+			children = (
+				CAF902B32FDBA4AE00824537 /* AppDelegate.swift */,
+				CAF902BF2FDBA4AE00824537 /* ViewController.swift */,
+				CAF902C12FDBA4AE00824537 /* Main.storyboard */,
+				CAF902C42FDBA4AE00824537 /* Assets.xcassets */,
+				CAF902C62FDBA4AE00824537 /* Info.plist */,
+				CAF902B52FDBA4AE00824537 /* Resources */,
+			);
+			path = "Safari Dark Mode";
+			sourceTree = "<group>";
+		};
+		CAF902B52FDBA4AE00824537 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CAF902B62FDBA4AE00824537 /* Main.html */,
+				CAF902B92FDBA4AE00824537 /* Icon.png */,
+				CAF902BB2FDBA4AE00824537 /* Style.css */,
+				CAF902BD2FDBA4AE00824537 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CAF902CF2FDBA4AF00824537 /* Safari Dark Mode Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CAF902DC2FDBA4AF00824537 /* Resources */,
+				CAF902D02FDBA4AF00824537 /* SafariWebExtensionHandler.swift */,
+				CAF902D22FDBA4AF00824537 /* Info.plist */,
+			);
+			path = "Safari Dark Mode Extension";
+			sourceTree = "<group>";
+		};
+		CAF902DC2FDBA4AF00824537 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CAF902DD2FDBA4AF00824537 /* popup */,
+				CAF902DE2FDBA4AF00824537 /* icons */,
+				CAF902DF2FDBA4AF00824537 /* manifest.json */,
+				CAF903032FDBA4AF00824537 /* base.css */,
+				CAF903042FDBA4AF00824537 /* gmail.css */,
+				CAF903052FDBA4AF00824537 /* sheets.css */,
+				CAF9030B2FDBA4AF00824537 /* filter.css */,
+				CAF903092FDBA4AF00824537 /* google-search.css */,
+				CAF903072FDBA4AF00824537 /* preload.js */,
+				CAF902E12FDBA4AF00824537 /* content.js */,
+			);
+			name = Resources;
+			path = "Safari Dark Mode Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAF902AF2FDBA4AE00824537 /* Safari Dark Mode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAF902D92FDBA4AF00824537 /* Build configuration list for PBXNativeTarget "Safari Dark Mode" */;
+			buildPhases = (
+				CAF902AC2FDBA4AE00824537 /* Sources */,
+				CAF902AD2FDBA4AE00824537 /* Frameworks */,
+				CAF902AE2FDBA4AE00824537 /* Resources */,
+				CAF902D82FDBA4AF00824537 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAF902CE2FDBA4AF00824537 /* PBXTargetDependency */,
+			);
+			name = "Safari Dark Mode";
+			packageProductDependencies = (
+			);
+			productName = "Safari Dark Mode";
+			productReference = CAF902B02FDBA4AE00824537 /* Safari Dark Mode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAF902CA2FDBA4AF00824537 /* Safari Dark Mode Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAF902D52FDBA4AF00824537 /* Build configuration list for PBXNativeTarget "Safari Dark Mode Extension" */;
+			buildPhases = (
+				CAF902C72FDBA4AF00824537 /* Sources */,
+				CAF902C82FDBA4AF00824537 /* Frameworks */,
+				CAF902C92FDBA4AF00824537 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Safari Dark Mode Extension";
+			packageProductDependencies = (
+			);
+			productName = "Safari Dark Mode Extension";
+			productReference = CAF902CB2FDBA4AF00824537 /* Safari Dark Mode Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAF902A82FDBA4AE00824537 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					CAF902AF2FDBA4AE00824537 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					CAF902CA2FDBA4AF00824537 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = CAF902AB2FDBA4AE00824537 /* Build configuration list for PBXProject "Safari Dark Mode" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAF902A72FDBA4AE00824537;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CAF902B12FDBA4AE00824537 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAF902AF2FDBA4AE00824537 /* Safari Dark Mode */,
+				CAF902CA2FDBA4AF00824537 /* Safari Dark Mode Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAF902AE2FDBA4AE00824537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF902BA2FDBA4AE00824537 /* Icon.png in Resources */,
+				CAF902C32FDBA4AE00824537 /* Main.storyboard in Resources */,
+				CAF902BE2FDBA4AE00824537 /* Script.js in Resources */,
+				CAF902B82FDBA4AE00824537 /* Main.html in Resources */,
+				CAF902C52FDBA4AE00824537 /* Assets.xcassets in Resources */,
+				CAF902BC2FDBA4AE00824537 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF902C92FDBA4AF00824537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF903002FDBA4AF00824537 /* base.css in Resources */,
+				CAF903012FDBA4AF00824537 /* gmail.css in Resources */,
+				CAF903022FDBA4AF00824537 /* sheets.css in Resources */,
+				CAF9030A2FDBA4AF00824537 /* filter.css in Resources */,
+				CAF903082FDBA4AF00824537 /* google-search.css in Resources */,
+				CAF903062FDBA4AF00824537 /* preload.js in Resources */,
+				CAF902E22FDBA4AF00824537 /* popup in Resources */,
+				CAF902E42FDBA4AF00824537 /* manifest.json in Resources */,
+				CAF902E32FDBA4AF00824537 /* icons in Resources */,
+				CAF902E62FDBA4AF00824537 /* content.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAF902AC2FDBA4AE00824537 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF902C02FDBA4AE00824537 /* ViewController.swift in Sources */,
+				CAF902B42FDBA4AE00824537 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF902C72FDBA4AF00824537 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF902D12FDBA4AF00824537 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAF902CE2FDBA4AF00824537 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAF902CA2FDBA4AF00824537 /* Safari Dark Mode Extension */;
+			targetProxy = CAF902CD2FDBA4AF00824537 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAF902B62FDBA4AE00824537 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF902B72FDBA4AE00824537 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		CAF902C12FDBA4AE00824537 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF902C22FDBA4AE00824537 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAF902D32FDBA4AF00824537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAF902D42FDBA4AF00824537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		CAF902D62FDBA4AF00824537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Safari Dark Mode Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safari Dark Mode Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pavelsuzdaltsev.safaridarkmode.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CAF902D72FDBA4AF00824537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Safari Dark Mode Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safari Dark Mode Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pavelsuzdaltsev.safaridarkmode.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CAF902DA2FDBA4AF00824537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Safari Dark Mode/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safari Dark Mode";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pavelsuzdaltsev.safaridarkmode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CAF902DB2FDBA4AF00824537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Safari Dark Mode/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safari Dark Mode";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pavelsuzdaltsev.safaridarkmode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAF902AB2FDBA4AE00824537 /* Build configuration list for PBXProject "Safari Dark Mode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF902D32FDBA4AF00824537 /* Debug */,
+				CAF902D42FDBA4AF00824537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAF902D52FDBA4AF00824537 /* Build configuration list for PBXNativeTarget "Safari Dark Mode Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF902D62FDBA4AF00824537 /* Debug */,
+				CAF902D72FDBA4AF00824537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAF902D92FDBA4AF00824537 /* Build configuration list for PBXNativeTarget "Safari Dark Mode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF902DA2FDBA4AF00824537 /* Debug */,
+				CAF902DB2FDBA4AF00824537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAF902A82FDBA4AE00824537 /* Project object */;
+}

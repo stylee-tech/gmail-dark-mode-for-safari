@@ -1,0 +1,25 @@
+:root:not([data-sdm-disabled]) {
+  background: #202124 !important;
+  color-scheme: dark !important;
+}
+
+:root:not([data-sdm-disabled]) body {
+  background-color: #202124 !important;
+  filter: invert(0.86) hue-rotate(165deg) saturate(0.92) contrast(0.96) brightness(0.95) !important;
+}
+
+:root:not([data-sdm-disabled]) img,
+:root:not([data-sdm-disabled]) picture,
+:root:not([data-sdm-disabled]) video,
+:root:not([data-sdm-disabled]) svg,
+:root:not([data-sdm-disabled]) iframe,
+:root:not([data-sdm-disabled]) [style*="background-image"] {
+  filter: invert(1) hue-rotate(-165deg) saturate(1.08) contrast(1.04) brightness(1.05) !important;
+}
+
+:root:not([data-sdm-disabled]) iframe img,
+:root:not([data-sdm-disabled]) iframe video,
+:root:not([data-sdm-disabled]) iframe canvas,
+:root:not([data-sdm-disabled]) iframe svg {
+  filter: none !important;
+}

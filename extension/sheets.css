@@ -1,0 +1,195 @@
+:root:not([data-sdm-disabled]) {
+  --sdm-bg: #17191d;
+  --sdm-bg-elevated: #1d2128;
+  --sdm-surface: #222730;
+  --sdm-surface-2: #2a303b;
+  --sdm-surface-3: #343c49;
+  --sdm-border: #424a57;
+  --sdm-border-strong: #687282;
+  --sdm-text: #e8ecf2;
+  --sdm-muted: #b8c0cc;
+  --sdm-dim: #9099a8;
+  --sdm-accent-bg: #233653;
+}
+
+:root:not([data-sdm-disabled]),
+:root:not([data-sdm-disabled]) body,
+:root:not([data-sdm-disabled]) #docs-editor-container,
+:root:not([data-sdm-disabled]) #docs-chrome,
+:root:not([data-sdm-disabled]) #docs-header,
+:root:not([data-sdm-disabled]) #docs-header-container,
+:root:not([data-sdm-disabled]) #docs-branding-container,
+:root:not([data-sdm-disabled]) #docs-titlebar-container,
+:root:not([data-sdm-disabled]) #docs-toolbar-wrapper,
+:root:not([data-sdm-disabled]) #docs-menubar,
+:root:not([data-sdm-disabled]) #formula-bar,
+:root:not([data-sdm-disabled]) .docs-titlebar,
+:root:not([data-sdm-disabled]) .docs-title-outer,
+:root:not([data-sdm-disabled]) .docs-gm,
+:root:not([data-sdm-disabled]) .waffle-sheet-container,
+:root:not([data-sdm-disabled]) .grid-container,
+:root:not([data-sdm-disabled]) .waffle-grid-container,
+:root:not([data-sdm-disabled]) [id$="-grid-table-container"],
+:root:not([data-sdm-disabled]) .grid-table-container,
+:root:not([data-sdm-disabled]) .fixed-table-container,
+:root:not([data-sdm-disabled]) .grid-fixed-wrapper,
+:root:not([data-sdm-disabled]) .grid-scrollable-wrapper,
+:root:not([data-sdm-disabled]) .fixed4-inner-container,
+:root:not([data-sdm-disabled]) .grid4-inner-container,
+:root:not([data-sdm-disabled]) .waffle-background-container,
+:root:not([data-sdm-disabled]) .waffle-cell-input,
+:root:not([data-sdm-disabled]) .waffle-formula-bar {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-title-input,
+:root:not([data-sdm-disabled]) .cell-input,
+:root:not([data-sdm-disabled]) .formula-content,
+:root:not([data-sdm-disabled]) .waffle-name-box,
+:root:not([data-sdm-disabled]) .docs-gm .goog-inline-block {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-menubar,
+:root:not([data-sdm-disabled]) .goog-menubar,
+:root:not([data-sdm-disabled]) .goog-menubar .goog-menu-button,
+:root:not([data-sdm-disabled]) .docs-title-input-label,
+:root:not([data-sdm-disabled]) .docs-title-widget,
+:root:not([data-sdm-disabled]) .docs-titlebar-buttons,
+:root:not([data-sdm-disabled]) .docs-gm .goog-menu-button,
+:root:not([data-sdm-disabled]) .docs-gm .goog-toolbar-menu-button {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-toolbar,
+:root:not([data-sdm-disabled]) .docs-toolbar,
+:root:not([data-sdm-disabled]) .docs-gm .docs-toolbar,
+:root:not([data-sdm-disabled]) .goog-toolbar-button,
+:root:not([data-sdm-disabled]) .goog-toolbar-toggle-button,
+:root:not([data-sdm-disabled]) .goog-toolbar-menu-button,
+:root:not([data-sdm-disabled]) .docs-material-button,
+:root:not([data-sdm-disabled]) .jfk-button,
+:root:not([data-sdm-disabled]) .jfk-button-standard {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-toolbar-button-hover,
+:root:not([data-sdm-disabled]) .goog-toolbar-menu-button-hover,
+:root:not([data-sdm-disabled]) .jfk-button-hover,
+:root:not([data-sdm-disabled]) .docs-material-button-hover {
+  background: var(--sdm-surface-3) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-toolbar-button-checked,
+:root:not([data-sdm-disabled]) .goog-toolbar-toggle-button-checked,
+:root:not([data-sdm-disabled]) .docs-material-button-selected {
+  background: var(--sdm-accent-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-menu,
+:root:not([data-sdm-disabled]) .goog-menuitem,
+:root:not([data-sdm-disabled]) .docs-material,
+:root:not([data-sdm-disabled]) .modal-dialog,
+:root:not([data-sdm-disabled]) .docs-gm .goog-menu {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-menuitem-highlight,
+:root:not([data-sdm-disabled]) .goog-menuitem-hover,
+:root:not([data-sdm-disabled]) .goog-menuitem:hover {
+  background: var(--sdm-surface-2) !important;
+}
+
+:root:not([data-sdm-disabled]) .waffle-sheet-tab,
+:root:not([data-sdm-disabled]) .docs-sheet-tab,
+:root:not([data-sdm-disabled]) .grid-bottom-bar,
+:root:not([data-sdm-disabled]) .waffle-bottom-bar {
+  background: var(--sdm-bg-elevated) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .waffle-sheet-tab-active,
+:root:not([data-sdm-disabled]) .docs-sheet-tab-selected {
+  background: var(--sdm-accent-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-gm .docs-titlebar-buttons,
+:root:not([data-sdm-disabled]) .docs-gm .docs-chat,
+:root:not([data-sdm-disabled]) .docs-gm .docs-icon {
+  background-color: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) .uberlay,
+:root:not([data-sdm-disabled]) .overlay-container-ltr {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .selection {
+  background-color: #8ab4f8 !important;
+}
+
+:root:not([data-sdm-disabled]) .range-border.active-cell-border,
+:root:not([data-sdm-disabled]) .range-border.selection-border,
+:root:not([data-sdm-disabled]) .range-border.autofill-border,
+:root:not([data-sdm-disabled]) .range-border.waffle-clipboard-border {
+  border-color: #8ab4f8 !important;
+}
+
+:root:not([data-sdm-disabled]) .waffle-sheet-container,
+:root:not([data-sdm-disabled]) .grid-container,
+:root:not([data-sdm-disabled]) .waffle-grid-container,
+:root:not([data-sdm-disabled]) [id$="-grid-table-container"],
+:root:not([data-sdm-disabled]) .grid-table-container,
+:root:not([data-sdm-disabled]) .fixed-table-container,
+:root:not([data-sdm-disabled]) .grid-fixed-wrapper,
+:root:not([data-sdm-disabled]) .grid-scrollable-wrapper,
+:root:not([data-sdm-disabled]) .fixed4-inner-container,
+:root:not([data-sdm-disabled]) .grid4-inner-container,
+:root:not([data-sdm-disabled]) .waffle-background-container {
+  background: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) #waffle-grid-container,
+:root:not([data-sdm-disabled]) [id$="-grid-table-container"] {
+  background: #20252e !important;
+}
+
+:root:not([data-sdm-disabled]) #waffle-grid-container canvas,
+:root:not([data-sdm-disabled]) [id$="-grid-table-container"] > canvas {
+  filter: invert(0.86) hue-rotate(180deg) brightness(0.94) contrast(0.88) saturate(0.75) !important;
+}
+
+:root:not([data-sdm-disabled]) .row-headers-background,
+:root:not([data-sdm-disabled]) .column-headers-background,
+:root:not([data-sdm-disabled]) .selected-row-headers-background,
+:root:not([data-sdm-disabled]) .selected-column-headers-background {
+  background: #252b34 !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .freezebar-handle,
+:root:not([data-sdm-disabled]) .freezebar-drop,
+:root:not([data-sdm-disabled]) .rowcol-dragger-handle-bar,
+:root:not([data-sdm-disabled]) .rowcol-dragger-drop-bar,
+:root:not([data-sdm-disabled]) .resizer-handle-bar,
+:root:not([data-sdm-disabled]) .resizer-drop-bar,
+:root:not([data-sdm-disabled]) .column-freezebar-extension,
+:root:not([data-sdm-disabled]) .row-freezebar-extension {
+  background-color: var(--sdm-border-strong) !important;
+}
+
+:root:not([data-sdm-disabled]) img,
+:root:not([data-sdm-disabled]) video,
+:root:not([data-sdm-disabled]) svg {
+  filter: none !important;
+}

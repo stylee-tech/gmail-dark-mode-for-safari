@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="popup.css">
+    <title>Safari Dark Mode</title>
+  </head>
+  <body>
+    <main>
+      <h1>Safari Dark Mode</h1>
+      <p id="site-label">Checking this page...</p>
+      <label class="toggle-row">
+        <span>Enable for this site</span>
+        <input id="enabled-toggle" type="checkbox" checked>
+      </label>
+      <p id="appearance-status"></p>
+      <p id="unsupported" hidden>This extension only runs on Gmail, Google Sheets, and Google Search.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
