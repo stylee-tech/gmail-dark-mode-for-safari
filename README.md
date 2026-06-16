@@ -8,6 +8,9 @@ Personal Safari Web Extension that applies a focused dark theme to:
 
 This is intentionally not a general-purpose dark-mode engine. It keeps the
 permission surface small and only targets the Google products I use.
+The extension also asks Safari for Google account/app-picker hosts so embedded
+Gmail account switcher surfaces can be themed, but standalone account pages are
+ignored by the product registry.
 
 ## Build the Safari wrapper
 
@@ -31,7 +34,8 @@ and enable the extension in Safari:
 
 1. Safari -> Settings -> Extensions
 2. Enable "Safari Dark Mode"
-3. Grant access for Gmail, Google Sheets, and Google Search when Safari prompts
+3. Grant access for Gmail, Google Sheets, Google Search, and the Google account
+   helper domains Safari prompts for
 
 For personal local use, enable Safari's Develop menu and choose
 `Develop -> Allow Unsigned Extensions` if Safari does not show the debug build.

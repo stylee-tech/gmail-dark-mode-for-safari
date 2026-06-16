@@ -1,47 +1,48 @@
 (function () {
   const api = globalThis.browser || globalThis.chrome;
-  const product = detectProduct();
-  const background = "#0f1115";
-  const foreground = "#eef2f7";
+  const registry = globalThis.__safariDarkModeRegistry;
+  const product = registry ? registry.detectProduct() : null;
+  const styleManager = api && registry && product
+    ? registry.createStyleManager(api, product)
+    : null;
   const colorSchemeQuery = globalThis.matchMedia
     ? globalThis.matchMedia("(prefers-color-scheme: dark)")
     : null;
-  const defaults = {
-    gmail: true,
-    sheets: true,
-    googleSearch: true
-  };
-  const style = document.createElement("style");
-  let siteEnabled = true;
+  const preloadStyle = document.createElement("style");
+  let siteEnabled = false;
+  let settingsReady = false;
+
+  document.documentElement.dataset.sdmPreload = "pending";
 
   if (product) {
     document.documentElement.dataset.sdmProduct = product;
+    document.documentElement.dataset.sdmRenderers = registry.renderersFor(product).join(" ");
   }
 
-  applyState();
-
-  style.id = "sdm-preload";
-  style.textContent = `
+  preloadStyle.id = `${registry ? registry.namespace : "pavel-safari-dark-mode"}-preload`;
+  preloadStyle.className = registry ? registry.namespace : "pavel-safari-dark-mode";
+  preloadStyle.setAttribute("data-pavel-safari-dark-mode", "preload");
+  preloadStyle.textContent = `
     html:not([data-sdm-disabled]),
     html:not([data-sdm-disabled]) body {
-      background: ${background} !important;
-      color: ${foreground} !important;
+      background: #151922 !important;
+      color: #eef2f7 !important;
       color-scheme: dark !important;
     }
   `;
 
-  if (document.head) {
-    document.head.prepend(style);
-  } else {
-    document.documentElement.prepend(style);
-  }
+  (document.head || document.documentElement).prepend(preloadStyle);
+  applyState();
 
-  if (api && product) {
-    api.storage.local.get({ enabledBySite: defaults }, (items) => {
-      const enabledBySite = items.enabledBySite || defaults;
-      siteEnabled = enabledBySite[product] !== false;
+  if (api && registry && product) {
+    registry.readEnabledBySite(api, (enabledBySite) => {
+      siteEnabled = registry.isProductEnabled(enabledBySite, product);
+      settingsReady = true;
       applyState();
     });
+  } else {
+    settingsReady = true;
+    applyState();
   }
 
   if (colorSchemeQuery) {
@@ -54,35 +55,24 @@
     }
   }
 
+  if (styleManager) {
+    styleManager.observe();
+  }
+
   function applyState() {
     const systemDark = !colorSchemeQuery || colorSchemeQuery.matches;
-    const enabled = Boolean(product && siteEnabled && systemDark);
+    const enabled = Boolean(product && settingsReady && siteEnabled && systemDark);
 
     document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
     document.documentElement.dataset.sdmEnabled = String(enabled);
     document.documentElement.dataset.sdmSiteEnabled = String(Boolean(siteEnabled));
     document.documentElement.dataset.sdmSystemDark = String(systemDark);
-  }
+    document.documentElement.dataset.sdmPreload = settingsReady
+      ? (enabled ? "enabled" : "disabled")
+      : "pending";
 
-  function detectProduct() {
-    if (location.hostname === "mail.google.com") {
-      return "gmail";
+    if (styleManager) {
+      styleManager.sync(enabled);
     }
-
-    if (
-      location.hostname === "docs.google.com" &&
-      location.pathname.startsWith("/spreadsheets/")
-    ) {
-      return "sheets";
-    }
-
-    if (
-      (location.hostname === "google.com" || location.hostname === "www.google.com") &&
-      location.pathname.startsWith("/search")
-    ) {
-      return "googleSearch";
-    }
-
-    return null;
   }
 })();

@@ -1,72 +1,32 @@
 (function () {
   const api = globalThis.browser || globalThis.chrome;
-  const product = detectProduct();
+  const registry = globalThis.__safariDarkModeRegistry;
+  const product = registry ? registry.detectProduct() : null;
   const colorSchemeQuery = globalThis.matchMedia
     ? globalThis.matchMedia("(prefers-color-scheme: dark)")
     : null;
 
-  if (!api || !product) {
+  if (!api || !registry || !product) {
     return;
   }
 
-  const defaults = {
-    gmail: true,
-    sheets: true,
-    googleSearch: true
-  };
+  const styleManager = registry.createStyleManager(api, product);
+  let enabledBySiteState = registry.defaults();
 
   document.documentElement.dataset.sdmProduct = product;
-  let enabledBySiteState = defaults;
-
-  function detectProduct() {
-    if (location.hostname === "mail.google.com") {
-      return "gmail";
-    }
-
-    if (
-      location.hostname === "docs.google.com" &&
-      location.pathname.startsWith("/spreadsheets/")
-    ) {
-      return "sheets";
-    }
-
-    if (
-      (location.hostname === "google.com" || location.hostname === "www.google.com") &&
-      location.pathname.startsWith("/search")
-    ) {
-      return "googleSearch";
-    }
-
-    return null;
-  }
-
-  function readSettings(callback) {
-    api.storage.local.get({ enabledBySite: defaults }, (items) => {
-      callback(items.enabledBySite || defaults);
-    });
-  }
-
-  function applyEnabled(enabledBySite) {
-    enabledBySiteState = Object.assign({}, defaults, enabledBySite);
-    const siteEnabled = enabledBySiteState[product] !== false;
-    const systemDark = isSystemDark();
-    const enabled = siteEnabled && systemDark;
-
-    document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
-    document.documentElement.dataset.sdmEnabled = String(enabled);
-    document.documentElement.dataset.sdmSiteEnabled = String(siteEnabled);
-    document.documentElement.dataset.sdmSystemDark = String(systemDark);
-  }
-
-  readSettings(applyEnabled);
+  document.documentElement.dataset.sdmRenderers = registry.renderersFor(product).join(" ");
+  styleManager.observe();
+  registry.readEnabledBySite(api, applyEnabled);
 
   if (api.storage.onChanged) {
     api.storage.onChanged.addListener((changes, areaName) => {
-      if (areaName !== "local" || !changes.enabledBySite) {
+      const storageChange = changes[registry.storageKey];
+
+      if (areaName !== "local" || !storageChange) {
         return;
       }
 
-      applyEnabled(changes.enabledBySite.newValue || defaults);
+      applyEnabled(storageChange.newValue || registry.defaults());
     });
   }
 
@@ -86,12 +46,17 @@
         return undefined;
       }
 
-      readSettings((enabledBySite) => {
-        const siteEnabled = enabledBySite[product] !== false;
+      if (!registry.isTopLevelWindow()) {
+        return undefined;
+      }
+
+      registry.readEnabledBySite(api, (enabledBySite) => {
+        const siteEnabled = registry.isProductEnabled(enabledBySite, product);
         const systemDark = isSystemDark();
 
         sendResponse({
           product,
+          renderers: registry.renderersFor(product),
           enabled: siteEnabled && systemDark,
           siteEnabled,
           systemDark
@@ -100,6 +65,20 @@
 
       return true;
     });
+  }
+
+  function applyEnabled(enabledBySite) {
+    enabledBySiteState = registry.normalizeEnabledBySite(enabledBySite);
+    const siteEnabled = registry.isProductEnabled(enabledBySiteState, product);
+    const systemDark = isSystemDark();
+    const enabled = siteEnabled && systemDark;
+
+    document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
+    document.documentElement.dataset.sdmEnabled = String(enabled);
+    document.documentElement.dataset.sdmSiteEnabled = String(siteEnabled);
+    document.documentElement.dataset.sdmSystemDark = String(systemDark);
+    document.documentElement.dataset.sdmPreload = enabled ? "enabled" : "disabled";
+    styleManager.sync(enabled);
   }
 
   function isSystemDark() {

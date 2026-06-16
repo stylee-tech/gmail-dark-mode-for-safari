@@ -1,24 +1,14 @@
 (function () {
   const api = globalThis.browser || globalThis.chrome;
+  const registry = globalThis.__safariDarkModeRegistry;
   const label = document.getElementById("site-label");
   const toggle = document.getElementById("enabled-toggle");
   const appearanceStatus = document.getElementById("appearance-status");
   const unsupported = document.getElementById("unsupported");
-  const defaults = {
-    gmail: true,
-    sheets: true,
-    googleSearch: true
-  };
-
-  const labels = {
-    gmail: "Gmail",
-    sheets: "Google Sheets",
-    googleSearch: "Google Search"
-  };
-
+  const labels = registry ? registry.labels() : {};
   let currentProduct = null;
 
-  if (!api) {
+  if (!api || !registry) {
     setUnsupported();
     return;
   }
@@ -56,10 +46,9 @@
       return;
     }
 
-    api.storage.local.get({ enabledBySite: defaults }, (items) => {
-      const enabledBySite = Object.assign({}, defaults, items.enabledBySite);
+    registry.readEnabledBySite(api, (enabledBySite) => {
       enabledBySite[currentProduct] = toggle.checked;
-      api.storage.local.set({ enabledBySite });
+      registry.writeEnabledBySite(api, enabledBySite);
     });
   });
 

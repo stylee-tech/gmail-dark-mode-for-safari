@@ -1,3 +1,7 @@
+:root:not([data-sdm-disabled]) {
+  --pavel-safari-dark-mode-gmail: applied;
+}
+
 :root:not([data-sdm-disabled]) body,
 :root:not([data-sdm-disabled]) div[role="application"],
 :root:not([data-sdm-disabled]) .bkK,
@@ -41,15 +45,66 @@
 :root:not([data-sdm-disabled]) .aAU,
 :root:not([data-sdm-disabled]) .gb_qe,
 :root:not([data-sdm-disabled]) .gb_2e,
-:root:not([data-sdm-disabled]) .gb_Ze,
-:root:not([data-sdm-disabled]) form[role="search"],
-:root:not([data-sdm-disabled]) [role="search"],
-:root:not([data-sdm-disabled]) [aria-label="Search mail"],
-:root:not([data-sdm-disabled]) [aria-label="Search in mail"],
-:root:not([data-sdm-disabled]) input[aria-label="Search mail"],
-:root:not([data-sdm-disabled]) input[aria-label="Search in mail"] {
+:root:not([data-sdm-disabled]) .gb_Ze {
   background: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(248, 250, 253)"],
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(241, 243, 244)"],
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: #fff"],
+:root:not([data-sdm-disabled]) .aAU [style*="background-color:#fff"],
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: #ffffff"],
+:root:not([data-sdm-disabled]) .aAU [style*="background-color:#ffffff"],
+:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(248, 250, 253)"],
+:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(241, 243, 244)"],
+:root:not([data-sdm-disabled]) .aAU [style*="background: #fff"],
+:root:not([data-sdm-disabled]) .aAU [style*="background:#fff"],
+:root:not([data-sdm-disabled]) .aAU [style*="background: #ffffff"],
+:root:not([data-sdm-disabled]) .aAU [style*="background:#ffffff"],
+:root:not([data-sdm-disabled]) .gb_qe [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_qe [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_2e [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_2e [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_Ze [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_Ze [style*="background: rgb(255, 255, 255)"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) .aAU input,
+:root:not([data-sdm-disabled]) input[aria-label="Search mail"],
+:root:not([data-sdm-disabled]) input[aria-label="Search in mail"],
+:root:not([data-sdm-disabled]) [aria-label="Search mail"] input,
+:root:not([data-sdm-disabled]) [aria-label="Search in mail"] input {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .aAU input::placeholder,
+:root:not([data-sdm-disabled]) input[aria-label="Search mail"]::placeholder,
+:root:not([data-sdm-disabled]) input[aria-label="Search in mail"]::placeholder {
+  color: var(--sdm-muted) !important;
+  opacity: 0.82 !important;
+}
+
+:root:not([data-sdm-disabled]) .aAU [role="button"],
+:root:not([data-sdm-disabled]) .aAU button {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--sdm-text) !important;
+  fill: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .aAU [role="button"]:hover,
+:root:not([data-sdm-disabled]) .aAU button:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: var(--sdm-text) !important;
+  fill: var(--sdm-text) !important;
 }
 
 :root:not([data-sdm-disabled]) .T-I,
@@ -61,10 +116,8 @@
 }
 
 :root:not([data-sdm-disabled]) a.J-Ke.n0.uA,
-:root:not([data-sdm-disabled]) .TO.NQ a.J-Ke,
-:root:not([data-sdm-disabled]) [aria-current="page"] a.J-Ke {
-  background: transparent !important;
-  color: var(--sdm-accent) !important;
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"] a.J-Ke {
+  color: var(--sdm-text) !important;
 }
 
 :root:not([data-sdm-disabled]) .zA,
@@ -98,7 +151,7 @@
 :root:not([data-sdm-disabled]) .TO.NQ,
 :root:not([data-sdm-disabled]) .TO:hover,
 :root:not([data-sdm-disabled]) .aim:hover,
-:root:not([data-sdm-disabled]) [aria-current="page"] {
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"] {
   background: var(--sdm-selected) !important;
   color: var(--sdm-text) !important;
 }
@@ -180,21 +233,29 @@
 
 :root:not([data-sdm-disabled]) .ii,
 :root:not([data-sdm-disabled]) .a3s {
-  background: #ffffff !important;
+  background: #d4d8de !important;
   color: #202124 !important;
   color-scheme: light !important;
 }
 
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: #fff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color:#fff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #ffffff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#ffffff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: white"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color:white"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(255, 255, 255)"],
 :root:not([data-sdm-disabled]) .a3s [style*="background: #fff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background:#fff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #ffffff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#ffffff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background: white"],
 :root:not([data-sdm-disabled]) .a3s [style*="background:white"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(255, 255, 255)"] {
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#fff"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#ffffff"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="white"] {
+  background-color: #d4d8de !important;
   color-scheme: light !important;
 }
 
@@ -277,12 +338,11 @@
 
 :root:not([data-sdm-disabled]) .TO.NQ,
 :root:not([data-sdm-disabled]) .TO.NQ:hover,
-:root:not([data-sdm-disabled]) .TO.NQ a.J-Ke,
-:root:not([data-sdm-disabled]) .TO.NQ .aio,
 :root:not([data-sdm-disabled]) .nZ.aHS,
 :root:not([data-sdm-disabled]) .nZ.aHS:hover,
-:root:not([data-sdm-disabled]) [aria-current="page"],
-:root:not([data-sdm-disabled]) [aria-current="page"] a {
+:root:not([data-sdm-disabled]) .nZ.aHS .J-Ke,
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"],
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"] a {
   background: var(--sdm-selected) !important;
   color: var(--sdm-text) !important;
 }
@@ -339,6 +399,145 @@
   background: var(--sdm-surface) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="listbox"] {
+  background: var(--sdm-bg-elevated) !important;
+  border: 1px solid var(--sdm-border) !important;
+  border-radius: 0 0 22px 22px !important;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.34) !important;
+  color: var(--sdm-text) !important;
+  overflow: hidden !important;
+}
+
+:root:not([data-sdm-disabled]) [role="listbox"] *,
+:root:not([data-sdm-disabled]) [role="listbox"] div,
+:root:not([data-sdm-disabled]) [role="listbox"] table,
+:root:not([data-sdm-disabled]) [role="listbox"] tbody,
+:root:not([data-sdm-disabled]) [role="listbox"] tr,
+:root:not([data-sdm-disabled]) [role="listbox"] td {
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="listbox"] > *,
+:root:not([data-sdm-disabled]) [role="listbox"] [role="option"],
+:root:not([data-sdm-disabled]) [role="listbox"] div,
+:root:not([data-sdm-disabled]) [role="listbox"] table,
+:root:not([data-sdm-disabled]) [role="listbox"] tbody,
+:root:not([data-sdm-disabled]) [role="listbox"] tr,
+:root:not([data-sdm-disabled]) [role="listbox"] td {
+  background: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) [role="listbox"] [role="option"]:hover,
+:root:not([data-sdm-disabled]) [role="listbox"] [aria-selected="true"],
+:root:not([data-sdm-disabled]) [role="listbox"] tr:hover,
+:root:not([data-sdm-disabled]) [role="listbox"] td:hover {
+  background: var(--sdm-selected-hover) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="listbox"] [role="button"],
+:root:not([data-sdm-disabled]) [role="listbox"] button,
+:root:not([data-sdm-disabled]) [role="listbox"] .T-I {
+  background: var(--sdm-surface-2) !important;
+  border: 1px solid var(--sdm-border) !important;
+  border-radius: 12px !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] {
+  background: var(--sdm-surface) !important;
+  border: 1px solid var(--sdm-border) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.34) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] table,
+:root:not([data-sdm-disabled]) [role="dialog"] tbody,
+:root:not([data-sdm-disabled]) [role="dialog"] tr,
+:root:not([data-sdm-disabled]) [role="dialog"] td {
+  background: transparent !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] div:not([role="button"]),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color:white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background:white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: white"] {
+  background: transparent !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color:white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background:white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: white"] {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] input,
+:root:not([data-sdm-disabled]) [role="dialog"] textarea,
+:root:not([data-sdm-disabled]) [role="dialog"] select {
+  background: var(--sdm-bg-elevated) !important;
+  border: 1px solid var(--sdm-border) !important;
+  border-radius: 8px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] input:focus,
+:root:not([data-sdm-disabled]) [role="dialog"] textarea:focus,
+:root:not([data-sdm-disabled]) [role="dialog"] select:focus {
+  border-color: rgba(138, 180, 248, 0.65) !important;
+  box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.16) !important;
+  outline: none !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] label,
+:root:not([data-sdm-disabled]) [role="dialog"] .J-J5-Ji,
+:root:not([data-sdm-disabled]) [role="dialog"] .T-I,
+:root:not([data-sdm-disabled]) [role="dialog"] [role="button"],
+:root:not([data-sdm-disabled]) [role="dialog"] button {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] [role="button"],
+:root:not([data-sdm-disabled]) [role="dialog"] button,
+:root:not([data-sdm-disabled]) [role="dialog"] .T-I:not(.T-I-KE) {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  border-radius: 12px !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] [role="button"]:hover,
+:root:not([data-sdm-disabled]) [role="dialog"] button:hover,
+:root:not([data-sdm-disabled]) [role="dialog"] .T-I:not(.T-I-KE):hover {
+  background: var(--sdm-surface-3) !important;
+  border-color: var(--sdm-border-strong) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] input[type="checkbox"] {
+  accent-color: var(--sdm-accent) !important;
+  background: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] .T-I-KE,
+:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"],
+:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"] {
+  background: #1a73e8 !important;
+  border-color: #1a73e8 !important;
+  border-radius: 999px !important;
+  color: #ffffff !important;
 }
 
 :root:not([data-sdm-disabled]) .gb_Qe *,
@@ -478,9 +677,9 @@
 :root:not([data-sdm-disabled]) .T-I.T-I-KE.L3,
 :root:not([data-sdm-disabled]) .z0 > .L3,
 :root:not([data-sdm-disabled]) [gh="cm"] {
-  background: #b9ddff !important;
-  border-color: #b9ddff !important;
-  color: #0b1524 !important;
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
   box-shadow: none !important;
 }
 
@@ -488,34 +687,23 @@
 :root:not([data-sdm-disabled]) .T-I.T-I-KE.L3 *,
 :root:not([data-sdm-disabled]) .z0 > .L3 *,
 :root:not([data-sdm-disabled]) [gh="cm"] * {
-  color: #0b1524 !important;
+  color: var(--sdm-text) !important;
 }
 
 :root:not([data-sdm-disabled]) .T-I.T-I-KE:hover,
 :root:not([data-sdm-disabled]) .T-I.T-I-KE.L3:hover,
 :root:not([data-sdm-disabled]) .z0 > .L3:hover,
 :root:not([data-sdm-disabled]) [gh="cm"]:hover {
-  background: #d2ebff !important;
-  border-color: #d2ebff !important;
-  color: #0b1524 !important;
+  background: var(--sdm-surface-3) !important;
+  border-color: var(--sdm-border-strong) !important;
+  color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .TN.bzz,
-:root:not([data-sdm-disabled]) .TN.bzz .aio,
-:root:not([data-sdm-disabled]) .TN.bzz .aio span,
-:root:not([data-sdm-disabled]) .TN.bzz .n0,
-:root:not([data-sdm-disabled]) .TN.bzz a,
-:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt,
-:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt .aio,
-:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt .aio span,
-:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt .n0,
-:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt a,
-:root:not([data-sdm-disabled]) .TN.bzz.aHS-bnt div,
 :root:not([data-sdm-disabled]) .TO.NQ,
-:root:not([data-sdm-disabled]) .TO.NQ .aio,
-:root:not([data-sdm-disabled]) .TO.NQ .aio span,
-:root:not([data-sdm-disabled]) .TO.NQ .n0,
-:root:not([data-sdm-disabled]) .TO.NQ a {
+:root:not([data-sdm-disabled]) .nZ.aHS,
+:root:not([data-sdm-disabled]) .nZ.aHS .J-Ke,
+:root:not([data-sdm-disabled]) a.J-Ke.n0.uA,
+:root:not([data-sdm-disabled]) .J-Ke.uA {
   background: var(--sdm-selected) !important;
   color: var(--sdm-text) !important;
   opacity: 1 !important;
@@ -557,5 +745,95 @@
 :root:not([data-sdm-disabled]) [role="main"] [style*="color:#5f6368"],
 :root:not([data-sdm-disabled]) [role="main"] [style*="color: #5f6368"] {
   color: var(--sdm-muted) !important;
+  opacity: 1 !important;
+}
+
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE,
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3,
+:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"],
+:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"] {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+  box-shadow: none !important;
+}
+
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE *,
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3 *,
+:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"] *,
+:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"] * {
+  color: var(--sdm-text) !important;
+  fill: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE:hover,
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3:hover,
+:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"]:hover,
+:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"]:hover {
+  background: var(--sdm-surface-3) !important;
+  border-color: var(--sdm-border-strong) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .J-Ke.n0.uA *,
+:root:not([data-sdm-disabled]) .J-Ke.uA * {
+  color: var(--sdm-text) !important;
+  fill: var(--sdm-text) !important;
+  opacity: 1 !important;
+}
+
+:root:not([data-sdm-disabled]) [role="navigation"] .aKz,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKz *,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKw,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKw *,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKo,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKo *,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKn,
+:root:not([data-sdm-disabled]) [role="navigation"] .aKn *,
+:root:not([data-sdm-disabled]) [role="navigation"] .CJ,
+:root:not([data-sdm-disabled]) [role="navigation"] .CJ *,
+:root:not([data-sdm-disabled]) [role="navigation"] .TK,
+:root:not([data-sdm-disabled]) [role="navigation"] .TK *,
+:root:not([data-sdm-disabled]) [role="navigation"] .n4,
+:root:not([data-sdm-disabled]) [role="navigation"] .n4 *,
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="More"],
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="More"] *,
+:root:not([data-sdm-disabled]) [role="navigation"] [title="More"],
+:root:not([data-sdm-disabled]) [role="navigation"] [title="More"] *,
+:root:not([data-sdm-disabled]) [role="navigation"] [data-tooltip="More"],
+:root:not([data-sdm-disabled]) [role="navigation"] [data-tooltip="More"] *,
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="Labels"],
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="Labels"] *,
+:root:not([data-sdm-disabled]) [role="navigation"] [title="Labels"],
+:root:not([data-sdm-disabled]) [role="navigation"] [title="Labels"] * {
+  color: var(--sdm-muted) !important;
+  fill: var(--sdm-muted) !important;
+  opacity: 1 !important;
+}
+
+:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)) .J-Ke,
+:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)) .J-Ke *,
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS) .J-Ke,
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS) .J-Ke * {
+  opacity: 1 !important;
+}
+
+:root:not([data-sdm-disabled]) [role="navigation"] .TN.bzz:not(.aHS):not(:hover),
+:root:not([data-sdm-disabled]) [role="navigation"] .TN.bzz:not(.aHS):not(:hover) .J-Ke,
+:root:not([data-sdm-disabled]) [role="navigation"] .TO:not(.NQ):not(:hover),
+:root:not([data-sdm-disabled]) [role="navigation"] .TO:not(.NQ):not(:hover) .J-Ke,
+:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)):not(:hover),
+:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)):not(:hover) .J-Ke,
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS):not(:hover),
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS):not(:hover) .J-Ke {
+  background: var(--sdm-bg) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS *,
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS .J-Ke *,
+:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ *,
+:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ .J-Ke * {
+  color: var(--sdm-text) !important;
+  fill: var(--sdm-text) !important;
   opacity: 1 !important;
 }

@@ -36,16 +36,15 @@
       defaultEnabled: true,
       renderers: ["css", "shader"],
       shader: {
-        opacity: 0.34,
-        background: "rgba(20, 25, 34, 0.34)",
-        backdropFilter: "brightness(0.82) saturate(0.9) contrast(0.98)",
+        opacity: 0.18,
+        background: "rgba(20, 25, 34, 0.18)",
+        backdropFilter: "brightness(0.92) saturate(0.96) contrast(0.98)",
         mixBlendMode: "multiply",
         targets: [
           "#waffle-grid-container",
           "[id$='-grid-table-container']",
           ".waffle-grid-container",
-          ".grid-container",
-          "#docs-editor"
+          ".grid-container"
         ]
       },
       styles: [styleCatalog.sheets]

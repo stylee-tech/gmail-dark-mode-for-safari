@@ -1,17 +1,18 @@
 :root:not([data-sdm-disabled]) {
   color-scheme: dark !important;
-  --sdm-bg: #0f1115;
-  --sdm-bg-elevated: #13161c;
-  --sdm-surface: #171b22;
-  --sdm-surface-2: #202630;
-  --sdm-surface-3: #2a3240;
-  --sdm-border: #343c49;
+  --pavel-safari-dark-mode-base: applied;
+  --sdm-bg: #151922;
+  --sdm-bg-elevated: #1b202a;
+  --sdm-surface: #202733;
+  --sdm-surface-2: #293241;
+  --sdm-surface-3: #344052;
+  --sdm-border: #445064;
   --sdm-border-strong: #596273;
   --sdm-text: #eef2f7;
   --sdm-muted: #aeb7c5;
   --sdm-dim: #7d8796;
   --sdm-accent: #8ab4f8;
-  --sdm-accent-bg: #1d3152;
+  --sdm-accent-bg: #243957;
   --sdm-selected: #1e3558;
   --sdm-selected-hover: #263f66;
 }

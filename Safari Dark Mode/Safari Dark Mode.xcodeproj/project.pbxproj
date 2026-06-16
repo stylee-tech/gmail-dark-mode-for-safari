@@ -27,6 +27,7 @@
 		CAF903062FDBA4AF00824537 /* preload.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF903072FDBA4AF00824537 /* preload.js */; };
 		CAF903082FDBA4AF00824537 /* google-search.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF903092FDBA4AF00824537 /* google-search.css */; };
 		CAF9030A2FDBA4AF00824537 /* filter.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF9030B2FDBA4AF00824537 /* filter.css */; };
+		CAF9030C2FDBA4AF00824537 /* site-registry.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF9030D2FDBA4AF00824537 /* site-registry.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		CAF903072FDBA4AF00824537 /* preload.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = preload.js; path = Resources/preload.js; sourceTree = "<group>"; };
 		CAF903092FDBA4AF00824537 /* google-search.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = "google-search.css"; path = "Resources/google-search.css"; sourceTree = "<group>"; };
 		CAF9030B2FDBA4AF00824537 /* filter.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = filter.css; path = Resources/filter.css; sourceTree = "<group>"; };
+		CAF9030D2FDBA4AF00824537 /* site-registry.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "site-registry.js"; path = "Resources/site-registry.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				CAF903052FDBA4AF00824537 /* sheets.css */,
 				CAF9030B2FDBA4AF00824537 /* filter.css */,
 				CAF903092FDBA4AF00824537 /* google-search.css */,
+				CAF9030D2FDBA4AF00824537 /* site-registry.js */,
 				CAF903072FDBA4AF00824537 /* preload.js */,
 				CAF902E12FDBA4AF00824537 /* content.js */,
 			);
@@ -271,6 +274,7 @@
 				CAF903022FDBA4AF00824537 /* sheets.css in Resources */,
 				CAF9030A2FDBA4AF00824537 /* filter.css in Resources */,
 				CAF903082FDBA4AF00824537 /* google-search.css in Resources */,
+				CAF9030C2FDBA4AF00824537 /* site-registry.js in Resources */,
 				CAF903062FDBA4AF00824537 /* preload.js in Resources */,
 				CAF902E22FDBA4AF00824537 /* popup in Resources */,
 				CAF902E42FDBA4AF00824537 /* manifest.json in Resources */,

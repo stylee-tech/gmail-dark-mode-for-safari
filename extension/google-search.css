@@ -1,16 +1,17 @@
 :root:not([data-sdm-disabled]) {
   color-scheme: dark !important;
-  --sdm-bg: #111317;
-  --sdm-bg-elevated: #151820;
-  --sdm-surface: #1b2028;
-  --sdm-surface-2: #232936;
-  --sdm-surface-3: #303848;
-  --sdm-border: #394252;
+  --pavel-safari-dark-mode-google-search: applied;
+  --sdm-bg: #151922;
+  --sdm-bg-elevated: #1b202a;
+  --sdm-surface: #202733;
+  --sdm-surface-2: #293241;
+  --sdm-surface-3: #344052;
+  --sdm-border: #445064;
   --sdm-text: #e8eaed;
-  --sdm-muted: #bdc4cf;
-  --sdm-dim: #8f98a7;
+  --sdm-muted: #d0d7e2;
+  --sdm-dim: #aeb8c8;
   --sdm-accent: #8ab4f8;
-  --sdm-accent-bg: #1e334f;
+  --sdm-accent-bg: #243957;
 }
 
 :root:not([data-sdm-disabled]),
@@ -219,6 +220,71 @@
 :root:not([data-sdm-disabled]) .gb_1e {
   background: var(--sdm-bg-elevated) !important;
   color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"],
+:root:not([data-sdm-disabled]) [role="menu"],
+:root:not([data-sdm-disabled]) .gb_C,
+:root:not([data-sdm-disabled]) .gb_D,
+:root:not([data-sdm-disabled]) .gb_E,
+:root:not([data-sdm-disabled]) .gb_F,
+:root:not([data-sdm-disabled]) .gb_Xa,
+:root:not([data-sdm-disabled]) .gb_Za,
+:root:not([data-sdm-disabled]) .gb_2d,
+:root:not([data-sdm-disabled]) .gb_Se,
+:root:not([data-sdm-disabled]) .gb_Ue,
+:root:not([data-sdm-disabled]) .gb_1e {
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] *,
+:root:not([data-sdm-disabled]) [role="menu"] *,
+:root:not([data-sdm-disabled]) .gb_C *,
+:root:not([data-sdm-disabled]) .gb_D *,
+:root:not([data-sdm-disabled]) .gb_E *,
+:root:not([data-sdm-disabled]) .gb_F *,
+:root:not([data-sdm-disabled]) .gb_Xa *,
+:root:not([data-sdm-disabled]) .gb_Za *,
+:root:not([data-sdm-disabled]) .gb_2d *,
+:root:not([data-sdm-disabled]) .gb_Se *,
+:root:not([data-sdm-disabled]) .gb_Ue *,
+:root:not([data-sdm-disabled]) .gb_1e * {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color:white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background:white"],
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: white"],
+:root:not([data-sdm-disabled]) .gb_C [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_C [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_C [style*="background-color:white"],
+:root:not([data-sdm-disabled]) .gb_C [style*="background-color: white"],
+:root:not([data-sdm-disabled]) .gb_C [style*="background:white"],
+:root:not([data-sdm-disabled]) .gb_C [style*="background: white"],
+:root:not([data-sdm-disabled]) .gb_D [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_D [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_D [style*="background-color:white"],
+:root:not([data-sdm-disabled]) .gb_D [style*="background-color: white"],
+:root:not([data-sdm-disabled]) .gb_D [style*="background:white"],
+:root:not([data-sdm-disabled]) .gb_D [style*="background: white"],
+:root:not([data-sdm-disabled]) .gb_E [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_E [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_E [style*="background-color:white"],
+:root:not([data-sdm-disabled]) .gb_E [style*="background-color: white"],
+:root:not([data-sdm-disabled]) .gb_E [style*="background:white"],
+:root:not([data-sdm-disabled]) .gb_E [style*="background: white"],
+:root:not([data-sdm-disabled]) .gb_F [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_F [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .gb_F [style*="background-color:white"],
+:root:not([data-sdm-disabled]) .gb_F [style*="background-color: white"],
+:root:not([data-sdm-disabled]) .gb_F [style*="background:white"],
+:root:not([data-sdm-disabled]) .gb_F [style*="background: white"] {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
 }
 
 :root:not([data-sdm-disabled]) .VfPpkd-LgbsSe,

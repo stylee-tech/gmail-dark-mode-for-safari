@@ -1,4 +1,5 @@
 :root:not([data-sdm-disabled]) {
+  --pavel-safari-dark-mode-sheets: applied;
   --sdm-bg: #17191d;
   --sdm-bg-elevated: #1d2128;
   --sdm-surface: #222730;
@@ -14,7 +15,6 @@
 
 :root:not([data-sdm-disabled]),
 :root:not([data-sdm-disabled]) body,
-:root:not([data-sdm-disabled]) #docs-editor-container,
 :root:not([data-sdm-disabled]) #docs-chrome,
 :root:not([data-sdm-disabled]) #docs-header,
 :root:not([data-sdm-disabled]) #docs-header-container,
@@ -26,17 +26,6 @@
 :root:not([data-sdm-disabled]) .docs-titlebar,
 :root:not([data-sdm-disabled]) .docs-title-outer,
 :root:not([data-sdm-disabled]) .docs-gm,
-:root:not([data-sdm-disabled]) .waffle-sheet-container,
-:root:not([data-sdm-disabled]) .grid-container,
-:root:not([data-sdm-disabled]) .waffle-grid-container,
-:root:not([data-sdm-disabled]) [id$="-grid-table-container"],
-:root:not([data-sdm-disabled]) .grid-table-container,
-:root:not([data-sdm-disabled]) .fixed-table-container,
-:root:not([data-sdm-disabled]) .grid-fixed-wrapper,
-:root:not([data-sdm-disabled]) .grid-scrollable-wrapper,
-:root:not([data-sdm-disabled]) .fixed4-inner-container,
-:root:not([data-sdm-disabled]) .grid4-inner-container,
-:root:not([data-sdm-disabled]) .waffle-background-container,
 :root:not([data-sdm-disabled]) .waffle-cell-input,
 :root:not([data-sdm-disabled]) .waffle-formula-bar {
   background: var(--sdm-bg) !important;
@@ -145,37 +134,8 @@
   border-color: #8ab4f8 !important;
 }
 
-:root:not([data-sdm-disabled]) .waffle-sheet-container,
-:root:not([data-sdm-disabled]) .grid-container,
-:root:not([data-sdm-disabled]) .waffle-grid-container,
-:root:not([data-sdm-disabled]) [id$="-grid-table-container"],
-:root:not([data-sdm-disabled]) .grid-table-container,
-:root:not([data-sdm-disabled]) .fixed-table-container,
-:root:not([data-sdm-disabled]) .grid-fixed-wrapper,
-:root:not([data-sdm-disabled]) .grid-scrollable-wrapper,
-:root:not([data-sdm-disabled]) .fixed4-inner-container,
-:root:not([data-sdm-disabled]) .grid4-inner-container,
-:root:not([data-sdm-disabled]) .waffle-background-container {
-  background: transparent !important;
-}
-
-:root:not([data-sdm-disabled]) #waffle-grid-container,
-:root:not([data-sdm-disabled]) [id$="-grid-table-container"] {
-  background: #20252e !important;
-}
-
-:root:not([data-sdm-disabled]) #waffle-grid-container canvas,
-:root:not([data-sdm-disabled]) [id$="-grid-table-container"] > canvas {
-  filter: invert(0.86) hue-rotate(180deg) brightness(0.94) contrast(0.88) saturate(0.75) !important;
-}
-
-:root:not([data-sdm-disabled]) .row-headers-background,
-:root:not([data-sdm-disabled]) .column-headers-background,
-:root:not([data-sdm-disabled]) .selected-row-headers-background,
-:root:not([data-sdm-disabled]) .selected-column-headers-background {
-  background: #252b34 !important;
-  border-color: var(--sdm-border) !important;
-}
+/* The grid itself is rendered and virtualized by Sheets. Keep it native and
+   soften it with the managed shader instead of chasing canvas/table internals. */
 
 :root:not([data-sdm-disabled]) .freezebar-handle,
 :root:not([data-sdm-disabled]) .freezebar-drop,

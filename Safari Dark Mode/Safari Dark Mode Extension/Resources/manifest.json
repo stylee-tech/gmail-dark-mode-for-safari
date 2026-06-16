@@ -12,6 +12,8 @@
     "storage",
     "https://mail.google.com/*",
     "https://ogs.google.com/*",
+    "https://accounts.google.com/*",
+    "https://myaccount.google.com/*",
     "https://docs.google.com/spreadsheets/*",
     "https://google.com/search*",
     "https://www.google.com/search*"
@@ -21,11 +23,8 @@
       "matches": [
         "https://mail.google.com/*"
       ],
-      "css": [
-        "base.css",
-        "gmail.css"
-      ],
       "js": [
+        "site-registry.js",
         "preload.js",
         "content.js"
       ],
@@ -36,11 +35,21 @@
       "matches": [
         "https://ogs.google.com/*"
       ],
-      "css": [
-        "base.css",
-        "gmail.css"
+      "js": [
+        "site-registry.js",
+        "preload.js",
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://accounts.google.com/*",
+        "https://myaccount.google.com/*"
       ],
       "js": [
+        "site-registry.js",
         "preload.js",
         "content.js"
       ],
@@ -51,10 +60,8 @@
       "matches": [
         "https://docs.google.com/spreadsheets/*"
       ],
-      "css": [
-        "sheets.css"
-      ],
       "js": [
+        "site-registry.js",
         "preload.js",
         "content.js"
       ],
@@ -65,16 +72,19 @@
         "https://google.com/search*",
         "https://www.google.com/search*"
       ],
-      "css": [
-        "base.css",
-        "google-search.css"
-      ],
       "js": [
+        "site-registry.js",
         "preload.js",
         "content.js"
       ],
       "run_at": "document_start"
     }
+  ],
+  "web_accessible_resources": [
+    "base.css",
+    "gmail.css",
+    "google-search.css",
+    "sheets.css"
   ],
   "browser_action": {
     "default_title": "Safari Dark Mode",
