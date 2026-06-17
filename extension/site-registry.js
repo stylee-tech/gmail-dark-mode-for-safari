@@ -1,6 +1,7 @@
 (function () {
   const namespace = "pavel-safari-dark-mode";
   const storageKey = "enabledBySite";
+  const preloadHintPrefix = `${namespace}:preload-site-enabled:`;
   const managedAttribute = "data-pavel-safari-dark-mode";
   const cssAppliedValue = "applied";
   const styleManagers = {};
@@ -54,28 +55,34 @@
       defaultEnabled: true,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.googleSearch]
+    },
+    googleHelper: {
+      label: "Google account helpers",
+      defaultEnabled: true,
+      inheritsFromFlow: true,
+      optimisticPreload: true,
+      renderers: ["css"],
+      styles: [styleCatalog.base, styleCatalog.gmail]
     }
   };
 
   function detectProduct(currentLocation, options) {
     const current = currentLocation || location;
-    const embedded = options && typeof options.embedded === "boolean"
-      ? options.embedded
-      : !isTopLevelWindow();
+    const includeHelpers = !options || options.includeHelpers !== false;
 
     if (current.hostname === "mail.google.com") {
       return "gmail";
     }
 
     if (current.hostname === "ogs.google.com") {
-      return embedded ? "gmail" : null;
+      return includeHelpers ? "googleHelper" : null;
     }
 
     if (
       current.hostname === "accounts.google.com" ||
       current.hostname === "myaccount.google.com"
     ) {
-      return embedded ? "gmail" : null;
+      return includeHelpers ? "googleHelper" : null;
     }
 
     if (
@@ -93,6 +100,55 @@
     }
 
     return null;
+  }
+
+  function detectContext(currentLocation, options) {
+    const product = detectProduct(currentLocation, options);
+
+    return {
+      product,
+      parentProduct: product === "googleHelper" ? detectParentProduct() : null
+    };
+  }
+
+  function detectParentProduct() {
+    const candidates = [];
+
+    try {
+      if (document.referrer) {
+        candidates.push(document.referrer);
+      }
+    } catch (_error) {
+      // Referrer can be unavailable in privacy-restricted frames.
+    }
+
+    try {
+      if (location.ancestorOrigins) {
+        for (let index = 0; index < location.ancestorOrigins.length; index += 1) {
+          candidates.push(location.ancestorOrigins[index]);
+        }
+      }
+    } catch (_error) {
+      // Safari/WebKit may omit ancestorOrigins in some contexts.
+    }
+
+    for (const candidate of candidates) {
+      const product = detectFlowProductFromUrl(candidate);
+
+      if (product) {
+        return product;
+      }
+    }
+
+    return null;
+  }
+
+  function detectFlowProductFromUrl(value) {
+    try {
+      return detectProduct(new URL(value), { includeHelpers: false });
+    } catch (_error) {
+      return null;
+    }
   }
 
   function isTopLevelWindow() {
@@ -131,8 +187,68 @@
     api.storage.local.set({ [storageKey]: normalizeEnabledBySite(enabledBySite) }, callback);
   }
 
-  function isProductEnabled(enabledBySite, product) {
-    return normalizeEnabledBySite(enabledBySite)[product] !== false;
+  function isProductEnabled(enabledBySite, product, context) {
+    const normalized = normalizeEnabledBySite(enabledBySite);
+
+    if (!product || normalized[product] === false) {
+      return false;
+    }
+
+    if (
+      products[product] &&
+      products[product].inheritsFromFlow &&
+      context &&
+      context.parentProduct &&
+      normalized[context.parentProduct] === false
+    ) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function isOwnProductEnabled(enabledBySite, product) {
+    return Boolean(product && normalizeEnabledBySite(enabledBySite)[product] !== false);
+  }
+
+  function shouldPreloadWithoutHint(product) {
+    return Boolean(products[product] && products[product].optimisticPreload);
+  }
+
+  function preloadHintKey(product) {
+    return `${preloadHintPrefix}${product}`;
+  }
+
+  function readPreloadHint(product) {
+    try {
+      const value = globalThis.localStorage
+        ? globalThis.localStorage.getItem(preloadHintKey(product))
+        : null;
+
+      if (value === "true") {
+        return true;
+      }
+
+      if (value === "false") {
+        return false;
+      }
+    } catch (_error) {
+      return null;
+    }
+
+    return null;
+  }
+
+  function writePreloadHint(product, enabled) {
+    try {
+      if (!globalThis.localStorage) {
+        return;
+      }
+
+      globalThis.localStorage.setItem(preloadHintKey(product), enabled ? "true" : "false");
+    } catch (_error) {
+      // Storage can be unavailable in some embedded/privacy contexts.
+    }
   }
 
   function stylesFor(product) {
@@ -489,6 +605,7 @@
     storageKey,
     products,
     detectProduct,
+    detectContext,
     isTopLevelWindow,
     defaults,
     labels,
@@ -496,6 +613,10 @@
     readEnabledBySite,
     writeEnabledBySite,
     isProductEnabled,
+    isOwnProductEnabled,
+    shouldPreloadWithoutHint,
+    readPreloadHint,
+    writePreloadHint,
     stylesFor,
     renderersFor,
     shaderFor,

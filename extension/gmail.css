@@ -391,6 +391,63 @@
   color-scheme: dark !important;
 }
 
+/* Email markup varies inline color casing and spacing; keep light backgrounds paired with light text overrides. */
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#fff" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#ffffff" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#fafafa" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f9f9f9" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f8f8f8" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f7f7f7" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f2f2f2" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f1f1f1" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#eeeeee" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#e6e6e6" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#ddd" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#dddddd" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#d9d9d9" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="white" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="rgb(255,255,255)" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="rgb(255, 255, 255)" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="rgba(255,255,255,1" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="rgba(255, 255, 255, 1" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#fff" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#ffffff" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#fafafa" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f9f9f9" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f8f8f8" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f7f7f7" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f2f2f2" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f1f1f1" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#eeeeee" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#e6e6e6" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#ddd" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#dddddd" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#d9d9d9" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="white" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="rgb(255,255,255)" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="rgb(255, 255, 255)" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="rgba(255,255,255,1" i],
+:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="rgba(255, 255, 255, 1" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#fff" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#ffffff" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#fafafa" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#f9f9f9" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#f8f8f8" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#f7f7f7" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#f2f2f2" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#f1f1f1" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#eeeeee" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#e6e6e6" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#ddd" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#dddddd" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#d9d9d9" i],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="white" i] {
+  background: var(--sdm-surface) !important;
+  background-color: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  color-scheme: dark !important;
+}
+
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: #ccc"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color:#ccc"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: #cccccc"],

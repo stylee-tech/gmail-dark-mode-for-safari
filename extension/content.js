@@ -1,7 +1,8 @@
 (function () {
   const api = globalThis.browser || globalThis.chrome;
   const registry = globalThis.__safariDarkModeRegistry;
-  const product = registry ? registry.detectProduct() : null;
+  const context = registry ? registry.detectContext() : null;
+  const product = context ? context.product : null;
   const colorSchemeQuery = globalThis.matchMedia
     ? globalThis.matchMedia("(prefers-color-scheme: dark)")
     : null;
@@ -14,6 +15,9 @@
   let enabledBySiteState = registry.defaults();
 
   document.documentElement.dataset.sdmProduct = product;
+  if (context.parentProduct) {
+    document.documentElement.dataset.sdmParentProduct = context.parentProduct;
+  }
   document.documentElement.dataset.sdmHost = location.hostname;
   document.documentElement.dataset.sdmRenderers = registry.renderersFor(product).join(" ");
   styleManager.observe();
@@ -52,7 +56,7 @@
       }
 
       registry.readEnabledBySite(api, (enabledBySite) => {
-        const siteEnabled = registry.isProductEnabled(enabledBySite, product);
+        const siteEnabled = registry.isProductEnabled(enabledBySite, product, context);
         const systemDark = isSystemDark();
 
         sendResponse({
@@ -70,10 +74,11 @@
 
   function applyEnabled(enabledBySite) {
     enabledBySiteState = registry.normalizeEnabledBySite(enabledBySite);
-    const siteEnabled = registry.isProductEnabled(enabledBySiteState, product);
+    const siteEnabled = registry.isProductEnabled(enabledBySiteState, product, context);
     const systemDark = isSystemDark();
     const enabled = siteEnabled && systemDark;
 
+    registry.writePreloadHint(product, registry.isOwnProductEnabled(enabledBySiteState, product));
     document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
     document.documentElement.dataset.sdmEnabled = String(enabled);
     document.documentElement.dataset.sdmSiteEnabled = String(siteEnabled);

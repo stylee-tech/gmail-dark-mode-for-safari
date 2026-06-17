@@ -408,7 +408,6 @@
 :root:not([data-sdm-disabled]) #rso .fG8Fp,
 :root:not([data-sdm-disabled]) #rso .mnr-c,
 :root:not([data-sdm-disabled]) #rso .obcontainer,
-:root:not([data-sdm-disabled]) #rso .related-question-pair,
 :root:not([data-sdm-disabled]) #rso .g-blk,
 :root:not([data-sdm-disabled]) #rso .kp-blk,
 :root:not([data-sdm-disabled]) #rso .osrp-blk,
@@ -428,9 +427,26 @@
 }
 
 /* Suggested questions and "Things to know" use deeply nested generated nodes. */
-:root:not([data-sdm-disabled]) #center_col .related-question-pair,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+}
+
 :root:not([data-sdm-disabled]) #center_col .related-question-pair [role="button"],
-:root:not([data-sdm-disabled]) #center_col .related-question-pair [aria-expanded],
+:root:not([data-sdm-disabled]) #center_col .related-question-pair [aria-expanded] {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(174, 184, 200, 0.18) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+}
+
 :root:not([data-sdm-disabled]) #center_col .cUnQKe [role="button"],
 :root:not([data-sdm-disabled]) #center_col .akqY6,
 :root:not([data-sdm-disabled]) #center_col .akqY6 [role="button"],
@@ -442,7 +458,6 @@
   -webkit-text-fill-color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) #center_col .related-question-pair:hover,
 :root:not([data-sdm-disabled]) #center_col .related-question-pair [role="button"]:hover,
 :root:not([data-sdm-disabled]) #center_col .related-question-pair [aria-expanded]:hover,
 :root:not([data-sdm-disabled]) #center_col .cUnQKe [role="button"]:hover,
@@ -569,4 +584,21 @@
   background: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
+}
+
+/* Keep People also ask as one module with divider rows, not nested cards. */
+:root:not([data-sdm-disabled]) #rso .related-question-pair,
+:root:not([data-sdm-disabled]) #rso .related-question-pair [role="button"],
+:root:not([data-sdm-disabled]) #rso .related-question-pair [aria-expanded] {
+  background: transparent !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+:root:not([data-sdm-disabled]) #rso .related-question-pair [role="button"],
+:root:not([data-sdm-disabled]) #rso .related-question-pair [aria-expanded] {
+  border-bottom: 1px solid rgba(174, 184, 200, 0.18) !important;
 }
