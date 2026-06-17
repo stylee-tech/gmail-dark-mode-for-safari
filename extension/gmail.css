@@ -74,22 +74,52 @@
   background-color: transparent !important;
 }
 
+:root:not([data-sdm-disabled]) form[role="search"]#aso_search_form_anchor,
+:root:not([data-sdm-disabled]) form[role="search"],
+:root:not([data-sdm-disabled]) [role="search"],
+:root:not([data-sdm-disabled]) .gb_Ze[role="search"],
+:root:not([data-sdm-disabled]) [gh="s"],
+:root:not([data-sdm-disabled]) .gb_Md.gb_Ze {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
 :root:not([data-sdm-disabled]) .aAU input,
+:root:not([data-sdm-disabled]) input[aria-label="Ask Gmail"],
 :root:not([data-sdm-disabled]) input[aria-label="Search mail"],
 :root:not([data-sdm-disabled]) input[aria-label="Search in mail"],
+:root:not([data-sdm-disabled]) input[placeholder="Ask Gmail"],
+:root:not([data-sdm-disabled]) form[role="search"] input[name="q"],
+:root:not([data-sdm-disabled]) form[role="search"] textarea[name="q"],
+:root:not([data-sdm-disabled]) [role="search"] input,
+:root:not([data-sdm-disabled]) [role="search"] textarea,
+:root:not([data-sdm-disabled]) input[name="q"],
+:root:not([data-sdm-disabled]) textarea[name="q"],
+:root:not([data-sdm-disabled]) [aria-label="Ask Gmail"] input,
 :root:not([data-sdm-disabled]) [aria-label="Search mail"] input,
 :root:not([data-sdm-disabled]) [aria-label="Search in mail"] input {
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
   color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+  caret-color: var(--sdm-accent) !important;
+  min-width: 8rem !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 :root:not([data-sdm-disabled]) .aAU input::placeholder,
+:root:not([data-sdm-disabled]) input[aria-label="Ask Gmail"]::placeholder,
 :root:not([data-sdm-disabled]) input[aria-label="Search mail"]::placeholder,
-:root:not([data-sdm-disabled]) input[aria-label="Search in mail"]::placeholder {
+:root:not([data-sdm-disabled]) input[aria-label="Search in mail"]::placeholder,
+:root:not([data-sdm-disabled]) input[placeholder="Ask Gmail"]::placeholder,
+:root:not([data-sdm-disabled]) [role="search"] input::placeholder,
+:root:not([data-sdm-disabled]) [role="search"] textarea::placeholder {
   color: var(--sdm-muted) !important;
-  opacity: 0.82 !important;
+  -webkit-text-fill-color: var(--sdm-muted) !important;
+  opacity: 1 !important;
 }
 
 :root:not([data-sdm-disabled]) .aAU [role="button"],
@@ -233,30 +263,213 @@
 
 :root:not([data-sdm-disabled]) .ii,
 :root:not([data-sdm-disabled]) .a3s {
-  background: #d4d8de !important;
-  color: #202124 !important;
-  color-scheme: light !important;
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  color-scheme: dark !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s,
+:root:not([data-sdm-disabled]) .a3s > div {
+  background: var(--sdm-surface) !important;
+  background-color: var(--sdm-surface) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+  color-scheme: dark !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s table,
+:root:not([data-sdm-disabled]) .a3s tbody,
+:root:not([data-sdm-disabled]) .a3s tr,
+:root:not([data-sdm-disabled]) .a3s td,
+:root:not([data-sdm-disabled]) .a3s th {
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+  color-scheme: dark !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s div,
+:root:not([data-sdm-disabled]) .a3s p,
+:root:not([data-sdm-disabled]) .a3s li,
+:root:not([data-sdm-disabled]) .a3s section,
+:root:not([data-sdm-disabled]) .a3s article {
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
 }
 
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: #fff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color:#fff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: #ffffff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color:#ffffff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f7f7f7"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f7f7f7"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f8f8f8"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f8f8f8"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f9f9f9"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f9f9f9"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #fafafa"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#fafafa"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f1f1f1"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f1f1f1"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f2f2f2"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f2f2f2"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #eeeeee"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#eeeeee"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #e6e6e6"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#e6e6e6"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #ddd"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#ddd"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #dddddd"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#dddddd"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #d9d9d9"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#d9d9d9"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: white"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color:white"],
 :root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(250, 250, 250)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(249, 249, 249)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(248, 248, 248)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(247, 247, 247)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(245, 245, 245)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(242, 242, 242)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(238, 238, 238)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(230, 230, 230)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(221, 221, 221)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(217, 217, 217)"],
 :root:not([data-sdm-disabled]) .a3s [style*="background: #fff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background:#fff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background: #ffffff"],
 :root:not([data-sdm-disabled]) .a3s [style*="background:#ffffff"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #f7f7f7"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#f7f7f7"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #f8f8f8"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#f8f8f8"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #f9f9f9"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#f9f9f9"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #fafafa"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#fafafa"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #f1f1f1"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#f1f1f1"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #f2f2f2"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#f2f2f2"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #eeeeee"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#eeeeee"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #e6e6e6"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#e6e6e6"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #ddd"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#ddd"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #dddddd"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#dddddd"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #d9d9d9"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#d9d9d9"],
 :root:not([data-sdm-disabled]) .a3s [style*="background: white"],
 :root:not([data-sdm-disabled]) .a3s [style*="background:white"],
 :root:not([data-sdm-disabled]) .a3s [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(250, 250, 250)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(249, 249, 249)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(248, 248, 248)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(247, 247, 247)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(245, 245, 245)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(242, 242, 242)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(238, 238, 238)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(230, 230, 230)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(221, 221, 221)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(217, 217, 217)"],
 :root:not([data-sdm-disabled]) .a3s [bgcolor="#fff"],
 :root:not([data-sdm-disabled]) .a3s [bgcolor="#ffffff"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="white"] {
-  background-color: #d4d8de !important;
-  color-scheme: light !important;
+:root:not([data-sdm-disabled]) .a3s [bgcolor="white"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#f7f7f7"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#f8f8f8"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#f9f9f9"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#fafafa"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#eeeeee"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#e6e6e6"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#dddddd"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#d9d9d9"] {
+  background: var(--sdm-surface) !important;
+  background-color: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  color-scheme: dark !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #ccc"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#ccc"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: #cccccc"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color:#cccccc"],
+:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(204, 204, 204)"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #ccc"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#ccc"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: #cccccc"],
+:root:not([data-sdm-disabled]) .a3s [style*="background:#cccccc"],
+:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(204, 204, 204)"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#ccc"],
+:root:not([data-sdm-disabled]) .a3s [bgcolor="#cccccc"] {
+  background: var(--sdm-surface-2) !important;
+  background-color: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+  color-scheme: dark !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s [style*="color: #000"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#000"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #000000"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#000000"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: black"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:black"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(0, 0, 0)"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #202124"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#202124"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(32, 33, 36)"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #222"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#222"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #222222"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#222222"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #333"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#333"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #333333"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#333333"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(34, 34, 34)"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(51, 51, 51)"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #444"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#444"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #444444"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#444444"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(68, 68, 68)"] {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s [style*="color: #555"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#555"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #555555"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#555555"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #666"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#666"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #666666"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#666666"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #777"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#777"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: #777777"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:#777777"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: gray"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:gray"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: grey"],
+:root:not([data-sdm-disabled]) .a3s [style*="color:grey"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(85, 85, 85)"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(102, 102, 102)"],
+:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(117, 117, 117)"] {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s a,
+:root:not([data-sdm-disabled]) .a3s a span,
+:root:not([data-sdm-disabled]) .a3s [href] {
+  color: var(--sdm-accent) !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s hr,
+:root:not([data-sdm-disabled]) .a3s table,
+:root:not([data-sdm-disabled]) .a3s td,
+:root:not([data-sdm-disabled]) .a3s th {
+  border-color: var(--sdm-border) !important;
 }
 
 :root:not([data-sdm-disabled]) .J-M,

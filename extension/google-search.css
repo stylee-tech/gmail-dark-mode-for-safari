@@ -359,3 +359,214 @@
 :root:not([data-sdm-disabled]) svg {
   filter: none !important;
 }
+
+/* SERP polish: keep normal results unframed, and make rich modules explicitly dark. */
+:root:not([data-sdm-disabled]) body,
+:root:not([data-sdm-disabled]) #cnt,
+:root:not([data-sdm-disabled]) #main,
+:root:not([data-sdm-disabled]) #rcnt,
+:root:not([data-sdm-disabled]) #center_col,
+:root:not([data-sdm-disabled]) #rhs,
+:root:not([data-sdm-disabled]) #search,
+:root:not([data-sdm-disabled]) #rso,
+:root:not([data-sdm-disabled]) #botstuff {
+  background-color: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #searchform,
+:root:not([data-sdm-disabled]) #searchform > div,
+:root:not([data-sdm-disabled]) .sfbg,
+:root:not([data-sdm-disabled]) .sfbgg,
+:root:not([data-sdm-disabled]) #hdtb,
+:root:not([data-sdm-disabled]) #hdtbMenus,
+:root:not([data-sdm-disabled]) .MUFPAc {
+  background-color: var(--sdm-bg-elevated) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) #rso > div,
+:root:not([data-sdm-disabled]) #rso .MjjYud,
+:root:not([data-sdm-disabled]) #rso .g,
+:root:not([data-sdm-disabled]) #rso .N54PNb,
+:root:not([data-sdm-disabled]) #rso .eKjLze,
+:root:not([data-sdm-disabled]) #rso .hlcw0c {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+:root:not([data-sdm-disabled]) #rso .MjjYud {
+  margin-bottom: 18px !important;
+}
+
+:root:not([data-sdm-disabled]) #rso .Ww4FFb,
+:root:not([data-sdm-disabled]) #rso .cUnQKe,
+:root:not([data-sdm-disabled]) #rso .ULSxyf,
+:root:not([data-sdm-disabled]) #rso .ifM9O,
+:root:not([data-sdm-disabled]) #rso .I6TXqe,
+:root:not([data-sdm-disabled]) #rso .fG8Fp,
+:root:not([data-sdm-disabled]) #rso .mnr-c,
+:root:not([data-sdm-disabled]) #rso .obcontainer,
+:root:not([data-sdm-disabled]) #rso .related-question-pair,
+:root:not([data-sdm-disabled]) #rso .g-blk,
+:root:not([data-sdm-disabled]) #rso .kp-blk,
+:root:not([data-sdm-disabled]) #rso .osrp-blk,
+:root:not([data-sdm-disabled]) #rhs .kp-blk,
+:root:not([data-sdm-disabled]) #rhs .kp-wholepage,
+:root:not([data-sdm-disabled]) #rhs .Ww4FFb,
+:root:not([data-sdm-disabled]) #rhs .ifM9O,
+:root:not([data-sdm-disabled]) #rhs .mnr-c,
+:root:not([data-sdm-disabled]) #rhs .VjDLd,
+:root:not([data-sdm-disabled]) #rhs .Lu57id,
+:root:not([data-sdm-disabled]) #rhs .knowledge-panel {
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  border: 1px solid rgba(174, 184, 200, 0.18) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+/* Suggested questions and "Things to know" use deeply nested generated nodes. */
+:root:not([data-sdm-disabled]) #center_col .related-question-pair,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair [role="button"],
+:root:not([data-sdm-disabled]) #center_col .related-question-pair [aria-expanded],
+:root:not([data-sdm-disabled]) #center_col .cUnQKe [role="button"],
+:root:not([data-sdm-disabled]) #center_col .akqY6,
+:root:not([data-sdm-disabled]) #center_col .akqY6 [role="button"],
+:root:not([data-sdm-disabled]) #center_col .mnr-c [role="button"],
+:root:not([data-sdm-disabled]) #center_col .ifM9O [role="button"] {
+  background-color: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #center_col .related-question-pair:hover,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair [role="button"]:hover,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair [aria-expanded]:hover,
+:root:not([data-sdm-disabled]) #center_col .cUnQKe [role="button"]:hover,
+:root:not([data-sdm-disabled]) #center_col .akqY6 [role="button"]:hover {
+  background-color: var(--sdm-surface-3) !important;
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #center_col .related-question-pair div,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair span,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair h2,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair h3,
+:root:not([data-sdm-disabled]) #center_col .cUnQKe div,
+:root:not([data-sdm-disabled]) #center_col .cUnQKe span,
+:root:not([data-sdm-disabled]) #center_col .cUnQKe h2,
+:root:not([data-sdm-disabled]) #center_col .cUnQKe h3,
+:root:not([data-sdm-disabled]) #center_col .akqY6 div,
+:root:not([data-sdm-disabled]) #center_col .akqY6 span,
+:root:not([data-sdm-disabled]) #center_col .akqY6 h2,
+:root:not([data-sdm-disabled]) #center_col .akqY6 h3,
+:root:not([data-sdm-disabled]) #center_col .mnr-c h2,
+:root:not([data-sdm-disabled]) #center_col .mnr-c h3,
+:root:not([data-sdm-disabled]) #center_col .mnr-c [role="heading"] {
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #center_col .related-question-pair a,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair a *,
+:root:not([data-sdm-disabled]) #center_col .cUnQKe a,
+:root:not([data-sdm-disabled]) #center_col .cUnQKe a *,
+:root:not([data-sdm-disabled]) #center_col .akqY6 a,
+:root:not([data-sdm-disabled]) #center_col .akqY6 a *,
+:root:not([data-sdm-disabled]) #center_col .mnr-c a,
+:root:not([data-sdm-disabled]) #center_col .mnr-c a *,
+:root:not([data-sdm-disabled]) #center_col .ifM9O a,
+:root:not([data-sdm-disabled]) #center_col .ifM9O a * {
+  color: var(--sdm-accent) !important;
+  -webkit-text-fill-color: var(--sdm-accent) !important;
+}
+
+:root:not([data-sdm-disabled]) #rso div[style*="linear-gradient"],
+:root:not([data-sdm-disabled]) #center_col div[style*="linear-gradient"],
+:root:not([data-sdm-disabled]) #rhs div[style*="linear-gradient"] {
+  background-image: none !important;
+}
+
+:root:not([data-sdm-disabled]) #rso [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) #rso [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) #rso [style*="background-color: white"],
+:root:not([data-sdm-disabled]) #rso [style*="background: white"],
+:root:not([data-sdm-disabled]) #rso [style*="background-color:#fff"],
+:root:not([data-sdm-disabled]) #rso [style*="background-color: #fff"],
+:root:not([data-sdm-disabled]) #center_col [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) #center_col [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) #center_col [style*="background-color: white"],
+:root:not([data-sdm-disabled]) #center_col [style*="background: white"],
+:root:not([data-sdm-disabled]) #center_col [style*="background-color:#fff"],
+:root:not([data-sdm-disabled]) #center_col [style*="background-color: #fff"],
+:root:not([data-sdm-disabled]) #rhs [style*="background-color: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) #rhs [style*="background: rgb(255, 255, 255)"],
+:root:not([data-sdm-disabled]) #rhs [style*="background-color: white"],
+:root:not([data-sdm-disabled]) #rhs [style*="background: white"],
+:root:not([data-sdm-disabled]) #rhs [style*="background-color:#fff"],
+:root:not([data-sdm-disabled]) #rhs [style*="background-color: #fff"] {
+  background-color: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #rso [style*="color: rgb(32, 33, 36)"],
+:root:not([data-sdm-disabled]) #rso [style*="color: rgb(60, 64, 67)"],
+:root:not([data-sdm-disabled]) #rso [style*="color:#202124"],
+:root:not([data-sdm-disabled]) #rso [style*="color: #202124"],
+:root:not([data-sdm-disabled]) #rso [style*="color:#3c4043"],
+:root:not([data-sdm-disabled]) #rso [style*="color: #3c4043"],
+:root:not([data-sdm-disabled]) #center_col [style*="color: rgb(32, 33, 36)"],
+:root:not([data-sdm-disabled]) #center_col [style*="color: rgb(60, 64, 67)"],
+:root:not([data-sdm-disabled]) #rhs [style*="color: rgb(32, 33, 36)"],
+:root:not([data-sdm-disabled]) #rhs [style*="color: rgb(60, 64, 67)"] {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #rso h1,
+:root:not([data-sdm-disabled]) #rso h2,
+:root:not([data-sdm-disabled]) #rso h3,
+:root:not([data-sdm-disabled]) #rso .LC20lb,
+:root:not([data-sdm-disabled]) #rso .DKV0Md,
+:root:not([data-sdm-disabled]) #rso .mCBkyc,
+:root:not([data-sdm-disabled]) #rhs h2,
+:root:not([data-sdm-disabled]) #rhs h3,
+:root:not([data-sdm-disabled]) #rhs .SPZz6b {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #rso .VwiC3b,
+:root:not([data-sdm-disabled]) #rso .MUxGbd,
+:root:not([data-sdm-disabled]) #rso .IsZvec,
+:root:not([data-sdm-disabled]) #rso .yDYNvb,
+:root:not([data-sdm-disabled]) #rso .LEwnzc,
+:root:not([data-sdm-disabled]) #rhs .kno-rdesc,
+:root:not([data-sdm-disabled]) #rhs .hgKElc,
+:root:not([data-sdm-disabled]) #rhs .wDYxhc,
+:root:not([data-sdm-disabled]) #rhs .yXK7lf {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) #rso a,
+:root:not([data-sdm-disabled]) #rso a:visited,
+:root:not([data-sdm-disabled]) #center_col a,
+:root:not([data-sdm-disabled]) #center_col a:visited,
+:root:not([data-sdm-disabled]) #rhs a,
+:root:not([data-sdm-disabled]) #rhs a:visited {
+  color: var(--sdm-accent) !important;
+  -webkit-text-fill-color: var(--sdm-accent) !important;
+}
+
+:root:not([data-sdm-disabled]) #rso g-more-link,
+:root:not([data-sdm-disabled]) #rso .qIbj0e,
+:root:not([data-sdm-disabled]) #rso .MJ8UF,
+:root:not([data-sdm-disabled]) #rso .YmvwI,
+:root:not([data-sdm-disabled]) #rso [role="button"],
+:root:not([data-sdm-disabled]) #rhs [role="button"] {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}

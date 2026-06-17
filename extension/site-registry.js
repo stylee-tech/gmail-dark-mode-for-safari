@@ -36,9 +36,9 @@
       defaultEnabled: true,
       renderers: ["css", "shader"],
       shader: {
-        opacity: 0.18,
-        background: "rgba(20, 25, 34, 0.18)",
-        backdropFilter: "brightness(0.92) saturate(0.96) contrast(0.98)",
+        opacity: 0.22,
+        background: "rgba(8, 12, 18, 0.28)",
+        backdropFilter: "brightness(0.9) saturate(0.95) contrast(0.98)",
         mixBlendMode: "multiply",
         targets: [
           "#waffle-grid-container",
@@ -67,11 +67,7 @@
       return "gmail";
     }
 
-    if (
-      current.hostname === "ogs.google.com" ||
-      current.hostname === "accounts.google.com" ||
-      current.hostname === "myaccount.google.com"
-    ) {
+    if (current.hostname === "ogs.google.com") {
       return embedded ? "gmail" : null;
     }
 
@@ -481,14 +477,14 @@
     return manager;
   }
 
-    globalThis.__safariDarkModeRegistry = {
-      namespace,
-      storageKey,
-      products,
-      detectProduct,
-      isTopLevelWindow,
-      defaults,
-      labels,
+  globalThis.__safariDarkModeRegistry = {
+    namespace,
+    storageKey,
+    products,
+    detectProduct,
+    isTopLevelWindow,
+    defaults,
+    labels,
     normalizeEnabledBySite,
     readEnabledBySite,
     writeEnabledBySite,

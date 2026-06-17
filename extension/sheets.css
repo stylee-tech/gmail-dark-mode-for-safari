@@ -36,8 +36,7 @@
 :root:not([data-sdm-disabled]) .docs-title-input,
 :root:not([data-sdm-disabled]) .cell-input,
 :root:not([data-sdm-disabled]) .formula-content,
-:root:not([data-sdm-disabled]) .waffle-name-box,
-:root:not([data-sdm-disabled]) .docs-gm .goog-inline-block {
+:root:not([data-sdm-disabled]) .waffle-name-box {
   background: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
 }
