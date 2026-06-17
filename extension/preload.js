@@ -17,6 +17,7 @@
 
   document.documentElement.dataset.sdmPreload = "pending";
   document.documentElement.dataset.sdmProduct = product;
+  document.documentElement.dataset.sdmHost = location.hostname;
   document.documentElement.dataset.sdmRenderers = registry.renderersFor(product).join(" ");
 
   preloadStyle.id = `${registry ? registry.namespace : "pavel-safari-dark-mode"}-preload`;

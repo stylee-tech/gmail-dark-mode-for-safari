@@ -12,6 +12,8 @@
     "storage",
     "https://mail.google.com/*",
     "https://ogs.google.com/*",
+    "https://accounts.google.com/*",
+    "https://myaccount.google.com/*",
     "https://docs.google.com/spreadsheets/*",
     "https://google.com/search*",
     "https://www.google.com/search*"
@@ -32,6 +34,19 @@
     {
       "matches": [
         "https://ogs.google.com/*"
+      ],
+      "js": [
+        "site-registry.js",
+        "preload.js",
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://accounts.google.com/*",
+        "https://myaccount.google.com/*"
       ],
       "js": [
         "site-registry.js",

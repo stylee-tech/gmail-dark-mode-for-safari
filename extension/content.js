@@ -14,6 +14,7 @@
   let enabledBySiteState = registry.defaults();
 
   document.documentElement.dataset.sdmProduct = product;
+  document.documentElement.dataset.sdmHost = location.hostname;
   document.documentElement.dataset.sdmRenderers = registry.renderersFor(product).join(" ");
   styleManager.observe();
   registry.readEnabledBySite(api, applyEnabled);

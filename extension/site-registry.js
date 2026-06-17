@@ -72,6 +72,13 @@
     }
 
     if (
+      current.hostname === "accounts.google.com" ||
+      current.hostname === "myaccount.google.com"
+    ) {
+      return embedded ? "gmail" : null;
+    }
+
+    if (
       current.hostname === "docs.google.com" &&
       current.pathname.startsWith("/spreadsheets/")
     ) {

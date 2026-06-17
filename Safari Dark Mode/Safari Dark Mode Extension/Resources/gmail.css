@@ -1050,3 +1050,116 @@
   fill: var(--sdm-text) !important;
   opacity: 1 !important;
 }
+
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) body,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) body,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) body {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) main,
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="main"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="dialog"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menu"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="list"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="listbox"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) main,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="main"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="dialog"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menu"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="list"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="listbox"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) main,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="main"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="dialog"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menu"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="list"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="listbox"] {
+  background: var(--sdm-bg-elevated) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) a,
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) button,
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="button"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="link"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menuitem"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="option"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) a,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) button,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="button"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="link"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menuitem"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="option"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) a,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) button,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="button"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="link"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menuitem"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="option"] {
+  background-color: transparent !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+  fill: var(--sdm-text) !important;
+  opacity: 1 !important;
+}
+
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"] {
+  background: var(--sdm-surface) !important;
+  background-color: var(--sdm-surface) !important;
+}
+
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"] {
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+}
+
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"],
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"],
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"],
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"] {
+  color: var(--sdm-muted) !important;
+  -webkit-text-fill-color: var(--sdm-muted) !important;
+}
+
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) a:hover,
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) button:hover,
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="button"]:hover,
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="link"]:hover,
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover,
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="option"]:hover,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) a:hover,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) button:hover,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="button"]:hover,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="link"]:hover,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover,
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="option"]:hover,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) a:hover,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) button:hover,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="button"]:hover,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="link"]:hover,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover,
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="option"]:hover {
+  background-color: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
