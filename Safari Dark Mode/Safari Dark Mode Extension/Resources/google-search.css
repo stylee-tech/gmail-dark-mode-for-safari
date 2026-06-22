@@ -602,3 +602,29 @@
 :root:not([data-sdm-disabled]) #rso .related-question-pair [aria-expanded] {
   border-bottom: 1px solid rgba(174, 184, 200, 0.18) !important;
 }
+
+/* Final accordion override after generic result-button styling. */
+:root:not([data-sdm-disabled]) #center_col .related-question-pair,
+:root:not([data-sdm-disabled]) #center_col .related-question-pair > *,
+:root:not([data-sdm-disabled]) #rso .related-question-pair,
+:root:not([data-sdm-disabled]) #rso .related-question-pair > * {
+  background: transparent !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+:root:not([data-sdm-disabled]) #center_col .related-question-pair [role="button"],
+:root:not([data-sdm-disabled]) #center_col .related-question-pair [aria-expanded],
+:root:not([data-sdm-disabled]) #rso .related-question-pair [role="button"],
+:root:not([data-sdm-disabled]) #rso .related-question-pair [aria-expanded] {
+  background: transparent !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-bottom: 1px solid rgba(174, 184, 200, 0.18) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}

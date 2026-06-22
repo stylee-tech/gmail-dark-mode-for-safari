@@ -51,10 +51,10 @@ Edit files in `extension/`, then sync the Safari wrapper resources:
 sh scripts/sync-extension-resources.sh
 ```
 
-The Google Sheets grid is rendered mostly on canvas, so Sheets uses a
-Nightshift-style page filter with small toolbar/menu overrides. Gmail and
-Google Search stay on site-specific CSS because Gmail in particular is fragile
-when broad styling is applied to dialogs and dynamic app surfaces.
+The Google Sheets grid is rendered mostly on canvas, so Sheets keeps its chrome
+site-specific and uses targeted grid/canvas fallbacks for the work area. Gmail
+and Google Search stay on site-specific CSS because Gmail in particular is
+fragile when broad styling is applied to dialogs and dynamic app surfaces.
 
 ## Reference-driven constraints
 
@@ -63,5 +63,4 @@ extensions like Nightshift: inject CSS as early as possible, keep the runtime
 small, and make the toggle site-aware. It also avoids a full dynamic color
 engine because Safari extension performance and platform quirks are more
 noticeable during initial page load. For this personal extension, the strategy
-is static site-specific CSS where practical, and a simple filter mode where the
-app is canvas-heavy enough that selector styling is brittle.
+is static site-specific CSS with narrow fallback rules for canvas-heavy surfaces.

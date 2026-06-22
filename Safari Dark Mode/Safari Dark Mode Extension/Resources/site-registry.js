@@ -29,30 +29,21 @@
     gmail: {
       label: "Gmail",
       defaultEnabled: true,
+      optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.gmail]
     },
     sheets: {
       label: "Google Sheets",
       defaultEnabled: true,
-      renderers: ["css", "shader"],
-      shader: {
-        opacity: 0.22,
-        background: "rgba(8, 12, 18, 0.28)",
-        backdropFilter: "brightness(0.9) saturate(0.95) contrast(0.98)",
-        mixBlendMode: "multiply",
-        targets: [
-          "#waffle-grid-container",
-          "[id$='-grid-table-container']",
-          ".waffle-grid-container",
-          ".grid-container"
-        ]
-      },
+      optimisticPreload: true,
+      renderers: ["css"],
       styles: [styleCatalog.sheets]
     },
     googleSearch: {
       label: "Google Search",
       defaultEnabled: true,
+      optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.googleSearch]
     },
@@ -60,6 +51,7 @@
       label: "Google account helpers",
       defaultEnabled: true,
       inheritsFromFlow: true,
+      requiresKnownParent: true,
       optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.gmail]
@@ -107,7 +99,8 @@
 
     return {
       product,
-      parentProduct: product === "googleHelper" ? detectParentProduct() : null
+      parentProduct: product === "googleHelper" ? detectParentProduct() : null,
+      isTopLevel: isTopLevelWindow()
     };
   }
 
@@ -194,14 +187,16 @@
       return false;
     }
 
-    if (
-      products[product] &&
-      products[product].inheritsFromFlow &&
-      context &&
-      context.parentProduct &&
-      normalized[context.parentProduct] === false
-    ) {
-      return false;
+    const productConfig = products[product];
+
+    if (productConfig && productConfig.inheritsFromFlow) {
+      if (!context || !context.parentProduct) {
+        return !productConfig.requiresKnownParent;
+      }
+
+      if (normalized[context.parentProduct] === false) {
+        return false;
+      }
     }
 
     return true;
@@ -211,18 +206,38 @@
     return Boolean(product && normalizeEnabledBySite(enabledBySite)[product] !== false);
   }
 
-  function shouldPreloadWithoutHint(product) {
-    return Boolean(products[product] && products[product].optimisticPreload);
+  function shouldPreloadWithoutHint(product, context) {
+    const productConfig = products[product];
+
+    if (!productConfig || !productConfig.optimisticPreload) {
+      return false;
+    }
+
+    if (productConfig.inheritsFromFlow && productConfig.requiresKnownParent) {
+      return Boolean(context && context.parentProduct);
+    }
+
+    return true;
   }
 
-  function preloadHintKey(product) {
-    return `${preloadHintPrefix}${product}`;
+  function preloadHintProduct(product, context) {
+    const productConfig = products[product];
+
+    if (productConfig && productConfig.inheritsFromFlow && context && context.parentProduct) {
+      return `${product}:${context.parentProduct}`;
+    }
+
+    return product;
   }
 
-  function readPreloadHint(product) {
+  function preloadHintKey(product, context) {
+    return `${preloadHintPrefix}${preloadHintProduct(product, context)}`;
+  }
+
+  function readPreloadHint(product, context) {
     try {
       const value = globalThis.localStorage
-        ? globalThis.localStorage.getItem(preloadHintKey(product))
+        ? globalThis.localStorage.getItem(preloadHintKey(product, context))
         : null;
 
       if (value === "true") {
@@ -239,13 +254,13 @@
     return null;
   }
 
-  function writePreloadHint(product, enabled) {
+  function writePreloadHint(product, enabled, context) {
     try {
       if (!globalThis.localStorage) {
         return;
       }
 
-      globalThis.localStorage.setItem(preloadHintKey(product), enabled ? "true" : "false");
+      globalThis.localStorage.setItem(preloadHintKey(product, context), enabled ? "true" : "false");
     } catch (_error) {
       // Storage can be unavailable in some embedded/privacy contexts.
     }
@@ -479,7 +494,7 @@
       shader.dataset.pavelSafariDarkModeRenderer = "shader";
       shader.style.position = "fixed";
       shader.style.pointerEvents = "none";
-      shader.style.zIndex = "3";
+      shader.style.zIndex = String(shaderConfig.zIndex || 3);
       shader.style.background = shaderConfig.background;
       shader.style.opacity = String(shaderConfig.opacity);
       shader.style.mixBlendMode = shaderConfig.mixBlendMode;

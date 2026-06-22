@@ -78,7 +78,11 @@
     const systemDark = isSystemDark();
     const enabled = siteEnabled && systemDark;
 
-    registry.writePreloadHint(product, registry.isOwnProductEnabled(enabledBySiteState, product));
+    registry.writePreloadHint(
+      product,
+      registry.isProductEnabled(enabledBySiteState, product, context),
+      context
+    );
     document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
     document.documentElement.dataset.sdmEnabled = String(enabled);
     document.documentElement.dataset.sdmSiteEnabled = String(siteEnabled);

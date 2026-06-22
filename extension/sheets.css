@@ -133,8 +133,74 @@
   border-color: #8ab4f8 !important;
 }
 
-/* The grid itself is rendered and virtualized by Sheets. Keep it native and
-   soften it with the managed shader instead of chasing canvas/table internals. */
+:root:not([data-sdm-disabled]) #waffle-grid-container,
+:root:not([data-sdm-disabled]) .waffle-grid-container,
+:root:not([data-sdm-disabled]) [id$="-grid-table-container"],
+:root:not([data-sdm-disabled]) #grid-table-container,
+:root:not([data-sdm-disabled]) .grid-container,
+:root:not([data-sdm-disabled]) .grid-table-container,
+:root:not([data-sdm-disabled]) .fixed-table-container,
+:root:not([data-sdm-disabled]) .grid-fixed-wrapper,
+:root:not([data-sdm-disabled]) .grid-scrollable-wrapper,
+:root:not([data-sdm-disabled]) .grid4-inner-container,
+:root:not([data-sdm-disabled]) .fixed4-inner-container,
+:root:not([data-sdm-disabled]) .waffle-background-container,
+:root:not([data-sdm-disabled]) .column-headers-background,
+:root:not([data-sdm-disabled]) .row-headers-background {
+  background: #1f252c !important;
+  background-color: #1f252c !important;
+}
+
+:root:not([data-sdm-disabled]) #waffle-grid-container canvas,
+:root:not([data-sdm-disabled]) .waffle-grid-container canvas,
+:root:not([data-sdm-disabled]) [id$="-grid-table-container"] canvas,
+:root:not([data-sdm-disabled]) #grid-table-container canvas,
+:root:not([data-sdm-disabled]) .grid-container canvas,
+:root:not([data-sdm-disabled]) .grid-table-container canvas,
+:root:not([data-sdm-disabled]) canvas.grid-table-container,
+:root:not([data-sdm-disabled]) canvas[id$="-grid-table-container"],
+:root:not([data-sdm-disabled]) canvas[dir="ltr"][style*="z-index: 2"] {
+  background: #1f252c !important;
+  filter: invert(0.88) hue-rotate(180deg) brightness(0.82) contrast(0.94) !important;
+}
+
+:root:not([data-sdm-disabled]) .waffle-cell,
+:root:not([data-sdm-disabled]) .waffle-cell-input,
+:root:not([data-sdm-disabled]) .waffle-selected-cell,
+:root:not([data-sdm-disabled]) .waffle-active-cell {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #waffle-grid-container,
+:root:not([data-sdm-disabled]) .waffle-grid-container {
+  background: #1f252c !important;
+  background-color: #1f252c !important;
+}
+
+:root:not([data-sdm-disabled]) .waffle-footer-container,
+:root:not([data-sdm-disabled]) .addRowsWidget-ltr,
+:root:not([data-sdm-disabled]) .addRowsWidget-rtl,
+:root:not([data-sdm-disabled]) .addRowsWidget-ltr *,
+:root:not([data-sdm-disabled]) .addRowsWidget-rtl * {
+  background: #1f252c !important;
+  background-color: #1f252c !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .addRowsWidget-ltr .jfk-button,
+:root:not([data-sdm-disabled]) .addRowsWidget-rtl .jfk-button {
+  background: var(--sdm-surface-2) !important;
+  background-color: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .addRowsWidget-ltr .jfk-textinput,
+:root:not([data-sdm-disabled]) .addRowsWidget-rtl .jfk-textinput {
+  background: var(--sdm-bg) !important;
+  background-color: var(--sdm-bg) !important;
+  border-color: var(--sdm-border) !important;
+  color: var(--sdm-text) !important;
+}
 
 :root:not([data-sdm-disabled]) .freezebar-handle,
 :root:not([data-sdm-disabled]) .freezebar-drop,

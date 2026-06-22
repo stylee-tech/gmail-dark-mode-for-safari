@@ -13,9 +13,9 @@
     ? globalThis.matchMedia("(prefers-color-scheme: dark)")
     : null;
   const preloadStyle = document.createElement("style");
-  const hintedSiteEnabled = registry.readPreloadHint(product);
+  const hintedSiteEnabled = registry.readPreloadHint(product, context);
   const hasPreloadHint = hintedSiteEnabled !== null;
-  const canOptimisticallyPreload = registry.shouldPreloadWithoutHint(product);
+  const canOptimisticallyPreload = registry.shouldPreloadWithoutHint(product, context);
   let siteEnabled = hasPreloadHint ? hintedSiteEnabled : canOptimisticallyPreload;
   let settingsReady = false;
   const initialSystemDark = !colorSchemeQuery || colorSchemeQuery.matches;
@@ -56,7 +56,11 @@
   registry.readEnabledBySite(api, (enabledBySite) => {
     siteEnabled = registry.isProductEnabled(enabledBySite, product, context);
     settingsReady = true;
-    registry.writePreloadHint(product, registry.isOwnProductEnabled(enabledBySite, product));
+    registry.writePreloadHint(
+      product,
+      registry.isProductEnabled(enabledBySite, product, context),
+      context
+    );
     applyState();
   });
 
