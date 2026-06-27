@@ -59,6 +59,15 @@
         const siteEnabled = registry.isProductEnabled(enabledBySite, product, context);
         const systemDark = isSystemDark();
 
+        if (
+          registry.products[product] &&
+          registry.products[product].requiresKnownParent &&
+          !context.parentProduct
+        ) {
+          sendResponse({ supported: false });
+          return;
+        }
+
         sendResponse({
           product,
           renderers: registry.renderersFor(product),
@@ -78,11 +87,6 @@
     const systemDark = isSystemDark();
     const enabled = siteEnabled && systemDark;
 
-    registry.writePreloadHint(
-      product,
-      registry.isProductEnabled(enabledBySiteState, product, context),
-      context
-    );
     document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
     document.documentElement.dataset.sdmEnabled = String(enabled);
     document.documentElement.dataset.sdmSiteEnabled = String(siteEnabled);

@@ -13,13 +13,11 @@
     ? globalThis.matchMedia("(prefers-color-scheme: dark)")
     : null;
   const preloadStyle = document.createElement("style");
-  const hintedSiteEnabled = registry.readPreloadHint(product, context);
-  const hasPreloadHint = hintedSiteEnabled !== null;
   const canOptimisticallyPreload = registry.shouldPreloadWithoutHint(product, context);
-  let siteEnabled = hasPreloadHint ? hintedSiteEnabled : canOptimisticallyPreload;
+  let siteEnabled = canOptimisticallyPreload;
   let settingsReady = false;
   const initialSystemDark = !colorSchemeQuery || colorSchemeQuery.matches;
-  const initialSiteStateKnown = hasPreloadHint || canOptimisticallyPreload;
+  const initialSiteStateKnown = canOptimisticallyPreload;
   const initialEnabled = Boolean(initialSiteStateKnown && siteEnabled && initialSystemDark);
 
   document.documentElement.toggleAttribute("data-sdm-disabled", !initialEnabled);
@@ -28,9 +26,9 @@
     ? String(Boolean(siteEnabled))
     : "pending";
   document.documentElement.dataset.sdmSystemDark = String(initialSystemDark);
-  document.documentElement.dataset.sdmPreload = hasPreloadHint
-    ? (initialEnabled ? "hint-enabled" : "hint-disabled")
-    : (canOptimisticallyPreload ? "optimistic-enabled" : "pending-disabled");
+  document.documentElement.dataset.sdmPreload = canOptimisticallyPreload
+    ? "optimistic-enabled"
+    : "pending-disabled";
   document.documentElement.dataset.sdmProduct = product;
   if (context.parentProduct) {
     document.documentElement.dataset.sdmParentProduct = context.parentProduct;
@@ -56,11 +54,6 @@
   registry.readEnabledBySite(api, (enabledBySite) => {
     siteEnabled = registry.isProductEnabled(enabledBySite, product, context);
     settingsReady = true;
-    registry.writePreloadHint(
-      product,
-      registry.isProductEnabled(enabledBySite, product, context),
-      context
-    );
     applyState();
   });
 
@@ -80,7 +73,7 @@
 
   function applyState() {
     const systemDark = !colorSchemeQuery || colorSchemeQuery.matches;
-    const siteStateKnown = settingsReady || hasPreloadHint || canOptimisticallyPreload;
+    const siteStateKnown = settingsReady || canOptimisticallyPreload;
     const enabled = Boolean(siteStateKnown && siteEnabled && systemDark);
 
     document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
@@ -91,9 +84,7 @@
     document.documentElement.dataset.sdmSystemDark = String(systemDark);
     document.documentElement.dataset.sdmPreload = settingsReady
       ? (enabled ? "enabled" : "disabled")
-      : (hasPreloadHint
-        ? (enabled ? "hint-enabled" : "hint-disabled")
-        : (canOptimisticallyPreload ? "optimistic-enabled" : "pending-disabled"));
+      : (canOptimisticallyPreload ? "optimistic-enabled" : "pending-disabled");
 
     styleManager.sync(enabled);
   }

@@ -1,7 +1,6 @@
 (function () {
   const namespace = "pavel-safari-dark-mode";
   const storageKey = "enabledBySite";
-  const preloadHintPrefix = `${namespace}:preload-site-enabled:`;
   const managedAttribute = "data-pavel-safari-dark-mode";
   const cssAppliedValue = "applied";
   const styleManagers = {};
@@ -29,21 +28,21 @@
     gmail: {
       label: "Gmail",
       defaultEnabled: true,
-      optimisticPreload: true,
+      optimisticPreload: false,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.gmail]
     },
     sheets: {
       label: "Google Sheets",
       defaultEnabled: true,
-      optimisticPreload: true,
+      optimisticPreload: false,
       renderers: ["css"],
       styles: [styleCatalog.sheets]
     },
     googleSearch: {
       label: "Google Search",
       defaultEnabled: true,
-      optimisticPreload: true,
+      optimisticPreload: false,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.googleSearch]
     },
@@ -52,7 +51,7 @@
       defaultEnabled: true,
       inheritsFromFlow: true,
       requiresKnownParent: true,
-      optimisticPreload: true,
+      optimisticPreload: false,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.gmail]
     }
@@ -96,11 +95,12 @@
 
   function detectContext(currentLocation, options) {
     const product = detectProduct(currentLocation, options);
+    const isTopLevel = isTopLevelWindow();
 
     return {
       product,
-      parentProduct: product === "googleHelper" ? detectParentProduct() : null,
-      isTopLevel: isTopLevelWindow()
+      parentProduct: product === "googleHelper" && !isTopLevel ? detectParentProduct() : null,
+      isTopLevel
     };
   }
 
@@ -220,52 +220,6 @@
     return true;
   }
 
-  function preloadHintProduct(product, context) {
-    const productConfig = products[product];
-
-    if (productConfig && productConfig.inheritsFromFlow && context && context.parentProduct) {
-      return `${product}:${context.parentProduct}`;
-    }
-
-    return product;
-  }
-
-  function preloadHintKey(product, context) {
-    return `${preloadHintPrefix}${preloadHintProduct(product, context)}`;
-  }
-
-  function readPreloadHint(product, context) {
-    try {
-      const value = globalThis.localStorage
-        ? globalThis.localStorage.getItem(preloadHintKey(product, context))
-        : null;
-
-      if (value === "true") {
-        return true;
-      }
-
-      if (value === "false") {
-        return false;
-      }
-    } catch (_error) {
-      return null;
-    }
-
-    return null;
-  }
-
-  function writePreloadHint(product, enabled, context) {
-    try {
-      if (!globalThis.localStorage) {
-        return;
-      }
-
-      globalThis.localStorage.setItem(preloadHintKey(product, context), enabled ? "true" : "false");
-    } catch (_error) {
-      // Storage can be unavailable in some embedded/privacy contexts.
-    }
-  }
-
   function stylesFor(product) {
     return products[product] ? products[product].styles.map((style) => Object.assign({}, style)) : [];
   }
@@ -327,6 +281,7 @@
       });
 
       pruneUnexpected(expectedStyles);
+      restoreManagedStyleOrder(expectedStyles, parent);
       syncRenderers();
       scheduleAudit();
     }
@@ -420,6 +375,7 @@
       fallback.dataset.pavelSafariDarkModeFile = style.file;
       fallback.textContent = `@import url("${href}");`;
       (document.head || document.documentElement).appendChild(fallback);
+      restoreManagedStyleOrder(stylesFor(product), document.head || document.documentElement);
 
       fetch(href)
         .then((response) => {
@@ -444,6 +400,22 @@
         if (!expectedFiles.includes(element.dataset.pavelSafariDarkModeFile)) {
           element.remove();
         }
+      });
+    }
+
+    function restoreManagedStyleOrder(expectedStyles, parent) {
+      if (!parent) {
+        return;
+      }
+
+      expectedStyles.forEach((_style, index) => {
+        [managedStyleId(index), fallbackStyleId(index)].forEach((id) => {
+          const element = document.getElementById(id);
+
+          if (element) {
+            parent.appendChild(element);
+          }
+        });
       });
     }
 
@@ -630,8 +602,6 @@
     isProductEnabled,
     isOwnProductEnabled,
     shouldPreloadWithoutHint,
-    readPreloadHint,
-    writePreloadHint,
     stylesFor,
     renderersFor,
     shaderFor,
