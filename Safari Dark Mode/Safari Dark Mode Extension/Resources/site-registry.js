@@ -28,21 +28,21 @@
     gmail: {
       label: "Gmail",
       defaultEnabled: true,
-      optimisticPreload: false,
+      optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.gmail]
     },
     sheets: {
       label: "Google Sheets",
       defaultEnabled: true,
-      optimisticPreload: false,
+      optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.sheets]
     },
     googleSearch: {
       label: "Google Search",
       defaultEnabled: true,
-      optimisticPreload: false,
+      optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.googleSearch]
     },

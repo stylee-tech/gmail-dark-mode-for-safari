@@ -45,8 +45,10 @@ For personal local use, enable Safari's Develop menu and choose
 
 The extension defaults to dark mode on supported sites. Use the toolbar
 popup to disable it per site.
-Preload waits for extension-local settings before applying dark styles, so a
-site disabled in the popup should not flash dark during the next page load.
+Safari injects the main product CSS at `document_start` to reduce first-paint
+white flashes on enabled pages. Because Safari extension storage is async, a
+site disabled in the popup may briefly prepaint dark until the stored setting is
+read.
 
 Edit files in `extension/`, then sync the Safari wrapper resources:
 
@@ -64,10 +66,10 @@ When adding a new top-level file or directory under `extension/`, also add it to
 the Safari extension target resources in Xcode. The sync script copies files, but
 the Xcode project controls what is packaged into the `.appex`.
 
-The Google Sheets grid is rendered mostly on canvas, so Sheets keeps its chrome
-site-specific and uses targeted grid/canvas fallbacks for the work area. Gmail
-and Google Search stay on site-specific CSS because Gmail in particular is
-fragile when broad styling is applied to dialogs and dynamic app surfaces.
+The Google Sheets grid is rendered mostly on canvas, so Sheets keeps the sheet
+surface native/light and limits dark styling to surrounding chrome. Gmail and
+Google Search stay on site-specific CSS because Gmail in particular is fragile
+when broad styling is applied to dialogs and dynamic app surfaces.
 
 ## Security and privacy
 
@@ -75,7 +77,7 @@ fragile when broad styling is applied to dialogs and dynamic app surfaces.
 - The extension does not store state in Google page storage and does not collect
   analytics, browsing history, page content, or account data.
 - Root `data-sdm-*` attributes are used only as coarse CSS state for the active
-  product, host, renderer, and enabled state.
+  product, host, renderer, enabled state, and preload phase.
 - CSS files are exposed as web-accessible resources so Safari can load them from
   content scripts; keep that list limited to the styles the registry uses.
 - The native Safari extension handler is intentionally inert and should stay

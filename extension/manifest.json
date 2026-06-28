@@ -23,6 +23,10 @@
       "matches": [
         "https://mail.google.com/*"
       ],
+      "css": [
+        "base.css",
+        "gmail.css"
+      ],
       "js": [
         "site-registry.js",
         "preload.js",
@@ -60,6 +64,9 @@
       "matches": [
         "https://docs.google.com/spreadsheets/*"
       ],
+      "css": [
+        "sheets.css"
+      ],
       "js": [
         "site-registry.js",
         "preload.js",
@@ -71,6 +78,10 @@
       "matches": [
         "https://google.com/search*",
         "https://www.google.com/search*"
+      ],
+      "css": [
+        "base.css",
+        "google-search.css"
       ],
       "js": [
         "site-registry.js",

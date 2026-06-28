@@ -15,8 +15,10 @@ data surfaces narrow.
   DOM-visible because CSS uses them for product and enabled-state selectors. Keep
   those attributes limited to coarse product, host, renderer, and state values;
   do not place account identifiers, page content, URLs, or user data there.
-- Preload waits for extension-local storage before enabling styles. This avoids
-  briefly applying dark styles to products the user has disabled.
+- First-party product CSS preloads at `document_start` to avoid white first
+  paints on enabled pages. Safari extension storage is async, so disabled
+  first-party products may briefly prepaint dark before the stored setting turns
+  the CSS off.
 
 ## Host permissions
 

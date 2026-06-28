@@ -147,8 +147,9 @@
 :root:not([data-sdm-disabled]) .waffle-background-container,
 :root:not([data-sdm-disabled]) .column-headers-background,
 :root:not([data-sdm-disabled]) .row-headers-background {
-  background: #1f252c !important;
-  background-color: #1f252c !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color-scheme: light !important;
 }
 
 :root:not([data-sdm-disabled]) #waffle-grid-container canvas,
@@ -160,8 +161,8 @@
 :root:not([data-sdm-disabled]) canvas.grid-table-container,
 :root:not([data-sdm-disabled]) canvas[id$="-grid-table-container"],
 :root:not([data-sdm-disabled]) canvas[dir="ltr"][style*="z-index: 2"] {
-  background: #1f252c !important;
-  filter: invert(0.88) hue-rotate(180deg) brightness(0.82) contrast(0.94) !important;
+  background: #ffffff !important;
+  filter: none !important;
 }
 
 :root:not([data-sdm-disabled]) .waffle-cell,
@@ -173,8 +174,9 @@
 
 :root:not([data-sdm-disabled]) #waffle-grid-container,
 :root:not([data-sdm-disabled]) .waffle-grid-container {
-  background: #1f252c !important;
-  background-color: #1f252c !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color-scheme: light !important;
 }
 
 :root:not([data-sdm-disabled]) .waffle-footer-container,
