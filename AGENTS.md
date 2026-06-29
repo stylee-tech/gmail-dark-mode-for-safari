@@ -18,5 +18,6 @@
   `SECURITY.md`.
 - Do not add dependencies, remote code, telemetry, or broad host permissions for
   this personal extension without documenting the reason.
-- Commit completed changes directly to `main` in this repo. Do not create
-  branches or pull requests unless explicitly requested.
+- Commit completed changes directly to `main` in this repo, then push to
+  `origin/main` right away. Do not create branches or pull requests unless
+  explicitly requested.
