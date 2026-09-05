@@ -5,8 +5,10 @@
   so `Safari Dark Mode/Safari Dark Mode Extension/Resources/` matches.
 - Use `sh scripts/sync-extension-resources.sh --check` in reviews and before
   release to catch stale packaged resources.
-- After code or resource changes, rebuild the macOS wrapper with XcodeBuildMCP
-  when available. First verify/set defaults for
+- For extension-only behavior changes, sync resources and verify the affected
+  behavior in Safari. Rebuild the macOS wrapper when native code, Xcode project
+  settings, resource membership, permissions, or a release/package gate changes.
+  Use XcodeBuildMCP when available. First verify/set defaults for
   `Safari Dark Mode/Safari Dark Mode.xcodeproj`, scheme `Safari Dark Mode`,
   configuration `Debug`, platform `macOS`, and derived data path
   `build/DerivedData`; then run the MCP build action. If XcodeBuildMCP is not
@@ -21,3 +23,6 @@
 - Commit completed changes directly to `main` in this repo, then push to
   `origin/main` right away. Do not create branches or pull requests unless
   explicitly requested.
+
+Documentation-only edits require link/path review and `git diff --check`; they
+do not require syncing unchanged resources, launching Safari, or building Xcode.
