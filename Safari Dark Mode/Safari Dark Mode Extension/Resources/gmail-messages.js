@@ -7,6 +7,38 @@
   let enabled = false;
   let timer = 0;
   let observer;
+  const inlineOverrides = new Map();
+
+  function restoreInline() {
+    for (const [element, properties] of inlineOverrides) {
+      for (const [property, original] of properties) {
+        // Preserve newer sender edits instead of replacing them with our backup.
+        if (element.style.getPropertyValue(property) !== original.applied ||
+            element.style.getPropertyPriority(property) !== 'important') continue;
+        element.style.setProperty(property, original.value, original.priority);
+      }
+    }
+    inlineOverrides.clear();
+  }
+
+  function overrideImportant(element) {
+    const properties = new Map();
+    for (const [property, value] of Object.entries({
+      'color': 'var(--sdm-message-fg)',
+      'background-color': 'var(--sdm-message-bg)',
+      'background-image': 'var(--sdm-message-image)',
+      '-webkit-text-fill-color': 'currentColor',
+      ...Object.fromEntries(['top', 'right', 'bottom', 'left'].map(side =>
+        [`border-${side}-color`, 'var(--sdm-message-border)']))
+    })) {
+      if (element.style.getPropertyPriority(property) !== 'important') continue;
+      const original = { value: element.style.getPropertyValue(property), priority: 'important' };
+      element.style.setProperty(property, value, 'important');
+      original.applied = element.style.getPropertyValue(property);
+      properties.set(property, original);
+    }
+    if (properties.size) inlineOverrides.set(element, properties);
+  }
 
   function parse(value) {
     const parts = value.match(/^rgba?\(([^)]+)\)$/);
@@ -106,21 +138,33 @@
           image: style.backgroundImage, border: parse(style.borderTopColor) };
       });
       const backgrounds = new Map();
+      const originalBackgrounds = new Map();
+      const imageRegions = new Set();
       for (const sample of samples) {
         const { element } = sample;
+        const insideImage = imageRegions.has(element.parentElement);
+        const preserve = insideImage || sample.image.includes('url(');
+        const originalBackground = composite(sample.background || transparent,
+          originalBackgrounds.get(element.parentElement) || [255, 255, 255, 1]);
+        originalBackgrounds.set(element, originalBackground);
+        if (preserve) imageRegions.add(element);
         const parent = backgrounds.get(element.parentElement) || surface;
-        const background = element === message ? surface : darkBackground(sample.background);
+        // At an image-region boundary, retain the original backing color too:
+        // a transparent image must not inherit a newly darkened ancestor.
+        const background = preserve ? (insideImage ? sample.background || transparent : originalBackground)
+          : element === message ? surface : darkBackground(sample.background);
         const effective = composite(background, parent);
         backgrounds.set(element, effective);
         element.style.setProperty('--sdm-message-bg', css(background));
-        element.style.setProperty('--sdm-message-fg', css(readableText(sample.color, effective)));
-        element.style.setProperty('--sdm-message-border', css(darkBackground(sample.border)));
+        element.style.setProperty('--sdm-message-fg', css(preserve ? sample.color || [32, 33, 36, 1] : readableText(sample.color, effective)));
+        element.style.setProperty('--sdm-message-border', css(preserve ? sample.border || transparent : darkBackground(sample.border)));
         // Gradients are colors, not photographs; keep their stops dark too.
-        const image = sample.image.includes('gradient(') && !sample.image.includes('url(')
+        const image = !preserve && sample.image.includes('gradient(')
           ? sample.image.replace(/rgba?\([^)]+\)/g, value => css(darkBackground(parse(value))))
           : sample.image;
         element.style.setProperty('--sdm-message-image', image);
         element.setAttribute(attribute, '');
+        overrideImportant(element);
       }
     } finally {
       message.removeAttribute('data-sdm-measuring');
@@ -139,15 +183,19 @@
     if (!enabled) return;
     // Disconnect while writing our own CSS variables to avoid a mutation loop.
     observer.disconnect();
-    try { document.querySelectorAll('.a3s').forEach(paint); }
+    try {
+      restoreInline();
+      document.querySelectorAll('.a3s').forEach(paint);
+    }
     finally { if (enabled) observe(); }
   }
 
   function schedule(records) {
     if (timer || !enabled) return;
     const relevant = records.some(record =>
+      inlineOverrides.has(record.target) ||
       record.target.nodeType === 1 && record.target.closest('.a3s') ||
-      [...(record.addedNodes || [])].some(node => node.nodeType === 1 &&
+      [...(record.addedNodes || []), ...(record.removedNodes || [])].some(node => node.nodeType === 1 &&
         (node.matches('.a3s, style, link[rel="stylesheet"]') || node.querySelector('.a3s'))));
     if (relevant) timer = setTimeout(refresh, 60);
   }
@@ -162,7 +210,7 @@
         observer.disconnect();
         clearTimeout(timer);
         timer = 0;
-        // Overrides are gated by data-sdm-disabled. Leave sender styles intact.
+        restoreInline();
       }
     }
   };

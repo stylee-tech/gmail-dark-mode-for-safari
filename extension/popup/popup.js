@@ -6,6 +6,7 @@
   const choices = selector.querySelectorAll("input[name=appearance]");
   const appearanceStatus = document.getElementById("appearance-status");
   const unsupported = document.getElementById("unsupported");
+  const retry = document.getElementById("retry-connection");
   const appearance = globalThis.matchMedia("(prefers-color-scheme: dark)");
   let currentProduct = null;
   let savedMode = "system";
@@ -15,38 +16,67 @@
     return;
   }
 
-  api.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    const queryError = api.runtime.lastError;
-    const tab = tabs && tabs[0];
-    if (queryError || !tab || typeof tab.id === "undefined") {
-      setUnavailable(false);
-      return;
+  retry.addEventListener("click", connect);
+  connect();
+
+  function connect() {
+    let finished = false;
+    let urlProduct = null;
+    currentProduct = null;
+    selector.disabled = true;
+    retry.hidden = true;
+    unsupported.hidden = true;
+    label.textContent = "Checking this page…";
+    appearanceStatus.textContent = "Connecting to this page…";
+    const timeout = setTimeout(() => fail(true), 4000);
+
+    function fail(timedOut = false) {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timeout);
+      setUnavailable(Boolean(urlProduct));
+      retry.hidden = false;
+      if (timedOut) {
+        label.textContent = "Connection timed out";
+        appearanceStatus.textContent = "Try again. If this persists, reload the page or reopen Safari’s extension settings.";
+      }
     }
 
-    let urlProduct = null;
-    try { urlProduct = registry.detectProduct(new URL(tab.url), { includeHelpers: false }); }
-    catch (_error) { /* Safari may withhold the URL until access is granted. */ }
-
-    api.tabs.sendMessage(tab.id, { type: "sdm:get-product" }, { frameId: 0 }, (response) => {
-      const messageError = api.runtime.lastError;
-      if (messageError || !response || !registry.products[response.product] || response.supported === false) {
-        setUnavailable(Boolean(urlProduct));
-        return;
-      }
-
-      currentProduct = response.product;
-      label.textContent = registry.products[currentProduct].label;
-      savedMode = registry.normalizeEnabledBySite({ [currentProduct]: response.mode ?? response.siteEnabled })[currentProduct];
-      selectMode(savedMode);
-      selector.disabled = false;
-      renderStatus();
-    });
-  });
+    try {
+      api.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        const queryError = api.runtime.lastError;
+        if (finished) return;
+        const tab = tabs && tabs[0];
+        if (queryError || !tab || typeof tab.id === "undefined") { fail(); return; }
+        try { urlProduct = registry.detectProduct(new URL(tab.url), { includeHelpers: false }); }
+        catch (_error) { /* Safari may withhold the URL until access is granted. */ }
+        try {
+          api.tabs.sendMessage(tab.id, { type: "sdm:get-product" }, { frameId: 0 }, (response) => {
+            const messageError = api.runtime.lastError;
+            if (finished) return;
+            if (messageError || !response || !registry.products[response.product] || response.supported === false) {
+              fail();
+              return;
+            }
+            finished = true;
+            clearTimeout(timeout);
+            currentProduct = response.product;
+            label.textContent = registry.products[currentProduct].label;
+            savedMode = registry.normalizeEnabledBySite({ [currentProduct]: response.mode ?? response.siteEnabled })[currentProduct];
+            selectMode(savedMode);
+            selector.disabled = false;
+            renderStatus();
+          });
+        } catch (_error) { fail(); }
+      });
+    } catch (_error) { fail(); }
+  }
 
   selector.addEventListener("change", (event) => {
     if (!currentProduct || selector.disabled || !event.target.checked) return;
     const requestedMode = event.target.value;
     if (!["dark", "off", "system"].includes(requestedMode)) return;
+    const focusedChoice = Array.from(choices).includes(document.activeElement) ? document.activeElement : null;
     selector.disabled = true;
     appearanceStatus.textContent = "Saving preference…";
 
@@ -60,6 +90,7 @@
       if (!error) savedMode = requestedMode;
       selectMode(savedMode);
       selector.disabled = false;
+      if (focusedChoice && document.activeElement === document.body) focusedChoice.focus();
       if (error) appearanceStatus.textContent = "Couldn’t save. Please try again.";
       else renderStatus();
     }

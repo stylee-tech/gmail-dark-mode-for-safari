@@ -93,7 +93,9 @@ git diff --check
 Verify the popup on a supported page: switch off/on, reopen the popup, and reload
 the page. Confirm that preferences persist and that switching system appearance
 does not re-enable a disabled product. Check Gmail, Search, and Sheets chrome;
-standalone Google account pages must remain untouched.
+standalone Google account pages must remain untouched. The popup times out after
+four seconds if Safari does not respond and offers Retry connection instead of
+staying stuck. Keyboard focus remains on the appearance choice after saving.
 
 When adding a new top-level file or directory under `extension/`, also add it to
 the Safari extension target resources in Xcode. The sync script copies files, but
@@ -105,7 +107,9 @@ not. Native scrollbars are styled separately. Never paint opaque backgrounds ove
 grid layers.
 Gmail message bodies are dark too. A Gmail-only renderer converts text and
 background colors together, preserves images and already-dark surfaces, and
-rechecks newly opened messages. Turning the extension off restores sender colors.
+rechecks newly opened messages. Image-backed sections retain their original text
+and backing colors, including transparent images. Inline `!important` styles are
+converted as a pair and restored when Off, without discarding newer sender edits.
 Its color conversion takes inspiration from [Chromium Auto Dark Mode's
 lightness-based color filter](https://github.com/chromium/chromium/blob/main/third_party/blink/renderer/platform/graphics/dark_mode_color_filter.cc):
 adjust perceptual lightness independently of chroma, distinguish backgrounds from
@@ -136,3 +140,15 @@ small, and make the appearance setting site-aware. It also avoids a full dynamic
 engine because Safari extension performance and platform quirks are more
 noticeable during initial page load. For this personal extension, the strategy
 is static site-specific CSS with narrow fallback rules for canvas-heavy surfaces.
+
+### Reliable local rebuilds
+
+Run `sh scripts/build-and-run.sh` when updating the installed development build.
+It closes only this project's running companion, syncs and builds the extension,
+and launches the new app. Keeping the old companion running while replacing its
+bundle can make its **Open Safari Extension Settings** button fail. The script
+does not quit Safari or toggle the extension.
+
+For `tests/gmail-rendering.html`, use Safari's Reload Page From Origin
+(Option-Command-R) after editing the fixture or renderer to avoid testing a cached
+script revision.

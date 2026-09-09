@@ -25,7 +25,10 @@
 - `gmail-messages.js` converts Gmail message foreground/background colors as a
   pair. Chrome rules must exclude `.a3s` and its descendants. Keep images intact,
   measure original colors before conversion, and disconnect the message observer
-  during writes. Do not restore blanket white message bodies or blanket light text.
+  during writes. Preserve image-backed sections with their original foregrounds
+  and effective backing colors. Restore temporary inline-important overrides
+  before measuring and when disabling; preserve newer sender edits. Do not restore
+  blanket white message bodies or blanket light text.
   Message color conversion adjusts CIE Lab lightness, preserves already-readable
   colors, and checks contrast against the converted background. See the Chromium
   reference in README.md; Safari cannot enable Chromium's rendering-engine flag.
@@ -33,9 +36,14 @@
   it only opens Safari settings and reads extension enablement.
 - Gmail `.nU` elements wrap sidebar label text. Never include them in icon
   filters; style their text colors separately.
+- Gmail expanded compose is a dialog containing `.M9`; exclude it from generic
+  dialog rules. Its `.afx` recipient editor is a listbox, not an autocomplete
+  popup. Preserve icon background images and native field geometry in both sizes.
 - `extension/popup/` owns toolbar controls and connection/save feedback.
   Keep On (Always dark), Off (Website default), and System (Follow device)
-  visible as one-click radio choices; Off does not force light appearance.
+  visible as one-click radio choices; Off does not force light appearance. Keep
+  connection attempts bounded with a retry action, and retain keyboard focus
+  after an asynchronous preference save.
   `tests/` contains dependency-free Node regression tests.
 
 ## Editing and validation
@@ -46,7 +54,8 @@
 - Use `sh scripts/sync-extension-resources.sh --check` in reviews and before
   release to catch stale packaged resources.
 - Open `tests/gmail-rendering.html` through a local HTTP server for message
-  rendering changes; all displayed checks must pass, followed by real Safari
+  rendering changes; all displayed checks must pass (reload from origin with Option-Command-R
+  after fixture/source edits to avoid cached scripts), followed by real Safari
   verification of a plain email and a styled HTML email.
 - Run `node --test tests/*.test.cjs` for runtime changes and
   `git diff --check` for every change. Check changed JavaScript with `node --check`.
@@ -61,6 +70,11 @@
   `build/DerivedData`; then run the MCP build action. If XcodeBuildMCP is not
   available or cannot run the macOS build, fall back to:
   `xcodebuild -project "Safari Dark Mode/Safari Dark Mode.xcodeproj" -scheme "Safari Dark Mode" -configuration Debug -derivedDataPath build/DerivedData build`.
+- For a rebuilt local install, use `sh scripts/build-and-run.sh`. It stops only
+  the companion at the canonical build path, syncs resources, builds, and launches
+  a fresh process. Replacing a running companion bundle can break Safari’s
+  Settings handoff even when the extension remains enabled. It leaves Safari
+  running and does not change extension enablement.
 - For a requested local install, run the app at
   `build/DerivedData/Build/Products/Debug/Safari Dark Mode.app`, then enable it in
   Safari Settings > Extensions and grant only the supported sites. An ad-hoc
@@ -70,7 +84,11 @@
   app. Report authentication or permission blockers accurately.
   After repeated packaged rebuilds, Safari may retain stale extension contexts in
   existing Gmail tabs. If a styled page reports “Page not connected” in the popup,
-  check the same URL in a fresh tab before changing the messaging code.
+  check the same URL in a fresh tab before changing the messaging code. If Safari
+  omits the extension after a rebuild and logs a signing-dictionary lookup failure,
+  clean-rebuild and relaunch the local host app before touching browser state.
+  Use a new build/version when verifying a revised packaged resource set; Safari
+  can retain old resource contents for an already loaded extension version.
 - Safari 27 can also load `extension/` through Settings > Developer > Add
   Temporary Extension. This expires after 24 hours or quitting Safari; use the
   packaged app when the user asks for a rebuilt installed extension.

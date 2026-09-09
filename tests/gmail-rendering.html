@@ -18,8 +18,18 @@ body { font-family: system-ui; padding: 24px; }
 <div class="a3s" id="styled"><div class="card" id="card"><h2>Styled email</h2><p id="card-copy" style="color:#292f3c">Readable text on an off-white card.</p><a id="button" class="button" href="#">Continue</a></div></div>
 <div class="a3s"><table bgcolor="#ffffff" style="color:#333"><tr><td id="table-copy">Legacy table background</td></tr></table><p id="accent" style="color:#bb9911">Colored newsletter headline</p><div id="gradient" style="background:linear-gradient(rgb(255,255,255),rgb(240,235,220));color:black">Gradient card</div></div>
 <div class="a3s"><div id="dark-card" style="background:#181818;color:white;padding:12px">Already dark content</div><img id="image" alt="Original colors" width="48" height="48" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect fill='%23f84' width='48' height='48'/%3E%3C/svg%3E"></div>
+<div class="a3s"><p id="important-fg" style="background:white;color:black!important">Important foreground</p><p id="important-bg" style="background:white!important;color:black">Important background</p><p id="important-fill" style="background:white!important;color:black!important;-webkit-text-fill-color:black!important">Important text fill</p></div>
 </div>
+<div class="a3s"><div id="image-region" style="background: white url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect fill='white' width='20' height='20'/%3E%3C/svg%3E&quot;);color:#222"><p id="image-region-copy">Original text over a background image <span id="image-region-accent" style="color:#1255cc">with a blue accent</span></p></div></div>
+<div class="a3s"><div style="background:#f8f6ee;color:#222"><div id="transparent-image-region" style="background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'/%3E&quot;)">Transparent image keeps its original backing color</div></div></div>
 <div id="footer" class="nr wR" style="background:white"><div class="amn"><span id="reply" class="ams" role="link" style="color:#444">Reply</span></div></div>
+<!-- Both normal and expanded composers share M9; expanded mode adds a dialog ancestor. -->
+<div role="dialog" class="nH Hd"><div class="M9">
+  <div class="aoD"><div class="aGb" style="background:white"><div class="afx" role="listbox"><input id="compose-recipient" aria-label="Test recipient" style="border:0;border-radius:0" placeholder="To"></div></div></div>
+  <div class="J-Z"><div role="button" class="J-Z-M-I"><div id="compose-format-icon" class="aaA" style="width:20px;height:20px;background-image:linear-gradient(black,black)"></div></div></div>
+  <div class="aDh"><div role="button" class="a1 aaA" id="compose-attachment-icon" style="width:20px;height:20px;background-image:linear-gradient(black,black)"></div></div>
+  <div class="Am" contenteditable="true" id="compose-body">Synthetic compose body</div>
+</div></div>
 <script src="../extension/gmail-messages.js"></script>
 <script>
 const results = [];
@@ -29,6 +39,11 @@ const rgb = value => value.match(/[\d.]+/g).slice(0,3).map(Number);
 const lum = value => rgb(value).map(n=>n/255).map(n=>n<=.04045?n/12.92:((n+.055)/1.055)**2.4).reduce((a,n,i)=>a+n*[.2126,.7152,.0722][i],0);
 const ratio = (a,b) => (Math.max(lum(a),lum(b))+.05)/(Math.min(lum(a),lum(b))+.05);
 __safariDarkModeMessages.sync(true);
+check('Expanded compose formatting icon retained', color('compose-format-icon','backgroundImage')!=='none');
+check('Expanded compose attachment icon retained', color('compose-attachment-icon','backgroundImage')!=='none');
+check('Compose fields retain inline geometry', color('compose-recipient','borderWidth')==='0px' && color('compose-recipient','borderRadius')==='0px');
+check('Recipient editor is not a floating suggestion card', getComputedStyle(document.querySelector('.afx')).borderRadius==='0px' && getComputedStyle(document.querySelector('.aGb')).backgroundColor==='rgba(0, 0, 0, 0)');
+check('Compose body has readable dark colors', lum(color('compose-body','backgroundColor'))<.1 && ratio(color('compose-body','color'),color('compose-body','backgroundColor'))>=4.5);
 check('Reply strip is dark', lum(color('footer','backgroundColor'))<.1 && ratio(color('reply','color'),color('reply','backgroundColor'))>=4.5);
 check('Plain message is dark', lum(color('plain','backgroundColor')) < .1);
 check('Plain text has contrast', ratio(color('plain-copy','color'),color('plain','backgroundColor'))>=4.5);
@@ -42,10 +57,16 @@ check('Table text is readable', lum(color('table-copy','color'))>.3);
 check('Button label has contrast', ratio(color('button','color'),color('button','backgroundColor'))>=4.5);
 check('Already dark surface preserved', color('dark-card','backgroundColor')==='rgb(24, 24, 24)');
 check('Images are unmodified', !document.getElementById('image').hasAttribute('data-sdm-message-colors') && color('image','filter')==='none');
+for (const id of ['important-fg','important-bg','important-fill']) {
+ check(id+' has paired dark contrast', lum(color(id,'backgroundColor'))<.1 && ratio(color(id,'webkitTextFillColor'),color(id,'backgroundColor'))>=4.5);
+}
+check('Image-backed region keeps original colors', color('image-region','backgroundColor')==='rgb(255, 255, 255)' && color('image-region-copy','color')==='rgb(34, 34, 34)' && color('image-region-accent','color')==='rgb(18, 85, 204)' && color('image-region','backgroundImage').includes('url('));
+check('Transparent image keeps its original backing color', color('transparent-image-region','backgroundColor')==='rgb(248, 246, 238)' && color('transparent-image-region','color')==='rgb(34, 34, 34)');
 const first = color('card-copy','color');
 document.documentElement.setAttribute('data-sdm-disabled','');
 __safariDarkModeMessages.sync(false);
 check('Off restores sender card', color('card','backgroundColor')==='rgb(248, 246, 238)' && color('card-copy','color')==='rgb(41, 47, 60)');
+check('Off restores inline priorities', document.getElementById('important-fg').style.getPropertyPriority('color')==='important' && color('important-fg','color')==='rgb(0, 0, 0)' && color('important-bg','backgroundColor')==='rgb(255, 255, 255)' && document.getElementById('important-bg').style.getPropertyPriority('background-color')==='important');
 document.documentElement.removeAttribute('data-sdm-disabled');
 __safariDarkModeMessages.sync(true);
 check('Re-enable is stable', color('card-copy','color')===first);
@@ -53,8 +74,13 @@ const late = document.createElement('div'); late.className='a3s'; late.id='late'
 setTimeout(()=>{
  check('New message gets dark styling', lum(color('late-copy','backgroundColor')) < .1 && ratio(color('late-copy','color'),color('late-copy','backgroundColor'))>=4.5);
  document.getElementById('late-copy').style.backgroundColor='#f0e0d0';
+ document.getElementById('important-fg').style.setProperty('color', '#123456', 'important');
  setTimeout(()=>{
   check('Sender style updates get reprocessed', lum(color('late-copy','backgroundColor'))<.1);
+  document.documentElement.setAttribute('data-sdm-disabled',''); __safariDarkModeMessages.sync(false);
+  check('Off preserves newer sender important edits', color('important-fg','color')==='rgb(18, 52, 86)');
+  document.documentElement.removeAttribute('data-sdm-disabled'); __safariDarkModeMessages.sync(true);
+  check('Important styles remain readable after refresh', ratio(color('important-bg','color'),color('important-bg','backgroundColor'))>=4.5);
   let changes=0; const observer=new MutationObserver(records=>changes+=records.length); observer.observe(document.querySelector('.messages'),{subtree:true,attributes:true,childList:true});
   setTimeout(()=>{observer.disconnect();check('Observer settles without rewriting itself',changes===0);document.documentElement.dataset.testsComplete='true';},400);
  },180);

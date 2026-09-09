@@ -280,3 +280,8 @@
   color: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
 }
+
+/* The Share lock is a CSS mask, whose paint color is its background. */
+:root:not([data-sdm-disabled]) .scb-split-button .scb-icon {
+  background-color: var(--sdm-text) !important;
+}

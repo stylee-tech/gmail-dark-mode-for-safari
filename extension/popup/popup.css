@@ -53,3 +53,6 @@ fieldset:disabled .appearance-choice { cursor: default; }
 #appearance-status { margin-top: 12px; min-height: 36px; font-size: 12px; }
 #unsupported { margin-top: 10px; font-size: 12px; }
 footer { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 11px; line-height: 1.6; }
+
+#retry-connection { margin-top: 8px; padding: 8px 12px; min-height: 36px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; }
+#retry-connection:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

@@ -623,6 +623,12 @@
   box-shadow: none !important;
 }
 
+/* Secondary headings in the expanded suggestions panel. */
+:root:not([data-sdm-disabled]) .UUbT9 .ynRric {
+  color: var(--sdm-muted) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
 /* The rounded search field owns its surface. Painting its rectangular parents
    and inner textarea hides the corners and introduces a false underline. */
 :root:not([data-sdm-disabled]) :is(.A8SBwf, .SDkEP, .a4bIc, .iblpc),
