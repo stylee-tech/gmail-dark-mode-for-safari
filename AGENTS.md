@@ -7,12 +7,14 @@
 - `extension/manifest.json` uses Manifest V3 (Safari 15.4+). Keep API permissions
   in `permissions`, URL access in `host_permissions`, and the toolbar UI in
   `action`. Development is currently exercised in Safari 27.
-- `site-registry.js` owns product detection, boolean preference normalization,
+- `site-registry.js` owns product detection, appearance-mode normalization,
   helper-frame gating, and idempotent stylesheet maintenance.
 - `preload.js` only establishes synchronous first-paint attributes. `content.js`
   is the sole owner of storage and system-appearance listeners. Do not introduce
   a second state controller or unconditional stylesheet reordering.
-- Dark styling requires both the product preference and macOS Dark Appearance.
+- Per-product modes are `system` (default), `dark`, and `off`. Only `system`
+  follows macOS Dark Appearance; `dark` overrides it. Preserve old boolean
+  preferences as `true` → `system` and `false` → `off`.
   Google account helpers inherit a known embedded parent; standalone account
   pages stay untouched. Keep Sheets grid layers transparent where Google expects
   them to be. A scoped canvas filter darkens the grid without changing document
@@ -57,7 +59,7 @@
   `build/DerivedData/Build/Products/Debug/Safari Dark Mode.app`, then enable it in
   Safari Settings > Extensions and grant only the supported sites. An ad-hoc
   build needs Settings > Developer > Allow unsigned extensions. The user must
-  complete any macOS authentication prompt. Verify the version, popup toggle,
+  complete any macOS authentication prompt. Verify the version, popup appearance choices,
   persistence after reload, and affected Google surfaces in the actual Safari
   app. Report authentication or permission blockers accurately.
   After repeated packaged rebuilds, Safari may retain stale extension contexts in

@@ -14,14 +14,15 @@
       </header>
       <p class="eyebrow">CURRENT WEBSITE</p>
       <h2 id="site-label">Checking this page…</h2>
-      <label class="toggle-row">
-        <span>Use dark appearance</span>
-        <input id="enabled-toggle" type="checkbox" role="switch" disabled aria-describedby="appearance-status">
-        <span class="switch" aria-hidden="true"></span>
-      </label>
+      <label class="appearance-label" for="appearance-mode">Appearance</label>
+      <select id="appearance-mode" disabled aria-describedby="appearance-status">
+        <option value="system">Follow device</option>
+        <option value="dark">Dark</option>
+        <option value="off">Off</option>
+      </select>
       <p id="appearance-status" role="status" aria-live="polite">Connecting to this page…</p>
       <p id="unsupported" hidden>Works with Gmail, Google Sheets, and Google Search.</p>
-      <footer>Follows your Mac’s appearance.<br>Preferences stay on this device.</footer>
+      <footer>Choose an appearance for this website.<br>Preferences stay on this device.</footer>
     </main>
     <script src="../site-registry.js"></script>
     <script src="popup.js"></script>

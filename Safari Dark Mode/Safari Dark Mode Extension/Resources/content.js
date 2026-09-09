@@ -61,7 +61,8 @@
       }
 
       registry.readEnabledBySite(api, (enabledBySite) => {
-        const siteEnabled = registry.isProductEnabled(enabledBySite, product, context);
+        const mode = registry.modeFor(enabledBySite, product, context);
+        const siteEnabled = mode !== "off";
         const systemDark = isSystemDark();
 
         if (
@@ -76,7 +77,8 @@
         sendResponse({
           product,
           renderers: registry.renderersFor(product),
-          enabled: siteEnabled && systemDark,
+          enabled: registry.isProductEnabled(enabledBySite, product, context, systemDark),
+          mode,
           siteEnabled,
           systemDark
         });
@@ -88,12 +90,14 @@
 
   function applyEnabled(enabledBySite) {
     enabledBySiteState = registry.normalizeEnabledBySite(enabledBySite);
-    const siteEnabled = registry.isProductEnabled(enabledBySiteState, product, context);
+    const mode = registry.modeFor(enabledBySiteState, product, context);
+    const siteEnabled = mode !== "off";
     const systemDark = isSystemDark();
-    const enabled = siteEnabled && systemDark;
+    const enabled = registry.isProductEnabled(enabledBySiteState, product, context, systemDark);
 
     document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
     document.documentElement.dataset.sdmEnabled = String(enabled);
+    document.documentElement.dataset.sdmMode = mode;
     document.documentElement.dataset.sdmSiteEnabled = String(siteEnabled);
     document.documentElement.dataset.sdmSystemDark = String(systemDark);
     document.documentElement.dataset.sdmPreload = enabled ? "enabled" : "disabled";

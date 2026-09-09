@@ -27,28 +27,28 @@
   const products = {
     gmail: {
       label: "Gmail",
-      defaultEnabled: true,
+      defaultMode: "system",
       optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.gmail]
     },
     sheets: {
       label: "Google Sheets",
-      defaultEnabled: true,
+      defaultMode: "system",
       optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.sheets]
     },
     googleSearch: {
       label: "Google Search",
-      defaultEnabled: true,
+      defaultMode: "system",
       optimisticPreload: true,
       renderers: ["css"],
       styles: [styleCatalog.base, styleCatalog.googleSearch]
     },
     googleHelper: {
       label: "Google account helpers",
-      defaultEnabled: true,
+      defaultMode: "system",
       inheritsFromFlow: true,
       requiresKnownParent: true,
       optimisticPreload: false,
@@ -158,7 +158,7 @@
 
   function defaults() {
     return Object.keys(products).reduce((result, key) => {
-      result[key] = products[key].defaultEnabled;
+      result[key] = products[key].defaultMode;
       return result;
     }, {});
   }
@@ -174,9 +174,11 @@
     const normalized = defaults();
 
     for (const key of Object.keys(normalized)) {
-      if (value && typeof value[key] === "boolean") {
-        normalized[key] = value[key];
-      }
+      const mode = value && value[key];
+      // Keep the existing storage key and migrate boolean preferences on read.
+      if (mode === false) normalized[key] = "off";
+      else if (mode === true) normalized[key] = "system";
+      else if (["system", "dark", "off"].includes(mode)) normalized[key] = mode;
     }
 
     return normalized;
@@ -196,30 +198,24 @@
     });
   }
 
-  function isProductEnabled(enabledBySite, product, context) {
+  function modeFor(enabledBySite, product, context) {
     const normalized = normalizeEnabledBySite(enabledBySite);
-
-    if (!Object.hasOwn(products, product) || normalized[product] === false) {
-      return false;
+    if (!Object.hasOwn(products, product) || normalized[product] === "off") return "off";
+    if (products[product].inheritsFromFlow) {
+      const parent = context && context.parentProduct;
+      if (!parent || !Object.hasOwn(products, parent) || products[parent].inheritsFromFlow) return "off";
+      return normalized[parent];
     }
+    return normalized[product];
+  }
 
-    const productConfig = products[product];
-
-    if (productConfig && productConfig.inheritsFromFlow) {
-      if (!context || !context.parentProduct) {
-        return !productConfig.requiresKnownParent;
-      }
-
-      if (normalized[context.parentProduct] === false) {
-        return false;
-      }
-    }
-
-    return true;
+  function isProductEnabled(enabledBySite, product, context, systemDark = true) {
+    const mode = modeFor(enabledBySite, product, context);
+    return mode === "dark" || (mode === "system" && systemDark);
   }
 
   function isOwnProductEnabled(enabledBySite, product) {
-    return Boolean(product && normalizeEnabledBySite(enabledBySite)[product] !== false);
+    return Object.hasOwn(products, product) && normalizeEnabledBySite(enabledBySite)[product] !== "off";
   }
 
   function shouldPreloadWithoutHint(product, context) {
@@ -448,6 +444,7 @@
     normalizeEnabledBySite,
     readEnabledBySite,
     writeEnabledBySite,
+    modeFor,
     isProductEnabled,
     isOwnProductEnabled,
     shouldPreloadWithoutHint,

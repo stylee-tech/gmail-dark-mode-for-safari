@@ -115,8 +115,8 @@ test('helper frames inherit only a known supported parent and never preload opti
 test('storage normalization retains boolean preferences and drops unknown or malformed values', () => {
   const h = harness();
   const settings = h.registry.normalizeEnabledBySite({ gmail: false, sheets: 'false', unexpected: true });
-  assert.equal(settings.gmail, false);
-  assert.equal(settings.sheets, true);
+  assert.equal(settings.gmail, 'off');
+  assert.equal(settings.sheets, 'system');
   assert.equal(Object.hasOwn(settings, 'unexpected'), false);
   assert.equal(h.registry.isProductEnabled({}, 'unknown'), false);
 });
@@ -157,4 +157,42 @@ test('a delayed initial storage read cannot overwrite a more recent toggle', () 
   h.setEnabled({ gmail: false });
   h.reads.shift()({ enabledBySite: { gmail: true } });
   assert.equal(h.document.documentElement.dataset.sdmEnabled, 'false');
+});
+
+
+test('appearance modes migrate booleans, preserve explicit choices, and resolve every system state', () => {
+  const h = harness();
+  const settings = h.registry.normalizeEnabledBySite({ gmail: true, sheets: false, googleSearch: 'dark' });
+  assert.equal(settings.gmail, 'system');
+  assert.equal(settings.sheets, 'off');
+  assert.equal(settings.googleSearch, 'dark');
+  for (const mode of ['system', 'dark', 'off']) {
+    for (const systemDark of [false, true]) {
+      assert.equal(h.registry.isProductEnabled({ gmail: mode }, 'gmail', {}, systemDark),
+        mode === 'dark' || (mode === 'system' && systemDark));
+    }
+  }
+});
+
+test('live mode changes and system changes update styling without a reload', () => {
+  const h = harness();
+  h.run('preload.js'); h.run('content.js');
+  h.reads.shift()({ enabledBySite: { gmail: 'system' } });
+  const enabled = () => h.document.documentElement.dataset.sdmEnabled;
+  h.setDark(false); assert.equal(enabled(), 'false');
+  h.setEnabled({ gmail: 'dark' }); assert.equal(enabled(), 'true');
+  h.setDark(true); h.setDark(false); assert.equal(enabled(), 'true');
+  h.setEnabled({ gmail: 'off' }); h.setDark(true); assert.equal(enabled(), 'false');
+  h.setEnabled({ gmail: 'system' }); assert.equal(enabled(), 'true');
+  h.setDark(false); assert.equal(enabled(), 'false');
+  h.flush();
+});
+
+test('helper frames inherit forced dark but standalone helpers stay untouched', () => {
+  const h = harness('https://accounts.google.com/', { embedded: true, referrer: 'https://mail.google.com/' });
+  const context = h.registry.detectContext();
+  assert.equal(h.registry.isProductEnabled({ gmail: 'dark' }, 'googleHelper', context, false), true);
+  assert.equal(h.registry.isProductEnabled({ gmail: 'system' }, 'googleHelper', context, false), false);
+  assert.equal(h.registry.isProductEnabled({ gmail: 'off' }, 'googleHelper', context, true), false);
+  assert.equal(h.registry.isProductEnabled({ googleHelper: 'dark' }, 'googleHelper', {}, true), false);
 });

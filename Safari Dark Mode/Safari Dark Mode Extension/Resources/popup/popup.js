@@ -2,12 +2,12 @@
   const api = globalThis.browser || globalThis.chrome;
   const registry = globalThis.__safariDarkModeRegistry;
   const label = document.getElementById("site-label");
-  const toggle = document.getElementById("enabled-toggle");
+  const selector = document.getElementById("appearance-mode");
   const appearanceStatus = document.getElementById("appearance-status");
   const unsupported = document.getElementById("unsupported");
   const appearance = globalThis.matchMedia("(prefers-color-scheme: dark)");
   let currentProduct = null;
-  let savedEnabled = false;
+  let savedMode = "system";
 
   if (!api || !registry) {
     setUnavailable(false);
@@ -35,51 +35,53 @@
 
       currentProduct = response.product;
       label.textContent = registry.products[currentProduct].label;
-      savedEnabled = response.siteEnabled !== false;
-      toggle.checked = savedEnabled;
-      toggle.disabled = false;
+      savedMode = registry.normalizeEnabledBySite({ [currentProduct]: response.mode ?? response.siteEnabled })[currentProduct];
+      selector.value = savedMode;
+      selector.disabled = false;
       renderStatus();
     });
   });
 
-  toggle.addEventListener("change", () => {
+  selector.addEventListener("change", () => {
     if (!currentProduct) return;
-    const requestedEnabled = toggle.checked;
-    toggle.disabled = true;
+    const requestedMode = selector.value;
+    selector.disabled = true;
     appearanceStatus.textContent = "Saving preference…";
 
     registry.readEnabledBySite(api, (settings, readError) => {
       if (readError) { finishSave(readError); return; }
-      settings[currentProduct] = requestedEnabled;
+      settings[currentProduct] = requestedMode;
       registry.writeEnabledBySite(api, settings, finishSave);
     });
 
     function finishSave(error) {
-      if (!error) savedEnabled = requestedEnabled;
-      toggle.checked = savedEnabled;
-      toggle.disabled = false;
+      if (!error) savedMode = requestedMode;
+      selector.value = savedMode;
+      selector.disabled = false;
       if (error) appearanceStatus.textContent = "Couldn’t save. Please try again.";
       else renderStatus();
     }
   });
 
   appearance.addEventListener("change", () => {
-    if (currentProduct && !toggle.disabled) renderStatus();
+    if (currentProduct && !selector.disabled) renderStatus();
   });
 
   function renderStatus() {
-    appearanceStatus.textContent = !savedEnabled
+    appearanceStatus.textContent = savedMode === "off"
       ? "Off for this website. Its original appearance is restored."
-      : appearance.matches
-        ? "Dark appearance is on for this website."
-        : "Ready for dark mode. Turns on when your Mac uses Dark Appearance.";
+      : savedMode === "dark"
+        ? "Dark appearance stays on, regardless of your device setting."
+        : appearance.matches
+          ? "Following your device: dark appearance is on."
+          : "Following your device: original appearance is shown.";
   }
 
   function setUnavailable(isSupportedUrl) {
     currentProduct = null;
     label.textContent = isSupportedUrl ? "Page not connected" : "No supported page";
-    toggle.checked = false;
-    toggle.disabled = true;
+    selector.value = "system";
+    selector.disabled = true;
     appearanceStatus.textContent = isSupportedUrl
       ? "Allow this website in Safari’s extension settings, then reload the page."
       : "Open a supported website. If you’re already there, allow access in Safari and reload.";

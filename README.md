@@ -52,9 +52,11 @@ and [Safari manifest compatibility](https://developer.apple.com/documentation/sa
 
 ## Development
 
-Each supported product is enabled by default, and dark styling follows macOS
-Dark Appearance. Use the toolbar popup to disable a product across its tabs.
-The popup reports whether styling is active, off, waiting for Dark Appearance,
+Each supported product defaults to **Follow device**, which follows macOS
+appearance. In the toolbar popup, choose **Dark** to keep dark styling on, or
+**Off** to restore the website’s original appearance. Choices apply across that
+product’s tabs. Existing enabled preferences become Follow device; disabled
+preferences stay Off. The popup reports the selected mode and active appearance,
 or unable to connect because the page needs access or a reload.
 Safari injects the main product CSS at `document_start` to reduce first-paint
 white flashes on enabled pages. Because Safari extension storage is async, a
@@ -129,7 +131,7 @@ See `SECURITY.md` for release checks and permission rules.
 
 This project follows the lightweight Safari-extension pattern used by older
 extensions like Nightshift: inject CSS as early as possible, keep the runtime
-small, and make the toggle site-aware. It also avoids a full dynamic color
+small, and make the appearance setting site-aware. It also avoids a full dynamic color
 engine because Safari extension performance and platform quirks are more
 noticeable during initial page load. For this personal extension, the strategy
 is static site-specific CSS with narrow fallback rules for canvas-heavy surfaces.

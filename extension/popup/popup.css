@@ -34,31 +34,19 @@ p { margin: 0; line-height: 1.5; color: var(--muted); }
 .subtitle { font-size: 11px; margin-top: 3px; }
 .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 1.3px; }
 h2 { font-size: 21px; letter-spacing: -.5px; margin: 5px 0 16px; }
-.toggle-row {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 52px;
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--surface);
-  cursor: pointer;
+.appearance-label { display: block; margin-bottom: 8px; color: var(--muted); }
+select {
+  appearance: none;
+  width: 100%; min-height: 44px; padding: 10px 36px 10px 12px;
+  border: 1px solid var(--border); border-radius: 10px;
+  background-color: var(--surface); color: var(--text); font: inherit;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 17px) 50%, calc(100% - 12px) 50%;
+  background-size: 5px 5px; background-repeat: no-repeat;
 }
-.toggle-row input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.switch { flex: 0 0 34px; height: 21px; padding: 3px; border-radius: 20px; background: var(--track); }
-.switch::before { content: ""; display: block; width: 15px; height: 15px; border-radius: 50%; background: white; }
-input:checked + .switch { background: #36744c; }
-input:checked + .switch::before { transform: translateX(13px); }
-input:focus-visible + .switch { outline: 3px solid var(--accent); outline-offset: 3px; }
-input:disabled + .switch { opacity: .45; }
+select:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+select:disabled { opacity: .5; }
 #appearance-status { margin-top: 12px; min-height: 36px; font-size: 12px; }
 #unsupported { margin-top: 10px; font-size: 12px; }
 footer { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 11px; line-height: 1.6; }
-
-@media (forced-colors: active) {
-  .toggle-row input { position: static; opacity: 1; width: auto; height: auto; }
-  .switch { display: none; }
-}

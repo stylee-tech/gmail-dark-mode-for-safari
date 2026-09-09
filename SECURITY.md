@@ -5,7 +5,7 @@ data surfaces narrow.
 
 ## Data handling
 
-- The extension stores only per-product enablement flags in extension-local
+- The extension stores only per-product appearance modes (`system`, `dark`, or `off`) in extension-local
   storage under `enabledBySite`.
 - The extension does not collect browsing history, page content, account data,
   analytics, telemetry, or remote diagnostics.

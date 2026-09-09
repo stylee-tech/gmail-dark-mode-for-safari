@@ -18,7 +18,7 @@ final class ViewController: NSViewController {
         let title = NSTextField(labelWithString: "Safari Dark Mode")
         title.font = .systemFont(ofSize: 23, weight: .semibold)
         let detail = NSTextField(wrappingLabelWithString:
-            "A softer shade of Gmail, Google Search, and Sheets.\nFollows your Mac’s Dark Appearance.")
+            "A softer shade of Gmail, Google Search, and Sheets.\nChoose Follow device, Dark, or Off in Safari’s toolbar popup.")
         detail.textColor = .secondaryLabelColor
         detail.alignment = .center
         statusLabel.alignment = .center
