@@ -1,6 +1,6 @@
 # Mac App Store release
 
-Updated 9 September 2026. Release candidate: **1.0.0 (19)**.
+Updated 9 September 2026. Current internal test build: **1.0.0 (20)**.
 
 ## Approved launch decisions
 
@@ -97,6 +97,16 @@ Search; Gmail's Trash notice banner; and Gmail's advanced search/filter panel.
 Inspect and verify these in Safari before preparing the next candidate.
 Leave reload-flash prevention unchanged unless a reliable solution is established;
 the current implementation already requests document-start injection.
+
+Build 20 is uploaded to the existing internal TestFlight group and installed on
+this Mac. It adds dynamic companion setup status; the rendering reports above
+remain unresolved. All 12 regression tests and archive/export passed. Owner
+verification and explicit confirmation are required before resubmission.
+
+The first build-20 status check failed because Xcode had registered the release
+archive alongside the TestFlight app. Unregistering only the archive restored
+the green “Extension enabled” state, verified by screenshot. The archive script
+now unregisters its packaging copy after export to prevent this conflict.
 
 Before the TestFlight installation, Safari registered the old unsigned 0.2.15
 extension while the companion ran from a signed archive. That mismatch was a

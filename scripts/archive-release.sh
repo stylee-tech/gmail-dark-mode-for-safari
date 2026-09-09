@@ -23,3 +23,8 @@ PY
 xcodebuild -exportArchive -archivePath build/GmailDarkMode-1.0.xcarchive \
   -exportOptionsPlist build/ExportOptions.plist -exportPath build/AppStore \
   -allowProvisioningUpdates
+
+# Xcode registers the archived app during packaging. Leave only installed copies
+# discoverable: a duplicate archive can break Safari's status/settings lookup.
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister \
+  -u "$repo_dir/build/GmailDarkMode-1.0.xcarchive/Products/Applications/Safari Dark Mode.app"
