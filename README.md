@@ -52,12 +52,13 @@ and [Safari manifest compatibility](https://developer.apple.com/documentation/sa
 
 ## Development
 
-Each supported product defaults to **Follow device**, which follows macOS
-appearance. In the toolbar popup, choose **Dark** to keep dark styling on, or
-**Off** to restore the website’s original appearance. Choices apply across that
-product’s tabs. Existing enabled preferences become Follow device; disabled
-preferences stay Off. The popup reports the selected mode and active appearance,
-or unable to connect because the page needs access or a reload.
+Each supported product defaults to **System (Follow device)**, which follows
+macOS appearance. The toolbar popup shows three one-click choices:
+**On (Always dark)**, **Off (Website default)**, and **System (Follow device)**.
+Off restores the website’s own appearance; it does not force a light theme.
+Choices apply across that product’s tabs. Existing enabled preferences become
+System; disabled preferences stay Off. The popup reports the selected mode and
+active appearance, or explains when the page needs access or a reload.
 Safari injects the main product CSS at `document_start` to reduce first-paint
 white flashes on enabled pages. Because Safari extension storage is async, a
 site disabled in the popup may briefly prepaint dark until the stored setting is

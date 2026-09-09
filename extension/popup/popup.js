@@ -3,6 +3,7 @@
   const registry = globalThis.__safariDarkModeRegistry;
   const label = document.getElementById("site-label");
   const selector = document.getElementById("appearance-mode");
+  const choices = selector.querySelectorAll("input[name=appearance]");
   const appearanceStatus = document.getElementById("appearance-status");
   const unsupported = document.getElementById("unsupported");
   const appearance = globalThis.matchMedia("(prefers-color-scheme: dark)");
@@ -36,15 +37,16 @@
       currentProduct = response.product;
       label.textContent = registry.products[currentProduct].label;
       savedMode = registry.normalizeEnabledBySite({ [currentProduct]: response.mode ?? response.siteEnabled })[currentProduct];
-      selector.value = savedMode;
+      selectMode(savedMode);
       selector.disabled = false;
       renderStatus();
     });
   });
 
-  selector.addEventListener("change", () => {
-    if (!currentProduct) return;
-    const requestedMode = selector.value;
+  selector.addEventListener("change", (event) => {
+    if (!currentProduct || selector.disabled || !event.target.checked) return;
+    const requestedMode = event.target.value;
+    if (!["dark", "off", "system"].includes(requestedMode)) return;
     selector.disabled = true;
     appearanceStatus.textContent = "Saving preference…";
 
@@ -56,7 +58,7 @@
 
     function finishSave(error) {
       if (!error) savedMode = requestedMode;
-      selector.value = savedMode;
+      selectMode(savedMode);
       selector.disabled = false;
       if (error) appearanceStatus.textContent = "Couldn’t save. Please try again.";
       else renderStatus();
@@ -67,9 +69,13 @@
     if (currentProduct && !selector.disabled) renderStatus();
   });
 
+  function selectMode(mode) {
+    for (const choice of choices) choice.checked = choice.value === mode;
+  }
+
   function renderStatus() {
     appearanceStatus.textContent = savedMode === "off"
-      ? "Off for this website. Its original appearance is restored."
+      ? "Using this website’s default appearance."
       : savedMode === "dark"
         ? "Dark appearance stays on, regardless of your device setting."
         : appearance.matches
@@ -80,7 +86,7 @@
   function setUnavailable(isSupportedUrl) {
     currentProduct = null;
     label.textContent = isSupportedUrl ? "Page not connected" : "No supported page";
-    selector.value = "system";
+    selectMode("system");
     selector.disabled = true;
     appearanceStatus.textContent = isSupportedUrl
       ? "Allow this website in Safari’s extension settings, then reload the page."

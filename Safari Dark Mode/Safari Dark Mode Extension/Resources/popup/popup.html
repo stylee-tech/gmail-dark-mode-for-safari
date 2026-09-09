@@ -14,12 +14,21 @@
       </header>
       <p class="eyebrow">CURRENT WEBSITE</p>
       <h2 id="site-label">Checking this page…</h2>
-      <label class="appearance-label" for="appearance-mode">Appearance</label>
-      <select id="appearance-mode" disabled aria-describedby="appearance-status">
-        <option value="system">Follow device</option>
-        <option value="dark">Dark</option>
-        <option value="off">Off</option>
-      </select>
+      <fieldset id="appearance-mode" disabled aria-describedby="appearance-status">
+        <legend>Appearance</legend>
+        <label class="appearance-choice">
+          <input type="radio" name="appearance" value="dark">
+          <span><strong>On</strong> <span class="choice-detail">(Always dark)</span></span>
+        </label>
+        <label class="appearance-choice">
+          <input type="radio" name="appearance" value="off">
+          <span><strong>Off</strong> <span class="choice-detail">(Website default)</span></span>
+        </label>
+        <label class="appearance-choice">
+          <input type="radio" name="appearance" value="system">
+          <span><strong>System</strong> <span class="choice-detail">(Follow device)</span></span>
+        </label>
+      </fieldset>
       <p id="appearance-status" role="status" aria-live="polite">Connecting to this page…</p>
       <p id="unsupported" hidden>Works with Gmail, Google Sheets, and Google Search.</p>
       <footer>Choose an appearance for this website.<br>Preferences stay on this device.</footer>

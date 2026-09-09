@@ -34,6 +34,8 @@
 - Gmail `.nU` elements wrap sidebar label text. Never include them in icon
   filters; style their text colors separately.
 - `extension/popup/` owns toolbar controls and connection/save feedback.
+  Keep On (Always dark), Off (Website default), and System (Follow device)
+  visible as one-click radio choices; Off does not force light appearance.
   `tests/` contains dependency-free Node regression tests.
 
 ## Editing and validation

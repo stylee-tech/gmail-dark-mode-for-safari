@@ -9,6 +9,13 @@ test('popup saves three modes, migrates legacy preferences and restores selectio
   let failSave = false;
   const elements = Object.fromEntries(['site-label', 'appearance-mode', 'appearance-status', 'unsupported'].map(id =>
     [id, { disabled: true, addEventListener(_type, callback) { this.change = callback; } }]));
+  const choices = ['dark', 'off', 'system'].map(value => ({ value, checked: false }));
+  elements['appearance-mode'].querySelectorAll = () => choices;
+  const select = mode => {
+    for (const choice of choices) choice.checked = choice.value === mode;
+    elements['appearance-mode'].change({ target: choices.find(choice => choice.checked) });
+  };
+  const selectedMode = () => choices.filter(choice => choice.checked).map(choice => choice.value);
   const appearance = { matches: false, addEventListener(_type, callback) { this.change = callback; } };
   const api = {
     runtime: {},
@@ -32,20 +39,21 @@ test('popup saves three modes, migrates legacy preferences and restores selectio
   }
   const selector = elements['appearance-mode'];
   const status = elements['appearance-status'];
-  assert.equal(selector.value, 'system');
+  assert.deepEqual(selectedMode(), ['system']);
   assert.equal(selector.disabled, false);
   assert.match(status.textContent, /original appearance/);
   for (const mode of ['dark', 'off', 'system']) {
-    selector.value = mode; selector.change();
+    select(mode);
+    assert.deepEqual(selectedMode(), [mode]);
     assert.equal(stored.gmail, mode);
     assert.equal(stored.sheets, 'off', 'preserve other sites when migrating storage');
     assert.equal(selector.disabled, false);
   }
   appearance.matches = true; appearance.change();
   assert.match(status.textContent, /Following your device: dark/);
-  failSave = true; selector.value = 'dark'; selector.change();
+  failSave = true; select('dark');
   assert.equal(stored.gmail, 'system');
-  assert.equal(selector.value, 'system');
+  assert.deepEqual(selectedMode(), ['system']);
   assert.equal(selector.disabled, false);
   assert.match(status.textContent, /Couldn’t save/);
 });
