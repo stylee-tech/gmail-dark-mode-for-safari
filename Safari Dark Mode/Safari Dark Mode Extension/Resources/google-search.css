@@ -396,10 +396,6 @@
   box-shadow: none !important;
 }
 
-:root:not([data-sdm-disabled]) #rso .MjjYud {
-  margin-bottom: 18px !important;
-}
-
 :root:not([data-sdm-disabled]) #rso .Ww4FFb,
 :root:not([data-sdm-disabled]) #rso .cUnQKe,
 :root:not([data-sdm-disabled]) #rso .ULSxyf,
@@ -410,7 +406,14 @@
 :root:not([data-sdm-disabled]) #rso .obcontainer,
 :root:not([data-sdm-disabled]) #rso .g-blk,
 :root:not([data-sdm-disabled]) #rso .kp-blk,
-:root:not([data-sdm-disabled]) #rso .osrp-blk,
+:root:not([data-sdm-disabled]) #rso .osrp-blk {
+  background: transparent !important;
+  color: var(--sdm-text) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
 :root:not([data-sdm-disabled]) #rhs .kp-blk,
 :root:not([data-sdm-disabled]) #rhs .kp-wholepage,
 :root:not([data-sdm-disabled]) #rhs .Ww4FFb,
@@ -596,6 +599,35 @@
   border-left: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
+}
+
+/* The rounded search field owns its surface. Painting its rectangular parents
+   and inner textarea hides the corners and introduces a false underline. */
+:root:not([data-sdm-disabled]) :is(.A8SBwf, .SDkEP, .a4bIc, .iblpc),
+:root:not([data-sdm-disabled]) .RNNXgb :is(.vOY7J, .fzj3ad, .etxtjc, .HZVG1b),
+:root:not([data-sdm-disabled]) textarea[name="q"],
+:root:not([data-sdm-disabled]) input[name="q"] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+:root:not([data-sdm-disabled]) :is(#hdtb, #hdtb *, .appbar, .MUFPAc, .zLSRge) {
+  border-color: #343c49 !important;
+}
+
+:root:not([data-sdm-disabled]) #rso :is(em, b, strong) {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+:root:not([data-sdm-disabled]) #rso .related-question-pair .p8Jhnd {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #rso .related-question-pair .p8Jhnd svg {
+  fill: currentColor !important;
 }
 
 :root:not([data-sdm-disabled]) #rso .related-question-pair [role="button"],

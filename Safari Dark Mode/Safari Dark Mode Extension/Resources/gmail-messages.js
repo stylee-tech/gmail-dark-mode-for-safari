@@ -33,25 +33,58 @@
     return (values[0] + .05) / (values[1] + .05);
   }
 
+  // Like Chromium Auto Dark Mode, change perceptual lightness independently
+  // of chroma. Standard CIE Lab (D65) conversion keeps blue links blue rather
+  // than mixing every dark foreground with gray. This runs on message colors
+  // only; photographs and the page's painting pipeline are never transformed.
+  function lab(color) {
+    const rgb = color.slice(0, 3).map(n => {
+      n /= 255;
+      return n <= .04045 ? n / 12.92 : ((n + .055) / 1.055) ** 2.4;
+    });
+    const xyz = [
+      (.4124564 * rgb[0] + .3575761 * rgb[1] + .1804375 * rgb[2]) / .95047,
+      .2126729 * rgb[0] + .7151522 * rgb[1] + .072175 * rgb[2],
+      (.0193339 * rgb[0] + .119192 * rgb[1] + .9503041 * rgb[2]) / 1.08883
+    ].map(n => n > 216 / 24389 ? Math.cbrt(n) : n * 841 / 108 + 4 / 29);
+    return [116 * xyz[1] - 16, 500 * (xyz[0] - xyz[1]), 200 * (xyz[1] - xyz[2])];
+  }
+
+  function withLightness(color, lightness) {
+    const [, a, b] = lab(color);
+    const y = (lightness + 16) / 116;
+    const xyz = [y + a / 500, y, y - b / 200]
+      .map(n => n > 6 / 29 ? n ** 3 : (n - 4 / 29) * 108 / 841)
+      .map((n, i) => n * [.95047, 1, 1.08883][i]);
+    return [
+      3.2404542 * xyz[0] - 1.5371385 * xyz[1] - .4985314 * xyz[2],
+      -.969266 * xyz[0] + 1.8760108 * xyz[1] + .041556 * xyz[2],
+      .0556434 * xyz[0] - .2040259 * xyz[1] + 1.0572252 * xyz[2]
+    ].map(n => Math.round(255 * Math.max(0, Math.min(1,
+      n <= .0031308 ? 12.92 * n : 1.055 * n ** (1 / 2.4) - .055))))
+      .concat(color[3]);
+  }
+
   function darkBackground(color) {
     if (!color || color[3] === 0 || luminance(color) < .18) return color || transparent;
-    // Retain a little of the sender's tint and the original alpha, including
-    // off-white cards that cannot be recognized by hard-coded CSS selectors.
-    return surface.slice(0, 3).map((value, index) =>
-      Math.round(value + (color[index] - 230) * .08)).concat(color[3]);
+    // Keep the sender's tint and distinctions between white/off-white cards.
+    return withLightness(color, Math.max(12, Math.min(28, 110 - lab(color)[0])));
   }
 
   function readableText(color, background) {
     if (!color) color = [32, 33, 36, 1];
     if (color[3] === 0) return color;
     if (contrast(composite(color, background), background) >= 4.5) return color;
-    const target = luminance(background) < .18 ? [238, 242, 247] : [20, 25, 34];
-    for (let step = 1; step <= 10; step++) {
-      const candidate = color.slice(0, 3).map((value, index) =>
-        Math.round(value + (target[index] - value) * step / 10)).concat(1);
-      if (contrast(candidate, background) >= 7) return candidate;
+    const dark = luminance(background) < .18;
+    const initial = dark ? Math.min(95, Math.max(70, 110 - lab(color)[0])) : 15;
+    for (let step = 0; step <= 10; step++) {
+      const lightness = initial + ((dark ? 100 : 0) - initial) * step / 10;
+      const candidate = withLightness(color, lightness);
+      if (contrast(composite(candidate, background), background) >= 7) return candidate;
     }
-    return target.concat(1);
+    // Very translucent author text may not reach readable contrast at any
+    // lightness. Only then replace its alpha, keeping readable text untouched.
+    return (dark ? [238, 242, 247] : [20, 25, 34]).concat(1);
   }
 
   function css(color) {

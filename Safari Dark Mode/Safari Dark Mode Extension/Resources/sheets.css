@@ -139,6 +139,32 @@
   color-scheme: light !important;
 }
 
+/* These are native scrolling controls, outside the canvas painting layers. */
+:root:not([data-sdm-disabled]) .native-scrollbar {
+  color-scheme: dark !important;
+  background-color: var(--sdm-bg-elevated) !important;
+  scrollbar-color: var(--sdm-border-strong) var(--sdm-bg-elevated) !important;
+}
+
+:root:not([data-sdm-disabled]) .native-scrollbar::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+  background: var(--sdm-bg-elevated) !important;
+}
+
+:root:not([data-sdm-disabled]) .native-scrollbar::-webkit-scrollbar-track,
+:root:not([data-sdm-disabled]) .native-scrollbar::-webkit-scrollbar-track-piece,
+:root:not([data-sdm-disabled]) .native-scrollbar::-webkit-scrollbar-button,
+:root:not([data-sdm-disabled]) .native-scrollbar::-webkit-scrollbar-corner {
+  background: var(--sdm-bg-elevated) !important;
+  border-color: var(--sdm-bg-elevated) !important;
+}
+
+:root:not([data-sdm-disabled]) .native-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sdm-border-strong) !important;
+  border-radius: 6px !important;
+}
+
 /* Google paints both cells and the unused sheet surface into one canvas. Keep
    the native grid geometry, but invert that canvas in dark mode so blank rows
    do not remain a bright slab below the populated cells. */

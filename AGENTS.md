@@ -2,7 +2,7 @@
 
 ## Project map and constraints
 
-- Personal macOS Safari Web Extension for Gmail, Google Sheets chrome, and
+- Personal macOS Safari Web Extension for Gmail, Google Sheets, and
   Google Search. Do not expand this into a generic dark-mode engine.
 - `extension/manifest.json` uses Manifest V3 (Safari 15.4+). Keep API permissions
   in `permissions`, URL access in `host_permissions`, and the toolbar UI in
@@ -14,12 +14,17 @@
   a second state controller or unconditional stylesheet reordering.
 - Dark styling requires both the product preference and macOS Dark Appearance.
   Google account helpers inherit a known embedded parent; standalone account
-  pages stay untouched. Keep Sheets grid layers native/light and transparent
-  where Google expects them to be. Never paint over grid or canvas overlays.
+  pages stay untouched. Keep Sheets grid layers transparent where Google expects
+  them to be. A scoped canvas filter darkens the grid without changing document
+  formatting; it does change displayed cell colors. Never paint opaque backgrounds
+  over grid or canvas overlays. Style native scrollbars separately from the canvas.
 - `gmail-messages.js` converts Gmail message foreground/background colors as a
   pair. Chrome rules must exclude `.a3s` and its descendants. Keep images intact,
   measure original colors before conversion, and disconnect the message observer
   during writes. Do not restore blanket white message bodies or blanket light text.
+  Message color conversion adjusts CIE Lab lightness, preserves already-readable
+  colors, and checks contrast against the converted background. See the Chromium
+  reference in README.md; Safari cannot enable Chromium's rendering-engine flag.
 - The macOS `ViewController.swift` uses native AppKit setup/status controls;
   it only opens Safari settings and reads extension enablement.
 - `extension/popup/` owns toolbar controls and connection/save feedback.
@@ -55,6 +60,9 @@
   complete any macOS authentication prompt. Verify the version, popup toggle,
   persistence after reload, and affected Google surfaces in the actual Safari
   app. Report authentication or permission blockers accurately.
+  After repeated packaged rebuilds, Safari may retain stale extension contexts in
+  existing Gmail tabs. If a styled page reports “Page not connected” in the popup,
+  check the same URL in a fresh tab before changing the messaging code.
 - Safari 27 can also load `extension/` through Settings > Developer > Add
   Temporary Extension. This expires after 24 hours or quitting Safari; use the
   packaged app when the user asks for a rebuilt installed extension.

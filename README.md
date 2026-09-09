@@ -96,11 +96,18 @@ When adding a new top-level file or directory under `extension/`, also add it to
 the Safari extension target resources in Xcode. The sync script copies files, but
 the Xcode project controls what is packaged into the `.appex`.
 
-Sheets keeps its grid’s native layers and cell colors intact, and limits dark
-styling to surrounding chrome. Never paint opaque backgrounds over grid layers.
+Sheets keeps its grid’s native layers intact and applies a scoped canvas filter
+for dark cells. Displayed fill/text colors change, but document formatting does
+not. Native scrollbars are styled separately. Never paint opaque backgrounds over
+grid layers.
 Gmail message bodies are dark too. A Gmail-only renderer converts text and
 background colors together, preserves images and already-dark surfaces, and
 rechecks newly opened messages. Turning the extension off restores sender colors.
+Its color conversion takes inspiration from [Chromium Auto Dark Mode's
+lightness-based color filter](https://github.com/chromium/chromium/blob/main/third_party/blink/renderer/platform/graphics/dark_mode_color_filter.cc):
+adjust perceptual lightness independently of chroma, distinguish backgrounds from
+foregrounds, and preserve readable colors and images. This is a Gmail-specific
+DOM implementation, not Chromium's paint-time engine or image classifier.
 Gmail and Google Search stay on site-specific CSS because Gmail in particular is fragile
 when broad styling is applied to dialogs and dynamic app surfaces.
 

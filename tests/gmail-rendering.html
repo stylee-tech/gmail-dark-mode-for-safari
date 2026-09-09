@@ -14,7 +14,7 @@ body { font-family: system-ui; padding: 24px; }
 <h1>Gmail dark message checks</h1>
 <pre id="results" style="max-height:200px;overflow:auto">Running…</pre>
 <div class="messages">
-<div class="a3s" id="plain"><p id="plain-copy">Ordinary email with inherited colors.</p><a id="plain-link" href="#">A readable link</a></div>
+<div class="a3s" id="plain"><p id="plain-copy">Ordinary email with inherited colors.</p><a id="plain-link" href="#" style="color:#1255cc">A readable blue link</a></div>
 <div class="a3s" id="styled"><div class="card" id="card"><h2>Styled email</h2><p id="card-copy" style="color:#292f3c">Readable text on an off-white card.</p><a id="button" class="button" href="#">Continue</a></div></div>
 <div class="a3s"><table bgcolor="#ffffff" style="color:#333"><tr><td id="table-copy">Legacy table background</td></tr></table><p id="accent" style="color:#bb9911">Colored newsletter headline</p><div id="gradient" style="background:linear-gradient(rgb(255,255,255),rgb(240,235,220));color:black">Gradient card</div></div>
 <div class="a3s"><div id="dark-card" style="background:#181818;color:white;padding:12px">Already dark content</div><img id="image" alt="Original colors" width="48" height="48" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect fill='%23f84' width='48' height='48'/%3E%3C/svg%3E"></div>
@@ -32,6 +32,8 @@ __safariDarkModeMessages.sync(true);
 check('Reply strip is dark', lum(color('footer','backgroundColor'))<.1 && ratio(color('reply','color'),color('reply','backgroundColor'))>=4.5);
 check('Plain message is dark', lum(color('plain','backgroundColor')) < .1);
 check('Plain text has contrast', ratio(color('plain-copy','color'),color('plain','backgroundColor'))>=4.5);
+check('Neutral body copy stays bright', lum(color('plain-copy','color'))>.65);
+check('Blue links retain their hue and contrast', rgb(color('plain-link','color'))[2]>rgb(color('plain-link','color'))[0]+30 && ratio(color('plain-link','color'),color('plain','backgroundColor'))>=4.5);
 check('Off-white card becomes dark', lum(color('card','backgroundColor')) < .1);
 check('Card text has contrast', ratio(color('card-copy','color'),color('card','backgroundColor'))>=4.5);
 check('Newsletter accent has contrast', ratio(color('accent','color'), color('plain','backgroundColor'))>=4.5);
