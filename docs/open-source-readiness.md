@@ -137,7 +137,8 @@ from local backups/recovery refs:
   releases, Actions runs, or Actions artifacts. Previously reviewed image content
   has not changed since the asset audit.
 
-**Remaining privacy gate:** GitHub's authenticated commit API still returns a
+**Historical finding, resolved by repository replacement below:** GitHub's
+authenticated commit API returned a
 pre-rewrite commit by its old SHA with the former personal email. This verifies
 server retention; it does not establish whether unauthenticated access would be
 possible after changing visibility. Do not assume the rewrite erased old objects.
@@ -153,3 +154,29 @@ at https://stylee-tech.github.io/gmail-dark-mode-for-safari/ and deploys `site/`
 through the repository workflow. The prior private-plan blocker is resolved.
 See [current deployment](support-deployment.md); earlier sections describe the
 historical preparation state, not current hosting.
+
+## Clean repository replacement completed
+
+On 9 September 2026, at the owner's request, a fresh repository received only the
+sanitized main branch from a clean remote clone. Before publication, every
+reachable commit and file was checked for the former personal email, with no
+matches; all author/committer emails were `hello@trystylee.com`. No local backup,
+recovery ref, tool checkpoint, old Actions history, or old Git object was imported.
+
+The prior repository was made private, renamed to a recovery archive, and
+archived. The replacement reclaimed the canonical public repository name and URL.
+Application source, sanitized commit history, MIT license, and Pages URL are
+preserved. Existing local clones can continue using the same main branch and
+remote URL, but must never push old recovery refs or use `--mirror`.
+
+Unauthenticated verification after cutover:
+
+- Public pre-rewrite commit web URL returned HTTP 404.
+- Public commit API reported that the old SHA does not exist (HTTP 422).
+- Private archive API returned HTTP 404 without authentication.
+- Public commit listing contained only `hello@trystylee.com`.
+- Pages deployment succeeded on the fresh repository at the existing Stylee URL.
+
+This removes access through the active public repository. It cannot retract
+copies downloaded or cached by third parties while the original was public.
+The local backup and private archive remain available for owner recovery only.

@@ -37,3 +37,7 @@ until the next app update; compatibility redirects handle them in the meantime.
 
 For updates, verify both pages, CSS, relative navigation and contact links after
 the workflow succeeds. Preserve compatibility URLs and deploy only static content.
+
+The public source repository was replaced with a fresh repository containing only
+sanitized history on 9 September 2026. Pages was re-enabled and deployed at the
+same Stylee URL; links and deployment workflow did not change.
