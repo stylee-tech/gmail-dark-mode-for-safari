@@ -139,6 +139,15 @@
   color-scheme: light !important;
 }
 
+/* Google paints both cells and the unused sheet surface into one canvas. Keep
+   the native grid geometry, but invert that canvas in dark mode so blank rows
+   do not remain a bright slab below the populated cells. */
+:root:not([data-sdm-disabled]) [id$="-grid-container"] canvas,
+:root:not([data-sdm-disabled]) .grid-container canvas,
+:root:not([data-sdm-disabled]) canvas[dir="ltr"][style*="z-index: 2"] {
+  filter: invert(.92) hue-rotate(180deg) !important;
+}
+
 :root:not([data-sdm-disabled]) .waffle-footer-container,
 :root:not([data-sdm-disabled]) .addRowsWidget-ltr,
 :root:not([data-sdm-disabled]) .addRowsWidget-rtl,
