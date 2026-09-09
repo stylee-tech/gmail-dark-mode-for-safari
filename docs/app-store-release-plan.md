@@ -12,9 +12,25 @@ System (Follow device). Off must not be marketed as forced light mode.
 Use the existing native Mac app as the installation/help interface.
 Proposed release version: 1.0.0, after the gates below pass.
 
-Decisions still needed:
+Publisher setup:
 
-- Apple Developer Program membership and individual/organization publisher.
+- Active Apple Developer Program membership confirmed by Pavel.
+- Reuse the developer team configured in the sibling Stylee project:
+  [Stylee Xcode project](../../stylee-core/mobile/Stylee.xcodeproj/project.pbxproj).
+  Source inspection found one configured team and automatic signing. Keep the
+  actual team/account identifiers out of this plan.
+- [Stylee export options](../../stylee-core/mobile/StyleeAppStoreExportOptions.plist)
+  use App Store Connect export, automatic signing, and managed build numbering;
+  they omit an explicit team override. Adapt this workflow for macOS, rather than
+  copying iOS provisioning profiles or Stylee-specific artifact policies.
+- Refer to [Stylee mobile release guidance](../../stylee-core/mobile/README.md)
+  for existing archive/preflight conventions. Reuse available account access when
+  release execution begins; credentials and live account permissions have not
+  been inspected in this planning pass.
+- This extension remains a separate product with its own app record and bundle
+  identifiers. Confirm the displayed seller when creating that record.
+
+Decisions still needed:
 - Free or paid upfront; exact price if paid.
 - Public product name: working name is Safari Dark Mode. Confirm availability
   and branding before preparing final art; describe the supported sites clearly
@@ -46,8 +62,8 @@ or unverified known regressions. Document any intentional color changes.
 
 ## 2. Prepare the distributable Mac app
 
-- Confirm the intended developer team and availability of both existing bundle
-  identifiers before registering the app and extension.
+- Use the confirmed Stylee developer team; verify availability of both existing
+  extension-project bundle identifiers before registering the app and extension.
 - Configure App Store distribution signing for both targets. Current source has
   automatic signing but no development team; successful ad-hoc builds are not
   evidence of App Store signing readiness.
