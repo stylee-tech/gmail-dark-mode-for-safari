@@ -78,7 +78,7 @@ those features of the extension, rather than third-party content a user already
 views in Safari. It distributes no third-party content. App Privacy must be
 published as Data Not Collected, consistent with the code and public policy.
 
-## Submission status and remaining gates
+## Submission status
 
 The separate macOS app record has been created. English metadata, category,
 review contact/notes, screenshots and free pricing are configured. Build 19 is
@@ -87,18 +87,28 @@ and accepted the updated developer agreement. App Privacy was published as
 Data Not Collected and verified in Safari. `asc validate` reports zero errors
 and zero warnings.
 
-Submission is held for the signed Settings-button check. Safari still registered
-the old unsigned 0.2.15 extension while the companion ran from a signed archive;
-this mismatch can prevent SafariServices from finding an extension owned by the
-running app. Do not claim the button is fixed until it is exercised after the
-TestFlight installation. Local/trash registrations were removed narrowly without
-deleting their archived builds or receipts.
+Version 1.0.0 (19) was submitted on 9 September 2026 at 18:14 UTC. Apple's API
+confirmed both the submission and version are **WAITING_FOR_REVIEW**, with the
+release type still **MANUAL**. The app is not publicly released.
+
+Before the TestFlight installation, Safari registered the old unsigned 0.2.15
+extension while the companion ran from a signed archive. That mismatch was a
+possible cause of the earlier Settings failure. Local/trash registrations were
+removed narrowly without deleting their archived builds or receipts.
 
 An Internal Testing group contains build 19 and the owner's tester account.
 TestFlight build 19 was downloaded and opened from `/Applications/Safari Dark Mode.app`.
 The installed copy has an Apple receipt and Safari recognizes the signed extension
-as enabled. Settings-button verification is pending an idle Safari window.
-Complete that check, then submit and record the server's final review state here.
+as enabled. Clicking its Settings button opened Safari's Extensions pane with
+Gmail Dark Mode for Safari 1.0.0 selected and enabled, confirmed by screenshot.
+The accessibility tree continued reporting the underlying browser window; that
+stale text alone must not be interpreted as a Settings-button failure.
+
+The final CLI readiness check reported zero errors and zero warnings. Its
+privacy-publication informational note was covered by the earlier Safari check.
+The CLI submission wrapper initially failed its final item lookup; a subsequent
+read confirmed the correct version was already attached, and submitting that
+same submission succeeded without creating a duplicate.
 
 After approval, release manually, check installation from the live App Store,
 and tag the shipped commit. Google UI changes are the main maintenance risk;

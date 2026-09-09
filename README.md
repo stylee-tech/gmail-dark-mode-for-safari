@@ -158,9 +158,10 @@ script revision.
 
 ## App Store release
 
-Version 1.0.0 is free, published by Stylee, Inc. The release uses
-manual release after review. An internal TestFlight installation is being used
-to verify the signed setup flow before submission.
+Version 1.0.0 (19), free from Stylee, Inc., is waiting for App Review as of
+9 September 2026. Release remains manual after approval. The TestFlight build
+is installed, and its Settings button was verified to open Safari's Extensions
+pane with this extension selected and enabled.
 See [release status and checklist](docs/app-store-release-plan.md).
 
 - [Help and support](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/)
