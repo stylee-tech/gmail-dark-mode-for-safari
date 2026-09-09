@@ -173,11 +173,13 @@ both architectures, and exports an App Store package to `build/AppStore/`.
 Signing remains automatic; account identifiers and signing artifacts stay out of
 source control. This script does not upload or release the app.
 
-The public support site lives in a separate repository,
-[pavel-suzdaltsev/gmail-dark-mode-support](https://github.com/pavel-suzdaltsev/gmail-dark-mode-support).
-The current support deployment publishes only `site/`. See the
-[public-source audit and organization migration plan](docs/open-source-readiness.md)
-for the proposed Stylee move. Existing support URLs remain live until cutover.
+The app and support website now share this private repository:
+[stylee-tech/gmail-dark-mode-for-safari](https://github.com/stylee-tech/gmail-dark-mode-for-safari).
+Edit support and privacy content in `site/`; it is the canonical source.
+The old personal Pages repository currently serves a deployment copy to preserve
+existing app links. GitHub Pages cannot be enabled on this private organization
+repository under the current plan. See [support deployment](docs/support-deployment.md)
+and the [publication audit](docs/open-source-readiness.md).
 
 ## Contributing and source publication
 

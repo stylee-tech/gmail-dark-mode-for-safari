@@ -113,7 +113,7 @@ do not require syncing unchanged resources, launching Safari, or building Xcode.
   environment. Never put team IDs, API credentials, or signing artifacts in docs.
 - Keep App Store manifest descriptions at 112 characters or fewer. Match native
   and manifest marketing versions; increment native build numbers for uploads.
-- `site/` mirrors the public support-only repository; `docs/store/` contains
+- `site/` is the canonical support/privacy source in this repository; `docs/store/` contains
   English metadata and sample-content listing images. Never publish private mail.
 - First launch is free and uses MANUAL release after approval. The owner
   requested an internal TestFlight installation to verify the signed setup flow.
@@ -129,3 +129,7 @@ working for existing binaries until a verified migration is complete. Publicatio
 history replacement, repository transfer, and App Store release are separate actions.
 External contributors should propose pull requests rather than push to the owner’s
 main branch. Do not store machine-specific paths or credentials in this guide.
+
+The canonical remote is `https://github.com/stylee-tech/gmail-dark-mode-for-safari.git`.
+Keep it private. The old personal Pages repository is only a compatibility hosting
+copy until a new host is verified; follow `docs/support-deployment.md`.

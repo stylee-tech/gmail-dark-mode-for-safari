@@ -47,7 +47,8 @@ pattern scan in `scripts/audit-public-source.py`. Runtime rendering is unchanged
 
 1. Select a source license and confirm rights to distribute source and artwork.
    Do not describe a public repository as open source until a license is applied.
-2. Confirm `stylee-tech` as the destination for both source and support site.
+2. The owner transferred the source to `stylee-tech/gmail-dark-mode-for-safari`
+   and requested support source consolidation into that same private repository.
 3. Choose historical disclosure policy. Recommended: publish a reviewed snapshot
    as a new repository with an organization-approved author identity, while
    retaining this private history. That avoids exposing the personal commit
@@ -62,22 +63,19 @@ pattern scan in `scripts/audit-public-source.py`. Runtime rendering is unchanged
 
 ## Migration plan
 
-Proposed destinations (not created or verified yet):
+### 1. Consolidation completed; hosting cutover pending
 
-- Source: `https://github.com/stylee-tech/safari-dark-mode`
-- Support repository: `https://github.com/stylee-tech/gmail-dark-mode-support`
-- Support: `https://stylee-tech.github.io/gmail-dark-mode-support/`
-- Privacy: `https://stylee-tech.github.io/gmail-dark-mode-support/privacy.html`
+Canonical private repository:
+`https://github.com/stylee-tech/gmail-dark-mode-for-safari`.
+Both application and support/privacy source live here; website files are in `site/`.
+All four files were compared by Git blob hash against the old support repository
+and matched exactly. No old support history was imported.
 
-### 1. Establish the destination
-
-Create or transfer only after the destination and history policy are confirmed.
-For a fresh public source snapshot, include source, contributor documentation,
-license, and sample assets; keep this private repository as historical archive.
-Do not accidentally copy ignored files, certificates, user data, or Git metadata.
-For support, copy the reviewed `site/` files into a dedicated organization
-repository, enable GitHub Pages, and verify HTTPS, relative styles/navigation,
-privacy text, and contact links before changing any consumers.
+GitHub rejected Pages enablement because the organization's current plan does not
+support Pages for this private repository. Visibility was not changed. A future
+Pages address would be `https://stylee-tech.github.io/gmail-dark-mode-for-safari/`,
+with `privacy.html` underneath; these are not live or verified addresses.
+See [support deployment](support-deployment.md) for the remaining hosting choice.
 
 ### 2. Preserve old links
 

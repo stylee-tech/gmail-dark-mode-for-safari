@@ -62,9 +62,9 @@ Package SHA-256: `744e5c3409edf6bd8add06cb6862871fd8a4c25904a4158e17eaff32a40592
 - [English metadata](store/metadata.json)
 - [Sample screenshot fixture](store/preview.html)
 
-The support-only public repository is
-[pavel-suzdaltsev/gmail-dark-mode-support](https://github.com/pavel-suzdaltsev/gmail-dark-mode-support).
-Its contents mirror `site/`; the extension source repository remains private.
+Support/privacy source is consolidated in this private repository's `site/`
+directory. The old personal support repository remains a hosting copy for existing
+binaries; see [deployment status](support-deployment.md).
 Both public URLs were verified to return HTTP 200.
 
 Four 2560 × 1600 listing images show sample inbox/email content, a sample Sheets
