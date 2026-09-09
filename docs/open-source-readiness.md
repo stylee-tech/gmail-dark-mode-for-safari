@@ -46,8 +46,9 @@ pattern scan in `scripts/audit-public-source.py`. Runtime rendering is unchanged
 
 ## Publication decisions
 
-1. Select a source license and confirm rights to distribute source and artwork.
-   Do not describe a public repository as open source until a license is applied.
+1. Completed: the owner selected MIT with Copyright (c) 2026 Stylee, Inc.
+   See [LICENSE](../LICENSE) and [asset scope](../ASSETS.md). This license choice
+   does not change repository visibility.
 2. The owner transferred the source to `stylee-tech/gmail-dark-mode-for-safari`
    and requested support source consolidation into that same private repository.
 3. Historical email correction completed at the owner's request on 9 September

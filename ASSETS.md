@@ -6,9 +6,9 @@ with private content.
 
 The moon/browser icon master includes OpenAI image-generation provenance in its
 C2PA metadata. Native and extension icons are size variants. No private account
-information was observed in the metadata during the publication audit. Confirm
-the intended artwork redistribution terms with the owner before publication;
-this record does not assert third-party trademark rights.
+information was observed in the metadata during the publication audit. The project source, documentation, and bundled project artwork are distributed
+under the [MIT license](LICENSE), to the extent of Stylee, Inc.’s rights.
+Third-party trademarks are not licensed by this grant.
 
 Gmail color conversion takes conceptual inspiration from Chromium Auto Dark Mode,
 as linked in README.md. This implementation uses DOM/computed-style conversion;

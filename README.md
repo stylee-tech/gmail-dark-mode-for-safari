@@ -187,5 +187,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for local prerequisites, validation, and
 safe sample content. Security reports go privately to hello@trystylee.com.
 [Asset provenance](ASSETS.md) and the
 [publication checklist](docs/open-source-readiness.md) cover distribution readiness.
-Source licensing is pending owner selection; public availability alone does not
-grant an open-source license.
+## License
+
+[MIT](LICENSE) — Copyright (c) 2026 Stylee, Inc.
+See [ASSETS.md](ASSETS.md) for asset provenance and trademark information.
