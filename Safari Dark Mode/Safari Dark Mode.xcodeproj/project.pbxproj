@@ -24,6 +24,7 @@
 		CAF903062FDBA4AF00824537 /* preload.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF903072FDBA4AF00824537 /* preload.js */; };
 		CAF903082FDBA4AF00824537 /* google-search.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF903092FDBA4AF00824537 /* google-search.css */; };
 		CAF9030C2FDBA4AF00824537 /* site-registry.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF9030D2FDBA4AF00824537 /* site-registry.js */; };
+		CAF903102FDBA4AF00824537 /* gmail-messages.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF903112FDBA4AF00824537 /* gmail-messages.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		CAF903072FDBA4AF00824537 /* preload.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = preload.js; path = Resources/preload.js; sourceTree = "<group>"; };
 		CAF903092FDBA4AF00824537 /* google-search.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = "google-search.css"; path = "Resources/google-search.css"; sourceTree = "<group>"; };
 		CAF9030D2FDBA4AF00824537 /* site-registry.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "site-registry.js"; path = "Resources/site-registry.js"; sourceTree = "<group>"; };
+		CAF903112FDBA4AF00824537 /* gmail-messages.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "gmail-messages.js"; path = "Resources/gmail-messages.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				CAF903052FDBA4AF00824537 /* sheets.css */,
 				CAF903092FDBA4AF00824537 /* google-search.css */,
 				CAF9030D2FDBA4AF00824537 /* site-registry.js */,
+				CAF903112FDBA4AF00824537 /* gmail-messages.js */,
 				CAF903072FDBA4AF00824537 /* preload.js */,
 				CAF902E12FDBA4AF00824537 /* content.js */,
 			);
@@ -259,6 +262,7 @@
 				CAF903022FDBA4AF00824537 /* sheets.css in Resources */,
 				CAF903082FDBA4AF00824537 /* google-search.css in Resources */,
 				CAF9030C2FDBA4AF00824537 /* site-registry.js in Resources */,
+				CAF903102FDBA4AF00824537 /* gmail-messages.js in Resources */,
 				CAF903062FDBA4AF00824537 /* preload.js in Resources */,
 				CAF902E22FDBA4AF00824537 /* popup in Resources */,
 				CAF902E42FDBA4AF00824537 /* manifest.json in Resources */,
@@ -435,7 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -450,7 +454,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.4;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -470,7 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -485,7 +489,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.4;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -508,7 +512,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -524,7 +528,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.4;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -548,7 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -564,7 +568,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.4;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,

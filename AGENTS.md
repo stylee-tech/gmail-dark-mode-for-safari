@@ -16,8 +16,10 @@
   Google account helpers inherit a known embedded parent; standalone account
   pages stay untouched. Keep Sheets grid layers native/light and transparent
   where Google expects them to be. Never paint over grid or canvas overlays.
-- Preserve sender-authored Gmail message colors within `.a3s`; chrome rules
-  must exclude both the message root and its descendants.
+- `gmail-messages.js` converts Gmail message foreground/background colors as a
+  pair. Chrome rules must exclude `.a3s` and its descendants. Keep images intact,
+  measure original colors before conversion, and disconnect the message observer
+  during writes. Do not restore blanket white message bodies or blanket light text.
 - The macOS `ViewController.swift` uses native AppKit setup/status controls;
   it only opens Safari settings and reads extension enablement.
 - `extension/popup/` owns toolbar controls and connection/save feedback.
@@ -30,6 +32,9 @@
   so `Safari Dark Mode/Safari Dark Mode Extension/Resources/` matches.
 - Use `sh scripts/sync-extension-resources.sh --check` in reviews and before
   release to catch stale packaged resources.
+- Open `tests/gmail-rendering.html` through a local HTTP server for message
+  rendering changes; all displayed checks must pass, followed by real Safari
+  verification of a plain email and a styled HTML email.
 - Run `node --test tests/*.test.cjs` for runtime changes and
   `git diff --check` for every change. Check changed JavaScript with `node --check`.
 - For extension-only behavior changes, sync resources and verify the affected

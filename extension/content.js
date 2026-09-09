@@ -98,6 +98,7 @@
     document.documentElement.dataset.sdmSystemDark = String(systemDark);
     document.documentElement.dataset.sdmPreload = enabled ? "enabled" : "disabled";
     styleManager.sync(enabled);
+    if (product === "gmail") globalThis.__safariDarkModeMessages?.sync(enabled);
   }
 
   function isSystemDark() {

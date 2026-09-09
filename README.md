@@ -76,6 +76,10 @@ sh scripts/sync-extension-resources.sh --check
 For a packaged installation, rebuild after syncing so Safari receives the new
 assets. For a temporary installation, reload it in Safari Settings instead.
 
+For message rendering changes, serve this repository locally and open
+`tests/gmail-rendering.html`. Its checks cover ordinary text, HTML cards, buttons,
+images, dynamic messages, disabling/re-enabling, and observer stability.
+
 Run the dependency-free regression checks (Node 18+):
 
 ```sh
@@ -94,9 +98,10 @@ the Xcode project controls what is packaged into the `.appex`.
 
 Sheets keeps its grid’s native layers and cell colors intact, and limits dark
 styling to surrounding chrome. Never paint opaque backgrounds over grid layers.
-Received Gmail messages retain the sender’s HTML colors on a light message
-surface, so branded emails and buttons stay readable. Gmail and
-Google Search stay on site-specific CSS because Gmail in particular is fragile
+Gmail message bodies are dark too. A Gmail-only renderer converts text and
+background colors together, preserves images and already-dark surfaces, and
+rechecks newly opened messages. Turning the extension off restores sender colors.
+Gmail and Google Search stay on site-specific CSS because Gmail in particular is fragile
 when broad styling is applied to dialogs and dynamic app surfaces.
 
 ## Security and privacy

@@ -1231,11 +1231,45 @@
   color: var(--sdm-text) !important;
 }
 
-/* Treat received messages as documents. Keep sender colors and backgrounds
-   together instead of guessing which individual colors can be replaced. */
+/* Message colors are converted together by gmail-messages.js. Until measured,
+   use a dark root; sender-specific descendants are handled on the next pass. */
 :root:not([data-sdm-disabled]) .a3s {
+  color-scheme: dark !important;
+  background: var(--sdm-surface) !important;
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+/* A synchronous measurement pass reads the sender's colors on a neutral base.
+   This attribute is removed before the browser paints. */
+:root:not([data-sdm-disabled]) .a3s[data-sdm-measuring] {
   color-scheme: light !important;
   background: #fff !important;
   color: #202124 !important;
+}
+
+:root:not([data-sdm-disabled]) .a3s:not([data-sdm-measuring])[data-sdm-message-colors],
+:root:not([data-sdm-disabled]) .a3s:not([data-sdm-measuring]) [data-sdm-message-colors] {
+  background-color: var(--sdm-message-bg) !important;
+  background-image: var(--sdm-message-image) !important;
+  color: var(--sdm-message-fg) !important;
   -webkit-text-fill-color: currentColor !important;
+  border-color: var(--sdm-message-border) !important;
+}
+
+/* Gmail's reply/forward footer is outside the received message document. */
+:root:not([data-sdm-disabled]) .nr.wR:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .amn:where(:not(.a3s, .a3s *)) {
+  background-color: var(--sdm-surface) !important;
+}
+
+:root:not([data-sdm-disabled]) .amn .ams:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .amn [role="button"]:where(:not(.a3s, .a3s *)) {
+  background-color: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .amn .ams:where(:not(.a3s, .a3s *))::before {
+  filter: brightness(0) invert(.9) !important;
 }

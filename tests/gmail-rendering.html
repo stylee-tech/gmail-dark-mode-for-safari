@@ -1,0 +1,61 @@
+<!doctype html>
+<html data-sdm-product="gmail" data-sdm-host="mail.google.com">
+<meta charset="utf-8">
+<title>Gmail message rendering regression checks</title>
+<link rel="stylesheet" href="../extension/base.css">
+<link rel="stylesheet" href="../extension/gmail.css">
+<style>
+body { font-family: system-ui; padding: 24px; }
+.messages { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.a3s { padding: 20px; border-radius: 12px; }
+.card { background: #f8f6ee; color: #292f3c; padding: 20px; border: 1px solid #ccc; border-radius: 16px; }
+.button { display: inline-block; color: white; background: #292f3c; padding: 12px 20px; border-radius: 24px; }
+</style>
+<h1>Gmail dark message checks</h1>
+<pre id="results" style="max-height:200px;overflow:auto">Running…</pre>
+<div class="messages">
+<div class="a3s" id="plain"><p id="plain-copy">Ordinary email with inherited colors.</p><a id="plain-link" href="#">A readable link</a></div>
+<div class="a3s" id="styled"><div class="card" id="card"><h2>Styled email</h2><p id="card-copy" style="color:#292f3c">Readable text on an off-white card.</p><a id="button" class="button" href="#">Continue</a></div></div>
+<div class="a3s"><table bgcolor="#ffffff" style="color:#333"><tr><td id="table-copy">Legacy table background</td></tr></table><p id="accent" style="color:#bb9911">Colored newsletter headline</p><div id="gradient" style="background:linear-gradient(rgb(255,255,255),rgb(240,235,220));color:black">Gradient card</div></div>
+<div class="a3s"><div id="dark-card" style="background:#181818;color:white;padding:12px">Already dark content</div><img id="image" alt="Original colors" width="48" height="48" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect fill='%23f84' width='48' height='48'/%3E%3C/svg%3E"></div>
+</div>
+<div id="footer" class="nr wR" style="background:white"><div class="amn"><span id="reply" class="ams" role="link" style="color:#444">Reply</span></div></div>
+<script src="../extension/gmail-messages.js"></script>
+<script>
+const results = [];
+const check = (name, pass) => { results.push({name,pass}); document.querySelector('#results').textContent = JSON.stringify(results,null,2); };
+const color = (id, prop) => getComputedStyle(document.getElementById(id))[prop];
+const rgb = value => value.match(/[\d.]+/g).slice(0,3).map(Number);
+const lum = value => rgb(value).map(n=>n/255).map(n=>n<=.04045?n/12.92:((n+.055)/1.055)**2.4).reduce((a,n,i)=>a+n*[.2126,.7152,.0722][i],0);
+const ratio = (a,b) => (Math.max(lum(a),lum(b))+.05)/(Math.min(lum(a),lum(b))+.05);
+__safariDarkModeMessages.sync(true);
+check('Reply strip is dark', lum(color('footer','backgroundColor'))<.1 && ratio(color('reply','color'),color('reply','backgroundColor'))>=4.5);
+check('Plain message is dark', lum(color('plain','backgroundColor')) < .1);
+check('Plain text has contrast', ratio(color('plain-copy','color'),color('plain','backgroundColor'))>=4.5);
+check('Off-white card becomes dark', lum(color('card','backgroundColor')) < .1);
+check('Card text has contrast', ratio(color('card-copy','color'),color('card','backgroundColor'))>=4.5);
+check('Newsletter accent has contrast', ratio(color('accent','color'), color('plain','backgroundColor'))>=4.5);
+check('Gradient stops are dark', !color('gradient','backgroundImage').includes('255, 255, 255'));
+check('Table text is readable', lum(color('table-copy','color'))>.3);
+check('Button label has contrast', ratio(color('button','color'),color('button','backgroundColor'))>=4.5);
+check('Already dark surface preserved', color('dark-card','backgroundColor')==='rgb(24, 24, 24)');
+check('Images are unmodified', !document.getElementById('image').hasAttribute('data-sdm-message-colors') && color('image','filter')==='none');
+const first = color('card-copy','color');
+document.documentElement.setAttribute('data-sdm-disabled','');
+__safariDarkModeMessages.sync(false);
+check('Off restores sender card', color('card','backgroundColor')==='rgb(248, 246, 238)' && color('card-copy','color')==='rgb(41, 47, 60)');
+document.documentElement.removeAttribute('data-sdm-disabled');
+__safariDarkModeMessages.sync(true);
+check('Re-enable is stable', color('card-copy','color')===first);
+const late = document.createElement('div'); late.className='a3s'; late.id='late'; late.innerHTML='<div id="late-copy" style="color:#222;background:#fafafa">Dynamically opened message</div>'; document.querySelector('.messages').append(late);
+setTimeout(()=>{
+ check('New message gets dark styling', lum(color('late-copy','backgroundColor')) < .1 && ratio(color('late-copy','color'),color('late-copy','backgroundColor'))>=4.5);
+ document.getElementById('late-copy').style.backgroundColor='#f0e0d0';
+ setTimeout(()=>{
+  check('Sender style updates get reprocessed', lum(color('late-copy','backgroundColor'))<.1);
+  let changes=0; const observer=new MutationObserver(records=>changes+=records.length); observer.observe(document.querySelector('.messages'),{subtree:true,attributes:true,childList:true});
+  setTimeout(()=>{observer.disconnect();check('Observer settles without rewriting itself',changes===0);document.documentElement.dataset.testsComplete='true';},400);
+ },180);
+},180);
+</script>
+</html>

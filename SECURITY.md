@@ -20,6 +20,10 @@ data surfaces narrow.
   first-party products may briefly prepaint dark before the stored setting turns
   the CSS off.
 
+The Gmail message renderer inspects computed colors and writes local CSS
+overrides inside received message bodies. It does not read message text, follow
+links, change message content, or persist sender data.
+
 ## Host permissions
 
 The Manifest V3 `host_permissions` and content-script matches should stay
