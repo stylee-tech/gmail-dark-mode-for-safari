@@ -43,3 +43,16 @@ otherwise, and deploy only static content.
 The public source repository was replaced with a fresh repository containing only
 sanitized history on 9 September 2026. Pages was re-enabled and deployed at the
 same Stylee URL; links and deployment workflow did not change.
+
+## App Store download placeholder
+
+Both pages link to the `#download` section on `site/index.html`. Until the app is
+publicly available, that section explicitly says coming soon and has a disabled
+button with no destination. It does not link to TestFlight or a guessed store URL.
+
+At release, verify the public App Store listing opens without authentication.
+Replace the button marked `APP_STORE_DOWNLOAD` with an `<a class="download-button"
+href="VERIFIED_APP_STORE_URL">Download on the Mac App Store</a>`. Remove the
+coming-soon copy and change `download-status` to the minimum macOS/Safari
+requirements. Keep the `download` section ID so navigation from both pages works.
+Verify the link and mobile layout after the Pages deployment succeeds.
