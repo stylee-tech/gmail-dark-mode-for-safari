@@ -1,6 +1,6 @@
 # Mac App Store release
 
-Updated 9 September 2026. Current internal test build: **1.0.0 (20)**.
+Updated 9 September 2026. Submitted build: **1.0.0 (21)** — **WAITING_FOR_REVIEW**.
 
 ## Approved launch decisions
 
@@ -90,7 +90,7 @@ and zero warnings.
 Version 1.0.0 (19) was submitted on 9 September 2026 at 18:14 UTC, then withdrawn
 at the owner's request for another improvement batch. Apple's API confirmed
 **DEVELOPER_REJECTED** after cancellation; release type remains **MANUAL**.
-Submission is on hold and the app is not publicly released.
+The hold was lifted by the owner for build 21; the app is not publicly released.
 
 Open rendering reports: the Google account switcher across Gmail, Sheets and
 Search; Gmail's Trash notice banner; and Gmail's advanced search/filter panel.
@@ -100,15 +100,14 @@ the current implementation already requests document-start injection.
 
 Build 20 is uploaded to the existing internal TestFlight group and installed on
 this Mac. It adds dynamic companion setup status; the rendering reports above
-remain unresolved. All 12 regression tests and archive/export passed. Owner
-verification and explicit confirmation are required before resubmission.
+remain unresolved. All 12 regression tests and archive/export passed. The owner subsequently authorized build 21 resubmission.
 
 The first build-20 status check failed because Xcode had registered the release
 archive alongside the TestFlight app. Unregistering only the archive restored
 the green “Extension enabled” state, verified by screenshot. The archive script
 now unregisters its packaging copy after export to prevent this conflict.
 
-Next-build UI correction: the enabled-state button says “Open Safari Settings…”
+Build 21 UI correction: the enabled-state button says “Go to Settings…”
 and directs users to Websites → Gmail Dark Mode for Safari. The public
 SafariServices handoff opens Extensions; it does not expose a website-access
 pane selector. This copy correction is not in installed TestFlight build 20.
@@ -144,3 +143,11 @@ through support without adding page-content telemetry.
 - [App Privacy Details](https://developer.apple.com/app-store/app-privacy-details/)
 - [Age rating definitions](https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions/)
 - [Mac screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/)
+
+## Build 21 resubmission
+
+On 9 September 2026 at 20:35 UTC, Apple confirmed WAITING_FOR_REVIEW for
+version 1.0.0, build 21. The owner explicitly authorized this resubmission.
+The signed archive/export and all 12 regression tests passed; App Store
+validation reported no errors or warnings. Release remains MANUAL.
+The three outstanding rendering reports above were not changed in this build.

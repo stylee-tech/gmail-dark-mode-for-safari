@@ -89,7 +89,7 @@ final class ViewController: NSViewController {
                 } else if state?.isEnabled == true {
                     self.showStatus(title: "Extension enabled", symbol: "checkmark.circle.fill", color: .systemGreen,
                                     guidance: "To manage website access, open Safari Settings, then choose\nWebsites → Gmail Dark Mode for Safari.",
-                                    action: "Open Safari Settings…")
+                                    action: "Go to Settings…")
                 } else {
                     self.showStatus(title: "Turn on the extension", symbol: "power.circle", color: .secondaryLabelColor,
                                     guidance: "Enable Gmail Dark Mode for Safari in Settings > Extensions,\nthen allow Gmail, Google Sheets, and Google Search.",

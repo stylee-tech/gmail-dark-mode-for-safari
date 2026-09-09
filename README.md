@@ -158,11 +158,10 @@ script revision.
 
 ## App Store release
 
-Version 1.0.0 (19), free from Stylee, Inc., was withdrawn from App Review on
-9 September 2026 for another rendering-fix batch. Submission is on hold.
-Release remains manual after approval. TestFlight build 20 is installed for owner
-verification of its dynamic setup status. Resubmission requires owner confirmation.
-Build 19's Settings button was verified to open Safari's Extensions pane.
+Version 1.0.0 (21), free from Stylee, Inc., was resubmitted on 9 September 2026
+and is waiting for App Review. Release remains manual after approval.
+The enabled-state companion button says “Go to Settings…” and opens Extensions.
+TestFlight build 20 remains installed on this Mac.
 See [release status and checklist](docs/app-store-release-plan.md).
 
 - [Help and support](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/)
