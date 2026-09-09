@@ -1,7 +1,8 @@
 # Public-source readiness and Stylee migration
 
 Audit date: 9 September 2026. Baseline: `b0dad3b` (build 21).
-The repository remains private. This document is preparation, not authorization
+The repository was private at the audit baseline; the owner subsequently made
+it public. This historical audit is not authorization
 to change visibility, rewrite history, transfer repositories, or release the app.
 
 ## Audit findings
@@ -144,3 +145,11 @@ If that address must not become public, keep this repository private and either
 arrange confirmed server-side removal or publish the sanitized branch into a
 fresh repository without the old server history. No remote objects or local
 backups were deleted during this verification.
+
+## Stylee Pages cutover
+
+The owner made the repository public on 9 September 2026. Pages is now enabled
+at https://stylee-tech.github.io/gmail-dark-mode-for-safari/ and deploys `site/`
+through the repository workflow. The prior private-plan blocker is resolved.
+See [current deployment](support-deployment.md); earlier sections describe the
+historical preparation state, not current hosting.

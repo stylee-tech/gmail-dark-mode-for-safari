@@ -131,5 +131,7 @@ External contributors should propose pull requests rather than push to the owner
 main branch. Do not store machine-specific paths or credentials in this guide.
 
 The canonical remote is `https://github.com/stylee-tech/gmail-dark-mode-for-safari.git`.
-Keep it private. The old personal Pages repository is only a compatibility hosting
-copy until a new host is verified; follow `docs/support-deployment.md`.
+The repository is public. Deploy only `site/` through `.github/workflows/pages.yml`.
+The old personal repository contains redirects but its private visibility blocks
+Pages hosting; owner approval is required to restore public hosting. Follow
+`docs/support-deployment.md`.

@@ -1,45 +1,41 @@
-# Support website ownership and deployment
+# Support website deployment
 
-The canonical source is `site/` in the private repository
+Canonical source: `site/` in
 [stylee-tech/gmail-dark-mode-for-safari](https://github.com/stylee-tech/gmail-dark-mode-for-safari).
-The extension, native app, support page, and privacy policy are maintained together.
-Do not edit a separate support-source repository.
+The repository is public at the owner's direction.
 
-## Current deployment
+## Live Stylee URLs
 
-On 9 September 2026, all four files in the old support repository were verified
-by Git blob hash to match `site/` exactly: `.nojekyll`, `index.html`, `privacy.html`,
-and `style.css`. Thus consolidation requires no additional content import or
-history merge. The local origin now points at the organization's renamed repo.
+- https://stylee-tech.github.io/gmail-dark-mode-for-safari/
+- https://stylee-tech.github.io/gmail-dark-mode-for-safari/privacy.html
 
-The public URLs embedded in existing builds remain:
+`.github/workflows/pages.yml` deploys only `site/` when its files change on main,
+or through manual dispatch. Official actions are pinned to commit hashes.
+Deployment uses GitHub's scoped Pages/OIDC permissions, with no stored deploy key.
+Never upload the whole repository, build output, or `.git` as a site artifact.
+
+## Compatibility URLs
+
+Legacy URLs embedded in earlier app builds:
 
 - https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/
 - https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/privacy.html
 
-The old repository is retained only as a hosting copy, not the canonical source.
-Archived at the owner’s request on 9 September 2026. Its description, homepage,
-and README point to the Stylee repository. Both existing Pages URLs returned HTTP
-200 after archival. Do not delete or privatize it while existing builds use them. Do not change native or App Store links to an unserved URL.
+Redirect pages with readable fallback links have been committed to the old
+repository. However, it is now PRIVATE and GitHub has disabled its Pages site,
+so these URLs currently return 404. Restoring public visibility requires owner
+approval. The repository was temporarily unarchived to prepare the redirects and is now
+archived again.
+Once public hosting is approved, enable Pages and verify both legacy URLs; do
+not claim compatibility is restored until those checks pass.
 
-## Hosting blocker
+## Verification and application links
 
-GitHub's Pages creation API rejected this private organization repository with:
-“Your current plan does not support GitHub Pages for this repository.”
-The repository remains private as requested. Choose a plan supporting private
-repository Pages, or another static host, before moving live hosting.
-The archived hosting copy is read-only. If its deployed pages need updates,
-unarchive it for the approved update, then archive it again.
-Only export those four static files, never the whole private repository or `.git`.
+On 9 September 2026 the initial deployment succeeded, and both new HTML pages
+and CSS matched `site/` byte-for-byte over HTTPS. App Store Connect's English
+support and privacy URLs were updated to Stylee; build 21 was not withdrawn.
+Native source now uses the new URLs. Existing binaries retain their old URLs
+until the next app update; compatibility redirects handle them in the meantime.
 
-## Cutover checklist
-
-1. Enable the selected host without changing source visibility.
-2. Deploy only `site/`. No build process, credentials in site files, or runtime
-   environment variables are needed.
-3. Verify HTTPS, both pages, CSS, relative navigation and support email links.
-4. Keep existing URLs working through equivalent content or explicit redirects
-   with fallback links. Test them separately; repository redirects are insufficient.
-5. Update native help/privacy URLs and App Store metadata only after verification;
-   native links require a subsequent binary. Build 21 in review is unchanged.
-6. Keep this document and README aligned with actual hosting ownership and URLs.
+For updates, verify both pages, CSS, relative navigation and contact links after
+the workflow succeeds. Preserve compatibility URLs and deploy only static content.

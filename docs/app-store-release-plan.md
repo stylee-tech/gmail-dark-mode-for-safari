@@ -57,12 +57,12 @@ Package SHA-256: `744e5c3409edf6bd8add06cb6862871fd8a4c25904a4158e17eaff32a40592
 
 ## Listing and public pages
 
-- [Support and setup](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/)
-- [Privacy policy](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/privacy.html)
+- [Support and setup](https://stylee-tech.github.io/gmail-dark-mode-for-safari/)
+- [Privacy policy](https://stylee-tech.github.io/gmail-dark-mode-for-safari/privacy.html)
 - [English metadata](store/metadata.json)
 - [Sample screenshot fixture](store/preview.html)
 
-Support/privacy source is consolidated in this private repository's `site/`
+Support/privacy source is consolidated in this public repository's `site/`
 directory. The old personal support repository remains a hosting copy for existing
 binaries; see [deployment status](support-deployment.md).
 Both public URLs were verified to return HTTP 200.

@@ -163,8 +163,8 @@ and is waiting for App Review. Release remains manual after approval.
 The enabled-state companion button says “Go to Settings…” and opens Extensions.
 See [release status and checklist](docs/app-store-release-plan.md).
 
-- [Help and support](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/)
-- [Privacy policy](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/privacy.html)
+- [Help and support](https://stylee-tech.github.io/gmail-dark-mode-for-safari/)
+- [Privacy policy](https://stylee-tech.github.io/gmail-dark-mode-for-safari/privacy.html)
 - Support: hello@trystylee.com
 
 Set `SDM_DEVELOPMENT_TEAM` in your shell to the configured publisher team, then run
@@ -173,13 +173,12 @@ both architectures, and exports an App Store package to `build/AppStore/`.
 Signing remains automatic; account identifiers and signing artifacts stay out of
 source control. This script does not upload or release the app.
 
-The app and support website now share this private repository:
+The app and support website now share this public repository:
 [stylee-tech/gmail-dark-mode-for-safari](https://github.com/stylee-tech/gmail-dark-mode-for-safari).
 Edit support and privacy content in `site/`; it is the canonical source.
-The old personal Pages repository currently serves a deployment copy to preserve
-existing app links. GitHub Pages cannot be enabled on this private organization
-repository under the current plan. See [support deployment](docs/support-deployment.md)
-and the [publication audit](docs/open-source-readiness.md).
+GitHub Pages automatically deploys `site/` under the Stylee organization.
+Redirects for earlier builds are prepared at the old personal repository;
+restoring their hosting awaits approval to make that support-only repo public. See [support deployment](docs/support-deployment.md).
 
 ## Contributing and source publication
 

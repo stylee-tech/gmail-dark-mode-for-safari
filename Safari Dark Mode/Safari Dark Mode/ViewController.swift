@@ -116,11 +116,11 @@ final class ViewController: NSViewController {
     }
 
     @objc private func openHelp() {
-        NSWorkspace.shared.open(URL(string: "https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/")!)
+        NSWorkspace.shared.open(URL(string: "https://stylee-tech.github.io/gmail-dark-mode-for-safari/")!)
     }
 
     @objc private func openPrivacy() {
-        NSWorkspace.shared.open(URL(string: "https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/privacy.html")!)
+        NSWorkspace.shared.open(URL(string: "https://stylee-tech.github.io/gmail-dark-mode-for-safari/privacy.html")!)
     }
 
     @objc private func openSettings() {
