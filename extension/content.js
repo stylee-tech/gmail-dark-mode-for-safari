@@ -13,6 +13,7 @@
 
   const styleManager = registry.createStyleManager(api, product);
   let enabledBySiteState = registry.defaults();
+  let storageRevision = 0;
 
   document.documentElement.dataset.sdmProduct = product;
   if (context.parentProduct) {
@@ -21,7 +22,10 @@
   document.documentElement.dataset.sdmHost = location.hostname;
   document.documentElement.dataset.sdmRenderers = registry.renderersFor(product).join(" ");
   styleManager.observe();
-  registry.readEnabledBySite(api, applyEnabled);
+  const initialRevision = storageRevision;
+  registry.readEnabledBySite(api, (settings) => {
+    if (storageRevision === initialRevision) applyEnabled(settings);
+  });
 
   if (api.storage.onChanged) {
     api.storage.onChanged.addListener((changes, areaName) => {
@@ -31,6 +35,7 @@
         return;
       }
 
+      storageRevision += 1;
       applyEnabled(storageChange.newValue || registry.defaults());
     });
   }

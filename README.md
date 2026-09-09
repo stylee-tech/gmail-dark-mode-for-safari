@@ -13,38 +13,49 @@ Gmail account switcher surfaces can be themed. Content scripts may run on those
 helper hosts, but styling is gated unless the helper page is part of a known
 supported product flow.
 
-## Build the Safari wrapper
+## Build and install in Safari
 
-The source extension lives in `extension/`.
-
-To generate a local macOS Safari extension app:
+The source extension lives in `extension/`. The existing Xcode project is the
+maintained macOS wrapper; do not regenerate it for ordinary development.
+The extension uses Manifest V3 and requires Safari 15.4 or later. The current
+local refresh targets Safari 27.
 
 ```sh
-xcrun safari-web-extension-converter extension \
-  --project-location . \
-  --app-name "Safari Dark Mode" \
-  --bundle-identifier "dev.pavelsuzdaltsev.safaridarkmode" \
-  --macos-only \
-  --copy-resources \
-  --no-open \
-  --no-prompt
+sh scripts/sync-extension-resources.sh
+xcodebuild -project "Safari Dark Mode/Safari Dark Mode.xcodeproj" \
+  -scheme "Safari Dark Mode" -configuration Debug \
+  -derivedDataPath build/DerivedData build
+open "build/DerivedData/Build/Products/Debug/Safari Dark Mode.app"
 ```
 
-Then open `Safari Dark Mode/Safari Dark Mode.xcodeproj`, build and run the app,
-and enable the extension in Safari:
+Then enable **Safari Dark Mode** in **Safari > Settings > Extensions** and
+allow access to the supported Google sites. Reload existing Google tabs after
+installing or updating. Check the current Safari profile if an enabled extension
+does not appear in a window.
 
-1. Safari -> Settings -> Extensions
-2. Enable "Safari Dark Mode"
-3. Grant access for Gmail, Google Sheets, Google Search, and the Google account
-   helper domains Safari prompts for
+For a local ad-hoc build, enable **Settings > Advanced > Show features for web
+developers**, then **Settings > Developer > Allow unsigned extensions**. macOS
+may ask you to authenticate. Older Safari versions expose the unsigned-extension
+option in the Develop menu. This is a development installation, not a signed
+App Store release. Safari can reset unsigned-extension permission after quitting;
+if the extension disappears, check that setting again.
 
-For personal local use, enable Safari's Develop menu and choose
-`Develop -> Allow Unsigned Extensions` if Safari does not show the debug build.
+### Quick iteration in Safari 27
+
+**Settings > Developer > Add Temporary Extension…** can load the `extension/`
+folder directly. Use **Reload** in Extensions settings after edits. Temporary
+extensions expire after 24 hours or when Safari quits; use the rebuilt wrapper
+for the regular local installation. Avoid enabling both copies simultaneously.
+
+Apple documents the [installation and update workflow](https://developer.apple.com/documentation/safariservices/running-your-safari-web-extension)
+and [Safari manifest compatibility](https://developer.apple.com/documentation/safariservices/assessing-your-safari-web-extension-s-browser-compatibility).
 
 ## Development
 
-The extension defaults to dark mode on supported sites. Use the toolbar
-popup to disable it per site.
+Each supported product is enabled by default, and dark styling follows macOS
+Dark Appearance. Use the toolbar popup to disable a product across its tabs.
+The popup reports whether styling is active, off, waiting for Dark Appearance,
+or unable to connect because the page needs access or a reload.
 Safari injects the main product CSS at `document_start` to reduce first-paint
 white flashes on enabled pages. Because Safari extension storage is async, a
 site disabled in the popup may briefly prepaint dark until the stored setting is
@@ -62,12 +73,29 @@ Verify the packaged copy is current:
 sh scripts/sync-extension-resources.sh --check
 ```
 
+For a packaged installation, rebuild after syncing so Safari receives the new
+assets. For a temporary installation, reload it in Safari Settings instead.
+
+Run the dependency-free regression checks (Node 18+):
+
+```sh
+node --test tests/*.test.cjs
+git diff --check
+```
+
+Verify the popup on a supported page: switch off/on, reopen the popup, and reload
+the page. Confirm that preferences persist and that switching system appearance
+does not re-enable a disabled product. Check Gmail, Search, and Sheets chrome;
+standalone Google account pages must remain untouched.
+
 When adding a new top-level file or directory under `extension/`, also add it to
 the Safari extension target resources in Xcode. The sync script copies files, but
 the Xcode project controls what is packaged into the `.appex`.
 
-The Google Sheets grid is rendered mostly on canvas, so Sheets keeps the sheet
-surface native/light and limits dark styling to surrounding chrome. Gmail and
+Sheets keeps its grid’s native layers and cell colors intact, and limits dark
+styling to surrounding chrome. Never paint opaque backgrounds over grid layers.
+Received Gmail messages retain the sender’s HTML colors on a light message
+surface, so branded emails and buttons stay readable. Gmail and
 Google Search stay on site-specific CSS because Gmail in particular is fragile
 when broad styling is applied to dialogs and dynamic app surfaces.
 

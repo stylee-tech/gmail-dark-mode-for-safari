@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CAF902B42FDBA4AE00824537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF902B32FDBA4AE00824537 /* AppDelegate.swift */; };
-		CAF902B82FDBA4AE00824537 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = CAF902B62FDBA4AE00824537 /* Main.html */; };
 		CAF902BA2FDBA4AE00824537 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF902B92FDBA4AE00824537 /* Icon.png */; };
-		CAF902BC2FDBA4AE00824537 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = CAF902BB2FDBA4AE00824537 /* Style.css */; };
-		CAF902BE2FDBA4AE00824537 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = CAF902BD2FDBA4AE00824537 /* Script.js */; };
 		CAF902C02FDBA4AE00824537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF902BF2FDBA4AE00824537 /* ViewController.swift */; };
 		CAF902C32FDBA4AE00824537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF902C12FDBA4AE00824537 /* Main.storyboard */; };
 		CAF902C52FDBA4AE00824537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF902C42FDBA4AE00824537 /* Assets.xcassets */; };
@@ -56,10 +53,7 @@
 /* Begin PBXFileReference section */
 		CAF902B02FDBA4AE00824537 /* Safari Dark Mode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safari Dark Mode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF902B32FDBA4AE00824537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAF902B72FDBA4AE00824537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
 		CAF902B92FDBA4AE00824537 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		CAF902BB2FDBA4AE00824537 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
-		CAF902BD2FDBA4AE00824537 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
 		CAF902BF2FDBA4AE00824537 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAF902C22FDBA4AE00824537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAF902C42FDBA4AE00824537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,10 +125,7 @@
 		CAF902B52FDBA4AE00824537 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CAF902B62FDBA4AE00824537 /* Main.html */,
 				CAF902B92FDBA4AE00824537 /* Icon.png */,
-				CAF902BB2FDBA4AE00824537 /* Style.css */,
-				CAF902BD2FDBA4AE00824537 /* Script.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -255,10 +246,7 @@
 			files = (
 				CAF902BA2FDBA4AE00824537 /* Icon.png in Resources */,
 				CAF902C32FDBA4AE00824537 /* Main.storyboard in Resources */,
-				CAF902BE2FDBA4AE00824537 /* Script.js in Resources */,
-				CAF902B82FDBA4AE00824537 /* Main.html in Resources */,
 				CAF902C52FDBA4AE00824537 /* Assets.xcassets in Resources */,
-				CAF902BC2FDBA4AE00824537 /* Style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,14 +298,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CAF902B62FDBA4AE00824537 /* Main.html */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAF902B72FDBA4AE00824537 /* Base */,
-			);
-			name = Main.html;
-			sourceTree = "<group>";
-		};
 		CAF902C12FDBA4AE00824537 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -455,7 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -470,7 +450,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.2.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -490,7 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -505,7 +485,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.2.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -528,7 +508,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -544,12 +524,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.2.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
-					"-framework",
-					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.pavelsuzdaltsev.safaridarkmode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -570,7 +548,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -586,12 +564,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.2.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
-					"-framework",
-					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.pavelsuzdaltsev.safaridarkmode;
 				PRODUCT_NAME = "$(TARGET_NAME)";

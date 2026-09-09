@@ -133,49 +133,9 @@
   border-color: #8ab4f8 !important;
 }
 
-:root:not([data-sdm-disabled]) #waffle-grid-container,
-:root:not([data-sdm-disabled]) .waffle-grid-container,
-:root:not([data-sdm-disabled]) [id$="-grid-table-container"],
-:root:not([data-sdm-disabled]) #grid-table-container,
-:root:not([data-sdm-disabled]) .grid-container,
-:root:not([data-sdm-disabled]) .grid-table-container,
-:root:not([data-sdm-disabled]) .fixed-table-container,
-:root:not([data-sdm-disabled]) .grid-fixed-wrapper,
-:root:not([data-sdm-disabled]) .grid-scrollable-wrapper,
-:root:not([data-sdm-disabled]) .grid4-inner-container,
-:root:not([data-sdm-disabled]) .fixed4-inner-container,
-:root:not([data-sdm-disabled]) .waffle-background-container,
-:root:not([data-sdm-disabled]) .column-headers-background,
-:root:not([data-sdm-disabled]) .row-headers-background {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
-  color-scheme: light !important;
-}
-
-:root:not([data-sdm-disabled]) #waffle-grid-container canvas,
-:root:not([data-sdm-disabled]) .waffle-grid-container canvas,
-:root:not([data-sdm-disabled]) [id$="-grid-table-container"] canvas,
-:root:not([data-sdm-disabled]) #grid-table-container canvas,
-:root:not([data-sdm-disabled]) .grid-container canvas,
-:root:not([data-sdm-disabled]) .grid-table-container canvas,
-:root:not([data-sdm-disabled]) canvas.grid-table-container,
-:root:not([data-sdm-disabled]) canvas[id$="-grid-table-container"],
-:root:not([data-sdm-disabled]) canvas[dir="ltr"][style*="z-index: 2"] {
-  background: #ffffff !important;
-  filter: none !important;
-}
-
-:root:not([data-sdm-disabled]) .waffle-cell,
-:root:not([data-sdm-disabled]) .waffle-cell-input,
-:root:not([data-sdm-disabled]) .waffle-selected-cell,
-:root:not([data-sdm-disabled]) .waffle-active-cell {
-  color: var(--sdm-text) !important;
-}
-
-:root:not([data-sdm-disabled]) #waffle-grid-container,
-:root:not([data-sdm-disabled]) .waffle-grid-container {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+/* Sheets layers its grid over transparent containers. Opaque backgrounds on
+   those layers hide cell content; leave all grid painting to Sheets. */
+:root:not([data-sdm-disabled]) .grid-container {
   color-scheme: light !important;
 }
 
@@ -219,4 +179,19 @@
 :root:not([data-sdm-disabled]) video,
 :root:not([data-sdm-disabled]) svg {
   filter: none !important;
+}
+
+/* Current Sheets menus and monochrome sprite icons need explicit contrast. */
+:root:not([data-sdm-disabled]) #docs-menubar .goog-control,
+:root:not([data-sdm-disabled]) #docs-menubar .goog-control-content,
+:root:not([data-sdm-disabled]) .goog-menuitem-content,
+:root:not([data-sdm-disabled]) .goog-menuitem-accel,
+:root:not([data-sdm-disabled]) .goog-toolbar-menu-button-caption {
+  color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) #docs-chrome .docs-icon-img,
+:root:not([data-sdm-disabled]) .goog-menu .docs-icon-img,
+:root:not([data-sdm-disabled]) .grid-bottom-bar .docs-icon-img {
+  filter: brightness(0) invert(.9) !important;
 }

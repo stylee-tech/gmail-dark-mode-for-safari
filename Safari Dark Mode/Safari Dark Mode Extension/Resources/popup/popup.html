@@ -8,14 +8,20 @@
   </head>
   <body>
     <main>
-      <h1>Safari Dark Mode</h1>
-      <p id="site-label">Checking this page...</p>
+      <header>
+        <span class="moon" aria-hidden="true">☾</span>
+        <div><h1>Safari Dark Mode</h1><p class="subtitle">A softer shade of Google.</p></div>
+      </header>
+      <p class="eyebrow">CURRENT WEBSITE</p>
+      <h2 id="site-label">Checking this page…</h2>
       <label class="toggle-row">
-        <span>Enable for this site</span>
-        <input id="enabled-toggle" type="checkbox" checked>
+        <span>Use dark appearance</span>
+        <input id="enabled-toggle" type="checkbox" role="switch" disabled aria-describedby="appearance-status">
+        <span class="switch" aria-hidden="true"></span>
       </label>
-      <p id="appearance-status"></p>
-      <p id="unsupported" hidden>This extension only runs on Gmail, Google Sheets, and Google Search.</p>
+      <p id="appearance-status" role="status" aria-live="polite">Connecting to this page…</p>
+      <p id="unsupported" hidden>Works with Gmail, Google Sheets, and Google Search.</p>
+      <footer>Follows your Mac’s appearance.<br>Preferences stay on this device.</footer>
     </main>
     <script src="../site-registry.js"></script>
     <script src="popup.js"></script>

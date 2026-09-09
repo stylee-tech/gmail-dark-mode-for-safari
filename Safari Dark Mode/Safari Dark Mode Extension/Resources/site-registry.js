@@ -61,6 +61,10 @@
     const current = currentLocation || location;
     const includeHelpers = !options || options.includeHelpers !== false;
 
+    if (current.protocol && current.protocol !== "https:") {
+      return null;
+    }
+
     if (current.hostname === "mail.google.com") {
       return "gmail";
     }
@@ -85,7 +89,7 @@
 
     if (
       (current.hostname === "google.com" || current.hostname === "www.google.com") &&
-      current.pathname.startsWith("/search")
+      (current.pathname === "/search" || current.pathname.startsWith("/search/"))
     ) {
       return "googleSearch";
     }
@@ -167,23 +171,35 @@
   }
 
   function normalizeEnabledBySite(value) {
-    return Object.assign({}, defaults(), value || {});
+    const normalized = defaults();
+
+    for (const key of Object.keys(normalized)) {
+      if (value && typeof value[key] === "boolean") {
+        normalized[key] = value[key];
+      }
+    }
+
+    return normalized;
   }
 
   function readEnabledBySite(api, callback) {
     api.storage.local.get({ [storageKey]: defaults() }, (items) => {
-      callback(normalizeEnabledBySite(items[storageKey]));
+      const error = api.runtime.lastError;
+      callback(normalizeEnabledBySite(items && items[storageKey]), error || null);
     });
   }
 
   function writeEnabledBySite(api, enabledBySite, callback) {
-    api.storage.local.set({ [storageKey]: normalizeEnabledBySite(enabledBySite) }, callback);
+    api.storage.local.set({ [storageKey]: normalizeEnabledBySite(enabledBySite) }, () => {
+      const error = api.runtime.lastError;
+      if (callback) callback(error || null);
+    });
   }
 
   function isProductEnabled(enabledBySite, product, context) {
     const normalized = normalizeEnabledBySite(enabledBySite);
 
-    if (!product || normalized[product] === false) {
+    if (!Object.hasOwn(products, product) || normalized[product] === false) {
       return false;
     }
 
@@ -228,14 +244,6 @@
     return products[product] ? products[product].renderers.slice() : [];
   }
 
-  function shaderFor(product) {
-    return products[product] && products[product].shader
-      ? Object.assign({}, products[product].shader, {
-        targets: products[product].shader.targets.slice()
-      })
-      : null;
-  }
-
   function createStyleManager(api, product) {
     if (styleManagers[product]) {
       return styleManagers[product];
@@ -243,11 +251,9 @@
 
     let observer = null;
     let throttleTimer = 0;
-    let shaderTimer = 0;
+    let auditTimers = [];
     let lastEnabled = false;
     let lastHead = null;
-    let lastBody = null;
-    let resizeListenerAttached = false;
 
     function sync(enabled) {
       lastEnabled = Boolean(enabled);
@@ -277,12 +283,12 @@
 
         link.dataset.pavelSafariDarkModeFile = style.file;
         link.dataset.pavelSafariDarkModeMarker = style.marker;
-        link.href = api.runtime.getURL(style.file);
+        const href = api.runtime.getURL(style.file);
+        if (link.href !== href) link.href = href;
       });
 
       pruneUnexpected(expectedStyles);
       restoreManagedStyleOrder(expectedStyles, parent);
-      syncRenderers();
       scheduleAudit();
     }
 
@@ -294,7 +300,6 @@
       observer = new MutationObserver(() => scheduleSync());
       observer.observe(document.documentElement, { childList: true });
       observeHead();
-      observeBody();
     }
 
     function scheduleSync() {
@@ -305,11 +310,9 @@
       throttleTimer = window.setTimeout(() => {
         throttleTimer = 0;
         observeHead();
-        observeBody();
 
         if (lastEnabled) {
           sync(true);
-          scheduleShaderPosition();
         }
       }, 250);
     }
@@ -323,23 +326,9 @@
       observer.observe(document.head, { childList: true });
     }
 
-    function observeBody() {
-      if (
-        !observer ||
-        !document.body ||
-        document.body === lastBody ||
-        !renderersFor(product).includes("shader")
-      ) {
-        return;
-      }
-
-      lastBody = document.body;
-      observer.observe(document.body, { childList: true, subtree: true });
-    }
-
     function scheduleAudit() {
-      window.setTimeout(audit, 80);
-      window.setTimeout(audit, 400);
+      auditTimers.forEach((timer) => window.clearTimeout(timer));
+      auditTimers = [80, 400].map((delay) => window.setTimeout(audit, delay));
     }
 
     function audit() {
@@ -356,8 +345,6 @@
           injectFallback(style, index);
         }
       });
-
-      auditShader();
     }
 
     function injectFallback(style, index) {
@@ -408,20 +395,22 @@
         return;
       }
 
-      expectedStyles.forEach((_style, index) => {
-        [managedStyleId(index), fallbackStyleId(index)].forEach((id) => {
-          const element = document.getElementById(id);
-
-          if (element) {
-            parent.appendChild(element);
-          }
-        });
-      });
+      const elements = expectedStyles.flatMap((_style, index) =>
+        [managedStyleId(index), fallbackStyleId(index)]
+          .map((id) => document.getElementById(id))
+          .filter(Boolean)
+      );
+      // Moving an already ordered link still produces a mutation in WebKit.
+      // Leave the DOM untouched once our styles are the final children.
+      const tail = Array.from(parent.children).slice(-elements.length);
+      if (elements.every((element, index) => tail[index] === element)) return;
+      elements.forEach((element) => parent.appendChild(element));
     }
 
     function remove() {
+      auditTimers.forEach((timer) => window.clearTimeout(timer));
+      auditTimers = [];
       document.querySelectorAll(managedStyleSelector()).forEach((element) => element.remove());
-      removeShader();
     }
 
     function managedStyleSelector() {
@@ -434,146 +423,6 @@
 
     function fallbackStyleId(index) {
       return `${namespace}-fallback-${index}`;
-    }
-
-    function syncRenderers() {
-      if (renderersFor(product).includes("shader")) {
-        ensureShader();
-      } else {
-        removeShader();
-      }
-    }
-
-    function ensureShader() {
-      const shaderConfig = shaderFor(product);
-
-      if (!shaderConfig) {
-        removeShader();
-        return;
-      }
-
-      let shader = document.getElementById(shaderId());
-
-      if (!shader) {
-        shader = document.createElement("div");
-        shader.id = shaderId();
-        shader.className = namespace;
-        shader.setAttribute(managedAttribute, "shader");
-        shader.setAttribute("aria-hidden", "true");
-        document.documentElement.appendChild(shader);
-      }
-
-      shader.dataset.pavelSafariDarkModeRenderer = "shader";
-      shader.style.position = "fixed";
-      shader.style.pointerEvents = "none";
-      shader.style.zIndex = String(shaderConfig.zIndex || 3);
-      shader.style.background = shaderConfig.background;
-      shader.style.opacity = String(shaderConfig.opacity);
-      shader.style.mixBlendMode = shaderConfig.mixBlendMode;
-      shader.style.backdropFilter = shaderConfig.backdropFilter;
-      shader.style.webkitBackdropFilter = shaderConfig.backdropFilter;
-      shader.style.contain = "strict";
-
-      attachShaderPositionListeners();
-      positionShader();
-    }
-
-    function attachShaderPositionListeners() {
-      if (resizeListenerAttached) {
-        return;
-      }
-
-      resizeListenerAttached = true;
-      window.addEventListener("resize", scheduleShaderPosition, { passive: true });
-      window.addEventListener("scroll", scheduleShaderPosition, { passive: true });
-    }
-
-    function scheduleShaderPosition() {
-      if (!lastEnabled || !renderersFor(product).includes("shader") || shaderTimer) {
-        return;
-      }
-
-      shaderTimer = window.setTimeout(() => {
-        shaderTimer = 0;
-        positionShader();
-      }, 80);
-    }
-
-    function positionShader() {
-      const shader = document.getElementById(shaderId());
-      const target = findShaderTarget();
-
-      if (!shader) {
-        return;
-      }
-
-      if (!target) {
-        shader.hidden = true;
-        shader.style.left = "0";
-        shader.style.top = "0";
-        shader.style.width = "0";
-        shader.style.height = "0";
-        return;
-      }
-
-      const rect = target.getBoundingClientRect();
-      const width = Math.max(0, Math.min(rect.width, window.innerWidth - Math.max(0, rect.left)));
-      const height = Math.max(0, Math.min(rect.height, window.innerHeight - Math.max(0, rect.top)));
-
-      shader.style.left = `${Math.max(0, rect.left)}px`;
-      shader.style.top = `${Math.max(0, rect.top)}px`;
-      shader.style.width = `${width}px`;
-      shader.style.height = `${height}px`;
-      shader.hidden = width < 16 || height < 16;
-    }
-
-    function findShaderTarget() {
-      const shaderConfig = shaderFor(product);
-
-      if (!shaderConfig) {
-        return null;
-      }
-
-      for (const selector of shaderConfig.targets) {
-        const target = document.querySelector(selector);
-
-        if (target) {
-          return target;
-        }
-      }
-
-      return null;
-    }
-
-    function auditShader() {
-      if (!renderersFor(product).includes("shader")) {
-        return;
-      }
-
-      const shader = document.getElementById(shaderId());
-
-      if (!shader) {
-        ensureShader();
-        return;
-      }
-
-      const rect = shader.getBoundingClientRect();
-
-      if (rect.width < 16 || rect.height < 16) {
-        positionShader();
-      }
-    }
-
-    function removeShader() {
-      const shader = document.getElementById(shaderId());
-
-      if (shader) {
-        shader.remove();
-      }
-    }
-
-    function shaderId() {
-      return `${namespace}-shader`;
     }
 
     const manager = {
@@ -604,7 +453,6 @@
     shouldPreloadWithoutHint,
     stylesFor,
     renderersFor,
-    shaderFor,
     createStyleManager
   };
 })();

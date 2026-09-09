@@ -1,104 +1,104 @@
-:root:not([data-sdm-disabled]) {
+:root:not([data-sdm-disabled]):where(:not(.a3s, .a3s *)) {
   --pavel-safari-dark-mode-gmail: applied;
 }
 
-:root:not([data-sdm-disabled]) body,
-:root:not([data-sdm-disabled]) div[role="application"],
-:root:not([data-sdm-disabled]) .bkK,
-:root:not([data-sdm-disabled]) .aeJ,
-:root:not([data-sdm-disabled]) .aeH,
-:root:not([data-sdm-disabled]) .aeI,
-:root:not([data-sdm-disabled]) .ae3,
-:root:not([data-sdm-disabled]) .ae4,
-:root:not([data-sdm-disabled]) .aim,
-:root:not([data-sdm-disabled]) .ain,
-:root:not([data-sdm-disabled]) .aia,
-:root:not([data-sdm-disabled]) .nH .nH,
-:root:not([data-sdm-disabled]) .nH,
-:root:not([data-sdm-disabled]) .aeN,
-:root:not([data-sdm-disabled]) .aeF,
-:root:not([data-sdm-disabled]) .AO,
-:root:not([data-sdm-disabled]) .Tm,
-:root:not([data-sdm-disabled]) .aic,
-:root:not([data-sdm-disabled]) [role="main"],
-:root:not([data-sdm-disabled]) [role="navigation"],
-:root:not([data-sdm-disabled]) [role="complementary"] {
+:root:not([data-sdm-disabled]) body:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) div[role="application"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .bkK:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aeJ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aeH:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aeI:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .ae3:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .ae4:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aim:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .ain:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aia:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH .nH:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aeN:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aeF:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .AO:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .Tm:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aic:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-bg) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) header,
-:root:not([data-sdm-disabled]) .gb_Td,
-:root:not([data-sdm-disabled]) .gb_Dd,
-:root:not([data-sdm-disabled]) .gb_Fd,
-:root:not([data-sdm-disabled]) .gb_Ue,
-:root:not([data-sdm-disabled]) .gb_2d,
-:root:not([data-sdm-disabled]) .G-atb,
-:root:not([data-sdm-disabled]) .G-tF,
-:root:not([data-sdm-disabled]) .bAw,
-:root:not([data-sdm-disabled]) .bq9,
-:root:not([data-sdm-disabled]) .brC-aT5-aOt-Jw {
+:root:not([data-sdm-disabled]) header:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Td:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Dd:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Fd:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ue:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2d:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .G-atb:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .G-tF:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .bAw:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .bq9:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .brC-aT5-aOt-Jw:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-bg-elevated) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .aAU,
-:root:not([data-sdm-disabled]) .gb_qe,
-:root:not([data-sdm-disabled]) .gb_2e,
-:root:not([data-sdm-disabled]) .gb_Ze {
+:root:not([data-sdm-disabled]) .aAU:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_qe:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2e:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ze:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(248, 250, 253)"],
-:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(241, 243, 244)"],
-:root:not([data-sdm-disabled]) .aAU [style*="background-color: #fff"],
-:root:not([data-sdm-disabled]) .aAU [style*="background-color:#fff"],
-:root:not([data-sdm-disabled]) .aAU [style*="background-color: #ffffff"],
-:root:not([data-sdm-disabled]) .aAU [style*="background-color:#ffffff"],
-:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(248, 250, 253)"],
-:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(241, 243, 244)"],
-:root:not([data-sdm-disabled]) .aAU [style*="background: #fff"],
-:root:not([data-sdm-disabled]) .aAU [style*="background:#fff"],
-:root:not([data-sdm-disabled]) .aAU [style*="background: #ffffff"],
-:root:not([data-sdm-disabled]) .aAU [style*="background:#ffffff"],
-:root:not([data-sdm-disabled]) .gb_qe [style*="background-color: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .gb_qe [style*="background: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .gb_2e [style*="background-color: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .gb_2e [style*="background: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .gb_Ze [style*="background-color: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .gb_Ze [style*="background: rgb(255, 255, 255)"] {
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(248, 250, 253)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: rgb(241, 243, 244)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: #fff"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background-color:#fff"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background-color: #ffffff"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background-color:#ffffff"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(248, 250, 253)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background: rgb(241, 243, 244)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background: #fff"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background:#fff"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background: #ffffff"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU [style*="background:#ffffff"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_qe [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_qe [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2e [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2e [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ze [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ze [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)) {
   background: transparent !important;
   background-color: transparent !important;
 }
 
-:root:not([data-sdm-disabled]) form[role="search"]#aso_search_form_anchor,
-:root:not([data-sdm-disabled]) form[role="search"],
-:root:not([data-sdm-disabled]) [role="search"],
-:root:not([data-sdm-disabled]) .gb_Ze[role="search"],
-:root:not([data-sdm-disabled]) [gh="s"],
-:root:not([data-sdm-disabled]) .gb_Md.gb_Ze {
+:root:not([data-sdm-disabled]) form[role="search"]#aso_search_form_anchor:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) form[role="search"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="search"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ze[role="search"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [gh="s"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Md.gb_Ze:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .aAU input,
-:root:not([data-sdm-disabled]) input[aria-label="Ask Gmail"],
-:root:not([data-sdm-disabled]) input[aria-label="Search mail"],
-:root:not([data-sdm-disabled]) input[aria-label="Search in mail"],
-:root:not([data-sdm-disabled]) input[placeholder="Ask Gmail"],
-:root:not([data-sdm-disabled]) form[role="search"] input[name="q"],
-:root:not([data-sdm-disabled]) form[role="search"] textarea[name="q"],
-:root:not([data-sdm-disabled]) [role="search"] input,
-:root:not([data-sdm-disabled]) [role="search"] textarea,
-:root:not([data-sdm-disabled]) input[name="q"],
-:root:not([data-sdm-disabled]) textarea[name="q"],
-:root:not([data-sdm-disabled]) [aria-label="Ask Gmail"] input,
-:root:not([data-sdm-disabled]) [aria-label="Search mail"] input,
-:root:not([data-sdm-disabled]) [aria-label="Search in mail"] input {
+:root:not([data-sdm-disabled]) .aAU input:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) input[aria-label="Ask Gmail"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) input[aria-label="Search mail"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) input[aria-label="Search in mail"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) input[placeholder="Ask Gmail"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) form[role="search"] input[name="q"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) form[role="search"] textarea[name="q"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="search"] input:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="search"] textarea:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) input[name="q"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) textarea[name="q"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [aria-label="Ask Gmail"] input:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [aria-label="Search mail"] input:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [aria-label="Search in mail"] input:where(:not(.a3s, .a3s *)) {
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
@@ -110,600 +110,335 @@
   visibility: visible !important;
 }
 
-:root:not([data-sdm-disabled]) .aAU input::placeholder,
-:root:not([data-sdm-disabled]) input[aria-label="Ask Gmail"]::placeholder,
-:root:not([data-sdm-disabled]) input[aria-label="Search mail"]::placeholder,
-:root:not([data-sdm-disabled]) input[aria-label="Search in mail"]::placeholder,
-:root:not([data-sdm-disabled]) input[placeholder="Ask Gmail"]::placeholder,
-:root:not([data-sdm-disabled]) [role="search"] input::placeholder,
-:root:not([data-sdm-disabled]) [role="search"] textarea::placeholder {
+:root:not([data-sdm-disabled]) .aAU input:where(:not(.a3s, .a3s *))::placeholder,
+:root:not([data-sdm-disabled]) input[aria-label="Ask Gmail"]:where(:not(.a3s, .a3s *))::placeholder,
+:root:not([data-sdm-disabled]) input[aria-label="Search mail"]:where(:not(.a3s, .a3s *))::placeholder,
+:root:not([data-sdm-disabled]) input[aria-label="Search in mail"]:where(:not(.a3s, .a3s *))::placeholder,
+:root:not([data-sdm-disabled]) input[placeholder="Ask Gmail"]:where(:not(.a3s, .a3s *))::placeholder,
+:root:not([data-sdm-disabled]) [role="search"] input:where(:not(.a3s, .a3s *))::placeholder,
+:root:not([data-sdm-disabled]) [role="search"] textarea:where(:not(.a3s, .a3s *))::placeholder {
   color: var(--sdm-muted) !important;
   -webkit-text-fill-color: var(--sdm-muted) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) .aAU [role="button"],
-:root:not([data-sdm-disabled]) .aAU button {
+:root:not([data-sdm-disabled]) .aAU [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU button:where(:not(.a3s, .a3s *)) {
   background: transparent !important;
   border-color: transparent !important;
   color: var(--sdm-text) !important;
   fill: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .aAU [role="button"]:hover,
-:root:not([data-sdm-disabled]) .aAU button:hover {
+:root:not([data-sdm-disabled]) .aAU [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aAU button:hover:where(:not(.a3s, .a3s *)) {
   background: rgba(255, 255, 255, 0.06) !important;
   color: var(--sdm-text) !important;
   fill: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .T-I,
-:root:not([data-sdm-disabled]) .J-J5-Ji,
-:root:not([data-sdm-disabled]) .J-Ke,
-:root:not([data-sdm-disabled]) a.J-Ke,
-:root:not([data-sdm-disabled]) a.J-Ke.n0.uA {
+:root:not([data-sdm-disabled]) .T-I:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-J5-Ji:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) a.J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) a.J-Ke.n0.uA:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) a.J-Ke.n0.uA,
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"] a.J-Ke {
+:root:not([data-sdm-disabled]) a.J-Ke.n0.uA:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"] a.J-Ke:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .zA,
-:root:not([data-sdm-disabled]) .yO,
-:root:not([data-sdm-disabled]) .x7,
-:root:not([data-sdm-disabled]) .Cp,
-:root:not([data-sdm-disabled]) .UI,
-:root:not([data-sdm-disabled]) .F,
-:root:not([data-sdm-disabled]) .BltHke,
-:root:not([data-sdm-disabled]) .aDP,
-:root:not([data-sdm-disabled]) .adC,
-:root:not([data-sdm-disabled]) .adF,
-:root:not([data-sdm-disabled]) .if,
-:root:not([data-sdm-disabled]) td.xY,
-:root:not([data-sdm-disabled]) .xS,
-:root:not([data-sdm-disabled]) .xT,
-:root:not([data-sdm-disabled]) .yi,
-:root:not([data-sdm-disabled]) .y6 {
+:root:not([data-sdm-disabled]) .zA:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .yO:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .x7:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .Cp:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .UI:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .F:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .BltHke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aDP:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .adC:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .adF:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .if:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) td.xY:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .xS:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .xT:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .yi:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .y6:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   color: var(--sdm-text) !important;
   border-color: var(--sdm-border) !important;
 }
 
-:root:not([data-sdm-disabled]) .zA:hover,
-:root:not([data-sdm-disabled]) .yO:hover,
-:root:not([data-sdm-disabled]) .x7:hover,
-:root:not([data-sdm-disabled]) [aria-selected="true"] {
+:root:not([data-sdm-disabled]) .zA:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .yO:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .x7:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [aria-selected="true"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
 }
 
-:root:not([data-sdm-disabled]) .TO.NQ,
-:root:not([data-sdm-disabled]) .TO:hover,
-:root:not([data-sdm-disabled]) .aim:hover,
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"] {
+:root:not([data-sdm-disabled]) .TO.NQ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TO:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aim:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-selected) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .bog,
-:root:not([data-sdm-disabled]) .bqe,
-:root:not([data-sdm-disabled]) .yP,
-:root:not([data-sdm-disabled]) .zF,
-:root:not([data-sdm-disabled]) .av,
-:root:not([data-sdm-disabled]) .aio,
-:root:not([data-sdm-disabled]) .aio span,
-:root:not([data-sdm-disabled]) .G2,
-:root:not([data-sdm-disabled]) .ha,
-:root:not([data-sdm-disabled]) .hP {
+:root:not([data-sdm-disabled]) .bog:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .bqe:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .yP:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zF:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .av:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aio:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aio span:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .G2:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .ha:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .hP:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .y2,
-:root:not([data-sdm-disabled]) .bsU,
-:root:not([data-sdm-disabled]) .gD,
-:root:not([data-sdm-disabled]) .g3,
-:root:not([data-sdm-disabled]) .hx,
-:root:not([data-sdm-disabled]) .aKz {
+:root:not([data-sdm-disabled]) .y2:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .bsU:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gD:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .g3:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .hx:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aKz:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
 }
 
-:root:not([data-sdm-disabled]) .xT .ar,
-:root:not([data-sdm-disabled]) .xT .as {
+:root:not([data-sdm-disabled]) .xT .ar:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .xT .as:where(:not(.a3s, .a3s *)) {
   background: transparent !important;
 }
 
-:root:not([data-sdm-disabled]) .xT .at {
+:root:not([data-sdm-disabled]) .xT .at:where(:not(.a3s, .a3s *)) {
   background-color: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
 }
 
-:root:not([data-sdm-disabled]) .xT .au {
+:root:not([data-sdm-disabled]) .xT .au:where(:not(.a3s, .a3s *)) {
   border-color: var(--sdm-border) !important;
 }
 
-:root:not([data-sdm-disabled]) .xT .av {
+:root:not([data-sdm-disabled]) .xT .av:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
 }
 
-:root:not([data-sdm-disabled]) .brd,
-:root:not([data-sdm-disabled]) .brc {
+:root:not([data-sdm-disabled]) .brd:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .brc:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .brc:hover {
+:root:not([data-sdm-disabled]) .brc:hover:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-3) !important;
 }
 
-:root:not([data-sdm-disabled]) .bzB,
-:root:not([data-sdm-disabled]) .brg {
+:root:not([data-sdm-disabled]) .bzB:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .brg:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
 }
 
-:root:not([data-sdm-disabled]) .iY,
-:root:not([data-sdm-disabled]) .aju,
-:root:not([data-sdm-disabled]) .gE,
-:root:not([data-sdm-disabled]) .gH,
-:root:not([data-sdm-disabled]) .h7,
-:root:not([data-sdm-disabled]) .Bk,
-:root:not([data-sdm-disabled]) .G3,
-:root:not([data-sdm-disabled]) .adn {
+:root:not([data-sdm-disabled]) .iY:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aju:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gE:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gH:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .h7:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .Bk:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .G3:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .adn:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .Am,
-:root:not([data-sdm-disabled]) .editable,
-:root:not([data-sdm-disabled]) .gs {
+:root:not([data-sdm-disabled]) .Am:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .editable:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gs:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .ii,
-:root:not([data-sdm-disabled]) .a3s {
-  background: var(--sdm-surface) !important;
-  color: var(--sdm-text) !important;
-  color-scheme: dark !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s,
-:root:not([data-sdm-disabled]) .a3s > div {
-  background: var(--sdm-surface) !important;
-  background-color: var(--sdm-surface) !important;
-  border-color: var(--sdm-border) !important;
-  color: var(--sdm-text) !important;
-  color-scheme: dark !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s table,
-:root:not([data-sdm-disabled]) .a3s tbody,
-:root:not([data-sdm-disabled]) .a3s tr,
-:root:not([data-sdm-disabled]) .a3s td,
-:root:not([data-sdm-disabled]) .a3s th {
-  border-color: var(--sdm-border) !important;
-  color: var(--sdm-text) !important;
-  color-scheme: dark !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s div,
-:root:not([data-sdm-disabled]) .a3s p,
-:root:not([data-sdm-disabled]) .a3s li,
-:root:not([data-sdm-disabled]) .a3s section,
-:root:not([data-sdm-disabled]) .a3s article {
-  border-color: var(--sdm-border) !important;
-  color: var(--sdm-text) !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #fff"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#fff"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #ffffff"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#ffffff"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f7f7f7"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f7f7f7"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f8f8f8"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f8f8f8"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f9f9f9"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f9f9f9"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #fafafa"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#fafafa"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f1f1f1"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f1f1f1"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #f2f2f2"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#f2f2f2"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #eeeeee"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#eeeeee"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #e6e6e6"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#e6e6e6"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #ddd"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#ddd"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #dddddd"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#dddddd"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #d9d9d9"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#d9d9d9"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: white"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:white"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(250, 250, 250)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(249, 249, 249)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(248, 248, 248)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(247, 247, 247)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(245, 245, 245)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(242, 242, 242)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(238, 238, 238)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(230, 230, 230)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(221, 221, 221)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(217, 217, 217)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #fff"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#fff"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #ffffff"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#ffffff"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #f7f7f7"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#f7f7f7"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #f8f8f8"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#f8f8f8"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #f9f9f9"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#f9f9f9"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #fafafa"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#fafafa"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #f1f1f1"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#f1f1f1"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #f2f2f2"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#f2f2f2"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #eeeeee"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#eeeeee"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #e6e6e6"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#e6e6e6"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #ddd"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#ddd"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #dddddd"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#dddddd"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #d9d9d9"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#d9d9d9"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: white"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:white"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(250, 250, 250)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(249, 249, 249)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(248, 248, 248)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(247, 247, 247)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(245, 245, 245)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(242, 242, 242)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(238, 238, 238)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(230, 230, 230)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(221, 221, 221)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(217, 217, 217)"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#fff"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#ffffff"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="white"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#f7f7f7"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#f8f8f8"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#f9f9f9"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#fafafa"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#eeeeee"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#e6e6e6"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#dddddd"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#d9d9d9"] {
-  background-color: var(--sdm-surface) !important;
-  color: var(--sdm-text) !important;
-  color-scheme: dark !important;
-}
-
-/* Email markup varies inline color casing and spacing; keep light backgrounds paired with light text overrides. */
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#fff" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#ffffff" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#fafafa" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f9f9f9" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f8f8f8" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f7f7f7" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f2f2f2" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#f1f1f1" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#eeeeee" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#e6e6e6" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#ddd" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#dddddd" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="#d9d9d9" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="white" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="rgb(255,255,255)" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="rgb(255, 255, 255)" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="rgba(255,255,255,1" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color" i][style*="rgba(255, 255, 255, 1" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#fff" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#ffffff" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#fafafa" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f9f9f9" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f8f8f8" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f7f7f7" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f2f2f2" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#f1f1f1" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#eeeeee" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#e6e6e6" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#ddd" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#dddddd" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="#d9d9d9" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="white" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="rgb(255,255,255)" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="rgb(255, 255, 255)" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="rgba(255,255,255,1" i],
-:root:not([data-sdm-disabled]) .a3s [style*="background:" i][style*="rgba(255, 255, 255, 1" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#fff" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#ffffff" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#fafafa" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#f9f9f9" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#f8f8f8" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#f7f7f7" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#f2f2f2" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#f1f1f1" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#eeeeee" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#e6e6e6" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#ddd" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#dddddd" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#d9d9d9" i],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="white" i] {
-  background-color: var(--sdm-surface) !important;
-  color: var(--sdm-text) !important;
-  color-scheme: dark !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #ccc"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#ccc"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: #cccccc"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color:#cccccc"],
-:root:not([data-sdm-disabled]) .a3s [style*="background-color: rgb(204, 204, 204)"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #ccc"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#ccc"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: #cccccc"],
-:root:not([data-sdm-disabled]) .a3s [style*="background:#cccccc"],
-:root:not([data-sdm-disabled]) .a3s [style*="background: rgb(204, 204, 204)"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#ccc"],
-:root:not([data-sdm-disabled]) .a3s [bgcolor="#cccccc"] {
-  background-color: var(--sdm-surface-2) !important;
-  color: var(--sdm-text) !important;
-  color-scheme: dark !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s [style*="color: #000"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#000"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #000000"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#000000"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: black"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:black"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(0, 0, 0)"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #202124"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#202124"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(32, 33, 36)"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #222"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#222"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #222222"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#222222"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #333"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#333"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #333333"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#333333"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(34, 34, 34)"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(51, 51, 51)"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #444"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#444"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #444444"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#444444"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(68, 68, 68)"] {
-  color: var(--sdm-text) !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s [style*="color: #555"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#555"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #555555"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#555555"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #666"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#666"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #666666"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#666666"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #777"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#777"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: #777777"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:#777777"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: gray"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:gray"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: grey"],
-:root:not([data-sdm-disabled]) .a3s [style*="color:grey"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(85, 85, 85)"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(102, 102, 102)"],
-:root:not([data-sdm-disabled]) .a3s [style*="color: rgb(117, 117, 117)"] {
-  color: var(--sdm-muted) !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s a,
-:root:not([data-sdm-disabled]) .a3s a span,
-:root:not([data-sdm-disabled]) .a3s [href] {
-  color: var(--sdm-accent) !important;
-}
-
-:root:not([data-sdm-disabled]) .a3s hr,
-:root:not([data-sdm-disabled]) .a3s table,
-:root:not([data-sdm-disabled]) .a3s td,
-:root:not([data-sdm-disabled]) .a3s th {
-  border-color: var(--sdm-border) !important;
-}
-
-:root:not([data-sdm-disabled]) .J-M,
-:root:not([data-sdm-disabled]) .b8,
-:root:not([data-sdm-disabled]) .vh,
-:root:not([data-sdm-disabled]) .Kj-JD {
+:root:not([data-sdm-disabled]) .J-M:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .b8:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .vh:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .Kj-JD:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   border-color: var(--sdm-border-strong) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .AD,
-:root:not([data-sdm-disabled]) .M9,
-:root:not([data-sdm-disabled]) .aoI,
-:root:not([data-sdm-disabled]) .aoP,
-:root:not([data-sdm-disabled]) .aoT,
-:root:not([data-sdm-disabled]) .aoD,
-:root:not([data-sdm-disabled]) .aoY,
-:root:not([data-sdm-disabled]) .Ar,
-:root:not([data-sdm-disabled]) .At,
-:root:not([data-sdm-disabled]) .aDh,
-:root:not([data-sdm-disabled]) .btC,
-:root:not([data-sdm-disabled]) .gU,
-:root:not([data-sdm-disabled]) .wO,
-:root:not([data-sdm-disabled]) .vO,
-:root:not([data-sdm-disabled]) .ao5,
-:root:not([data-sdm-disabled]) .aoO {
+:root:not([data-sdm-disabled]) .AD:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoI:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoP:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoT:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoD:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoY:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .Ar:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .At:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aDh:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .btC:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gU:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .wO:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .vO:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .ao5:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoO:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .M9 {
+:root:not([data-sdm-disabled]) .M9:where(:not(.a3s, .a3s *)) {
   box-shadow: 0 18px 50px rgb(0 0 0 / 45%) !important;
 }
 
-:root:not([data-sdm-disabled]) .aoT,
-:root:not([data-sdm-disabled]) .aoD {
+:root:not([data-sdm-disabled]) .aoT:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoD:where(:not(.a3s, .a3s *)) {
   box-shadow: inset 0 -1px 0 var(--sdm-border) !important;
 }
 
-:root:not([data-sdm-disabled]) .vO,
-:root:not([data-sdm-disabled]) .aoT input,
-:root:not([data-sdm-disabled]) .aoD input,
-:root:not([data-sdm-disabled]) .aoP input {
+:root:not([data-sdm-disabled]) .vO:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoT input:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoD input:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoP input:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .aoT .aB,
-:root:not([data-sdm-disabled]) .aoD .aB,
-:root:not([data-sdm-disabled]) .aYF,
-:root:not([data-sdm-disabled]) .aHS-bnt {
+:root:not([data-sdm-disabled]) .aoT .aB:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aoD .aB:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aYF:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aHS-bnt:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
 }
 
-:root:not([data-sdm-disabled]) .M9 .J-Z,
-:root:not([data-sdm-disabled]) .M9 .J-JN-M-I,
-:root:not([data-sdm-disabled]) .M9 .T-I:not(.T-I-KE),
-:root:not([data-sdm-disabled]) .M9 .asa,
-:root:not([data-sdm-disabled]) .M9 .G-Ni,
-:root:not([data-sdm-disabled]) .M9 [role="button"]:not(.T-I-KE) {
+:root:not([data-sdm-disabled]) .M9 .J-Z:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .J-JN-M-I:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .T-I:not(.T-I-KE):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .asa:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .G-Ni:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 [role="button"]:not(.T-I-KE):where(:not(.a3s, .a3s *)) {
   background: transparent !important;
   background-color: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
 }
 
-:root:not([data-sdm-disabled]) .M9 .J-Z:hover,
-:root:not([data-sdm-disabled]) .M9 .J-JN-M-I:hover,
-:root:not([data-sdm-disabled]) .M9 .T-I:not(.T-I-KE):hover,
-:root:not([data-sdm-disabled]) .M9 .asa:hover,
-:root:not([data-sdm-disabled]) .M9 .G-Ni:hover,
-:root:not([data-sdm-disabled]) .M9 [role="button"]:not(.T-I-KE):hover {
+:root:not([data-sdm-disabled]) .M9 .J-Z:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .J-JN-M-I:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .T-I:not(.T-I-KE):hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .asa:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .G-Ni:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 [role="button"]:not(.T-I-KE):hover:where(:not(.a3s, .a3s *)) {
   background-color: var(--sdm-surface-2) !important;
   border-color: transparent !important;
 }
 
-:root:not([data-sdm-disabled]) .M9 .a8X,
-:root:not([data-sdm-disabled]) .M9 .a8V,
-:root:not([data-sdm-disabled]) .M9 .a8u,
-:root:not([data-sdm-disabled]) .M9 .J-Z-M-I-J6-H {
+:root:not([data-sdm-disabled]) .M9 .a8X:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .a8V:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .a8u:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .J-Z-M-I-J6-H:where(:not(.a3s, .a3s *)) {
   filter: invert(1) brightness(1.65) contrast(0.9) !important;
   opacity: 0.92 !important;
 }
 
-:root:not([data-sdm-disabled]) .M9 .T-I-KE,
-:root:not([data-sdm-disabled]) .M9 .T-I-KE * {
+:root:not([data-sdm-disabled]) .M9 .T-I-KE:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 .T-I-KE *:where(:not(.a3s, .a3s *)) {
   background-color: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
   filter: none !important;
 }
 
-:root:not([data-sdm-disabled]) .a3s img,
-:root:not([data-sdm-disabled]) .ii img,
-:root:not([data-sdm-disabled]) .adn img,
-:root:not([data-sdm-disabled]) .M9 img,
-:root:not([data-sdm-disabled]) .brc img {
+:root:not([data-sdm-disabled]) .a3s img:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .ii img:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .adn img:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .M9 img:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .brc img:where(:not(.a3s, .a3s *)) {
   filter: none !important;
 }
 
-:root:not([data-sdm-disabled]) .TO:hover,
-:root:not([data-sdm-disabled]) .TO:hover a.J-Ke,
-:root:not([data-sdm-disabled]) .TO:hover .aio,
-:root:not([data-sdm-disabled]) .aim:hover,
-:root:not([data-sdm-disabled]) .aim:hover a,
-:root:not([data-sdm-disabled]) .nZ:hover,
-:root:not([data-sdm-disabled]) .J-Ke:hover,
-:root:not([data-sdm-disabled]) .J-N:hover,
-:root:not([data-sdm-disabled]) .J-LC:hover {
+:root:not([data-sdm-disabled]) .TO:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TO:hover a.J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TO:hover .aio:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aim:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aim:hover a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-Ke:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-N:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-LC:hover:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-selected-hover) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .TO.NQ,
-:root:not([data-sdm-disabled]) .TO.NQ:hover,
-:root:not([data-sdm-disabled]) .nZ.aHS,
-:root:not([data-sdm-disabled]) .nZ.aHS:hover,
-:root:not([data-sdm-disabled]) .nZ.aHS .J-Ke,
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"],
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"] a {
+:root:not([data-sdm-disabled]) .TO.NQ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TO.NQ:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ.aHS:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ.aHS:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ.aHS .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-current="page"] a:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-selected) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .zA:hover td,
-:root:not([data-sdm-disabled]) .zA:hover .xY,
-:root:not([data-sdm-disabled]) .zA:hover .xS,
-:root:not([data-sdm-disabled]) .zA:hover .xT,
-:root:not([data-sdm-disabled]) .zA:hover .y6,
-:root:not([data-sdm-disabled]) .zA[aria-selected="true"] td,
-:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xY,
-:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xS,
-:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xT,
-:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .y6 {
+:root:not([data-sdm-disabled]) .zA:hover td:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA:hover .xY:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA:hover .xS:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA:hover .xT:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA:hover .y6:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] td:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xY:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xS:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .xT:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .zA[aria-selected="true"] .y6:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .T-I:hover,
-:root:not([data-sdm-disabled]) .asa:hover,
-:root:not([data-sdm-disabled]) .G-Ni:hover,
-:root:not([data-sdm-disabled]) [role="button"]:hover {
+:root:not([data-sdm-disabled]) .T-I:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .asa:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .G-Ni:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="button"]:hover:where(:not(.a3s, .a3s *)) {
   background-color: var(--sdm-surface-3) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .gb_Qe,
-:root:not([data-sdm-disabled]) .gb_Se,
-:root:not([data-sdm-disabled]) .gb_Te,
-:root:not([data-sdm-disabled]) .gb_Ue,
-:root:not([data-sdm-disabled]) .gb_Ve,
-:root:not([data-sdm-disabled]) .gb_Wa,
-:root:not([data-sdm-disabled]) .gb_Xa,
-:root:not([data-sdm-disabled]) .gb_Za,
-:root:not([data-sdm-disabled]) .gb_0a,
-:root:not([data-sdm-disabled]) .gb_1a,
-:root:not([data-sdm-disabled]) .gb_2a,
-:root:not([data-sdm-disabled]) .gb_3a,
-:root:not([data-sdm-disabled]) .gb_4a,
-:root:not([data-sdm-disabled]) .gb_Ea,
-:root:not([data-sdm-disabled]) .gb_Fa,
-:root:not([data-sdm-disabled]) .gb_Ga,
-:root:not([data-sdm-disabled]) .gb_Ha,
-:root:not([data-sdm-disabled]) .gb_Ia,
-:root:not([data-sdm-disabled]) .gb_Ja,
-:root:not([data-sdm-disabled]) .gb_Ka,
-:root:not([data-sdm-disabled]) .gb_La,
-:root:not([data-sdm-disabled]) .gb_Ma,
-:root:not([data-sdm-disabled]) .gb_Na,
-:root:not([data-sdm-disabled]) .gb_Oa,
-:root:not([data-sdm-disabled]) [role="dialog"],
-:root:not([data-sdm-disabled]) [role="menu"],
-:root:not([data-sdm-disabled]) [role="listbox"] {
+:root:not([data-sdm-disabled]) .gb_Qe:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Se:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Te:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ue:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ve:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Wa:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Xa:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Za:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_0a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_1a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_3a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_4a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ea:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Fa:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ga:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ha:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ia:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ja:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ka:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_La:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ma:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Na:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Oa:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="menu"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="listbox"] {
+:root:not([data-sdm-disabled]) [role="listbox"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-bg-elevated) !important;
   border: 1px solid var(--sdm-border) !important;
   border-radius: 0 0 22px 22px !important;
@@ -712,44 +447,44 @@
   overflow: hidden !important;
 }
 
-:root:not([data-sdm-disabled]) [role="listbox"] *,
-:root:not([data-sdm-disabled]) [role="listbox"] div,
-:root:not([data-sdm-disabled]) [role="listbox"] table,
-:root:not([data-sdm-disabled]) [role="listbox"] tbody,
-:root:not([data-sdm-disabled]) [role="listbox"] tr,
-:root:not([data-sdm-disabled]) [role="listbox"] td {
+:root:not([data-sdm-disabled]) [role="listbox"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] div:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] table:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] tbody:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] tr:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] td:where(:not(.a3s, .a3s *)) {
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="listbox"] > *,
-:root:not([data-sdm-disabled]) [role="listbox"] [role="option"],
-:root:not([data-sdm-disabled]) [role="listbox"] div,
-:root:not([data-sdm-disabled]) [role="listbox"] table,
-:root:not([data-sdm-disabled]) [role="listbox"] tbody,
-:root:not([data-sdm-disabled]) [role="listbox"] tr,
-:root:not([data-sdm-disabled]) [role="listbox"] td {
+:root:not([data-sdm-disabled]) [role="listbox"] > *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] [role="option"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] div:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] table:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] tbody:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] tr:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] td:where(:not(.a3s, .a3s *)) {
   background: transparent !important;
 }
 
-:root:not([data-sdm-disabled]) [role="listbox"] [role="option"]:hover,
-:root:not([data-sdm-disabled]) [role="listbox"] [aria-selected="true"],
-:root:not([data-sdm-disabled]) [role="listbox"] tr:hover,
-:root:not([data-sdm-disabled]) [role="listbox"] td:hover {
+:root:not([data-sdm-disabled]) [role="listbox"] [role="option"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] [aria-selected="true"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] tr:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] td:hover:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-selected-hover) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="listbox"] [role="button"],
-:root:not([data-sdm-disabled]) [role="listbox"] button,
-:root:not([data-sdm-disabled]) [role="listbox"] .T-I {
+:root:not([data-sdm-disabled]) [role="listbox"] [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] button:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="listbox"] .T-I:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   border: 1px solid var(--sdm-border) !important;
   border-radius: 12px !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] {
+:root:not([data-sdm-disabled]) [role="dialog"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   border: 1px solid var(--sdm-border) !important;
   border-radius: 18px !important;
@@ -757,39 +492,39 @@
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] table,
-:root:not([data-sdm-disabled]) [role="dialog"] tbody,
-:root:not([data-sdm-disabled]) [role="dialog"] tr,
-:root:not([data-sdm-disabled]) [role="dialog"] td {
+:root:not([data-sdm-disabled]) [role="dialog"] table:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] tbody:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] tr:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] td:where(:not(.a3s, .a3s *)) {
   background: transparent !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] div:not([role="button"]),
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color:white"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: white"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background:white"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: white"] {
+:root:not([data-sdm-disabled]) [role="dialog"] div:not([role="button"]):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color:white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background:white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: white"]:where(:not(.a3s, .a3s *)) {
   background: transparent !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color:white"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: white"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background:white"],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: white"] {
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color:white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background-color: white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background:white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background: white"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] input,
-:root:not([data-sdm-disabled]) [role="dialog"] textarea,
-:root:not([data-sdm-disabled]) [role="dialog"] select {
+:root:not([data-sdm-disabled]) [role="dialog"] input:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] textarea:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] select:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-bg-elevated) !important;
   border: 1px solid var(--sdm-border) !important;
   border-radius: 8px !important;
@@ -797,148 +532,148 @@
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] input:focus,
-:root:not([data-sdm-disabled]) [role="dialog"] textarea:focus,
-:root:not([data-sdm-disabled]) [role="dialog"] select:focus {
+:root:not([data-sdm-disabled]) [role="dialog"] input:focus:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] textarea:focus:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] select:focus:where(:not(.a3s, .a3s *)) {
   border-color: rgba(138, 180, 248, 0.65) !important;
   box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.16) !important;
   outline: none !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] label,
-:root:not([data-sdm-disabled]) [role="dialog"] .J-J5-Ji,
-:root:not([data-sdm-disabled]) [role="dialog"] .T-I,
-:root:not([data-sdm-disabled]) [role="dialog"] [role="button"],
-:root:not([data-sdm-disabled]) [role="dialog"] button {
+:root:not([data-sdm-disabled]) [role="dialog"] label:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] .J-J5-Ji:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] .T-I:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] button:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] [role="button"],
-:root:not([data-sdm-disabled]) [role="dialog"] button,
-:root:not([data-sdm-disabled]) [role="dialog"] .T-I:not(.T-I-KE) {
+:root:not([data-sdm-disabled]) [role="dialog"] [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] button:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] .T-I:not(.T-I-KE):where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
   border-radius: 12px !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] [role="button"]:hover,
-:root:not([data-sdm-disabled]) [role="dialog"] button:hover,
-:root:not([data-sdm-disabled]) [role="dialog"] .T-I:not(.T-I-KE):hover {
+:root:not([data-sdm-disabled]) [role="dialog"] [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] button:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] .T-I:not(.T-I-KE):hover:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-3) !important;
   border-color: var(--sdm-border-strong) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] input[type="checkbox"] {
+:root:not([data-sdm-disabled]) [role="dialog"] input[type="checkbox"]:where(:not(.a3s, .a3s *)) {
   accent-color: var(--sdm-accent) !important;
   background: transparent !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] .T-I-KE,
-:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"],
-:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"] {
+:root:not([data-sdm-disabled]) [role="dialog"] .T-I-KE:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"]:where(:not(.a3s, .a3s *)) {
   background: #1a73e8 !important;
   border-color: #1a73e8 !important;
   border-radius: 999px !important;
   color: #ffffff !important;
 }
 
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#fff" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#ffffff" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="white" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(255,255,255)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(255, 255, 255)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(248,250,253)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(248, 250, 253)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(241,243,244)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(241, 243, 244)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#f8fafd" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#f1f3f4" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#edf2fa" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#e8f0fe" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#eaf0f9" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(232,240,254)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(232, 240, 254)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(234,240,249)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(234, 240, 249)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#fff" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#ffffff" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="white" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(255,255,255)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(255, 255, 255)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(248,250,253)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(248, 250, 253)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(241,243,244)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(241, 243, 244)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#f8fafd" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#f1f3f4" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#edf2fa" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#e8f0fe" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#eaf0f9" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(232,240,254)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(232, 240, 254)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(234,240,249)" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(234, 240, 249)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#fff" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#ffffff" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="white" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(255,255,255)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(255, 255, 255)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(248,250,253)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(248, 250, 253)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(241,243,244)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(241, 243, 244)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#f8fafd" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#f1f3f4" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#edf2fa" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#e8f0fe" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#eaf0f9" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(232,240,254)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(232, 240, 254)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(234,240,249)" i],
-:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(234, 240, 249)" i] {
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#fff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#ffffff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="white" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(255,255,255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(255, 255, 255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(248,250,253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(248, 250, 253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(241,243,244)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(241, 243, 244)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#f8fafd" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#f1f3f4" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#edf2fa" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#e8f0fe" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#eaf0f9" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(232,240,254)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(232, 240, 254)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(234,240,249)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(234, 240, 249)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#fff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#ffffff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="white" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(255,255,255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(255, 255, 255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(248,250,253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(248, 250, 253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(241,243,244)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(241, 243, 244)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#f8fafd" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#f1f3f4" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#edf2fa" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#e8f0fe" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="#eaf0f9" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(232,240,254)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(232, 240, 254)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(234,240,249)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [style*="background" i][style*="rgb(234, 240, 249)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#fff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#ffffff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="white" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(255,255,255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(255, 255, 255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(248,250,253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(248, 250, 253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(241,243,244)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(241, 243, 244)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#f8fafd" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#f1f3f4" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#edf2fa" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#e8f0fe" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="#eaf0f9" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(232,240,254)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(232, 240, 254)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(234,240,249)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="complementary"] [style*="background" i][style*="rgb(234, 240, 249)" i]:where(:not(.a3s, .a3s *)) {
   background-color: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
   color-scheme: dark !important;
 }
 
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#c2e7ff" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(194,231,255)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(194, 231, 255)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#b3e5fc" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(187,222,251)" i],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(187, 222, 251)" i] {
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#c2e7ff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(194,231,255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(194, 231, 255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="#b3e5fc" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(187,222,251)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background" i][style*="rgb(187, 222, 251)" i]:where(:not(.a3s, .a3s *)) {
   background-color: var(--sdm-accent-bg) !important;
   border-color: rgba(138, 180, 248, 0.36) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"],
-:root:not([data-sdm-disabled]) [role="dialog"] h1,
-:root:not([data-sdm-disabled]) [role="dialog"] h2,
-:root:not([data-sdm-disabled]) [role="dialog"] h3,
-:root:not([data-sdm-disabled]) [role="dialog"] label,
-:root:not([data-sdm-disabled]) [role="dialog"] div,
-:root:not([data-sdm-disabled]) [role="dialog"] span {
+:root:not([data-sdm-disabled]) [role="dialog"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] h1:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] h2:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] h3:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] label:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] div:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] span:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] [aria-disabled="true"],
-:root:not([data-sdm-disabled]) [role="dialog"] [aria-disabled="true"] *,
-:root:not([data-sdm-disabled]) [role="dialog"] [disabled],
-:root:not([data-sdm-disabled]) [role="dialog"] [disabled] * {
+:root:not([data-sdm-disabled]) [role="dialog"] [aria-disabled="true"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [aria-disabled="true"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [disabled]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [disabled] *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-dim) !important;
   -webkit-text-fill-color: var(--sdm-dim) !important;
 }
 
 /* Reassert dialog action buttons after generic light-surface catchers. */
-:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"],
-:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"][style*="background" i],
-:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"],
-:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"][style*="background" i],
-:root:not([data-sdm-disabled]) [role="dialog"] button[type="submit"],
-:root:not([data-sdm-disabled]) [role="dialog"] button[type="submit"][style*="background" i] {
+:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"][style*="background" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"][style*="background" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] button[type="submit"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] button[type="submit"][style*="background" i]:where(:not(.a3s, .a3s *)) {
   background: #1a73e8 !important;
   background-color: #1a73e8 !important;
   border-color: #1a73e8 !important;
@@ -946,358 +681,358 @@
   -webkit-text-fill-color: #fff !important;
 }
 
-:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"] *,
-:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"] *,
-:root:not([data-sdm-disabled]) [role="dialog"] button[type="submit"] * {
+:root:not([data-sdm-disabled]) [role="dialog"] [data-tooltip="Search"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] [aria-label="Search"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="dialog"] button[type="submit"] *:where(:not(.a3s, .a3s *)) {
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
   fill: #fff !important;
 }
 
-:root:not([data-sdm-disabled]) .gb_Qe *,
-:root:not([data-sdm-disabled]) .gb_Se *,
-:root:not([data-sdm-disabled]) .gb_Te *,
-:root:not([data-sdm-disabled]) .gb_Ue *,
-:root:not([data-sdm-disabled]) .gb_Ve *,
-:root:not([data-sdm-disabled]) .gb_Wa *,
-:root:not([data-sdm-disabled]) .gb_Xa *,
-:root:not([data-sdm-disabled]) .gb_Za *,
-:root:not([data-sdm-disabled]) .gb_0a *,
-:root:not([data-sdm-disabled]) .gb_1a *,
-:root:not([data-sdm-disabled]) .gb_2a *,
-:root:not([data-sdm-disabled]) .gb_3a *,
-:root:not([data-sdm-disabled]) .gb_4a *,
-:root:not([data-sdm-disabled]) .gb_Ea *,
-:root:not([data-sdm-disabled]) .gb_Fa *,
-:root:not([data-sdm-disabled]) .gb_Ga *,
-:root:not([data-sdm-disabled]) .gb_Ha *,
-:root:not([data-sdm-disabled]) .gb_Ia *,
-:root:not([data-sdm-disabled]) .gb_Ja *,
-:root:not([data-sdm-disabled]) .gb_Ka *,
-:root:not([data-sdm-disabled]) .gb_La *,
-:root:not([data-sdm-disabled]) .gb_Ma *,
-:root:not([data-sdm-disabled]) .gb_Na *,
-:root:not([data-sdm-disabled]) .gb_Oa * {
+:root:not([data-sdm-disabled]) .gb_Qe *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Se *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Te *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ue *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ve *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Wa *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Xa *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Za *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_0a *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_1a *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2a *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_3a *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_4a *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ea *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Fa *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ga *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ha *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ia *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ja *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ka *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_La *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ma *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Na *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Oa *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .gb_Qe a,
-:root:not([data-sdm-disabled]) .gb_Se a,
-:root:not([data-sdm-disabled]) .gb_Te a,
-:root:not([data-sdm-disabled]) .gb_Ue a,
-:root:not([data-sdm-disabled]) .gb_Ve a,
-:root:not([data-sdm-disabled]) .gb_Wa a,
-:root:not([data-sdm-disabled]) .gb_Xa a,
-:root:not([data-sdm-disabled]) .gb_Za a,
-:root:not([data-sdm-disabled]) .gb_0a a,
-:root:not([data-sdm-disabled]) .gb_1a a,
-:root:not([data-sdm-disabled]) .gb_2a a,
-:root:not([data-sdm-disabled]) .gb_3a a,
-:root:not([data-sdm-disabled]) .gb_4a a,
-:root:not([data-sdm-disabled]) .gb_Ea a,
-:root:not([data-sdm-disabled]) .gb_Fa a,
-:root:not([data-sdm-disabled]) .gb_Ga a,
-:root:not([data-sdm-disabled]) .gb_Ha a,
-:root:not([data-sdm-disabled]) .gb_Ia a,
-:root:not([data-sdm-disabled]) .gb_Ja a,
-:root:not([data-sdm-disabled]) .gb_Ka a,
-:root:not([data-sdm-disabled]) .gb_La a,
-:root:not([data-sdm-disabled]) .gb_Ma a,
-:root:not([data-sdm-disabled]) .gb_Na a,
-:root:not([data-sdm-disabled]) .gb_Oa a {
+:root:not([data-sdm-disabled]) .gb_Qe a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Se a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Te a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ue a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ve a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Wa a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Xa a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Za a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_0a a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_1a a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2a a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_3a a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_4a a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ea a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Fa a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ga a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ha a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ia a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ja a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ka a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_La a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ma a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Na a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Oa a:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-accent) !important;
 }
 
-:root:not([data-sdm-disabled]) .gb_Qe [role="button"],
-:root:not([data-sdm-disabled]) .gb_Se [role="button"],
-:root:not([data-sdm-disabled]) .gb_Te [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ue [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ve [role="button"],
-:root:not([data-sdm-disabled]) .gb_Wa [role="button"],
-:root:not([data-sdm-disabled]) .gb_Xa [role="button"],
-:root:not([data-sdm-disabled]) .gb_Za [role="button"],
-:root:not([data-sdm-disabled]) .gb_0a [role="button"],
-:root:not([data-sdm-disabled]) .gb_1a [role="button"],
-:root:not([data-sdm-disabled]) .gb_2a [role="button"],
-:root:not([data-sdm-disabled]) .gb_3a [role="button"],
-:root:not([data-sdm-disabled]) .gb_4a [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ea [role="button"],
-:root:not([data-sdm-disabled]) .gb_Fa [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ga [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ha [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ia [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ja [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ka [role="button"],
-:root:not([data-sdm-disabled]) .gb_La [role="button"],
-:root:not([data-sdm-disabled]) .gb_Ma [role="button"],
-:root:not([data-sdm-disabled]) .gb_Na [role="button"],
-:root:not([data-sdm-disabled]) .gb_Oa [role="button"] {
+:root:not([data-sdm-disabled]) .gb_Qe [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Se [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Te [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ue [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ve [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Wa [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Xa [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Za [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_0a [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_1a [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2a [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_3a [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_4a [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ea [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Fa [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ga [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ha [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ia [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ja [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ka [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_La [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ma [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Na [role="button"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Oa [role="button"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
 }
 
-:root:not([data-sdm-disabled]) .gb_Qe [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Se [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Te [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ue [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ve [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Wa [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Xa [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Za [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_0a [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_1a [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_2a [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_3a [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_4a [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ea [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Fa [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ga [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ha [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ia [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ja [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ka [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_La [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Ma [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Na [role="button"]:hover,
-:root:not([data-sdm-disabled]) .gb_Oa [role="button"]:hover {
+:root:not([data-sdm-disabled]) .gb_Qe [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Se [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Te [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ue [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ve [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Wa [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Xa [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Za [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_0a [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_1a [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_2a [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_3a [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_4a [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ea [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Fa [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ga [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ha [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ia [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ja [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ka [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_La [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Ma [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Na [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .gb_Oa [role="button"]:hover:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-3) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="main"] [style*="background-color: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background: rgb(255, 255, 255)"],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background-color:white"],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background-color: white"],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background:white"],
-:root:not([data-sdm-disabled]) [role="main"] [style*="background: white"] {
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color:white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background-color: white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background:white"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="background: white"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .TC,
-:root:not([data-sdm-disabled]) .TD,
-:root:not([data-sdm-disabled]) .aRv,
-:root:not([data-sdm-disabled]) .aRu,
-:root:not([data-sdm-disabled]) .aRz,
-:root:not([data-sdm-disabled]) .BltHke,
-:root:not([data-sdm-disabled]) .Cp .UI,
-:root:not([data-sdm-disabled]) .Cp .F,
-:root:not([data-sdm-disabled]) .ae4 .Cp {
+:root:not([data-sdm-disabled]) .TC:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TD:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aRv:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aRu:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aRz:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .BltHke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .Cp .UI:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .Cp .F:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .ae4 .Cp:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   color: var(--sdm-text) !important;
   border-color: var(--sdm-border) !important;
 }
 
-:root:not([data-sdm-disabled]) .T-I.T-I-KE,
-:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3,
-:root:not([data-sdm-disabled]) .z0 > .L3,
-:root:not([data-sdm-disabled]) [gh="cm"] {
+:root:not([data-sdm-disabled]) .T-I.T-I-KE:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 > .L3:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [gh="cm"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
   box-shadow: none !important;
 }
 
-:root:not([data-sdm-disabled]) .T-I.T-I-KE *,
-:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3 *,
-:root:not([data-sdm-disabled]) .z0 > .L3 *,
-:root:not([data-sdm-disabled]) [gh="cm"] * {
+:root:not([data-sdm-disabled]) .T-I.T-I-KE *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3 *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 > .L3 *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [gh="cm"] *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .T-I.T-I-KE:hover,
-:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3:hover,
-:root:not([data-sdm-disabled]) .z0 > .L3:hover,
-:root:not([data-sdm-disabled]) [gh="cm"]:hover {
+:root:not([data-sdm-disabled]) .T-I.T-I-KE:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .T-I.T-I-KE.L3:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 > .L3:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [gh="cm"]:hover:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-3) !important;
   border-color: var(--sdm-border-strong) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .TO.NQ,
-:root:not([data-sdm-disabled]) .nZ.aHS,
-:root:not([data-sdm-disabled]) .nZ.aHS .J-Ke,
-:root:not([data-sdm-disabled]) a.J-Ke.n0.uA,
-:root:not([data-sdm-disabled]) .J-Ke.uA {
+:root:not([data-sdm-disabled]) .TO.NQ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ.aHS:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ.aHS .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) a.J-Ke.n0.uA:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-Ke.uA:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-selected) !important;
   color: var(--sdm-text) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) .TN.bzz:hover,
-:root:not([data-sdm-disabled]) .TN.bzz:hover .aio,
-:root:not([data-sdm-disabled]) .TN.bzz:hover .aio span,
-:root:not([data-sdm-disabled]) .TN.bzz:hover .n0,
-:root:not([data-sdm-disabled]) .TN.bzz:hover a,
-:root:not([data-sdm-disabled]) .aHS-bnt:hover,
-:root:not([data-sdm-disabled]) .aHS-bnt:hover .aio,
-:root:not([data-sdm-disabled]) .aHS-bnt:hover .aio span,
-:root:not([data-sdm-disabled]) .aHS-bnt:hover .n0,
-:root:not([data-sdm-disabled]) .aHS-bnt:hover a {
+:root:not([data-sdm-disabled]) .TN.bzz:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TN.bzz:hover .aio:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TN.bzz:hover .aio span:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TN.bzz:hover .n0:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TN.bzz:hover a:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aHS-bnt:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aHS-bnt:hover .aio:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aHS-bnt:hover .aio span:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aHS-bnt:hover .n0:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aHS-bnt:hover a:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-selected-hover) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] .aKz,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKw,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKo,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKn,
-:root:not([data-sdm-disabled]) [role="navigation"] .CJ,
-:root:not([data-sdm-disabled]) [role="navigation"] .n4,
-:root:not([data-sdm-disabled]) [role="navigation"] .TK,
-:root:not([data-sdm-disabled]) [role="navigation"] [style*="color: rgb(95, 99, 104)"],
-:root:not([data-sdm-disabled]) [role="navigation"] [style*="color:#5f6368"],
-:root:not([data-sdm-disabled]) [role="navigation"] [style*="color: #5f6368"] {
+:root:not([data-sdm-disabled]) [role="navigation"] .aKz:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKw:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKo:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKn:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .CJ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .n4:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TK:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [style*="color: rgb(95, 99, 104)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [style*="color:#5f6368"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [style*="color: #5f6368"]:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] a[href*="#subscriptions"],
-:root:not([data-sdm-disabled]) [role="navigation"] a[href*="#settings/labels"],
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-label*="Manage subscriptions"],
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-label*="Manage labels"],
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-label*="Create new label"],
-:root:not([data-sdm-disabled]) [role="navigation"] [title*="Manage subscriptions"],
-:root:not([data-sdm-disabled]) [role="navigation"] [title*="Manage labels"],
-:root:not([data-sdm-disabled]) [role="navigation"] [title*="Create new label"] {
+:root:not([data-sdm-disabled]) [role="navigation"] a[href*="#subscriptions"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] a[href*="#settings/labels"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label*="Manage subscriptions"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label*="Manage labels"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label*="Create new label"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [title*="Manage subscriptions"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [title*="Manage labels"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [title*="Create new label"]:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
   -webkit-text-fill-color: var(--sdm-muted) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) [role="main"] .BltHke,
-:root:not([data-sdm-disabled]) [role="main"] .aRv,
-:root:not([data-sdm-disabled]) [role="main"] .aRu,
-:root:not([data-sdm-disabled]) [role="main"] .aRz,
-:root:not([data-sdm-disabled]) [role="main"] [style*="color: rgb(95, 99, 104)"],
-:root:not([data-sdm-disabled]) [role="main"] [style*="color:#5f6368"],
-:root:not([data-sdm-disabled]) [role="main"] [style*="color: #5f6368"] {
+:root:not([data-sdm-disabled]) [role="main"] .BltHke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] .aRv:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] .aRu:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] .aRz:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="color: rgb(95, 99, 104)"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="color:#5f6368"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="main"] [style*="color: #5f6368"]:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE,
-:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3,
-:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"],
-:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"] {
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
   box-shadow: none !important;
 }
 
-:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE *,
-:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3 *,
-:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"] *,
-:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"] * {
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3 *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"] *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
   fill: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE:hover,
-:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3:hover,
-:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"]:hover,
-:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"]:hover {
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 .T-I.T-I-KE.L3:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .z0 [role="button"][aria-label*="Compose"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="button"][aria-label*="Compose"]:hover:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface-3) !important;
   border-color: var(--sdm-border-strong) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) .J-Ke.n0.uA *,
-:root:not([data-sdm-disabled]) .J-Ke.uA * {
+:root:not([data-sdm-disabled]) .J-Ke.n0.uA *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-Ke.uA *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
   fill: var(--sdm-text) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] .aKz,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKz *,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKw,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKw *,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKo,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKo *,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKn,
-:root:not([data-sdm-disabled]) [role="navigation"] .aKn *,
-:root:not([data-sdm-disabled]) [role="navigation"] .CJ,
-:root:not([data-sdm-disabled]) [role="navigation"] .CJ *,
-:root:not([data-sdm-disabled]) [role="navigation"] .TK,
-:root:not([data-sdm-disabled]) [role="navigation"] .TK *,
-:root:not([data-sdm-disabled]) [role="navigation"] .n4,
-:root:not([data-sdm-disabled]) [role="navigation"] .n4 *,
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="More"],
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="More"] *,
-:root:not([data-sdm-disabled]) [role="navigation"] [title="More"],
-:root:not([data-sdm-disabled]) [role="navigation"] [title="More"] *,
-:root:not([data-sdm-disabled]) [role="navigation"] [data-tooltip="More"],
-:root:not([data-sdm-disabled]) [role="navigation"] [data-tooltip="More"] *,
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="Labels"],
-:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="Labels"] *,
-:root:not([data-sdm-disabled]) [role="navigation"] [title="Labels"],
-:root:not([data-sdm-disabled]) [role="navigation"] [title="Labels"] * {
+:root:not([data-sdm-disabled]) [role="navigation"] .aKz:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKz *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKw:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKw *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKo:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKo *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKn:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aKn *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .CJ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .CJ *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TK:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TK *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .n4:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .n4 *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="More"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="More"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [title="More"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [title="More"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [data-tooltip="More"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [data-tooltip="More"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="Labels"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [aria-label="Labels"] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [title="Labels"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [title="Labels"] *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
   fill: var(--sdm-muted) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)) .J-Ke,
-:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)) .J-Ke *,
-:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS) .J-Ke,
-:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS) .J-Ke * {
+:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)) .J-Ke *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS) .J-Ke *:where(:not(.a3s, .a3s *)) {
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] .TN.bzz:not(.aHS):not(:hover),
-:root:not([data-sdm-disabled]) [role="navigation"] .TN.bzz:not(.aHS):not(:hover) .J-Ke,
-:root:not([data-sdm-disabled]) [role="navigation"] .TO:not(.NQ):not(:hover),
-:root:not([data-sdm-disabled]) [role="navigation"] .TO:not(.NQ):not(:hover) .J-Ke,
-:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)):not(:hover),
-:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)):not(:hover) .J-Ke,
-:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS):not(:hover),
-:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS):not(:hover) .J-Ke {
+:root:not([data-sdm-disabled]) [role="navigation"] .TN.bzz:not(.aHS):not(:hover):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TN.bzz:not(.aHS):not(:hover) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TO:not(.NQ):not(:hover):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TO:not(.NQ):not(:hover) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)):not(:hover):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .aim:not(:has(.J-Ke.uA)):not(:hover) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS):not(:hover):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ:not(.aHS):not(:hover) .J-Ke:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-bg) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS *,
-:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS .J-Ke *,
-:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ *,
-:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ .J-Ke * {
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS .J-Ke *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ .J-Ke *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
   fill: var(--sdm-text) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] a[href],
-:root:not([data-sdm-disabled]) [role="navigation"] a[href] *,
-:root:not([data-sdm-disabled]) [role="navigation"] [role="link"],
-:root:not([data-sdm-disabled]) [role="navigation"] [role="link"] * {
+:root:not([data-sdm-disabled]) [role="navigation"] a[href]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] a[href] *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [role="link"]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [role="link"] *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
   fill: var(--sdm-muted) !important;
   -webkit-text-fill-color: var(--sdm-muted) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] a[href]:hover,
-:root:not([data-sdm-disabled]) [role="navigation"] a[href]:hover *,
-:root:not([data-sdm-disabled]) [role="navigation"] [role="link"]:hover,
-:root:not([data-sdm-disabled]) [role="navigation"] [role="link"]:hover * {
+:root:not([data-sdm-disabled]) [role="navigation"] a[href]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] a[href]:hover *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [role="link"]:hover:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] [role="link"]:hover *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
   fill: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] a.J-Ke.n0.uA,
-:root:not([data-sdm-disabled]) [role="navigation"] .J-Ke.uA,
-:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ,
-:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS {
+:root:not([data-sdm-disabled]) [role="navigation"] a.J-Ke.n0.uA:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .J-Ke.uA:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-selected) !important;
   color: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) [role="navigation"] a.J-Ke.n0.uA *,
-:root:not([data-sdm-disabled]) [role="navigation"] .J-Ke.uA *,
-:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ *,
-:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS * {
+:root:not([data-sdm-disabled]) [role="navigation"] a.J-Ke.n0.uA *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .J-Ke.uA *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .TO.NQ *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) [role="navigation"] .nZ.aHS *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
   fill: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
@@ -1305,56 +1040,56 @@
 }
 
 /* Gmail's left rail is not always exposed under role="navigation". */
-:root:not([data-sdm-disabled]) .aim:not(:has(.J-Ke.uA)):not(:hover),
-:root:not([data-sdm-disabled]) .TN:not(.NQ):not(.aHS):not(:hover),
-:root:not([data-sdm-disabled]) .TO:not(.NQ):not(:hover),
-:root:not([data-sdm-disabled]) .nZ:not(.aHS):not(:hover) {
+:root:not([data-sdm-disabled]) .aim:not(:has(.J-Ke.uA)):not(:hover):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TN:not(.NQ):not(.aHS):not(:hover):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TO:not(.NQ):not(:hover):where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ:not(.aHS):not(:hover):where(:not(.a3s, .a3s *)) {
   background: transparent !important;
 }
 
-:root:not([data-sdm-disabled]) .aim:not(:has(.J-Ke.uA)) .J-Ke,
-:root:not([data-sdm-disabled]) .aim:not(:has(.J-Ke.uA)) .J-Ke *,
-:root:not([data-sdm-disabled]) .TN:not(.NQ):not(.aHS) .J-Ke,
-:root:not([data-sdm-disabled]) .TN:not(.NQ):not(.aHS) .J-Ke *,
-:root:not([data-sdm-disabled]) .TO:not(.NQ) .J-Ke,
-:root:not([data-sdm-disabled]) .TO:not(.NQ) .J-Ke *,
-:root:not([data-sdm-disabled]) .nZ:not(.aHS) .J-Ke,
-:root:not([data-sdm-disabled]) .nZ:not(.aHS) .J-Ke *,
-:root:not([data-sdm-disabled]) .aio,
-:root:not([data-sdm-disabled]) .aio *,
-:root:not([data-sdm-disabled]) .nU,
-:root:not([data-sdm-disabled]) .nU * {
+:root:not([data-sdm-disabled]) .aim:not(:has(.J-Ke.uA)) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aim:not(:has(.J-Ke.uA)) .J-Ke *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TN:not(.NQ):not(.aHS) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TN:not(.NQ):not(.aHS) .J-Ke *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TO:not(.NQ) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TO:not(.NQ) .J-Ke *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ:not(.aHS) .J-Ke:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ:not(.aHS) .J-Ke *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aio:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aio *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nU:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nU *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
   fill: var(--sdm-muted) !important;
   -webkit-text-fill-color: var(--sdm-muted) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) .TO.NQ,
-:root:not([data-sdm-disabled]) .nZ.aHS,
-:root:not([data-sdm-disabled]) a.J-Ke.n0.uA,
-:root:not([data-sdm-disabled]) .J-Ke.uA {
+:root:not([data-sdm-disabled]) .TO.NQ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ.aHS:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) a.J-Ke.n0.uA:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-Ke.uA:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-selected) !important;
   color: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) .TO.NQ *,
-:root:not([data-sdm-disabled]) .nZ.aHS *,
-:root:not([data-sdm-disabled]) a.J-Ke.n0.uA *,
-:root:not([data-sdm-disabled]) .J-Ke.uA * {
+:root:not([data-sdm-disabled]) .TO.NQ *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nZ.aHS *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) a.J-Ke.n0.uA *:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .J-Ke.uA *:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
   fill: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
   opacity: 1 !important;
 }
 
-:root:not([data-sdm-disabled]) .CJ,
-:root:not([data-sdm-disabled]) .TK,
-:root:not([data-sdm-disabled]) .aKw,
-:root:not([data-sdm-disabled]) .aKz,
-:root:not([data-sdm-disabled]) .n4 {
+:root:not([data-sdm-disabled]) .CJ:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .TK:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aKw:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .aKz:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .n4:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
   fill: var(--sdm-muted) !important;
   -webkit-text-fill-color: var(--sdm-muted) !important;
@@ -1362,75 +1097,75 @@
 }
 
 /* Catch Gmail-generated cards/modules such as shipping summaries before they flash white. */
-:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="#fff" i],
-:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="#ffffff" i],
-:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="rgb(255,255,255)" i],
-:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="rgb(255, 255, 255)" i],
-:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="#f1f3f4" i],
-:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="#f8fafd" i],
-:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="rgb(248,250,253)" i],
-:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="rgb(248, 250, 253)" i],
-:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="#fff" i],
-:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="#ffffff" i],
-:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="rgb(255,255,255)" i],
-:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="rgb(255, 255, 255)" i],
-:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="#f1f3f4" i],
-:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="#f8fafd" i],
-:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="rgb(248,250,253)" i],
-:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="rgb(248, 250, 253)" i] {
+:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="#fff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="#ffffff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="rgb(255,255,255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="rgb(255, 255, 255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="#f1f3f4" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="#f8fafd" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="rgb(248,250,253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background" i][style*="rgb(248, 250, 253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="#fff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="#ffffff" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="rgb(255,255,255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="rgb(255, 255, 255)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="#f1f3f4" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="#f8fafd" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="rgb(248,250,253)" i]:where(:not(.a3s, .a3s *)),
+:root:not([data-sdm-disabled]) .nH [style*="background-color" i][style*="rgb(248, 250, 253)" i]:where(:not(.a3s, .a3s *)) {
   background-color: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
 }
 
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) body,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) body,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) body {
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) body:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) body:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) body:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-bg) !important;
   color: var(--sdm-text) !important;
 }
 
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) main,
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="main"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="dialog"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menu"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="list"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="listbox"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) main,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="main"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="dialog"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menu"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="list"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="listbox"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) main,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="main"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="dialog"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menu"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="list"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="listbox"] {
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) main:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="main"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="dialog"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menu"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="list"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="listbox"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) main:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="main"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="dialog"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menu"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="list"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="listbox"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) main:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="main"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="dialog"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menu"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="list"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="listbox"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-bg-elevated) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
 }
 
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) a,
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) button,
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="button"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="link"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menuitem"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="option"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) a,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) button,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="button"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="link"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menuitem"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="option"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) a,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) button,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="button"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="link"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menuitem"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="option"] {
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) a:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) button:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="button"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="link"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="option"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) a:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) button:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="button"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="link"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="option"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) a:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) button:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="button"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="link"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="option"]:where(:not(.a3s, .a3s *)) {
   background-color: transparent !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
@@ -1438,60 +1173,69 @@
   opacity: 1 !important;
 }
 
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"] {
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background-color: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background: rgb(255, 255, 255)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background-color: #fff"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="background:#fff"]:where(:not(.a3s, .a3s *)) {
   background: var(--sdm-surface) !important;
   background-color: var(--sdm-surface) !important;
 }
 
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"] {
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(32, 33, 36)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: #202124"]:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-text) !important;
   -webkit-text-fill-color: var(--sdm-text) !important;
 }
 
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"],
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"],
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"],
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"] {
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: rgb(95, 99, 104)"]:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [style*="color: #5f6368"]:where(:not(.a3s, .a3s *)) {
   color: var(--sdm-muted) !important;
   -webkit-text-fill-color: var(--sdm-muted) !important;
 }
 
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) a:hover,
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) button:hover,
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="button"]:hover,
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="link"]:hover,
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover,
-:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="option"]:hover,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) a:hover,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) button:hover,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="button"]:hover,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="link"]:hover,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover,
-:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="option"]:hover,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) a:hover,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) button:hover,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="button"]:hover,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="link"]:hover,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover,
-:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="option"]:hover {
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) a:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) button:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="link"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="ogs.google.com"]:not([data-sdm-disabled]) [role="option"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) a:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) button:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="link"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="accounts.google.com"]:not([data-sdm-disabled]) [role="option"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) a:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) button:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="button"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="link"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="menuitem"]:hover:where(:not(.a3s, .a3s *)),
+:root[data-sdm-host="myaccount.google.com"]:not([data-sdm-disabled]) [role="option"]:hover:where(:not(.a3s, .a3s *)) {
   background-color: var(--sdm-surface-2) !important;
   color: var(--sdm-text) !important;
+}
+
+/* Treat received messages as documents. Keep sender colors and backgrounds
+   together instead of guessing which individual colors can be replaced. */
+:root:not([data-sdm-disabled]) .a3s {
+  color-scheme: light !important;
+  background: #fff !important;
+  color: #202124 !important;
+  -webkit-text-fill-color: currentColor !important;
 }

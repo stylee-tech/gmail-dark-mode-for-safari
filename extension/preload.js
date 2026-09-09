@@ -1,91 +1,25 @@
+// Only establish first-paint state here. content.js owns storage and appearance changes.
 (function () {
-  const api = globalThis.browser || globalThis.chrome;
   const registry = globalThis.__safariDarkModeRegistry;
-  const context = registry ? registry.detectContext() : null;
-  const product = context ? context.product : null;
+  if (!registry) return;
 
-  if (!api || !registry || !product) {
-    return;
-  }
+  const context = registry.detectContext();
+  const product = context.product;
+  if (!product) return;
 
-  const styleManager = registry.createStyleManager(api, product);
-  const colorSchemeQuery = globalThis.matchMedia
-    ? globalThis.matchMedia("(prefers-color-scheme: dark)")
-    : null;
-  const preloadStyle = document.createElement("style");
-  const canOptimisticallyPreload = registry.shouldPreloadWithoutHint(product, context);
-  let siteEnabled = canOptimisticallyPreload;
-  let settingsReady = false;
-  const initialSystemDark = !colorSchemeQuery || colorSchemeQuery.matches;
-  const initialSiteStateKnown = canOptimisticallyPreload;
-  const initialEnabled = Boolean(initialSiteStateKnown && siteEnabled && initialSystemDark);
+  const systemDark = !globalThis.matchMedia ||
+    globalThis.matchMedia("(prefers-color-scheme: dark)").matches;
+  const siteEnabled = registry.shouldPreloadWithoutHint(product, context);
+  const enabled = siteEnabled && systemDark;
+  const root = document.documentElement;
 
-  document.documentElement.toggleAttribute("data-sdm-disabled", !initialEnabled);
-  document.documentElement.dataset.sdmEnabled = String(initialEnabled);
-  document.documentElement.dataset.sdmSiteEnabled = initialSiteStateKnown
-    ? String(Boolean(siteEnabled))
-    : "pending";
-  document.documentElement.dataset.sdmSystemDark = String(initialSystemDark);
-  document.documentElement.dataset.sdmPreload = canOptimisticallyPreload
-    ? "optimistic-enabled"
-    : "pending-disabled";
-  document.documentElement.dataset.sdmProduct = product;
-  if (context.parentProduct) {
-    document.documentElement.dataset.sdmParentProduct = context.parentProduct;
-  }
-  document.documentElement.dataset.sdmHost = location.hostname;
-  document.documentElement.dataset.sdmRenderers = registry.renderersFor(product).join(" ");
-
-  preloadStyle.id = `${registry ? registry.namespace : "pavel-safari-dark-mode"}-preload`;
-  preloadStyle.className = registry ? registry.namespace : "pavel-safari-dark-mode";
-  preloadStyle.setAttribute("data-pavel-safari-dark-mode", "preload");
-  preloadStyle.textContent = `
-    html:not([data-sdm-disabled]),
-    html:not([data-sdm-disabled]) body {
-      background: #151922 !important;
-      color: #eef2f7 !important;
-      color-scheme: dark !important;
-    }
-  `;
-
-  (document.head || document.documentElement).prepend(preloadStyle);
-  applyState();
-
-  registry.readEnabledBySite(api, (enabledBySite) => {
-    siteEnabled = registry.isProductEnabled(enabledBySite, product, context);
-    settingsReady = true;
-    applyState();
-  });
-
-  if (colorSchemeQuery) {
-    const handleChange = () => applyState();
-
-    if (colorSchemeQuery.addEventListener) {
-      colorSchemeQuery.addEventListener("change", handleChange);
-    } else if (colorSchemeQuery.addListener) {
-      colorSchemeQuery.addListener(handleChange);
-    }
-  }
-
-  if (styleManager) {
-    styleManager.observe();
-  }
-
-  function applyState() {
-    const systemDark = !colorSchemeQuery || colorSchemeQuery.matches;
-    const siteStateKnown = settingsReady || canOptimisticallyPreload;
-    const enabled = Boolean(siteStateKnown && siteEnabled && systemDark);
-
-    document.documentElement.toggleAttribute("data-sdm-disabled", !enabled);
-    document.documentElement.dataset.sdmEnabled = String(enabled);
-    document.documentElement.dataset.sdmSiteEnabled = siteStateKnown
-      ? String(Boolean(siteEnabled))
-      : "pending";
-    document.documentElement.dataset.sdmSystemDark = String(systemDark);
-    document.documentElement.dataset.sdmPreload = settingsReady
-      ? (enabled ? "enabled" : "disabled")
-      : (canOptimisticallyPreload ? "optimistic-enabled" : "pending-disabled");
-
-    styleManager.sync(enabled);
-  }
+  root.toggleAttribute("data-sdm-disabled", !enabled);
+  root.dataset.sdmEnabled = String(enabled);
+  root.dataset.sdmSiteEnabled = siteEnabled ? "true" : "pending";
+  root.dataset.sdmSystemDark = String(systemDark);
+  root.dataset.sdmPreload = enabled ? "optimistic-enabled" : "pending-disabled";
+  root.dataset.sdmProduct = product;
+  if (context.parentProduct) root.dataset.sdmParentProduct = context.parentProduct;
+  root.dataset.sdmHost = location.hostname;
+  root.dataset.sdmRenderers = registry.renderersFor(product).join(" ");
 })();

@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Safari Dark Mode",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "description": "Personal dark mode for Gmail, Google Sheets, and Google Search in Safari.",
   "icons": {
     "48": "icons/icon-48.png",
@@ -9,14 +9,7 @@
   },
   "permissions": [
     "activeTab",
-    "storage",
-    "https://mail.google.com/*",
-    "https://ogs.google.com/*",
-    "https://accounts.google.com/*",
-    "https://myaccount.google.com/*",
-    "https://docs.google.com/spreadsheets/*",
-    "https://google.com/search*",
-    "https://www.google.com/search*"
+    "storage"
   ],
   "content_scripts": [
     {
@@ -92,16 +85,43 @@
     }
   ],
   "web_accessible_resources": [
-    "base.css",
-    "gmail.css",
-    "google-search.css",
-    "sheets.css"
+    {
+      "resources": [
+        "base.css",
+        "gmail.css",
+        "google-search.css",
+        "sheets.css"
+      ],
+      "matches": [
+        "https://mail.google.com/*",
+        "https://ogs.google.com/*",
+        "https://accounts.google.com/*",
+        "https://myaccount.google.com/*",
+        "https://docs.google.com/*",
+        "https://google.com/*",
+        "https://www.google.com/*"
+      ]
+    }
   ],
-  "browser_action": {
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://ogs.google.com/*",
+    "https://accounts.google.com/*",
+    "https://myaccount.google.com/*",
+    "https://docs.google.com/spreadsheets/*",
+    "https://google.com/search*",
+    "https://www.google.com/search*"
+  ],
+  "action": {
     "default_title": "Safari Dark Mode",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "48": "icons/icon-48.png"
+    }
+  },
+  "browser_specific_settings": {
+    "safari": {
+      "strict_min_version": "15.4"
     }
   }
 }

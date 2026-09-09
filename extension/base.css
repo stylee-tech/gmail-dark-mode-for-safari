@@ -23,16 +23,16 @@
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) input,
-:root:not([data-sdm-disabled]) textarea,
-:root:not([data-sdm-disabled]) select {
+:root:not([data-sdm-disabled]) input:where(:not(.a3s *)),
+:root:not([data-sdm-disabled]) textarea:where(:not(.a3s *)),
+:root:not([data-sdm-disabled]) select:where(:not(.a3s *)) {
   background: var(--sdm-surface-2) !important;
   border-color: var(--sdm-border) !important;
   color: var(--sdm-text) !important;
 }
 
-:root:not([data-sdm-disabled]) input::placeholder,
-:root:not([data-sdm-disabled]) textarea::placeholder {
+:root:not([data-sdm-disabled]) input:where(:not(.a3s *))::placeholder,
+:root:not([data-sdm-disabled]) textarea:where(:not(.a3s *))::placeholder {
   color: var(--sdm-dim) !important;
 }
 

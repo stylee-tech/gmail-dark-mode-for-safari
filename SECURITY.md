@@ -22,7 +22,9 @@ data surfaces narrow.
 
 ## Host permissions
 
-The manifest should stay limited to the supported Google products:
+The Manifest V3 `host_permissions` and content-script matches should stay
+limited to the supported Google products. Safari may present host grants at
+domain granularity; retain path-level content-script matching and runtime gating:
 
 - `mail.google.com`
 - `docs.google.com/spreadsheets`
@@ -39,15 +41,24 @@ The native Safari extension handler is intentionally inert. Do not log, echo, or
 process arbitrary `browser.runtime.sendNativeMessage` payloads unless a real
 native messaging feature is designed and reviewed.
 
+The containing Mac app uses native AppKit controls to display extension status
+and open Safari settings. It does not load web content or accept JavaScript
+messages.
+
 ## Release checks
+
+Stylesheets are the only web-accessible resources, restricted to the existing
+Google host allowlist. Keep `activeTab` and `storage` as the only API permissions.
 
 Before shipping or sharing a build, run:
 
 ```sh
+node --test tests/*.test.cjs
 python3 -m json.tool extension/manifest.json >/dev/null
 plutil -lint "Safari Dark Mode/Safari Dark Mode/Info.plist" \
   "Safari Dark Mode/Safari Dark Mode Extension/Info.plist"
 sh scripts/sync-extension-resources.sh --check
 xcodebuild -project "Safari Dark Mode/Safari Dark Mode.xcodeproj" \
-  -scheme "Safari Dark Mode" -configuration Debug build
+  -scheme "Safari Dark Mode" -configuration Debug \
+  -derivedDataPath build/DerivedData build
 ```
