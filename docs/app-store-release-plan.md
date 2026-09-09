@@ -108,6 +108,11 @@ archive alongside the TestFlight app. Unregistering only the archive restored
 the green “Extension enabled” state, verified by screenshot. The archive script
 now unregisters its packaging copy after export to prevent this conflict.
 
+Next-build UI correction: the enabled-state button says “Open Safari Settings…”
+and directs users to Websites → Gmail Dark Mode for Safari. The public
+SafariServices handoff opens Extensions; it does not expose a website-access
+pane selector. This copy correction is not in installed TestFlight build 20.
+
 Before the TestFlight installation, Safari registered the old unsigned 0.2.15
 extension while the companion ran from a signed archive. That mismatch was a
 possible cause of the earlier Settings failure. Local/trash registrations were
