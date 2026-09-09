@@ -18,8 +18,9 @@ The public URLs embedded in existing builds remain:
 - https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/privacy.html
 
 The old repository is retained only as a hosting copy, not the canonical source.
-Do not delete, privatize, or archive it until replacement hosting and compatibility
-links are verified. Do not change native or App Store links to an unserved URL.
+Archived at the owner’s request on 9 September 2026. Its description, homepage,
+and README point to the Stylee repository. Both existing Pages URLs returned HTTP
+200 after archival. Do not delete or privatize it while existing builds use them. Do not change native or App Store links to an unserved URL.
 
 ## Hosting blocker
 
@@ -27,7 +28,8 @@ GitHub's Pages creation API rejected this private organization repository with:
 “Your current plan does not support GitHub Pages for this repository.”
 The repository remains private as requested. Choose a plan supporting private
 repository Pages, or another static host, before moving live hosting.
-Until then, publish reviewed changes from `site/` to the existing hosting copy.
+The archived hosting copy is read-only. If its deployed pages need updates,
+unarchive it for the approved update, then archive it again.
 Only export those four static files, never the whole private repository or `.git`.
 
 ## Cutover checklist
