@@ -132,6 +132,6 @@ main branch. Do not store machine-specific paths or credentials in this guide.
 
 The canonical remote is `https://github.com/stylee-tech/gmail-dark-mode-for-safari.git`.
 The repository is public. Deploy only `site/` through `.github/workflows/pages.yml`.
-The old personal repository contains redirects but its private visibility blocks
-Pages hosting; owner approval is required to restore public hosting. Follow
+The owner chose to keep the old support repository private and archived, accepting
+broken legacy URLs. Do not restore its public hosting without a new instruction. Follow
 `docs/support-deployment.md`.

@@ -21,13 +21,11 @@ Legacy URLs embedded in earlier app builds:
 - https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/
 - https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/privacy.html
 
-Redirect pages with readable fallback links have been committed to the old
-repository. However, it is now PRIVATE and GitHub has disabled its Pages site,
-so these URLs currently return 404. Restoring public visibility requires owner
-approval. The repository was temporarily unarchived to prepare the redirects and is now
-archived again.
-Once public hosting is approved, enable Pages and verify both legacy URLs; do
-not claim compatibility is restored until those checks pass.
+The owner explicitly chose to leave the old repository PRIVATE and archived,
+accepting that these URLs no longer work. Redirect files were prepared, but are
+not deployed because private Pages hosting is unavailable. Do not restore public
+visibility or hosting without a new instruction. Builds 19–21 retain these old
+embedded URLs; a later binary is required to use the new native source links.
 
 ## Verification and application links
 

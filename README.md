@@ -177,8 +177,8 @@ The app and support website now share this public repository:
 [stylee-tech/gmail-dark-mode-for-safari](https://github.com/stylee-tech/gmail-dark-mode-for-safari).
 Edit support and privacy content in `site/`; it is the canonical source.
 GitHub Pages automatically deploys `site/` under the Stylee organization.
-Redirects for earlier builds are prepared at the old personal repository;
-restoring their hosting awaits approval to make that support-only repo public. See [support deployment](docs/support-deployment.md).
+The owner chose to keep the old support repository private and archived;
+its old URLs no longer work for earlier app builds. See [support deployment](docs/support-deployment.md).
 
 ## Contributing and source publication
 
