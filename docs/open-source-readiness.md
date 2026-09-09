@@ -119,3 +119,28 @@ The Google account menu, Gmail Trash notice banner, and advanced search/filter
 panel still have reported white surfaces. Reload-flash prevention is unchanged.
 This source/publication audit does not certify those rendering issues resolved.
 Safari 26 and Intel compatibility are compiled targets, not runtime-tested claims.
+
+## Final verification after licensing and history rewrite
+
+Checked remote main `de8026a` on 9 September 2026 using a fresh clone, separate
+from local backups/recovery refs:
+
+- 89 tracked files, 36 commits, 236 unique reachable file objects.
+- Only `hello@trystylee.com` in reachable author/committer metadata.
+- No targeted credential, private-key, authentication URL, machine-path, or known
+  private-example markers found. Long token candidates were Xcode property names.
+- All 12 Node tests, JavaScript syntax checks, plist validation, resource sync,
+  and diff whitespace checks passed. Ignore probes covered environment files,
+  keys, certificates, private backups, release reports, and packages.
+- GitHub reports MIT, PRIVATE visibility, one branch, no tags, no issues,
+  releases, Actions runs, or Actions artifacts. Previously reviewed image content
+  has not changed since the asset audit.
+
+**Remaining privacy gate:** GitHub's authenticated commit API still returns a
+pre-rewrite commit by its old SHA with the former personal email. This verifies
+server retention; it does not establish whether unauthenticated access would be
+possible after changing visibility. Do not assume the rewrite erased old objects.
+If that address must not become public, keep this repository private and either
+arrange confirmed server-side removal or publish the sanitized branch into a
+fresh repository without the old server history. No remote objects or local
+backups were deleted during this verification.
