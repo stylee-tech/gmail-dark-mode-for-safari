@@ -1,13 +1,13 @@
-# Safari Dark Mode
+# Gmail Dark Mode for Safari
 
-Personal Safari Web Extension that applies a focused dark theme to:
+Safari Web Extension that applies a focused dark theme to:
 
 - Gmail (`https://mail.google.com/*`)
 - Google Sheets (`https://docs.google.com/spreadsheets/*`)
 - Google Search results (`https://google.com/search*` and `https://www.google.com/search*`)
 
 This is intentionally not a general-purpose dark-mode engine. It keeps the
-permission surface small and only targets the Google products I use.
+permission surface small and only targets Gmail, Sheets, and Search.
 The extension also asks Safari for Google account/app-picker hosts so embedded
 Gmail account switcher surfaces can be themed. Content scripts may run on those
 helper hosts, but styling is gated unless the helper page is part of a known
@@ -17,8 +17,10 @@ supported product flow.
 
 The source extension lives in `extension/`. The existing Xcode project is the
 maintained macOS wrapper; do not regenerate it for ordinary development.
-The extension uses Manifest V3 and requires Safari 15.4 or later. The current
-local refresh targets Safari 27.
+Version 1.0 uses Manifest V3 and requires macOS 26 and Safari 26 or later.
+Live rendering QA was performed on macOS 26.7 with Safari 27. Safari 26 and
+Intel hardware have not been runtime-tested; the release contains both arm64
+and x86_64 binaries.
 
 ```sh
 sh scripts/sync-extension-resources.sh
@@ -28,7 +30,7 @@ xcodebuild -project "Safari Dark Mode/Safari Dark Mode.xcodeproj" \
 open "build/DerivedData/Build/Products/Debug/Safari Dark Mode.app"
 ```
 
-Then enable **Safari Dark Mode** in **Safari > Settings > Extensions** and
+Then enable **Gmail Dark Mode for Safari** in **Safari > Settings > Extensions** and
 allow access to the supported Google sites. Reload existing Google tabs after
 installing or updating. Check the current Safari profile if an enabled extension
 does not appear in a window.
@@ -138,7 +140,7 @@ This project follows the lightweight Safari-extension pattern used by older
 extensions like Nightshift: inject CSS as early as possible, keep the runtime
 small, and make the appearance setting site-aware. It also avoids a full dynamic color
 engine because Safari extension performance and platform quirks are more
-noticeable during initial page load. For this personal extension, the strategy
+noticeable during initial page load. For this extension, the strategy
 is static site-specific CSS with narrow fallback rules for canvas-heavy surfaces.
 
 ### Reliable local rebuilds
@@ -152,3 +154,25 @@ does not quit Safari or toggle the extension.
 For `tests/gmail-rendering.html`, use Safari's Reload Page From Origin
 (Option-Command-R) after editing the fixture or renderer to avoid testing a cached
 script revision.
+
+
+## App Store release
+
+Version 1.0.0 is free, published by Stylee, Inc. The release uses
+manual release after review. An internal TestFlight installation is being used
+to verify the signed setup flow before submission.
+See [release status and checklist](docs/app-store-release-plan.md).
+
+- [Help and support](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/)
+- [Privacy policy](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/privacy.html)
+- Support: hello@trystylee.com
+
+Set `SDM_DEVELOPMENT_TEAM` in your shell to the configured publisher team, then run
+`sh scripts/archive-release.sh`. This runs regressions, syncs resources, archives
+both architectures, and exports an App Store package to `build/AppStore/`.
+Signing remains automatic; account identifiers and signing artifacts stay out of
+source control. This script does not upload or release the app.
+
+The public support site lives in a separate repository,
+[pavel-suzdaltsev/gmail-dark-mode-support](https://github.com/pavel-suzdaltsev/gmail-dark-mode-support).
+Only the contents of `site/` are published there; extension source stays private.

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Safari Dark Mode",
-  "version": "0.2.15",
-  "description": "Personal dark mode for Gmail, Google Sheets, and Google Search in Safari.",
+  "name": "Gmail Dark Mode for Safari",
+  "version": "1.0.0",
+  "description": "Dark appearance for Gmail, Google Sheets, and Google Search. Follow your Mac or choose per website.",
   "icons": {
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
@@ -114,7 +114,7 @@
     "https://www.google.com/search*"
   ],
   "action": {
-    "default_title": "Safari Dark Mode",
+    "default_title": "Gmail Dark Mode for Safari",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "48": "icons/icon-48.png"
@@ -122,7 +122,7 @@
   },
   "browser_specific_settings": {
     "safari": {
-      "strict_min_version": "15.4"
+      "strict_min_version": "26.0"
     }
   }
 }

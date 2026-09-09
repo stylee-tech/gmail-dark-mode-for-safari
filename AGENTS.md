@@ -2,9 +2,9 @@
 
 ## Project map and constraints
 
-- Personal macOS Safari Web Extension for Gmail, Google Sheets, and
+- macOS Safari Web Extension for Gmail, Google Sheets, and
   Google Search. Do not expand this into a generic dark-mode engine.
-- `extension/manifest.json` uses Manifest V3 (Safari 15.4+). Keep API permissions
+- `extension/manifest.json` uses Manifest V3; release 1.0 requires macOS/Safari 26+. Keep API permissions
   in `permissions`, URL access in `host_permissions`, and the toolbar UI in
   `action`. Development is currently exercised in Safari 27.
 - `site-registry.js` owns product detection, appearance-mode normalization,
@@ -104,3 +104,19 @@
 
 Documentation-only edits require link/path review and `git diff --check`; they
 do not require syncing unchanged resources, launching Safari, or building Xcode.
+
+## App Store releases
+
+- Public name: Gmail Dark Mode for Safari; publisher Stylee, Inc.; support
+  hello@trystylee.com. Keep internal project and bundle identifiers stable.
+- Use `scripts/archive-release.sh` with `SDM_DEVELOPMENT_TEAM` supplied in the
+  environment. Never put team IDs, API credentials, or signing artifacts in docs.
+- Keep App Store manifest descriptions at 112 characters or fewer. Match native
+  and manifest marketing versions; increment native build numbers for uploads.
+- `site/` mirrors the public support-only repository; `docs/store/` contains
+  English metadata and sample-content listing images. Never publish private mail.
+- First launch is free and uses MANUAL release after approval. The owner
+  requested an internal TestFlight installation to verify the signed setup flow.
+  Submission is distinct from public release.
+- Record actual runtime coverage separately from compiled architecture/minimum
+  version support. Safari 27 on macOS 26.7 is the verified release QA environment.

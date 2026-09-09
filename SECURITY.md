@@ -1,6 +1,6 @@
 # Security
 
-Safari Dark Mode is a personal Safari Web Extension. Keep the permission and
+Gmail Dark Mode for Safari is a Safari Web Extension. Keep the permission and
 data surfaces narrow.
 
 ## Data handling
@@ -47,7 +47,10 @@ native messaging feature is designed and reviewed.
 
 The containing Mac app uses native AppKit controls to display extension status
 and open Safari settings. It does not load web content or accept JavaScript
-messages.
+messages. Help and Privacy buttons open fixed public URLs in the default browser.
+Both native targets are sandboxed and request no user-selected file access.
+The native code uses no required-reason APIs and has no third-party SDKs.
+The app contains no non-exempt encryption.
 
 ## Release checks
 

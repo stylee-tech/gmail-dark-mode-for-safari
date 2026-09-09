@@ -1,0 +1,16 @@
+{
+  "name": "Gmail Dark Mode for Safari",
+  "subtitle": "Plus Sheets & Google Search",
+  "primaryLocale": "en-US",
+  "version": "1.0.0",
+  "price": "Free",
+  "category": "PRODUCTIVITY",
+  "releaseType": "MANUAL",
+  "supportUrl": "https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/",
+  "privacyPolicyUrl": "https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/privacy.html",
+  "supportEmail": "hello@trystylee.com",
+  "copyright": "2026 Stylee, Inc.",
+  "keywords": "gmail,dark,mode,safari,sheets,google,search,night,theme,appearance,extension",
+  "description": "Give Gmail a softer appearance in Safari—with support for Google Sheets and Google Search too.\n\nREAD, WRITE, AND SEARCH IN DARK APPEARANCE\nDark styling covers your Gmail inbox, message reading view, and compose window. It also adapts Google Sheets’ controls and grid, plus Google Search results and suggestions.\n\nTHREE CHOICES, ONE CLICK\n• On (Always dark): keep dark appearance enabled.\n• Off (Website default): restore the website’s own appearance.\n• System (Follow device): follow your Mac’s appearance setting.\nEach supported product remembers its own choice on this Mac. Off does not force a light theme.\n\nPRIVATE BY DESIGN\nYour browsing and message contents stay on your Mac. No analytics, advertising, tracking, or remote code. Appearance preferences are stored locally.\n\nTHOUGHTFUL COLOR HANDLING\nEmail foregrounds and backgrounds are adjusted together for readability. Photos and image-backed sections retain their original appearance. Google Sheets’ displayed colors change, while cell values and document formatting remain unchanged.\n\nSIMPLE SETUP\nOpen the Mac app, enable the extension in Safari Settings, and allow access to the supported Google sites. Use the Safari toolbar icon to choose an appearance.\n\nRequires macOS 26 or later and Safari 26 or later. Supports Gmail, Google Sheets, and Google Search; it is not a dark-mode extension for every website. Google account access is required for Gmail and private spreadsheets. Google website updates may occasionally require compatibility fixes.\n\nIndependent software from Stylee, Inc. Not affiliated with or endorsed by Google or Apple.",
+  "reviewNotes": "This macOS app contains a Safari Web Extension and a native setup/help interface. It does not require a separate account with us and has no purchases.\n\nTo test: open the Mac app, click Open Safari Extension Settings, enable Gmail Dark Mode for Safari, and allow website access. Visit https://www.google.com/search?q=safari to test without signing in. Open the Safari toolbar popup and test On, Off, and System. System follows the Mac’s appearance. Off restores the original website appearance.\n\nGmail and Google Sheets can be tested with a reviewer-controlled Google account. We do not provide or require access to a personal mailbox. The extension never sends emails or edits spreadsheet values. Its Sheets filter changes only displayed colors.\n\nRequested Google account/helper hosts are used only for embedded account/app-picker frames within the supported products. Standalone Google account pages are not restyled. The native extension handler performs no remote processing. Preferences remain local; no data is collected.\n\nRelease is configured for manual release after approval."
+}
