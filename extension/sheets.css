@@ -106,6 +106,7 @@
 }
 
 :root:not([data-sdm-disabled]) .waffle-sheet-tab-active,
+:root:not([data-sdm-disabled]) .docs-sheet-active-tab,
 :root:not([data-sdm-disabled]) .docs-sheet-tab-selected {
   background: var(--sdm-accent-bg) !important;
   color: var(--sdm-text) !important;
@@ -143,7 +144,10 @@
 :root:not([data-sdm-disabled]) .native-scrollbar {
   color-scheme: dark !important;
   background-color: var(--sdm-bg-elevated) !important;
-  scrollbar-color: var(--sdm-border-strong) var(--sdm-bg-elevated) !important;
+  /* Non-auto standard scrollbar properties suppress the WebKit part rules
+     below. Keep one styling mechanism so track/corner colors apply together. */
+  scrollbar-color: auto !important;
+  scrollbar-width: auto !important;
 }
 
 :root:not([data-sdm-disabled]) .native-scrollbar::-webkit-scrollbar {
@@ -179,8 +183,8 @@
 :root:not([data-sdm-disabled]) .addRowsWidget-rtl,
 :root:not([data-sdm-disabled]) .addRowsWidget-ltr *,
 :root:not([data-sdm-disabled]) .addRowsWidget-rtl * {
-  background: #1f252c !important;
-  background-color: #1f252c !important;
+  background: #191919 !important;
+  background-color: #191919 !important;
   color: var(--sdm-text) !important;
 }
 
@@ -229,4 +233,50 @@
 :root:not([data-sdm-disabled]) .goog-menu .docs-icon-img,
 :root:not([data-sdm-disabled]) .grid-bottom-bar .docs-icon-img {
   filter: brightness(0) invert(.9) !important;
+}
+
+/* Scrollbar spacers are separate from the transparent grid/canvas layers. */
+:root:not([data-sdm-disabled]) .grid-shim-bottom,
+:root:not([data-sdm-disabled]) .grid-shim-end-ltr,
+:root:not([data-sdm-disabled]) .grid-shim-end-rtl {
+  background: var(--sdm-bg-elevated) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) #formula-bar-name-box-wrapper,
+:root:not([data-sdm-disabled]) .waffle-name-box-container,
+:root:not([data-sdm-disabled]) #t-formula-bar-input {
+  background: var(--sdm-bg) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+  color-scheme: dark !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-omnibox-input,
+:root:not([data-sdm-disabled]) .goog-toolbar-combo-button {
+  background: var(--sdm-surface-2) !important;
+  color: var(--sdm-text) !important;
+  border-color: var(--sdm-border) !important;
+  color-scheme: dark !important;
+}
+
+:root:not([data-sdm-disabled]) .goog-toolbar-combo-button-input {
+  background: transparent !important;
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-omnibox-input::placeholder {
+  color: var(--sdm-muted) !important;
+  opacity: 1 !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-sheet-tab-caption {
+  color: var(--sdm-muted) !important;
+  -webkit-text-fill-color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .docs-sheet-active-tab .docs-sheet-tab-caption {
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
 }

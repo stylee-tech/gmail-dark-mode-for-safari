@@ -19,7 +19,9 @@
   pages stay untouched. Keep Sheets grid layers transparent where Google expects
   them to be. A scoped canvas filter darkens the grid without changing document
   formatting; it does change displayed cell colors. Never paint opaque backgrounds
-  over grid or canvas overlays. Style native scrollbars separately from the canvas.
+  over grid or canvas overlays. Style native scrollbars and `.grid-shim-*` fillers
+  separately from the canvas. With WebKit scrollbar-part styling, keep standard
+  `scrollbar-color` and `scrollbar-width` at `auto` so they do not suppress it.
 - `gmail-messages.js` converts Gmail message foreground/background colors as a
   pair. Chrome rules must exclude `.a3s` and its descendants. Keep images intact,
   measure original colors before conversion, and disconnect the message observer
