@@ -87,9 +87,16 @@ and accepted the updated developer agreement. App Privacy was published as
 Data Not Collected and verified in Safari. `asc validate` reports zero errors
 and zero warnings.
 
-Version 1.0.0 (19) was submitted on 9 September 2026 at 18:14 UTC. Apple's API
-confirmed both the submission and version are **WAITING_FOR_REVIEW**, with the
-release type still **MANUAL**. The app is not publicly released.
+Version 1.0.0 (19) was submitted on 9 September 2026 at 18:14 UTC, then withdrawn
+at the owner's request for another improvement batch. Apple's API confirmed
+**DEVELOPER_REJECTED** after cancellation; release type remains **MANUAL**.
+Submission is on hold and the app is not publicly released.
+
+Open rendering reports: the Google account switcher across Gmail, Sheets and
+Search; Gmail's Trash notice banner; and Gmail's advanced search/filter panel.
+Inspect and verify these in Safari before preparing the next candidate.
+Leave reload-flash prevention unchanged unless a reliable solution is established;
+the current implementation already requests document-start injection.
 
 Before the TestFlight installation, Safari registered the old unsigned 0.2.15
 extension while the companion ran from a signed archive. That mismatch was a

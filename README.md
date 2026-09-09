@@ -158,8 +158,9 @@ script revision.
 
 ## App Store release
 
-Version 1.0.0 (19), free from Stylee, Inc., is waiting for App Review as of
-9 September 2026. Release remains manual after approval. The TestFlight build
+Version 1.0.0 (19), free from Stylee, Inc., was withdrawn from App Review on
+9 September 2026 for another rendering-fix batch. Submission is on hold.
+Release remains manual after approval. The TestFlight build
 is installed, and its Settings button was verified to open Safari's Extensions
 pane with this extension selected and enabled.
 See [release status and checklist](docs/app-store-release-plan.md).
