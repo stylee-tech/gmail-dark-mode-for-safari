@@ -91,6 +91,28 @@
   border-color: var(--sdm-border-strong) !important;
 }
 
+/* Autocomplete owns nested text colors and a separate inner panel. Keep these
+   scoped to the suggestion popup, including Google's keyboard-selected row. */
+:root:not([data-sdm-disabled]) .UUbT9 .aajZCb {
+  background: var(--sdm-surface-2) !important;
+  border-color: var(--sdm-border) !important;
+}
+
+:root:not([data-sdm-disabled]) .UUbT9 :is(.wM6W7d, .wM6W7d *) {
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: var(--sdm-text) !important;
+}
+
+:root:not([data-sdm-disabled]) .UUbT9 :is(.ClJ9Yb, .ClJ9Yb *) {
+  color: var(--sdm-muted) !important;
+  -webkit-text-fill-color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) .UUbT9 .sbct:is(:hover, .sbhl),
+:root:not([data-sdm-disabled]) .UUbT9 .sbct:has([role="option"][aria-selected="true"]) {
+  background: var(--sdm-surface-3) !important;
+}
+
 :root:not([data-sdm-disabled]) .g,
 :root:not([data-sdm-disabled]) .MjjYud,
 :root:not([data-sdm-disabled]) .Ww4FFb,
