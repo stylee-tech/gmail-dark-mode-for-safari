@@ -4,3 +4,29 @@ build/
 xcuserdata/
 .DS_Store
 .asc/reports/
+
+# Local credentials and machine configuration (never ship these)
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pfx
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+.private/
+.asc/
+.codex/
+.agents/
+
+# Generated packages, logs, and local QA evidence
+*.xcarchive/
+*.ipa
+*.pkg
+*.dmg
+*.log
+coverage/
+playwright-report/
+test-results/

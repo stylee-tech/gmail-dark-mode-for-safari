@@ -98,7 +98,7 @@
   `SECURITY.md`.
 - Do not add dependencies, remote code, telemetry, or broad host permissions for
   this personal extension without documenting the reason.
-- Commit completed changes directly to `main` in this repo, then push to
+- For the owner’s private maintenance workflow, commit completed changes directly to `main` in this repo, then push to
   `origin/main` right away. Do not create branches or pull requests unless
   explicitly requested.
 
@@ -120,3 +120,12 @@ do not require syncing unchanged resources, launching Safari, or building Xcode.
   Submission is distinct from public release.
 - Record actual runtime coverage separately from compiled architecture/minimum
   version support. Safari 27 on macOS 26.7 is the verified release QA environment.
+
+## Public-source preparation
+
+Follow `docs/open-source-readiness.md` before publication or organization moves.
+Never publish local tool refs with `git push --mirror`. Keep old support URLs
+working for existing binaries until a verified migration is complete. Publication,
+history replacement, repository transfer, and App Store release are separate actions.
+External contributors should propose pull requests rather than push to the owner’s
+main branch. Do not store machine-specific paths or credentials in this guide.

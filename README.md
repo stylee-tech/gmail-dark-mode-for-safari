@@ -161,7 +161,6 @@ script revision.
 Version 1.0.0 (21), free from Stylee, Inc., was resubmitted on 9 September 2026
 and is waiting for App Review. Release remains manual after approval.
 The enabled-state companion button says “Go to Settings…” and opens Extensions.
-TestFlight build 20 remains installed on this Mac.
 See [release status and checklist](docs/app-store-release-plan.md).
 
 - [Help and support](https://pavel-suzdaltsev.github.io/gmail-dark-mode-support/)
@@ -176,4 +175,15 @@ source control. This script does not upload or release the app.
 
 The public support site lives in a separate repository,
 [pavel-suzdaltsev/gmail-dark-mode-support](https://github.com/pavel-suzdaltsev/gmail-dark-mode-support).
-Only the contents of `site/` are published there; extension source stays private.
+The current support deployment publishes only `site/`. See the
+[public-source audit and organization migration plan](docs/open-source-readiness.md)
+for the proposed Stylee move. Existing support URLs remain live until cutover.
+
+## Contributing and source publication
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local prerequisites, validation, and
+safe sample content. Security reports go privately to hello@trystylee.com.
+[Asset provenance](ASSETS.md) and the
+[publication checklist](docs/open-source-readiness.md) cover distribution readiness.
+Source licensing is pending owner selection; public availability alone does not
+grant an open-source license.

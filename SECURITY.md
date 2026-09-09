@@ -69,3 +69,9 @@ xcodebuild -project "Safari Dark Mode/Safari Dark Mode.xcodeproj" \
   -scheme "Safari Dark Mode" -configuration Debug \
   -derivedDataPath build/DerivedData build
 ```
+
+## Reporting a vulnerability
+
+Email hello@trystylee.com with a minimal reproduction and affected version.
+Do not post credentials or private Google content in public issues. We will
+coordinate investigation and disclosure through that address.
