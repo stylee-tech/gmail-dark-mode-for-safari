@@ -2,6 +2,21 @@
 
 Updated 9 September 2026. Submitted build: **1.0.0 (21)** — **WAITING_FOR_REVIEW**.
 
+## Current remaining work
+
+- Build 21 remains WAITING_FOR_REVIEW with manual release after approval.
+- Native source has the Stylee support/privacy URLs, but submitted build 21
+  embeds retired personal Pages URLs. A new signed build is required to fix the
+  app’s Help/Privacy buttons. Do not treat the App Store metadata update as a
+  binary update. Coordinate replacement/resubmission or the next update with
+  the owner; no submission was changed during this final status review.
+- Fix and visually verify the reported white Google account menu, Gmail Trash
+  notice, and advanced search/filter panel. Reload-flash behavior is unchanged.
+- Safari 26, Intel hardware, and other Macs still lack runtime coverage.
+
+Repository publication and Stylee Pages migration are complete. Public commit
+emails use the support address; recovery repositories remain private and archived.
+
 ## Approved launch decisions
 
 - Public name: **Gmail Dark Mode for Safari**.
@@ -32,7 +47,7 @@ Minimum deployment settings are macOS 26 and Safari 26. The package includes
 arm64 and x86_64 binaries. **Safari 26 and Intel hardware have not been runtime
 tested.** Do not describe compiled compatibility as runtime verification.
 Multi-Mac runtime coverage remains a follow-up check. An internal TestFlight
-group now has build 19 for verifying the Apple-installed setup flow on this Mac.
+group was initially given build 19 for verifying the Apple-installed setup flow on this Mac.
 
 ## Signed package
 
@@ -49,11 +64,11 @@ is declared false in the app Info.plist.
 
 Build 18 passed local signing checks but Apple rejected its manifest description
 (error 90849: maximum 112 characters). Build 19 shortens it and adds a regression
-check. Apple processed build 19 as VALID / APP_STORE_ELIGIBLE, and it is attached
-to version 1.0.0. The exported package passed deep, strict signature verification;
+check. Apple processed build 19 as VALID / APP_STORE_ELIGIBLE, and it was initially attached
+to version 1.0.0; build 21 is the current submitted binary. The exported package passed deep, strict signature verification;
 its resources, versions and architectures were checked directly.
 
-Package SHA-256: `744e5c3409edf6bd8add06cb6862871fd8a4c25904a4158e17eaff32a40592d3`.
+Historical build 19 package SHA-256: `744e5c3409edf6bd8add06cb6862871fd8a4c25904a4158e17eaff32a40592d3`.
 
 ## Listing and public pages
 

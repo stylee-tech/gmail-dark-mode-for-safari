@@ -33,10 +33,12 @@ On 9 September 2026 the initial deployment succeeded, and both new HTML pages
 and CSS matched `site/` byte-for-byte over HTTPS. App Store Connect's English
 support and privacy URLs were updated to Stylee; build 21 was not withdrawn.
 Native source now uses the new URLs. Existing binaries retain their old URLs
-until the next app update; compatibility redirects handle them in the meantime.
+until the next app update; those old links currently fail by the owner’s accepted
+legacy-hosting decision. App Store metadata links already work.
 
 For updates, verify both pages, CSS, relative navigation and contact links after
-the workflow succeeds. Preserve compatibility URLs and deploy only static content.
+the workflow succeeds. Leave retired legacy hosting private unless instructed
+otherwise, and deploy only static content.
 
 The public source repository was replaced with a fresh repository containing only
 sanitized history on 9 September 2026. Pages was re-enabled and deployed at the
