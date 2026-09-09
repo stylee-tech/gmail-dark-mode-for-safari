@@ -29,6 +29,8 @@
   reference in README.md; Safari cannot enable Chromium's rendering-engine flag.
 - The macOS `ViewController.swift` uses native AppKit setup/status controls;
   it only opens Safari settings and reads extension enablement.
+- Gmail `.nU` elements wrap sidebar label text. Never include them in icon
+  filters; style their text colors separately.
 - `extension/popup/` owns toolbar controls and connection/save feedback.
   `tests/` contains dependency-free Node regression tests.
 

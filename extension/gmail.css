@@ -1275,8 +1275,10 @@
 }
 
 /* Gmail's current monochrome icons are background images, not text/SVG fills.
-   Keep the colored starred state and selected Mail badge in their own colors. */
-:root:not([data-sdm-disabled]) :is(.qj, .aih, .nU, .T-Jo, .T-KT:not(.T-KT-Jp), .G-atb .T-I-J3):where(:not(.a3s, .a3s *)) {
+   Keep the colored starred state and selected Mail badge in their own colors.
+   .nU wraps label text, not an icon: filtering it flattens text and backgrounds
+   into solid rectangles. Its text colors are handled by the left-rail rules. */
+:root:not([data-sdm-disabled]) :is(.qj, .aih, .T-Jo, .T-KT:not(.T-KT-Jp), .G-atb .T-I-J3):where(:not(.a3s, .a3s *)) {
   filter: brightness(0) invert(.82) !important;
   opacity: 1 !important;
 }
