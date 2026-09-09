@@ -19,7 +19,8 @@ to change visibility, rewrite history, transfer repositories, or release the app
   candidates were Xcode property names, not tokens.
   This is a bounded audit, not a guarantee that every possible secret format is
   recognized. Do not validate suspected credentials by using them.
-- Commit author/committer metadata contains a personal email address. Making
+- At the audit baseline, commit author/committer metadata contained a personal
+  email address (corrected on main below). Making
   existing history public exposes it even after changing current files. This is
   personal information, not an authentication secret.
 - All 13 distinct current PNG assets were visually reviewed: four sample-content
@@ -49,12 +50,14 @@ pattern scan in `scripts/audit-public-source.py`. Runtime rendering is unchanged
    Do not describe a public repository as open source until a license is applied.
 2. The owner transferred the source to `stylee-tech/gmail-dark-mode-for-safari`
    and requested support source consolidation into that same private repository.
-3. Choose historical disclosure policy. Recommended: publish a reviewed snapshot
-   as a new repository with an organization-approved author identity, while
-   retaining this private history. That avoids exposing the personal commit
-   email and local development diary. Alternatively, explicitly accept the
-   existing author metadata, or prepare a separately sanitized history for review.
-   Never force-push rewritten history or delete the private archive as cleanup.
+3. Historical email correction completed at the owner's request on 9 September
+   2026: all 34 main-branch commits were rewritten to use `hello@trystylee.com`
+   as author/committer email; names, timestamps, messages and file trees were
+   preserved. Future commits in this checkout use the same email. The old
+   history is retained only in ignored local backups and local recovery refs;
+   never push those refs. Other clones must realign with the rewritten main.
+   GitHub may retain old commit objects by SHA; rewriting the branch is not a
+   guarantee of server-side erasure. Review that retention before publication.
 4. Immediately before publication, rerun the audit on the exact publication
    candidate, inspect untracked files and assets, and check GitHub releases,
    Actions artifacts, issues, discussions, and repository settings for exposure.
