@@ -184,17 +184,36 @@
     return normalized;
   }
 
+  // Safari and Chromium can expose callback or Promise completion. Resolve once
+  // even when both are delivered, so an old read cannot reapply stale state.
+  function storageOperation(api, operation, value, callback) {
+    let finished = false;
+    const finish = (result, error) => {
+      if (finished) return;
+      finished = true;
+      callback(result, error || null);
+    };
+    try {
+      const pending = api.storage.local[operation](value, result => {
+        finish(result, api.runtime.lastError);
+      });
+      if (pending && typeof pending.then === "function") {
+        pending.then(result => finish(result), error => finish(null, error));
+      }
+    } catch (error) {
+      finish(null, error);
+    }
+  }
+
   function readEnabledBySite(api, callback) {
-    api.storage.local.get({ [storageKey]: defaults() }, (items) => {
-      const error = api.runtime.lastError;
-      callback(normalizeEnabledBySite(items && items[storageKey]), error || null);
+    storageOperation(api, "get", { [storageKey]: defaults() }, (items, error) => {
+      callback(normalizeEnabledBySite(items && items[storageKey]), error);
     });
   }
 
   function writeEnabledBySite(api, enabledBySite, callback) {
-    api.storage.local.set({ [storageKey]: normalizeEnabledBySite(enabledBySite) }, () => {
-      const error = api.runtime.lastError;
-      if (callback) callback(error || null);
+    storageOperation(api, "set", { [storageKey]: normalizeEnabledBySite(enabledBySite) }, (_items, error) => {
+      if (callback) callback(error);
     });
   }
 

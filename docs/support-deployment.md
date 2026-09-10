@@ -25,13 +25,14 @@ The owner explicitly chose to leave the old repository PRIVATE and archived,
 accepting that these URLs no longer work. Redirect files were prepared, but are
 not deployed because private Pages hosting is unavailable. Do not restore public
 visibility or hosting without a new instruction. Builds 19–21 retain these old
-embedded URLs; a later binary is required to use the new native source links.
+embedded URLs; Build 22 uses the current native Stylee source links.
 
 ## Verification and application links
 
 On 9 September 2026 the initial deployment succeeded, and both new HTML pages
 and CSS matched `site/` byte-for-byte over HTTPS. App Store Connect's English
-support and privacy URLs were updated to Stylee; build 21 was not withdrawn.
+support and privacy URLs were updated to Stylee; Build 22 is the submitted
+replacement binary.
 Native source now uses the new URLs. Existing binaries retain their old URLs
 until the next app update; those old links currently fail by the owner’s accepted
 legacy-hosting decision. App Store metadata links already work.

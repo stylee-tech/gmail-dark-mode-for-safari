@@ -30,6 +30,8 @@ body { font-family: system-ui; padding: 24px; }
   <div class="aDh"><div role="button" class="a1 aaA" id="compose-attachment-icon" style="width:20px;height:20px;background-image:linear-gradient(black,black)"></div></div>
   <div class="Am" contenteditable="true" id="compose-body">Synthetic compose body</div>
 </div></div>
+<div class="ya" id="folder-notice" style="background:rgba(241,243,244,.87);color:#666">Folder retention notice</div>
+<div class="ZF-Av" id="advanced-search" style="background:white;color:#222"><div class="SK ZF-zT"><div class="ZZ"><div class="w-Nw boo"><label id="filter-label" for="filter-input">From</label><div class="w-Pv"><input id="filter-input" class="ZH nr aQa"></div></div><select id="filter-select" style="border-radius:999px;box-shadow:0 20px 30px #aaa"><option>All Mail</option></select></div></div></div>
 <script src="../extension/gmail-messages.js"></script>
 <script>
 const results = [];
@@ -39,6 +41,10 @@ const rgb = value => value.match(/[\d.]+/g).slice(0,3).map(Number);
 const lum = value => rgb(value).map(n=>n/255).map(n=>n<=.04045?n/12.92:((n+.055)/1.055)**2.4).reduce((a,n,i)=>a+n*[.2126,.7152,.0722][i],0);
 const ratio = (a,b) => (Math.max(lum(a),lum(b))+.05)/(Math.min(lum(a),lum(b))+.05);
 __safariDarkModeMessages.sync(true);
+check('Folder notice has dark contrast', lum(color('folder-notice','backgroundColor'))<.1 && ratio(color('folder-notice','color'),color('folder-notice','backgroundColor'))>=4.5);
+check('Advanced search panel and labels have dark contrast', lum(color('advanced-search','backgroundColor'))<.1 && ratio(color('filter-label','webkitTextFillColor'),color('advanced-search','backgroundColor'))>=4.5);
+check('Advanced search fields have readable contrast', ratio(color('filter-input','webkitTextFillColor'),color('filter-input','backgroundColor'))>=4.5);
+check('Filter controls do not inherit floating-card geometry', color('filter-select','borderRadius')==='4px' && color('filter-select','boxShadow')==='none');
 check('Expanded compose formatting icon retained', color('compose-format-icon','backgroundImage')!=='none');
 check('Expanded compose attachment icon retained', color('compose-attachment-icon','backgroundImage')!=='none');
 check('Compose fields retain inline geometry', color('compose-recipient','borderWidth')==='0px' && color('compose-recipient','borderRadius')==='0px');
@@ -65,6 +71,7 @@ check('Transparent image keeps its original backing color', color('transparent-i
 const first = color('card-copy','color');
 document.documentElement.setAttribute('data-sdm-disabled','');
 __safariDarkModeMessages.sync(false);
+check('Off restores native filter panel', color('advanced-search','backgroundColor')==='rgb(255, 255, 255)');
 check('Off restores sender card', color('card','backgroundColor')==='rgb(248, 246, 238)' && color('card-copy','color')==='rgb(41, 47, 60)');
 check('Off restores inline priorities', document.getElementById('important-fg').style.getPropertyPriority('color')==='important' && color('important-fg','color')==='rgb(0, 0, 0)' && color('important-bg','backgroundColor')==='rgb(255, 255, 255)' && document.getElementById('important-bg').style.getPropertyPriority('background-color')==='important');
 document.documentElement.removeAttribute('data-sdm-disabled');

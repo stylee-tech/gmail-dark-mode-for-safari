@@ -1,6 +1,6 @@
 # Public-source readiness and Stylee migration
 
-Audit date: 9 September 2026. Baseline: `b0dad3b` (build 21).
+Audit date: 10 September 2026. Baseline: current main (build 22).
 The repository was private at the audit baseline; the owner subsequently made
 it public. This historical audit is not authorization
 to change visibility, rewrite history, transfer repositories, or release the app.
@@ -84,7 +84,8 @@ See [support deployment](support-deployment.md) for the remaining hosting choice
 
 ### 2. Preserve old links
 
-Builds 19–21 embed the personal Pages URLs, and build 21 is waiting for review.
+Builds 19–21 embed the personal Pages URLs; Build 22 uses the Stylee Pages URLs
+and is waiting for review.
 Keep the current personal support/privacy pages working. Do not assume GitHub
 repository redirects also redirect Pages. Retain equivalent pages at the old
 addresses or deploy explicit page-level redirects with a readable fallback link.
@@ -101,7 +102,7 @@ Update these files together, after the new endpoints are live:
 - App Store Connect: version support URL and app-info privacy policy URL.
 
 The in-review build cannot be edited in place. Coordinate the next binary with
-App Review; do not withdraw or replace build 21 merely to prepare this migration.
+App Review; the current submitted build is 22.
 The static policy already identifies Stylee, Inc. and GitHub Pages as host, so
 moving GitHub ownership does not itself change app data collection behavior.
 
@@ -117,8 +118,8 @@ ownership, then update local remotes only after the destination exists.
 ## Known product limitations
 
 The Google account menu, Gmail Trash notice banner, and advanced search/filter
-panel still have reported white surfaces. Reload-flash prevention is unchanged.
-This source/publication audit does not certify those rendering issues resolved.
+panel fixes are covered by the current fixture and Safari verification. Reload-
+flash prevention is unchanged because no reliable prevention method was found.
 Safari 26 and Intel compatibility are compiled targets, not runtime-tested claims.
 
 ## Final verification after licensing and history rewrite

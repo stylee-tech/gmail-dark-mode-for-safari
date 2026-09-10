@@ -688,3 +688,9 @@
   border-radius: 0 !important;
   box-shadow: none !important;
 }
+
+/* Google's account frame opts into light even inside a dark product page.
+   Let its own responsive theme and our helper styles see the parent's scheme. */
+:root[data-sdm-enabled="true"]:not([data-sdm-disabled]) iframe[name="account"]:where(:not(.a3s, .a3s *)) {
+  color-scheme: dark !important;
+}

@@ -158,7 +158,7 @@ script revision.
 
 ## App Store release
 
-Version 1.0.0 (21), free from Stylee, Inc., was resubmitted on 9 September 2026
+Version 1.0.0 (22), free from Stylee, Inc., was resubmitted on 10 September 2026
 and is waiting for App Review. Release remains manual after approval.
 The enabled-state companion button says “Go to Settings…” and opens Extensions.
 See [release status and checklist](docs/app-store-release-plan.md).

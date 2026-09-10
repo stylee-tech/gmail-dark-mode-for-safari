@@ -196,3 +196,22 @@ test('helper frames inherit forced dark but standalone helpers stay untouched', 
   assert.equal(h.registry.isProductEnabled({ gmail: 'off' }, 'googleHelper', context, true), false);
   assert.equal(h.registry.isProductEnabled({ googleHelper: 'dark' }, 'googleHelper', {}, true), false);
 });
+
+test('storage handles Promise-only Safari completion and ignores duplicate callback completion', async () => {
+  const h = harness();
+  let delayedCallback;
+  h.api.storage.local.get = (_value, callback) => {
+    delayedCallback = callback;
+    return Promise.resolve({ enabledBySite: { gmail: 'dark' } });
+  };
+  const results = [];
+  h.registry.readEnabledBySite(h.api, (settings, error) => results.push({ settings, error }));
+  await Promise.resolve();
+  delayedCallback({ enabledBySite: { gmail: 'off' } });
+  assert.equal(results.length, 1);
+  assert.equal(results[0].settings.gmail, 'dark');
+  assert.equal(results[0].error, null);
+  h.api.storage.local.set = () => Promise.reject(new Error('storage unavailable'));
+  const error = await new Promise(resolve => h.registry.writeEnabledBySite(h.api, {}, resolve));
+  assert.equal(error.message, 'storage unavailable');
+});

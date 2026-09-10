@@ -1,17 +1,14 @@
 # Mac App Store release
 
-Updated 9 September 2026. Submitted build: **1.0.0 (21)** — **WAITING_FOR_REVIEW**.
+Updated 10 September 2026. Submitted build: **1.0.0 (22)** — **WAITING_FOR_REVIEW**.
 
 ## Current remaining work
 
-- Build 21 remains WAITING_FOR_REVIEW with manual release after approval.
-- Native source has the Stylee support/privacy URLs, but submitted build 21
-  embeds retired personal Pages URLs. A new signed build is required to fix the
-  app’s Help/Privacy buttons. Do not treat the App Store metadata update as a
-  binary update. Coordinate replacement/resubmission or the next update with
-  the owner; no submission was changed during this final status review.
-- Fix and visually verify the reported white Google account menu, Gmail Trash
-  notice, and advanced search/filter panel. Reload-flash behavior is unchanged.
+- Build 22 is WAITING_FOR_REVIEW with manual release after approval.
+- Native source and submitted Build 22 use the Stylee support/privacy URLs.
+- Build 22 includes the verified Google account switcher, Gmail Trash notice, and
+  advanced-search fixes. Reload-flash behavior remains unchanged because no
+  reliable prevention method was established.
 - Safari 26, Intel hardware, and other Macs still lack runtime coverage.
 
 Repository publication and Stylee Pages migration are complete. Public commit
@@ -65,7 +62,7 @@ is declared false in the app Info.plist.
 Build 18 passed local signing checks but Apple rejected its manifest description
 (error 90849: maximum 112 characters). Build 19 shortens it and adds a regression
 check. Apple processed build 19 as VALID / APP_STORE_ELIGIBLE, and it was initially attached
-to version 1.0.0; build 21 is the current submitted binary. The exported package passed deep, strict signature verification;
+to version 1.0.0; build 22 is the current submitted binary. The exported package passed deep, strict signature verification;
 its resources, versions and architectures were checked directly.
 
 Historical build 19 package SHA-256: `744e5c3409edf6bd8add06cb6862871fd8a4c25904a4158e17eaff32a40592d3`.
@@ -96,7 +93,7 @@ published as Data Not Collected, consistent with the code and public policy.
 ## Submission status
 
 The separate macOS app record has been created. English metadata, category,
-review contact/notes, screenshots and free pricing are configured. Build 19 is
+review contact/notes, screenshots and free pricing are configured. Build 22 is
 attached. Release type is MANUAL. The owner configured all 175 countries/regions
 and accepted the updated developer agreement. App Privacy was published as
 Data Not Collected and verified in Safari. `asc validate` reports zero errors
@@ -105,24 +102,24 @@ and zero warnings.
 Version 1.0.0 (19) was submitted on 9 September 2026 at 18:14 UTC, then withdrawn
 at the owner's request for another improvement batch. Apple's API confirmed
 **DEVELOPER_REJECTED** after cancellation; release type remains **MANUAL**.
-The hold was lifted by the owner for build 21; the app is not publicly released.
+The hold was lifted by the owner for build 22; the app is not publicly released.
 
-Open rendering reports: the Google account switcher across Gmail, Sheets and
-Search; Gmail's Trash notice banner; and Gmail's advanced search/filter panel.
-Inspect and verify these in Safari before preparing the next candidate.
-Leave reload-flash prevention unchanged unless a reliable solution is established;
-the current implementation already requests document-start injection.
+The Google account switcher across Gmail, Sheets and Search, Gmail's Trash notice
+banner, and Gmail's advanced search/filter panel are covered by the Build 22
+fixtures and Safari verification. Leave reload-flash prevention unchanged unless
+a reliable solution is established; the current implementation already requests
+document-start injection.
 
-Build 20 is uploaded to the existing internal TestFlight group and installed on
-this Mac. It adds dynamic companion setup status; the rendering reports above
-remain unresolved. All 12 regression tests and archive/export passed. The owner subsequently authorized build 21 resubmission.
+Build 20 was uploaded to the existing internal TestFlight group and installed on
+this Mac. Build 22 supersedes it for App Review after the rendering fixes. All
+13 regression tests and archive/export passed.
 
 The first build-20 status check failed because Xcode had registered the release
 archive alongside the TestFlight app. Unregistering only the archive restored
 the green “Extension enabled” state, verified by screenshot. The archive script
 now unregisters its packaging copy after export to prevent this conflict.
 
-Build 21 UI correction: the enabled-state button says “Go to Settings…”
+Build 22 UI correction: the enabled-state button says “Go to Settings…”
 and directs users to Websites → Gmail Dark Mode for Safari. The public
 SafariServices handoff opens Extensions; it does not expose a website-access
 pane selector. This copy correction is not in installed TestFlight build 20.
@@ -159,10 +156,10 @@ through support without adding page-content telemetry.
 - [Age rating definitions](https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions/)
 - [Mac screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/)
 
-## Build 21 resubmission
+## Build 22 resubmission
 
-On 9 September 2026 at 20:35 UTC, Apple confirmed WAITING_FOR_REVIEW for
-version 1.0.0, build 21. The owner explicitly authorized this resubmission.
-The signed archive/export and all 12 regression tests passed; App Store
-validation reported no errors or warnings. Release remains MANUAL.
-The three outstanding rendering reports above were not changed in this build.
+On 10 September 2026 at 00:18 UTC, Apple confirmed WAITING_FOR_REVIEW for
+version 1.0.0, build 22. The owner explicitly authorized this resubmission.
+The signed archive/export and all 13 regression tests passed; App Store
+validation reported zero errors and zero warnings. Release remains MANUAL.
+The previous Build 21 submission was cancelled so Build 22 could replace it.
