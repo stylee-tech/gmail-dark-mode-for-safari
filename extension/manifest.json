@@ -56,8 +56,6 @@
     },
     {
       "matches": [
-        "https://docs.google.com/spreadsheets",
-        "https://docs.google.com/spreadsheets?*",
         "https://docs.google.com/spreadsheets/*"
       ],
       "css": [
@@ -111,8 +109,6 @@
     "https://ogs.google.com/*",
     "https://accounts.google.com/*",
     "https://myaccount.google.com/*",
-    "https://docs.google.com/spreadsheets",
-    "https://docs.google.com/spreadsheets?*",
     "https://docs.google.com/spreadsheets/*",
     "https://google.com/search*",
     "https://www.google.com/search*"

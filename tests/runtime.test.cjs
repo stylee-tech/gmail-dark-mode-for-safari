@@ -112,31 +112,6 @@ test('helper frames inherit only a known supported parent and never preload opti
   assert.equal(h.registry.isProductEnabled({}, 'googleHelper', {}), false);
 });
 
-test('Sheets routes cover home, account, document and published URLs without accepting lookalikes', () => {
-  const { registry } = harness();
-  const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '../extension/manifest.json'), 'utf8'));
-  const sheets = manifest.content_scripts.find(script => script.css?.includes('sheets.css'));
-  const matches = (pattern, url) => {
-    const escaped = pattern.split('*').map(part => part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('.*');
-    return new RegExp(`^${escaped}$`).test(url.origin + url.pathname + url.search);
-  };
-  for (const pathname of ['/spreadsheets', '/spreadsheets?authuser=1', '/spreadsheets/',
-    '/spreadsheets/u/2/', '/spreadsheets/d/sample-document/edit?pli=1&gid=123#gid=123',
-    '/spreadsheets/d/another-document/view', '/spreadsheets/d/e/sample-publication/pubhtml']) {
-    const url = new URL(pathname, 'https://docs.google.com');
-    assert.equal(registry.detectProduct(url), 'sheets', pathname);
-    assert.ok(sheets.matches.some(pattern => matches(pattern, url)), `content injection: ${pathname}`);
-    assert.ok(manifest.host_permissions.some(pattern => matches(pattern, url)), `host access: ${pathname}`);
-  }
-  for (const value of ['https://docs.google.com/spreadsheets-copy', 'https://docs.google.com/document/d/sample/edit',
-    'https://docs.google.com/presentation/d/sample/edit', 'https://docs.google.com.example.org/spreadsheets/d/sample',
-    'http://docs.google.com/spreadsheets/d/sample']) {
-    const url = new URL(value);
-    assert.equal(registry.detectProduct(url), null, value);
-    assert.equal(sheets.matches.some(pattern => matches(pattern, url)), false, value);
-  }
-});
-
 test('storage normalization retains boolean preferences and drops unknown or malformed values', () => {
   const h = harness();
   const settings = h.registry.normalizeEnabledBySite({ gmail: false, sheets: 'false', unexpected: true });

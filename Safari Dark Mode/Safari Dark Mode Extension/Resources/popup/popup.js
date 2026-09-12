@@ -120,7 +120,7 @@
     selectMode("system");
     selector.disabled = true;
     appearanceStatus.textContent = isSupportedUrl
-      ? "Reload this page and retry. If it still won’t connect, check website access in Safari’s extension settings."
+      ? "Allow this website in Safari’s extension settings, then reload the page."
       : "Open a supported website. If you’re already there, allow access in Safari and reload.";
     unsupported.hidden = false;
   }

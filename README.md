@@ -3,7 +3,7 @@
 Safari Web Extension that applies a focused dark theme to:
 
 - Gmail (`https://mail.google.com/*`)
-- Google Sheets (the `https://docs.google.com/spreadsheets` home page and all paths beneath it)
+- Google Sheets (`https://docs.google.com/spreadsheets/*`)
 - Google Search results (`https://google.com/search*` and `https://www.google.com/search*`)
 
 This is intentionally not a general-purpose dark-mode engine. It keeps the
@@ -98,12 +98,6 @@ does not re-enable a disabled product. Check Gmail, Search, and Sheets chrome;
 standalone Google account pages must remain untouched. The popup times out after
 four seconds if Safari does not respond and offers Retry connection instead of
 staying stuck. Keyboard focus remains on the appearance choice after saving.
-
-Sheets recognition covers its home page, account-specific paths, shared and
-published sheets, and document URLs with query parameters or sheet-tab fragments.
-If a supported page is not connected, reload it and retry the popup; the message
-does not prove website permission is missing. In System mode, a light device
-appearance deliberately leaves the website's original appearance visible.
 
 When adding a new top-level file or directory under `extension/`, also add it to
 the Safari extension target resources in Xcode. The sync script copies files, but
