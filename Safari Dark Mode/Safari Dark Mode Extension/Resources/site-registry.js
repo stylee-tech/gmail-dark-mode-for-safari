@@ -82,7 +82,7 @@
 
     if (
       current.hostname === "docs.google.com" &&
-      current.pathname.startsWith("/spreadsheets/")
+      (current.pathname === "/spreadsheets" || current.pathname.startsWith("/spreadsheets/"))
     ) {
       return "sheets";
     }
