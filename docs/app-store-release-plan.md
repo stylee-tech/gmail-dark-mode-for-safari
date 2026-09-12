@@ -4,6 +4,15 @@ Updated 10 September 2026. Submitted build: **1.0.0 (22)** — **WAITING_FOR_REV
 
 ## Current remaining work
 
+Source update, 11 September 2026 (not included in submitted Build 22): Sheets
+matching now includes the exact `/spreadsheets` home URL, including query
+parameters, as well as all existing document/account/published paths. Connection
+failure copy recommends reload/retry before checking permissions. The reported
+document connected in the installed Safari extension both before and after a
+reload; its earlier failure was not reproduced. It was in System mode with light
+device appearance. All 14 Node regressions and a Debug build pass. These source
+changes require a new distributed build before installed users receive them.
+
 - Build 22 is WAITING_FOR_REVIEW with manual release after approval.
 - Native source and submitted Build 22 use the Stylee support/privacy URLs.
 - Build 22 includes the verified Google account switcher, Gmail Trash notice, and
