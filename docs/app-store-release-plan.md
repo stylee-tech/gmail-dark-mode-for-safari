@@ -13,6 +13,15 @@ reload; its earlier failure was not reproduced. It was in System mode with light
 device appearance. All 14 Node regressions and a Debug build pass. These source
 changes require a new distributed build before installed users receive them.
 
+Additional source update, 11 September 2026: Google Search's People also ask
+uses recolored native separators without duplicate button borders, and expanded
+answer emphasis uses a dark backing. People also search for has a readable
+heading, dark cards, and contrasting search icons. Verified through a live CSS
+preview in Safari 27: collapsed/expanded questions, related-link navigation, and
+Off/System restoration, with screenshots and computed colors inspected. Packaged
+resources are synchronized; this CSS update has not been installed as a new
+binary or included in Build 22. Other Google markup variants remain unverified.
+
 - Build 22 is WAITING_FOR_REVIEW with manual release after approval.
 - Native source and submitted Build 22 use the Stylee support/privacy URLs.
 - Build 22 includes the verified Google account switcher, Gmail Trash notice, and

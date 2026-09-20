@@ -465,7 +465,7 @@
 :root:not([data-sdm-disabled]) #center_col .related-question-pair [aria-expanded] {
   background: transparent !important;
   border: 0 !important;
-  border-bottom: 1px solid rgba(174, 184, 200, 0.18) !important;
+  border-bottom: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   color: var(--sdm-text) !important;
@@ -658,11 +658,6 @@
   fill: currentColor !important;
 }
 
-:root:not([data-sdm-disabled]) #rso .related-question-pair [role="button"],
-:root:not([data-sdm-disabled]) #rso .related-question-pair [aria-expanded] {
-  border-bottom: 1px solid rgba(174, 184, 200, 0.18) !important;
-}
-
 /* Final accordion override after generic result-button styling. */
 :root:not([data-sdm-disabled]) #center_col .related-question-pair,
 :root:not([data-sdm-disabled]) #center_col .related-question-pair > *,
@@ -684,7 +679,7 @@
   border-top: 0 !important;
   border-right: 0 !important;
   border-left: 0 !important;
-  border-bottom: 1px solid rgba(174, 184, 200, 0.18) !important;
+  border-bottom: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
@@ -693,4 +688,50 @@
    Let its own responsive theme and our helper styles see the parent's scheme. */
 :root[data-sdm-enabled="true"]:not([data-sdm-disabled]) iframe[name="account"]:where(:not(.a3s, .a3s *)) {
   color-scheme: dark !important;
+}
+
+/* Google draws the question separators on inner wrappers, not the button.
+   Recolor those native borders instead of adding a second line to each row. */
+:root:not([data-sdm-disabled]) #center_col .related-question-pair :is(.ysxiae, .XNo5Ab) {
+  border-color: var(--sdm-border) !important;
+}
+
+/* The answer's animated emphasis gradient is pale blue in Google's light
+   theme. Keep the emphasis, but pair it with the converted light text. */
+:root:not([data-sdm-disabled]) #center_col .related-question-pair .pOOWX b {
+  background-image: none !important;
+  background-color: var(--sdm-accent-bg) !important;
+}
+
+/* Related searches live below #rso in #bres. The heading uses role=heading,
+   and each link's pale backing belongs to .b2Rnsc rather than the anchor. */
+:root:not([data-sdm-disabled]) #bres .oIk2Cb :is([role="heading"], [role="heading"] span) {
+  color: var(--sdm-text) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+:root:not([data-sdm-disabled]) #bres .b2Rnsc {
+  background-color: var(--sdm-surface-2) !important;
+}
+
+:root:not([data-sdm-disabled]) #bres .b2Rnsc:has(a:is(:hover, :focus-visible)) {
+  background-color: var(--sdm-surface-3) !important;
+}
+
+:root:not([data-sdm-disabled]) #bres .b2Rnsc a:focus-visible {
+  outline: 2px solid var(--sdm-accent) !important;
+  outline-offset: 2px;
+}
+
+:root:not([data-sdm-disabled]) #bres .b2Rnsc :is(a, .dg6jd, .dg6jd b) {
+  color: var(--sdm-accent) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+:root:not([data-sdm-disabled]) #bres .b2Rnsc :is(.XbQ34c, .XbQ34c .z1asCe) {
+  color: var(--sdm-muted) !important;
+}
+
+:root:not([data-sdm-disabled]) #bres .b2Rnsc .XbQ34c svg {
+  fill: currentColor !important;
 }
