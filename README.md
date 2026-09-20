@@ -1,6 +1,6 @@
 # Stylee Night Mode for Safari
 
-Safari Web Extension that applies a focused dark theme to:
+A Safari Web Extension from Stylee with per-website appearance controls for:
 
 - Gmail (`https://mail.google.com/*`)
 - Google Sheets (the `https://docs.google.com/spreadsheets` home page and all paths beneath it)

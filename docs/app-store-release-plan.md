@@ -4,6 +4,15 @@ Updated 20 September 2026. Submitted build: **1.0.0 (22)** — **REJECTED**; rev
 
 ## Current remaining work
 
+Listing positioning update, 20 September 2026: the description and promotional
+text now lead with Stylee and per-website appearance controls, with Gmail, Google
+Sheets, and Google Search identified as supported websites. Keywords use generic
+feature terms. Four refreshed listing images are uploaded in the order recorded
+in `docs/store/metadata.json`, with the controls image first. Support copy matches
+this positioning. Metadata limits, image dimensions, screenshot order, and mobile
+support-page layout were checked. This listing update changes no extension code
+and does not resubmit or release the app.
+
 Naming update, 20 September 2026: the owner replied to App Review asking for
 clarification. Pending that response, remove Gmail from the public app/extension
 name and remove Google product branding from the subtitle, retaining "for Safari".
