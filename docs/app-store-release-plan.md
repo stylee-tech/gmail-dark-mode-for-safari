@@ -1,45 +1,48 @@
 # Mac App Store release
 
-Updated 20 September 2026. Submitted build: **1.0.0 (22)** — **REJECTED**; review submission has **UNRESOLVED_ISSUES**.
+Updated 20 September 2026. Submitted build: **1.0.0 (23)** — **WAITING_FOR_REVIEW**.
 
-## Current remaining work
+## Current submission
 
-Listing positioning update, 20 September 2026: the description and promotional
-text now lead with Stylee and per-website appearance controls, with Gmail, Google
-Sheets, and Google Search identified as supported websites. Keywords use generic
-feature terms. Four refreshed listing images are uploaded in the order recorded
-in `docs/store/metadata.json`, with the controls image first. Support copy matches
-this positioning. Metadata limits, image dimensions, screenshot order, and mobile
-support-page layout were checked. This listing update changes no extension code
-and does not resubmit or release the app.
+Build 23 was rebuilt from commit `2285b67`, signed, exported, uploaded and
+resubmitted on 20 September 2026 at 15:32 UTC. It includes merged PR #1/#2,
+the public name **Stylee Night Mode for Safari**, and the updated native and
+extension branding. Internal identifiers remain unchanged. Apple processed the
+build as VALID / APP_STORE_ELIGIBLE and confirmed it is attached to version 1.0.0.
+The existing rejected review item was marked resolved and the submission is now
+WAITING_FOR_REVIEW. Release remains **MANUAL**; the app is not publicly released.
 
-Naming update, 20 September 2026: the owner replied to App Review asking for
-clarification. Pending that response, remove Gmail from the public app/extension
-name and remove Google product branding from the subtitle, retaining "for Safari".
-Descriptions and setup instructions continue to identify the supported websites.
-Source build 23 incorporates this rename and the merged PR #1/#2 fixes; submitted
-Build 22 retains its original name and contents. No new submission or public
-release is authorized by this naming update. Internal identifiers and support URLs
-remain stable. App Store Connect accepted the name "Stylee Night Mode for Safari"
-and subtitle "Mail, spreadsheets & search"; the shorter Dark Mode and Night Mode
-names were unavailable. All four renamed listing screenshots were uploaded and
-finished processing. The review submission remains unresolved with Build 22
-attached; no new binary was uploaded or submitted.
+The updated name, subtitle, description, keywords, promotional text, reviewer
+instructions and four refreshed screenshots are saved in App Store Connect.
+Screenshots are complete and ordered controls, inbox, email, then Sheets, matching
+`docs/store/metadata.json`. Support/privacy pages match the positioning. The
+owner previously asked Apple to clarify compatibility wording; acceptance of
+"for Safari" remains subject to review.
 
-Rename validation: all 14 Node regressions, resource synchronization, metadata
-length checks, and all four 2560×1600 listing screenshot checks pass. The final
-renamed native build is blocked by Xcode requiring acceptance of its updated
-license; the earlier Debug build used the provisional name. Complete that local
-setup step and rebuild before any new TestFlight or App Store upload.
+Release verification: all 14 Node regressions passed, archive/export succeeded,
+and deep strict signature verification passed. Both app and extension report
+1.0.0 (23) and the final public name. All 19 packaged extension source files match
+the repository; resource synchronization and whitespace checks pass. Xcode's
+license blocker is cleared. This release pass did not repeat live Safari runtime
+QA; historical coverage and its limits are recorded below.
 
-Source update, 11 September 2026 (not included in submitted Build 22): Sheets
+## Prior submission and change history
+
+Build 22 was rejected on 15 September under Guideline 4.1(c) for Gmail/Google
+branding in the name and subtitle. The owner selected the new public name after
+"Dark Mode for Safari" and "Night Mode for Safari" proved unavailable. The
+subtitle is **Mail, spreadsheets & search**. Descriptions continue to identify
+Gmail, Google Sheets and Google Search as supported websites; this is not a
+general-purpose night-mode engine.
+
+Source update, 11 September 2026 (included in Build 23, not Build 22): Sheets
 matching now includes the exact `/spreadsheets` home URL, including query
 parameters, as well as all existing document/account/published paths. Connection
 failure copy recommends reload/retry before checking permissions. The reported
 document connected in the installed Safari extension both before and after a
 reload; its earlier failure was not reproduced. It was in System mode with light
 device appearance. All 14 Node regressions and a Debug build pass. These source
-changes require a new distributed build before installed users receive them.
+changes are included in the submitted Build 23.
 
 Additional source update, 11 September 2026: Google Search's People also ask
 uses recolored native separators without duplicate button borders, and expanded
@@ -47,8 +50,8 @@ answer emphasis uses a dark backing. People also search for has a readable
 heading, dark cards, and contrasting search icons. Verified through a live CSS
 preview in Safari 27: collapsed/expanded questions, related-link navigation, and
 Off/System restoration, with screenshots and computed colors inspected. Packaged
-resources are synchronized; this CSS update has not been installed as a new
-binary or included in Build 22. Other Google markup variants remain unverified.
+resources are synchronized; this CSS update is included in Build 23 but was not
+included in Build 22. Other Google markup variants remain unverified.
 
 - Build 22 was rejected on 15 September under Guideline 4.1(c) for Gmail/Google branding in the name and subtitle. Manual release remains selected.
 - Native source and submitted Build 22 use the Stylee support/privacy URLs.
@@ -109,7 +112,7 @@ is declared false in the app Info.plist.
 Build 18 passed local signing checks but Apple rejected its manifest description
 (error 90849: maximum 112 characters). Build 19 shortens it and adds a regression
 check. Apple processed build 19 as VALID / APP_STORE_ELIGIBLE, and it was initially attached
-to version 1.0.0; build 22 is the current submitted binary. The exported package passed deep, strict signature verification;
+to version 1.0.0; build 23 is the current submitted binary. The exported package passed deep, strict signature verification;
 its resources, versions and architectures were checked directly.
 
 Historical build 19 package SHA-256: `744e5c3409edf6bd8add06cb6862871fd8a4c25904a4158e17eaff32a40592d3`.
@@ -140,7 +143,7 @@ published as Data Not Collected, consistent with the code and public policy.
 ## Submission status
 
 The separate macOS app record has been created. English metadata, category,
-review contact/notes, screenshots and free pricing are configured. Build 22 is
+review contact/notes, screenshots and free pricing are configured. Build 23 is
 attached. Release type is MANUAL. The owner configured all 175 countries/regions
 and accepted the updated developer agreement. App Privacy was published as
 Data Not Collected and verified in Safari. `asc validate` reports zero errors
