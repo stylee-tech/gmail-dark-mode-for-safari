@@ -26,6 +26,10 @@ the repository; resource synchronization and whitespace checks pass. Xcode's
 license blocker is cleared. This release pass did not repeat live Safari runtime
 QA; historical coverage and its limits are recorded below.
 
+Build 23 was also made available to the existing Internal Testing TestFlight
+group on 20 September 2026, with updated What to Test instructions. Installation
+and runtime verification on the owner’s Mac remain pending.
+
 ## Prior submission and change history
 
 Build 22 was rejected on 15 September under Guideline 4.1(c) for Gmail/Google
