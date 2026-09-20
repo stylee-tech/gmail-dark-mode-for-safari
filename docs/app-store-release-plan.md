@@ -1,8 +1,27 @@
 # Mac App Store release
 
-Updated 10 September 2026. Submitted build: **1.0.0 (22)** — **WAITING_FOR_REVIEW**.
+Updated 20 September 2026. Submitted build: **1.0.0 (22)** — **REJECTED**; review submission has **UNRESOLVED_ISSUES**.
 
 ## Current remaining work
+
+Naming update, 20 September 2026: the owner replied to App Review asking for
+clarification. Pending that response, remove Gmail from the public app/extension
+name and remove Google product branding from the subtitle, retaining "for Safari".
+Descriptions and setup instructions continue to identify the supported websites.
+Source build 23 incorporates this rename and the merged PR #1/#2 fixes; submitted
+Build 22 retains its original name and contents. No new submission or public
+release is authorized by this naming update. Internal identifiers and support URLs
+remain stable. App Store Connect accepted the name "Stylee Night Mode for Safari"
+and subtitle "Mail, spreadsheets & search"; the shorter Dark Mode and Night Mode
+names were unavailable. All four renamed listing screenshots were uploaded and
+finished processing. The review submission remains unresolved with Build 22
+attached; no new binary was uploaded or submitted.
+
+Rename validation: all 14 Node regressions, resource synchronization, metadata
+length checks, and all four 2560×1600 listing screenshot checks pass. The final
+renamed native build is blocked by Xcode requiring acceptance of its updated
+license; the earlier Debug build used the provisional name. Complete that local
+setup step and rebuild before any new TestFlight or App Store upload.
 
 Source update, 11 September 2026 (not included in submitted Build 22): Sheets
 matching now includes the exact `/spreadsheets` home URL, including query
@@ -22,7 +41,7 @@ Off/System restoration, with screenshots and computed colors inspected. Packaged
 resources are synchronized; this CSS update has not been installed as a new
 binary or included in Build 22. Other Google markup variants remain unverified.
 
-- Build 22 is WAITING_FOR_REVIEW with manual release after approval.
+- Build 22 was rejected on 15 September under Guideline 4.1(c) for Gmail/Google branding in the name and subtitle. Manual release remains selected.
 - Native source and submitted Build 22 use the Stylee support/privacy URLs.
 - Build 22 includes the verified Google account switcher, Gmail Trash notice, and
   advanced-search fixes. Reload-flash behavior remains unchanged because no
@@ -34,7 +53,8 @@ emails use the support address; recovery repositories remain private and archive
 
 ## Approved launch decisions
 
-- Public name: **Gmail Dark Mode for Safari**.
+- Public name: **Stylee Night Mode for Safari** (Safari compatibility wording pending App Review clarification).
+- App Store subtitle: **Mail, spreadsheets & search**.
 - Publisher: **Stylee, Inc.**, using its existing developer membership.
 - Price: **Free**. Separate app record and stable extension-project bundle IDs.
 - Support: **hello@trystylee.com**.

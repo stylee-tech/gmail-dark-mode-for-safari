@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Gmail Dark Mode for Safari",
+  "name": "Stylee Night Mode for Safari",
   "version": "1.0.0",
   "description": "Dark appearance for Gmail, Google Sheets, and Google Search. Follow your Mac or choose per website.",
   "icons": {
@@ -118,7 +118,7 @@
     "https://www.google.com/search*"
   ],
   "action": {
-    "default_title": "Gmail Dark Mode for Safari",
+    "default_title": "Stylee Night Mode for Safari",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "48": "icons/icon-48.png"

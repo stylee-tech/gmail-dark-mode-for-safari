@@ -19,7 +19,7 @@ final class ViewController: NSViewController {
         super.viewDidLoad()
 
         let icon = NSImageView(image: NSImage(named: NSImage.applicationIconName) ?? NSImage())
-        let title = NSTextField(labelWithString: "Gmail Dark Mode for Safari")
+        let title = NSTextField(labelWithString: "Stylee Night Mode for Safari")
         title.font = .systemFont(ofSize: 23, weight: .semibold)
         let detail = NSTextField(wrappingLabelWithString:
             "A softer shade of Gmail, Google Search, and Sheets.\nChoose On, Off, or System in Safari’s toolbar popup.")
@@ -88,11 +88,11 @@ final class ViewController: NSViewController {
                     self.showUnknownStatus()
                 } else if state?.isEnabled == true {
                     self.showStatus(title: "Extension enabled", symbol: "checkmark.circle.fill", color: .systemGreen,
-                                    guidance: "To manage website access, open Safari Settings, then choose\nWebsites → Gmail Dark Mode for Safari.",
+                                    guidance: "To manage website access, open Safari Settings, then choose\nWebsites → Stylee Night Mode for Safari.",
                                     action: "Go to Settings…")
                 } else {
                     self.showStatus(title: "Turn on the extension", symbol: "power.circle", color: .secondaryLabelColor,
-                                    guidance: "Enable Gmail Dark Mode for Safari in Settings > Extensions,\nthen allow Gmail, Google Sheets, and Google Search.",
+                                    guidance: "Enable Stylee Night Mode for Safari in Settings > Extensions,\nthen allow Gmail, Google Sheets, and Google Search.",
                                     action: "Enable in Safari Settings…")
                 }
             }

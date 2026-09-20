@@ -1,4 +1,4 @@
-# Gmail Dark Mode for Safari
+# Stylee Night Mode for Safari
 
 Safari Web Extension that applies a focused dark theme to:
 
@@ -30,7 +30,7 @@ xcodebuild -project "Safari Dark Mode/Safari Dark Mode.xcodeproj" \
 open "build/DerivedData/Build/Products/Debug/Safari Dark Mode.app"
 ```
 
-Then enable **Gmail Dark Mode for Safari** in **Safari > Settings > Extensions** and
+Then enable **Stylee Night Mode for Safari** in **Safari > Settings > Extensions** and
 allow access to the supported Google sites. Reload existing Google tabs after
 installing or updating. Check the current Safari profile if an enabled extension
 does not appear in a window.

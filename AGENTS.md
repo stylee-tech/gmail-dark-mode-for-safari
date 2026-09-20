@@ -107,7 +107,7 @@ do not require syncing unchanged resources, launching Safari, or building Xcode.
 
 ## App Store releases
 
-- Public name: Gmail Dark Mode for Safari; publisher Stylee, Inc.; support
+- Public name: Stylee Night Mode for Safari; publisher Stylee, Inc.; support
   hello@trystylee.com. Keep internal project and bundle identifiers stable.
 - Use `scripts/archive-release.sh` with `SDM_DEVELOPMENT_TEAM` supplied in the
   environment. Never put team IDs, API credentials, or signing artifacts in docs.

@@ -439,13 +439,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Safari Dark Mode Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gmail Dark Mode for Safari";
+				INFOPLIST_KEY_CFBundleDisplayName = "Stylee Night Mode for Safari";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Stylee, Inc.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,13 +473,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Safari Dark Mode Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gmail Dark Mode for Safari";
+				INFOPLIST_KEY_CFBundleDisplayName = "Stylee Night Mode for Safari";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Stylee, Inc.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,13 +510,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Safari Dark Mode/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gmail Dark Mode for Safari";
+				INFOPLIST_KEY_CFBundleDisplayName = "Stylee Night Mode for Safari";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Stylee, Inc.";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -550,13 +550,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Safari Dark Mode/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gmail Dark Mode for Safari";
+				INFOPLIST_KEY_CFBundleDisplayName = "Stylee Night Mode for Safari";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Stylee, Inc.";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;

@@ -1,6 +1,6 @@
 # Security
 
-Gmail Dark Mode for Safari is a Safari Web Extension. Keep the permission and
+Stylee Night Mode for Safari is a Safari Web Extension. Keep the permission and
 data surfaces narrow.
 
 ## Data handling
